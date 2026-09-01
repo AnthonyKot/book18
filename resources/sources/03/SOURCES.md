@@ -1,0 +1,32 @@
+# Essay 3 — source index
+
+Accessed 2026-09-01 unless noted. Vendor statements below document current product positioning and capabilities; they are not treated as independent proof of performance or customer savings.
+
+## Law and official guidance
+
+1. **European Union, Regulation (EU) No 1169/2011 on food information to consumers.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX%3A32011R1169). Article 24 and Annex X support the distinction between use-by and minimum-durability dates and the required date form.
+2. **NVWA, “Houdbaarheidsdatum op levensmiddelen.”** [Guidance](https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen). Supports the Dutch-language operational summary: durability dates must be readable and findable; explains use-by versus best-before.
+3. **European Union, Directive 2011/91/EU on indications identifying the lot to which a foodstuff belongs.** [Official text](https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng). Articles 1–4 support the lot-indication claim and its exemptions.
+4. **European Union, Regulation (EC) No 178/2002, General Food Law.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R0178). Articles 18–19 support traceability and withdrawal responsibilities.
+5. **NVWA, “Veiligheidswaarschuwing Upfront Pita’s en Wraps,” 19 December 2025.** [Warning](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps). Concrete Dutch example of missing and wrong durability dates reaching sale; used as consequence evidence, not willingness-to-pay evidence.
+6. **European Union, Regulation (EC) No 852/2004 on the hygiene of foodstuffs.** [Official text](https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng). Annex II supports cleaning, disinfection and installation requirements relevant to a cell on a food line.
+7. **European Union, Regulation (EU) 2023/1230 on machinery.** [Current consolidated text](https://eur-lex.europa.eu/eli/reg/2023/1230/en) and [original Official Journal text](https://eur-lex.europa.eu/eli/reg/2023/1230/oj). Article 18 and Article 54 support the substantial-modification duty and 20 January 2027 application date. This essay does not give conformity advice; the channel integrator must scope it for each installation.
+
+## Hygienic and technical references
+
+8. **ISO, ISO 14159:2002, “Safety of machinery — Hygiene requirements for the design of machinery.”** [Catalogue and abstract](https://www.iso.org/standard/23748.html). Establishes the scope of the current published machinery-hygiene standard and notes that revision is under way.
+9. **EHEDG, “Hygienic Design Is a Decision, Not a Detail,” 2026 World Congress session description.** [Page](https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman). Concise authoritative statement of the five hygienic-design principles used in the essay.
+10. **Cognex, In-Sight 3800 datasheet and current reference manual.** [Datasheet](https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf); [specifications](https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2). Supports the component-level claims about OCR applications, global shutter, I/O and environmental rating. A component rating is not acceptance of the whole cell.
+
+## Named competitors and substitutes
+
+11. **Domino, R-Series code inspection system.** [Product page](https://www.domino-printing.com/en-us/products/r-series). Supports claims about printer-linked validation, preconfigured cameras and lighting, code/product sample testing and the breadth of the R-Series range.
+12. **Videojet-Laetus, inline vision systems.** [Product page and specifications](https://www.videojet.com/us/homepage/products/vision-systems.html). Supports claims about OCR/OCV, best-before and lot inspection, printer synchronisation, SKU control, lighting options and IP67 camera specification.
+13. **PackCheck, Vi-Track Platform.** [Product page](https://packcheck.nl/vitrack-platform/) and [company/customer page](https://packcheck.nl/). Supports the current Dutch competitive product description and PackCheck’s published Vezet customer account.
+14. **Vision Partners, EVIS Label Packaging Inspection System.** [Product page](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/). Supports the current Dutch competitive product description: date/barcode/text/seal inspection and MES/PLC/label-software integration.
+
+## Deliberately not used as market facts
+
+- No market-size report, analyst forecast or unsourced installed-base estimate is used.
+- No public source found a Dutch market price for a comparable turnkey cell. Every euro amount in the essay is therefore labelled as a required price, cost assumption or test budget.
+- Vendor claims that inspection “prevents recalls” or guarantees correctness are not repeated as outcomes. The essay treats validation results and paid buyer evidence as still missing.

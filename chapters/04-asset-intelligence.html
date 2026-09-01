@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Partner Owns the Wrench. Can You Keep the Margin? — The Second Engine</title>
+<meta name="description" content="A test of a white-label condition-monitoring and asset-intelligence layer sold through industrial maintenance firms.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Essay 4 of 5 · White-label industrial asset intelligence</p>
+<h1>The Partner Owns the Wrench. Can You Keep the Margin?</h1>
+<p class="lede">A regional maintenance company already visits the plant, reads the machines and earns trust by fixing what fails. You offer it a branded data layer: one asset history, disciplined alert triage, specialist review and reports its customers can use. That division looks elegant. It also gives the partner the customer, the measurements, the repair evidence and the right to replace you. The purchase decision is therefore not “can a developer build condition-monitoring software?” It is whether a maintenance firm will pay enough, share enough feedback and leave enough control with the software layer for a second company to exist.</p>
+
+<section class="proposition">
+<h2>The proposition</h2>
+<p>The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team. The purchase event is a contract renewal or competitive tender in which its industrial customer asks for continuous monitoring, consolidated asset history or evidence that route measurements cause action. The partner fears losing the account to a national technical-services group or an equipment vendor with a digital offer.</p>
+<p>The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS. A contracted vibration or reliability specialist reviews escalations. The local partner installs sensors, owns the route, speaks Dutch with technicians, recommends and performs repairs, and invoices the plant.</p>
+<p>The business refuses five things at the outset: supplying sensor hardware, promising remaining useful life, remotely declaring a machine safe, taking emergency calls from the plant, or selling around the partner. It returns one of three controlled outputs—observe, re-measure, or specialist escalation—with the evidence and confidence attached. A maintenance recommendation is issued only by the named partner analyst. This boundary is not legal decoration. Without it, one missed bearing fault can turn a software subscription into an argument about consequential production loss.</p>
+<p>The substitute is not a clipboard. The partner can keep reporting in Excel and PDFs, deploy a customer's incumbent EAM/APM suite, resell an equipment vendor's portal, or hire one analyst and assemble dashboards from commodity telemetry tools. The proposed layer wins only if it makes those routes and reports cheaper to operate while preserving the partner's brand. “Better AI” is neither the opening claim nor a defensible boundary.</p>
+</section>
+
+<section class="changed">
+<h2>What changed</h2>
+<p>There is no new law forcing this purchase. The change is that the pieces have become easier to connect while the complete offer has become harder to differentiate. Siemens documents Senseye ingestion through API, MQTT, email, S3 or Azure Blob Storage, or directly from a historian. Its ordinary time-series interface accepts up to 1 Hz and requires preprocessing above that rate; it also accepts vibration waveforms and spectra. <!-- CHECK: 04-senseye-ingestion --> A small entrant no longer needs to invent transport or charting. It does need to decide what every source means and whether two names describe the same motor.</p>
+<p>The feedback record matters more than the dashboard. Senseye's work-event API requires an asset, timestamp, message, routine/non-routine flag and work-activity type; “failure mode” is optional. Siemens says that a timely completion event lets its system learn how degradation evolved and relate subsequent data changes to the work. <!-- CHECK: 04-senseye-work-events --> That optional field exposes the commercial problem. A service report reading “checked, OK” closes a job for invoicing but does not say whether an alarm was a bearing defect, misalignment, process upset, loose sensor or false positive. Without a disciplined closeout, the dataset grows and the diagnostic asset does not.</p>
+<p>Incumbents already sell the whole loop. Augury describes a subscription combining industrial sensors, AI diagnostics, expert validation and connection into maintenance workflow, and markets coverage across more than 200 asset types. <!-- CHECK: 04-augury-bundle --> SKF describes software connected to CMMS/EAM, collection by the customer, a service partner or SKF, and subscription access to certified remote analysts. <!-- CHECK: 04-skf-bundle --> IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions inside an enterprise asset suite. <!-- CHECK: 04-maximo-bundle --> These are vendor descriptions, not independent proof of outcomes. They are decisive evidence of product surface area: software, expertise and workflow are not an empty niche.</p>
+<p>The Dutch channel is not waiting to be digitised either. SPIE Nederland presents machine maintenance, asset-management advice, maintenance-system implementation and a partnership with IFS Ultimo on the same service page. <!-- CHECK: 04-spie-offer --> ERIKS has marketed a Smart Asset Management team including software and application engineers and a platform that collects and presents machine data. <!-- CHECK: 04-eriks-offer --> At the specialist end, VIBRO offers condition monitoring, telemonitoring, vibration analysis, maintenance advice and sensor calibration. <!-- CHECK: 04-vibro-offer --> Istec says it combines vibration hardware, certified experts and analysis. <!-- CHECK: 04-istec-offer --> The plausible partner is therefore not “a maintenance firm that lacks software.” It is one whose current tool is too narrow, too expensive, tied to one sensor family, or weak under its own brand.</p>
+<p>That distinction separates obligation from budget. There is no statutory deadline and no public procurement trail here showing small maintenance firms buying a neutral intelligence layer. Vendor breadth shows a real job; it does not show willingness to pay this entrant. The budget must be discovered inside a live renewal: what revenue is at risk, what analyst hours are being consumed, and whether a branded evidence trail changes the partner's win rate or service margin. Until a partner pays, demand remains a hypothesis.</p>
+</section>
+
+<section class="sale">
+<h2>The first sale</h2>
+<p>Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider. Exclude OEM-only dealers whose economics depend on pulling the customer into their own cloud, and exclude national groups already selling an APM stack.</p>
+<p>The account list should include firms such as VIBRO and Istec as tests of the specialist end, not as assertions that they need the product. The opening is not “we built predictive AI.” It is: “Give us one redacted route export, one asset list and twenty closed work orders. In four weeks we will show whether your reports can become a repeatable branded service.” A warm introduction from a reliability engineer, sensor distributor or CMMS implementer is more credible than English-language outbound to a Dutch service director. The founder's A2 Dutch is adequate for technical preparation, not for discovering ambiguity in a plant-floor failure account. The partner must lead those conversations; an independent Dutch-speaking reliability specialist must join the first deliveries.</p>
+<p>The first product is a four-week, fixed-scope <strong>€7,500 paid data-and-service diagnostic</strong>. This is a proposed test price, not an observed market rate. It covers up to forty assets and three input formats: identity reconciliation; a data-quality and connectivity map; a failure/closeout taxonomy; two sample customer reports; an escalation runbook; and a proposed data-rights schedule. It does not include production connectors, model training or hardware. Half is payable before work. Free pilots select for curiosity and leave the core question—whether the partner can resell the layer—untested.</p>
+<p>The service director signs, but the diagnostic does not begin until a named end customer approves use of its data and the partner nominates both a route technician and someone who closes work orders. The production offer is quoted at a required-price hurdle: €18,000 onboarding, then €2,000 per monitored site per month plus €12 per active asset per month, with a 100-asset minimum. Hardware and field labour remain on the partner's invoice. The partner chooses its markup. If it cannot place that price inside a maintenance contract with a measurable gross-margin improvement or retention benefit, a cheaper portal will not fix the problem.</p>
+</section>
+
+<section class="economics">
+<h2>Does the money work?</h2>
+<p>The arithmetic below is a design gate. None of the prices, conversion rates or costs is reported as a market average. They state what must become true.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Model</th><th>Revenue</th><th>Direct cost / gross margin</th><th>Operating result</th></tr></thead>
+<tbody>
+<tr><td><strong>Year 1:</strong> four diagnostics; two production onboardings; four sites and 500 assets live for an average six months.</td><td>Diagnostics €30k; onboarding €36k; site fees €48k; asset fees €36k. <strong>Total €150k.</strong></td><td>Contract analyst €32k; telemetry/cloud €12k. <strong>Gross margin €106k (71%).</strong></td><td>Founder delivery at €75k replacement cost plus €35k legal, insurance, security, travel and sales leaves <strong>–€4k</strong>. No distributable owner income.</td></tr>
+<tr><td><strong>Mature test:</strong> twelve sites, average 160 assets; four new onboardings in the year.</td><td>Site fees €288k; asset fees €276k; onboarding €72k. <strong>Total €636k.</strong></td><td>Analyst review €84k; hosting/telemetry €42k. <strong>Gross margin €510k (80%).</strong></td><td>Delivery engineer €82k; partner success/technical writing €60k; founder replacement salary €100k; sales/travel €30k; insurance, legal and security €50k. <strong>€188k remains</strong> before corporation tax and financing.</td></tr>
+</tbody></table></div>
+<p>In the mature case the company can pay the target owner compensation and retain meaningful cash. It also reveals how little room there is for channel discounting. Cut recurring prices by 25% while direct review costs stay fixed and revenue falls by €141,000; most of the retained margin disappears. The partner may still add its own markup, but the software company cannot behave like a wholesale licence with a token fee. Its defendable share must pay for analyst review, integration variance, professional liability and support.</p>
+<p>Gross margin is protected by refusing pass-through hardware. Sensors, gateways, installation and replacement are specified and invoiced by the maintenance partner; putting them through this company's books would inflate revenue, create warranty exposure and consume working capital without creating software margin. Annual subscriptions should be billed quarterly in advance, onboarding 50% in advance and 50% on acceptance. Even then, the year-one company needs roughly €60,000–€80,000 for a six-month founder gap, legal drafting, insurance, a contracted analyst and security work before two partners are live. Keep at least two months of mature payroll and contractor cost—about €70,000 under this model—rather than treating all cash as owner income.</p>
+<p>The fragile input is analyst time. If every alarm takes bespoke investigation and every report needs founder editing, direct cost scales with assets while price is negotiated down as “software.” The operational metric is not assets connected. It is reviewed exceptions per 1,000 asset-days, minutes per reviewed exception, percentage resolved from the runbook, and percentage of escalations with a coded work outcome. A partner that will not return outcomes should pay a higher service price or not be onboarded.</p>
+</section>
+
+<section class="scale">
+<h2>From service to company</h2>
+<p><strong>Customer one</strong> is mostly integration and vocabulary. The founder maps motor “P-04 DE” to the CMMS asset, discovers time-zone and sampling errors, watches the analyst triage alerts and writes the report with the partner. Nothing about that delivery is scalable, but each exception should produce a fixture, validation rule or runbook step.</p>
+<p><strong>Customer five</strong> should use a canonical asset schema, a versioned importer kit and one escalation taxonomy. A trained implementation engineer handles the majority of ingestion and identity work. The partner's technician resolves low-confidence measurements from a checklist. The specialist sees only a queue with operating context, prior measurements and recent work. Reports are generated from approved findings, not rewritten in prose. The founder attends the service review, not every alert.</p>
+<p><strong>Customer twenty</strong> is viable only if acquisition is through three to five enabled maintenance partners and most delivery is teachable. The recurring work is genuine: new measurements arrive, assets change duty, sensors move, thresholds need review, work closes and failure labels alter future triage. The accumulating asset is not the customer's raw waveform. It is a tested connector library, asset-identity mappings, de-identified diagnostic features where contracts permit them, alert-to-work histories, calibrated partner playbooks and evidence of false-alert and escalation performance by asset class.</p>
+<p>Those rights must be written before data arrives. The plant owns its raw operating data and asset history; the maintenance partner owns its service notes and commercial relationship; the software company gets a limited licence to process both for the service. Any right to retain de-identified derived features after termination is separate and explicit. The contract must specify export format, deletion, sub-processors, model-training permission, who may contact the plant, and a transition period. If the partner insists that every derived field is its confidential data and can demand a full export while prohibiting reuse, it is buying labour and hosting, not funding an accumulating software asset.</p>
+<p>Diagnostic liability needs the same precision. The service-level agreement can promise ingestion freshness, queue response and report delivery. It should not warrant detection of every fault or prescribe that a machine continue running. Each output records source quality, analyst, confidence, evidence and disposition; critical findings require partner acknowledgement; silence escalates through a named route. Professional-indemnity and cyber cover, contract caps and exclusions are necessary but not sufficient. The operational defence is the audit trail that shows what was measured, what was missing, what the layer said and who accepted the decision.</p>
+</section>
+
+<section class="competition">
+<h2>The incumbent gets a turn</h2>
+<p>Siemens can pair broad ingestion with an established predictive-maintenance workflow. <!-- CHECK: 04-senseye-ingestion --> IBM can tell an existing Maximo customer that asset health and work history belong in the system already running maintenance. <!-- CHECK: 04-maximo-bundle --> Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut. It is one purchase order, one liability framework and an installed base.</p>
+<p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module, or hire the analyst after the white-label offer proves demand. The plant may insist on its corporate APM system, making the proposed layer an exporter with no user interface. At the low end, an InfluxDB/Grafana-style stack plus PDFs may be good enough because the scarce value is the technician who knows the machine.</p>
+<p>The entrant therefore competes on neutrality and partner economics: mixed sensors, fast onboarding of ugly route exports, the partner's brand, auditable review and no direct sale. But neutrality becomes a feature incumbents can copy. The harder defence is reciprocal dependency: the software layer makes the partner's analysts and technicians more productive, while their closed work orders improve its runbooks. If only one side learns, that side eventually captures the margin.</p>
+</section>
+
+<div class="counter">
+<h2>The capable failure</h2>
+<p>The company executes well. Two respected maintenance firms resell it, reports arrive on time, alerts are responsibly reviewed and several failures are caught. Customers praise their maintenance provider, because that is the logo, relationship and repair crew they see. At renewal, procurement treats the portal as part of the field contract rather than a separate outcome. The partners now have three years of report templates and know which alerts merit attention. One hires a reliability engineer; the other moves to a bundled OEM platform. Both demand a 40% lower wholesale rate before leaving.</p>
+<p>Meanwhile the software company cannot demonstrate a unique diagnostic corpus. Most closed work orders still say “inspected” or “replaced”; customer data licences prohibit cross-account learning; operating regimes differ enough that each threshold remains local. Good software and good service have created value, but the channel owns the proof, the customer and the exit. The company survives only by accepting lower prices and more analyst work. It has become a subcontracted expert practice wearing SaaS margins in its plan. Nothing in better execution repairs that allocation of power.</p>
+</div>
+
+<section class="monday">
+<h2>The first ninety days</h2>
+<ol>
+<li><strong>Days 1–15:</strong> interview ten owners or service directors across the ten prospect types. Ask for the last renewal where digital reporting mattered, current report-production hours, the software substitute and who owns raw data and work outcomes. Obtain two redacted route exports and matching closeouts under a simple NDA. Spend no more than €2,500 on travel and Dutch technical support.</li>
+<li><strong>Days 10–25:</strong> retain an independent Category III/IV vibration or reliability specialist for up to €4,000. Have that person score the samples for diagnostic sufficiency and write the three-level output boundary. If the data cannot support responsible triage, stop before software.</li>
+<li><strong>Days 20–40:</strong> pay an industrial-contract lawyer up to €4,000 to draft the white-label, data-rights, non-circumvention, export and liability schedule. Put the unresolved terms in front of both candidate partners; do not hide them until procurement.</li>
+<li><strong>Days 30–60:</strong> build only the thin path needed for one sample: importer, asset reconciliation, analyst queue, evidence record and branded report. Cap build and hosted-tool spend at €7,500. No custom sensor, general model or mobile app.</li>
+<li><strong>Days 45–75:</strong> offer the €7,500 diagnostic, 50% in advance, to at least five prospects. It is valid only with one named end-customer dataset, a route technician and closed-work-order access.</li>
+<li><strong>Days 60–90:</strong> deliver the first paid diagnostic and ask for a production order at the stated €18,000 onboarding and recurring price hurdle. Total pre-evidence spend is capped at <strong>€20,000</strong>.</li>
+</ol>
+<p><strong>Pass:</strong> one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee. <strong>Kill:</strong> no paid diagnostic after five properly scoped offers; no partner will return coded work outcomes; or every credible partner requires ownership/control terms that prevent a reusable connector and runbook asset. In any kill state, offer individual integration consulting only if premium self-employment is acceptable—do not call it the second engine.</p>
+</section>
+
+<div class="verdict-box">
+<h2>Verdict</h2>
+<p class="verdict">TEST THROUGH A PARTNER</p>
+<p>The partner is not just a route to market; it supplies language, plant access, measurement discipline, repair execution and the labels that could make the layer improve. The single assumption that would most change the verdict is that a regional maintenance firm will grant enough outcome feedback and derived-data rights while paying a recurring wholesale price that sustains at least roughly 75% gross margin. If the paid diagnostic disproves that, the software layer does not retain the economics.</p>
+</div>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>Siemens, <a href="https://developer.siemens.com/senseye/machine/index.html">Senseye machine-data integration</a> and <a href="https://developer.siemens.com/senseye/workorders/structure.html">work-event structure</a>.</li>
+<li>Augury, <a href="https://www.augury.com/machine-health/">Machine Health</a>.</li>
+<li>SKF, <a href="https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf">Assessing, managing and monitoring machine health</a>.</li>
+<li>IBM, <a href="https://www.ibm.com/products/maximo/asset-performance-management">Maximo Asset Performance Management</a>.</li>
+<li>SPIE Nederland, <a href="https://www.spie-nl.com/oplossing/maintenance-solutions">Maintenance Solutions</a>; ERIKS Nederland, <a href="https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/">Predictive Maintenance</a>.</li>
+<li>VIBRO, <a href="https://vibro.nl/en/">condition monitoring services</a>; Istec, <a href="https://www.istec.com/">vibration monitoring and analysis</a>.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav" aria-label="Essay navigation">
+  <a href="03-machine-vision-food.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="05-product-passports.html">Next →</a>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+</body>
+</html>
