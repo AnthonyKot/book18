@@ -1,6 +1,6 @@
 # Essay 02 — sources
 
-Accessed 2026-09-01. Partner and vendor pages are first-party descriptions. They establish that the channel structures and capabilities are offered; they do not establish independent outcomes, partner margin, retention or the proposed model prices.
+Accessed and re-fetched 2026-09-02. Partner and vendor pages are first-party descriptions. They establish that structures and capabilities are offered; they do not establish independent outcomes, margins, retention or the proposed model prices.
 
 1. **European Union — Regulation (EU) 2024/2847 (Cyber Resilience Act).** 23 October 2024.
    https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
@@ -15,8 +15,8 @@ Accessed 2026-09-01. Partner and vendor pages are first-party descriptions. They
    Corroborates the live operational context for CRA reporting; used in Reading.
 
 4. **Roosa Risto, Mohit Sethi and Mika Katara — “Effects of the Cyber Resilience Act (CRA) on Industrial Equipment Manufacturing Companies.”** 20 May 2025.
-   https://arxiv.org/abs/2505.14325
-   Supports: sample composition and limitations, existing IEC 62443 alignment and reported implementation pain. Claims `02-survey-pain`, `02-survey-sample`.
+   https://arxiv.org/html/2505.14325v2
+   Supports: the 2024 survey period, 2025 first publication, sample limitations, IEC 62443-4-1 alignment and reported implementation pain. Claims `02-survey-pain`, `02-survey-sample`.
 
 5. **Hard2bit — Cybersecurity partner programme.** Current vendor page.
    https://hard2bit.com/en/partners/
@@ -24,11 +24,11 @@ Accessed 2026-09-01. Partner and vendor pages are first-party descriptions. They
 
 6. **Cybellum — Partner programme.** Current vendor page.
    https://cybellum.com/partners/
-   Supports: existence and positioning of a product-security solution-provider channel. Used with the Hitachi case for `02-cybellum-channel` and in Reading.
+   Supports: a marketed solution-provider programme combining partner services with Cybellum's platform. Claim `02-cybellum-partners`; used in Reading.
 
 7. **Cybellum and Hitachi Solutions — “Hitachi & Cybellum Provide PLM Security Solutions in Japan.”** 8 November 2023.
    https://cybellum.com/blog/hitachi-solutions-and-cybellum-to-provide-plm-security-solutions-in-japan/
-   Supports: a first-party example combining consultancy/PSIRT capability with a product-security platform for lifecycle, vulnerability and CRA work. Claim `02-cybellum-channel`.
+   Supports: a first-party announcement of a planned service combining consultancy and PSIRT capability with product-security technology. It does not establish adoption or economics. Claim `02-cybellum-channel`.
 
 8. **Cybellum — Product Security Platform.** Current vendor page.
    https://cybellum.com/platform/
@@ -41,3 +41,15 @@ Accessed 2026-09-01. Partner and vendor pages are first-party descriptions. They
 10. **CEN and CENELEC — 2026 Work Programme, Digital Society.** 2026.
     https://wp2026.cencenelec.eu/sectors-list/digital-society/
     Supports: ongoing CRA horizontal and industrial-profile standardisation. Claim `02-standards`.
+
+11. **DEKRA — Cybersecurity services.** Current service page.
+    https://www.dekra.com/en/cybersecurity-services/
+    Supports: marketed testing and certification across industrial, ICT and connected-product sectors through direct contact. Claim `02-dekra`.
+
+12. **Bureau Veritas Cybersecurity — Industrial products: testing and certification.** Current service page; former Secura URL redirects here.
+    https://cybersecurity.bureauveritas.com/services/iot/industrial
+    Supports: marketed industrial-product testing and IEC 62443 product, process and certification work through direct enquiry. Claim `02-bv-security`.
+
+13. **TÜV Rheinland — Cybersecurity Assurance.** Current service page.
+    https://go.tuv.com/cybersecurity-assurance-from-tuv-rheinland?cpid=US21_I07_CYBER_WS_03
+    Supports: consumer and industrial product testing, a named assurance statement that is explicitly not certification, and direct manufacturer request. Claim `02-tuv`.
