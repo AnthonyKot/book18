@@ -1,0 +1,1485 @@
+Reading additional input from stdin...
+OpenAI Codex v0.148.0
+--------
+workdir: /home/diablo/book18
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 01a060b3-7485-7191-a391-f021ff27892c
+--------
+user
+Two reviewers assessed chapters/03-machine-vision-food.html independently; their reports are in drafts/reviews/03-flash.md and drafts/reviews/03-pro.md (either may be empty).
+Read CONTEXT.md, AGENT.md, the chapter, checks/claims/03.tsv, resources/sources/03/, and both reports. Be adversarial toward
+the REVIEWERS: for each of their findings, verify it against the chapter and the sources and mark it CONFIRMED / REJECTED
+(with why) / UNVERIFIABLE. Then add findings they both missed, using the checklist in scripts/prompts/review-checklist.md.
+Output one consolidated markdown report, ranked, with a one-line ship / revise / block verdict at the top.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+codex
+I’ll independently verify every reviewer claim against the chapter and its cited materials, then run the repository’s review checklist to catch omissions. I’ll keep reviewer-attributed findings distinct from newly discovered ones and rank only evidence-supported issues.
+exec
+/bin/bash -lc "pwd && rg --files -g 'CONTEXT.md' -g 'AGENT.md' -g 'chapters/03-machine-vision-food.html' -g 'checks/claims/03.tsv' -g 'drafts/reviews/03-flash.md' -g 'drafts/reviews/03-pro.md' -g 'scripts/prompts/review-checklist.md' -g 'resources/sources/03/**'" in /home/diablo/book18
+ succeeded in 254ms:
+/home/diablo/book18
+AGENT.md
+scripts/prompts/review-checklist.md
+CONTEXT.md
+chapters/03-machine-vision-food.html
+resources/sources/03/SOURCES.md
+drafts/reviews/03-pro.md
+drafts/reviews/03-flash.md
+checks/claims/03.tsv
+
+exec
+/bin/bash -lc "wc -l CONTEXT.md AGENT.md chapters/03-machine-vision-food.html checks/claims/03.tsv resources/sources/03/SOURCES.md drafts/reviews/03-flash.md drafts/reviews/03-pro.md scripts/prompts/review-checklist.md && sed -n '1,240p' CONTEXT.md && sed -n '1,240p' AGENT.md && sed -n '1,260p' scripts/prompts/review-checklist.md" in /home/diablo/book18
+ succeeded in 250ms:
+  192 CONTEXT.md
+   70 AGENT.md
+  154 chapters/03-machine-vision-food.html
+   25 checks/claims/03.tsv
+   32 resources/sources/03/SOURCES.md
+  136 drafts/reviews/03-flash.md
+   28 drafts/reviews/03-pro.md
+   23 scripts/prompts/review-checklist.md
+  660 total
+# Book 18 — CONTEXT
+
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
+a second, scalable business before 2030.
+
+This is an investment book, not a prediction that software employment will disappear. The
+reader has one good career, up to EUR 100,000 available, twelve to twenty-four months to
+learn, Dutch at A2 with a path to B1/B2, a base in Zaandam, and willingness to travel and do
+physical work. The question is which option earns the right to consume time and capital.
+
+Precedence: this file -> `AGENT.md` -> essay contracts (section 6) -> `TEMPLATE.md` -> prose.
+
+## 1. Thesis
+
+The mistake is to choose between "modern but still software" and "AI-resistant but an old
+Dutch trade." A better second engine sits at an interface: a new EU obligation or industrial
+technology, a buyer with an expensive consequence, and a delivery model that begins with
+expert service but can become recurring, teachable, and productised.
+
+The candidates are not recommendations. Each is a hypothesis subjected to the same
+sequence inherited from Book 4, *The Going Concern*:
+
+**demand -> payment -> economics -> operations -> resilience**
+
+An essay passes only if it can identify all five. A large market is not demand; a legal duty
+is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+not protection from competition.
+
+## 2. Reader and fixed assumptions
+
+- About forty, ten-plus years in enterprise full-stack development.
+- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+  the founder personally to win and execute Dutch-language local field work.
+- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+
+## 3. Economic gate
+
+Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+before personal tax, after operating expenses, with enough retained cash that the company is
+not emptied to pay its owner. Figures must separate:
+
+- revenue;
+- pass-through hardware or subcontracting;
+- gross margin;
+- operating costs;
+- owner labour at replacement cost;
+- recurring revenue;
+- working capital and capital expenditure.
+
+Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+as a market fact. Market prices require sources or live buyer evidence.
+
+## 4. Scalability test
+
+"Later a platform" is not evidence. Each essay must say what concretely changes between the
+first and twentieth customer. Score the option against four tests:
+
+1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+   depend solely on the founder's personal network.
+2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+   written playbook.
+3. **Recurring value:** some work recurs because the customer's state changes, not because an
+   annual report was artificially invented.
+4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+   workflow or distribution becomes more valuable with use.
+
+An expert practice is a legitimate outcome, but it must not be called a scalable company.
+
+## 5. Evidence and honesty rules
+
+- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+  European Commission, Dutch government, regulators, standards bodies).
+- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+- Competition: name existing vendors and the substitute, including internal implementation.
+- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+  and a row in `checks/claims/NN.tsv`.
+- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+  from practical enforcement.
+- Each essay must make the strongest case against itself. If the case cannot be answered,
+  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+  publisher, date accessed, and the claim supported.
+
+## 6. Essay contracts
+
+### 1. Connected Product Compliance Operations
+
+Test a managed operation combining the Cyber Resilience Act and Data Act for European
+connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+platform. The essay must define one initial customer segment, identify the exact recurring
+state changes, distinguish legal interpretation from technical implementation, and test
+whether a small manufacturer will buy an external operating function rather than a one-off
+consultant or generic GRC tool.
+
+### 2. White-label Product Security for Engineering Consultancies
+
+Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+machine integrators keep the customer relationship and resell a specialist product-security
+back office. The essay must confront channel conflict, margin sharing, trust, professional
+liability, partner enablement, and the risk that the partner learns the work and removes the
+supplier.
+
+### 3. A Narrow Machine-vision Product for Food or Packaging
+
+Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+inspection job in food/packaging for which successive installations could become materially
+similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+channels rather than competitors.
+
+### 4. White-label Industrial Asset Intelligence
+
+Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+data, the need for labelled failures, and whether the software layer has enough value to retain
+margin.
+
+### 5. Digital Product Passport / Battery-passport Integration
+
+Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+integration/managed-data business rather than generic DPP consulting. Separate the Battery
+Regulation's live requirements from the broader ESPR rollout and standards still being made.
+Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+data collection, access control, data verification, and the danger of building before delegated
+acts and customer budgets settle.
+
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
+## 7. Common verdict
+
+Each essay ends with exactly one provisional verdict:
+
+- **TEST NOW** — evidence supports spending a bounded amount on paid discovery.
+- **TEST THROUGH A PARTNER** — plausible only with a named channel or domain partner.
+- **WATCH** — timing or standards are too unsettled for material investment.
+- **ACQUIRE, DO NOT BUILD** — the capability is attractive but greenfield entry is structurally weak.
+- **DO NOT ENTER** — no credible route under the reader's constraints.
+
+The verdict is provisional until customer payment exists.
+
+## 8. Book shape
+
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
+and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
+final ranking.
+
+## 9. Decision record
+
+- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+  dependent on Dutch language and entrenched small-business competition.
+- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+  scalability test and explicit negative verdicts were added because these are option screens,
+  not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+# AGENT.md — instructions for Book 18 research and writing
+
+## Who is reading
+
+An experienced enterprise developer considering a serious second business. He can understand
+systems, integrations, unit economics and technical detail. He is not asking to be reassured.
+He wants to know which idea deserves two years and EUR 100,000, and which seductive idea should
+be killed before it consumes either.
+
+## Priority stack
+
+1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+   hypotheses are not presented as observed prices.
+2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+   this purchase outrank other work.
+3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+   and owner income are separate.
+4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+   accumulates. Never use "platform" as a magic word.
+5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+   uncertainty and partner capture belong in the main argument.
+6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+   resigning or buying the full equipment stack.
+
+## Research rules
+
+- Browse because laws, deadlines, standards, products and competitors are current.
+- Prefer primary sources for law and technical requirements.
+- For competitors, use their own product documentation and pricing where published; label
+  marketing claims as marketing claims.
+- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+  `inference`, or `open`. HTML may ship only with no `open` claims.
+- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
+- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+  concise paraphrases are normally enough.
+
+## Voice
+
+Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+
+## Required challenge
+
+Each essay must contain at least one credible path by which capable execution still loses. This
+is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+
+## Pre-ship test
+
+1. Can the reader name the buyer, purchase event and substitute?
+2. Is demand evidence distinct from regulation and market size?
+3. Does the economic model pay replacement-cost labour and still reach the owner target?
+4. Is the twentieth delivery visibly different from the first?
+5. Does the essay name why an incumbent, partner or customer might capture the margin?
+6. Is Dutch-language dependence stated for this exact channel?
+7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+8. Are all external claims receipted and all arithmetic labelled?
+
+## Coordination
+
+Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+`index.html`, `about.html`, static assets and cross-essay comparisons.
+Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+cited source (excerpt file or URL) actually supports, and give a concrete fix.
+
+1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+   hurdle as market price? Check dates against the cited primary sources.
+2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+   regulation standing in for demand?
+3. Economics: does the model pay replacement-cost labour, working capital and the owner
+   separately, and is the arithmetic internally consistent?
+4. Scalability: is the twentieth customer concretely different from the first, or is
+   "platform" doing the work?
+5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+   the margin-capture risk by partner or customer confronted?
+6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+   EUR 100k, no founder field work in Dutch) respected.
+8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+   an excerpt that says what the claim says; inference rows are honest about what they infer.
+9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+
+End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+
+exec
+/bin/bash -lc "sed -n '1,240p' chapters/03-machine-vision-food.html && sed -n '1,220p' checks/claims/03.tsv && sed -n '1,200p' resources/sources/03/SOURCES.md && sed -n '1,240p' drafts/reviews/03-flash.md && sed -n '1,200p' drafts/reviews/03-pro.md" in /home/diablo/book18
+ succeeded in 266ms:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspect the Date, Not “Food” — The Second Engine</title>
+<meta name="description" content="A test of one repeatable machine-vision product: recipe-linked best-before and lot-code verification for sliced-cheese thermoform packs, sold through a Dutch integrator.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<p class="kicker">Essay 3 of 7 · A narrow machine-vision product for food packaging</p>
+<h1>Inspect the date, not “food”</h1>
+<p class="lede">The sale is not artificial intelligence. It is a stainless cell that rejects a sliced-cheese pack when the thermal-transfer best-before or lot code is missing, unreadable or different from the line recipe. The plant operations manager buys after a code escape, retailer corrective action or line change; a Dutch integrator installs and supports it. That boundary makes successive deliveries similar. It also puts the idea between formidable substitutes: printer makers already join code and camera, and local vision integrators already join camera, PLC, reject and dashboard. The opportunity earns a test only if a partner will resell a validated cheese-specific module without taking all the margin and learning.</p>
+
+<section class="proposition">
+<h2>The proposition</h2>
+<p>Build one thing: an end-of-line verifier for <strong>black thermal-transfer best-before and lot codes on the glossy top film of single-file sliced-cheese thermoform packs</strong>. It sits after cutting and singulation, while the food is sealed. A monochrome camera reads the two fields, compares them with the expected strings supplied by the production recipe, and sends a pack identity and pass/fail result to the line PLC. A confirmed reject removes a failure into a locked bin. The cell stores the image, expected value, decoded value, recipe revision, decision and reject confirmation.</p>
+<p>The buyer is the plant operations manager at a private-label cheese slicer or co-packer. Quality writes the acceptance criteria; engineering and IT approve the connection; operations owns the downtime and signs. The purchase event is not “interest in AI.” It is a documented wrong-date or missing-code escape that requires corrective action, or a printer, labeler or line replacement that creates a funded change window.</p>
+<p>This business refuses five adjacent jobs: seal contamination, wrong-film artwork, barcode grading, foreign bodies and cheese defects. It does not supply a universal vision platform, rewrite the plant’s MES, act as the machine’s conformity assessor or promise that a camera prevents recalls. Each refusal preserves a repeatable field of view, defect vocabulary and acceptance test. If a buyer needs all five inspections, PackCheck, Vision Partners or a broad integrator is the honest answer.</p>
+<p>The default substitute is the operator’s start-up sample plus periodic quality checks. The stronger substitute is a vision option from the printer vendor or existing line integrator. The proposed company therefore sells neither labour nor components. It sells a pre-engineered optical/mechanical module, a demanding validation pack, and continuing evidence that the recipe, optics and reject path remain in control.</p>
+</section>
+
+<section class="changed">
+<h2>What changed</h2>
+<p>The obligation is old, not an approaching regulatory wave. Dutch NVWA guidance says durability information must be readable and findable; highly perishable foods use a use-by date and other foods a minimum-durability or best-before date. <!-- CHECK: 03-date-duty --> EU rules separately require a lot indication for food, with specified exemptions, and place it on the prepackaging or attached label when food is prepacked. <!-- CHECK: 03-lot-duty --> General Food Law requires traceability systems and requires a food business operator that believes food is unsafe to initiate withdrawal procedures once it has left the operator’s immediate control. <!-- CHECK: 03-trace-withdraw --> None of those texts says “buy machine vision.” They establish the consequence and leave the control method to the operator.</p>
+<p>The failure is real. In December 2025 the NVWA published a safety warning after one retailer sold pita packs without a durability date and wraps printed with 5 December 2026 instead of 5 December 2025. <!-- CHECK: 03-real-warning --> That is evidence that missing and wrong dates can pass through production and reach consumers. It is not evidence that Dutch cheese packers will spend €52,000 on this proposed cell. <!-- CHECK: 03-no-budget-proof --> Payment has to be discovered.</p>
+<p>The practical change is that the component stack has become product-like. Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. <!-- CHECK: 03-cognex-ocr --><!-- CHECK: 03-cognex-spec --> Domino’s R-Series packages code validation with preconfigured cameras and lights, while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. <!-- CHECK: 03-domino-range --><!-- CHECK: 03-videojet-system --> These are not proof that the proposed cheese module wins. They mean the founder need not invent OCR—and cannot claim OCR as a moat.</p>
+<p>Buyer pain, legal duty and budget remain separate. A plant may accept manual checks because escapes are rare, buy a printer-integrated camera during the next replacement, or ask its incumbent integrator to add a smart camera. The first paid diagnostic must reveal the frequency and cost of holds, rework, retailer claims and code-related nonconformities at one line. Without those numbers, the regulation is merely atmosphere.</p>
+</section>
+
+<section class="sale">
+<h2>The first sale</h2>
+<p>The first offer is <strong>CodeProof, a fixed €3,500 feasibility and loss diagnostic</strong>. This is a required test price, not an observed market price. Over one production shift and the following cleaning window, the work records pack sizes and spacing, line speed, printer and ribbon, code zones, recipes, PLC family, network policy, available reject length, reject-bin practice and every manual check. The customer supplies 500 representative packs and deliberately bad samples. Bench work compares two lighting geometries and returns a short specification: defect classes, optical layout, I/O map, reject concept, sanitation boundary, validation sample, downtime estimate and fixed cell quotation. It also returns “do not automate” when the defect rate and consequence cannot support the cell.</p>
+<p>The diagnostic is not credited against the build. Crediting turns evidence into free presales engineering. Its purchaser receives a useful line-control specification even if another integrator builds it. The operations manager signs; the quality manager owns the defect labels; the partner integrator attends the line survey because it will later own mechanics, PLC, safety and first-line support.</p>
+<p>The initial screen contains ten names: Royal A-ware, Vergeer Holland, Vandersterre, CONO Kaasmakers, FrieslandCampina, Royal Lactalis Leerdammer, Bouter Cheese, Kaas-Pack Holland, Henri Willig and Vepo Cheese. This is an outreach list, not a claim that any has an unprotected matching line or buying intent. <!-- CHECK: 03-prospect-list --> A partner first checks public pack format and its own installed-base knowledge, then asks the plant operations manager one question: “Show us the last code-related hold, customer complaint or audit action, and what it cost.” Five conversations with no dated event end the segment test early.</p>
+<p>Acquisition should begin through one Dutch packaging or vision integrator, not by the English-speaking founder cold-calling factory floors. The first named channel test is Vision Partners: ask whether it will put a white-label cheese-code module inside EVIS while retaining the mechanics, PLC and customer scope. EVIS’s published integrations make the overlap—and therefore the risk of a quick no—explicit. <!-- CHECK: 03-evis-channel --> The partner owns the Dutch introduction and safety conversation; the founder can conduct the technical workshop in English and build B1/B2 Dutch for commissioning. Zaandam is useful for travel, not a sales advantage. A business that still needs the founder to interpret rapid Dutch operator discussion at customer twenty has failed its own scale test.</p>
+</section>
+
+<section class="economics">
+<h2>Does the money work?</h2>
+<p>No comparable Dutch turnkey price was found in public documentation, so every number below is a hurdle. The customer price must survive a quote against Domino, Videojet-Laetus and local integrators; the company must survive after the channel has been paid. The model assumes the integrator owns the customer contract for mechanics, PLC, machinery conformity and first-line service, while the new company invoices the integrator for the optical module, software, validation and second-line support.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Offer</th><th>End-customer price hurdle</th><th>Company revenue</th><th>Direct cost at replacement rates</th><th>Contribution</th></tr></thead>
+<tbody>
+<tr><td>CodeProof diagnostic</td><td>€3,500</td><td>€2,800 after 20% partner share</td><td>€1,200 labour/travel</td><td>€1,600</td></tr>
+<tr><td>Inspection cell</td><td>€52,000</td><td>€35,000 wholesale</td><td>€18,000 hardware/assembly; €6,000 delivery labour; €1,500 warranty reserve</td><td>€9,500</td></tr>
+<tr><td>Evidence service</td><td>€6,000/year</td><td>€4,500 after partner share</td><td>€1,700 support labour, cloud and spares</td><td>€2,800</td></tr>
+</tbody>
+</table></div>
+<p>The €52,000 is not “a camera.” It includes the partner’s conveyor changes, guarded reject, wiring, PLC program, risk assessment work, installation and first response. If a standard printer-linked camera solves the job for materially less, the proposal loses and should lose. The €9,500 contribution is only 18% of the end-customer price—27% of wholesale revenue—and two revisits can erase it. The acceptance test and physical interfaces must therefore prevent open-ended commissioning.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Company model</th><th>Year 1: learn</th><th>Mature year: prove scale</th></tr></thead>
+<tbody>
+<tr><td>Volume</td><td>6 diagnostics; 3 cells; 3 service contracts</td><td>12 diagnostics; 12 cells; 36 service contracts</td></tr>
+<tr><td>Revenue</td><td>€135,300</td><td>€615,600</td></tr>
+<tr><td>Pass-through hardware, assembly and warranty</td><td>€58,500</td><td>€234,000</td></tr>
+<tr><td>Delivery/support labour at replacement cost</td><td>€30,300</td><td>€147,600</td></tr>
+<tr><td>Gross contribution</td><td>€46,500</td><td>€234,000</td></tr>
+<tr><td>Founder role at replacement cost</td><td>€65,000</td><td>€100,000</td></tr>
+<tr><td>Other operating cost</td><td>€47,000</td><td>€60,000</td></tr>
+<tr><td>Retained result before company tax</td><td>−€65,500</td><td>€74,000</td></tr>
+</tbody>
+</table></div>
+<p>All volumes, prices and costs are designed arithmetic, not market facts. <!-- CHECK: 03-prices --> Year one is intentionally a loss after charging the founder’s labour: it buys proof, not owner income. The mature design pays €100,000 for the founder role and retains €74,000 before company tax. That clears the reader’s income gate without pretending the owner works free.</p>
+<p>The working-capital rule is 50% of the company’s wholesale price at order, 40% after factory acceptance and 10% after site acceptance. A €17,500 deposit almost covers the assumed €18,000 hardware and assembly bill for one cell; two overlapping builds still require cash. After evidence, the maximum €100,000 allocation is €28,000 for a pre-production/demo cell and test packs, €32,000 working capital, €15,000 for insurance/legal/conformity documentation, €8,000 already spent on discovery and €17,000 contingency. No inventory beyond one critical-spares kit is justified until three paid installations pass.</p>
+</section>
+
+<section class="scale">
+<h2>From service to company</h2>
+<h3>How the cell works—and how it is accepted</h3>
+<p>The pack crosses a photoelectric trigger on a controlled single-file conveyor. A global-shutter monochrome camera freezes motion. Cross-polarised diffuse illumination suppresses specular glare from top film; a second low-angle light is tested only when embossed or wrinkled film defeats the first geometry. Lens and working distance are selected from the actual field of view so the thinnest character stroke has enough pixels at the fastest line speed. Those are recipe parameters, not settings an operator improvises.</p>
+<p>The algorithm first locates the print zone from stable pack features, then separates three questions. Presence asks whether ink exists in the expected region. OCR decodes the date and lot. Verification compares the decoded strings with values received from the authoritative line recipe, including allowed date arithmetic and format. “No read,” stale recipe, communications loss and low confidence all fail closed: reject this pack or stop after a configured sequence. A merely present, beautifully legible wrong date must fail.</p>
+<p>The PLC—not cloud software—tracks the pack from camera to reject. A pusher or air blast removes it; a downstream sensor confirms departure; bin-full, missed trigger, unconfirmed reject or encoder discrepancy stops the line. The integrator owns that deterministic state machine, guarding and restart behaviour. From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. <!-- CHECK: 03-machinery-date --><!-- CHECK: 03-substantial-mod --> That is why the vision company does not casually splice into a safety circuit or claim that a CE-marked camera makes a CE-compliant cell.</p>
+<p>Acceptance starts with a jointly signed defect taxonomy: missing print; stale or future date; transposed digit; incomplete character; weak contrast; smear; double print; displacement; glare; wrinkle; condensation; wrong lot format. The factory test runs 3,000 labelled defect images with zero misses, then a site test runs at least 100 physical challenge packs through trigger, decision, tracking and confirmed reject. A 10,000-good-pack production run must stay below the agreed false-reject rate—initial hurdle 0.2%—without bypass. Zero misses in an image library does not prove zero field risk, especially when images from one run are correlated. <!-- CHECK: 03-stat-test --> Results are reported by film, ribbon, line speed and defect class, not as one flattering accuracy percentage.</p>
+<p>Cleaning belongs in the design review. EU hygiene rules require relevant equipment and its installation to permit cleaning and, where necessary, disinfection. <!-- CHECK: 03-hygiene-law --> EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation—and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. <!-- CHECK: 03-ehedg-principles --><!-- CHECK: 03-iso-hygiene --> Even downstream of sealed food, the cell needs sloped stainless surfaces, accessible belt removal, sealed cable entries and documented chemical/temperature limits. An IP67 camera component is not a washdown design. The diagnostic observes the real cleaning method before selecting enclosure, connectors or fasteners.</p>
+
+<h3>First, fifth, twentieth</h3>
+<p><strong>Customer one</strong> consumes the founder. A rented camera and two lights go to the lab; the partner fabricates a one-off bracket and reject; the founder labels defects, tunes every region and stands through both shifts. The deliverable is not just a working cell. It is the first bill of materials, interface control document, defect library, FAT/SAT script, sanitation checklist, recipe schema and support runbook.</p>
+<p><strong>Customer five</strong> gets one of two standard conveyor widths, a fixed camera-to-pack envelope, prewired cabinet, versioned PLC handshakes for the two PLC families actually encountered, and a commissioning fixture that can replay triggers. The partner handles mechanical and electrical installation from drawings. A trained vision engineer performs most recipe work; the founder attends acceptance only for an exception. New film, ribbon, printer head or code format becomes a paid qualification, not free support.</p>
+<p><strong>Customer twenty</strong> arrives through a partner’s installed base. The partner performs survey, installation, Dutch operator training and first response. The company ships a tested module, reviews acceptance evidence remotely and handles optical/software escalation. Recurrence follows real state changes: new private-label SKUs, artwork and film changes, printer/ribbon changes, cleaning damage, lighting drift and retailer audit evidence. The accumulating asset is the consented, anonymised defect image set joined to film, lighting, lens, printer, speed and acceptance result—not generic “AI data.”</p>
+<p>The twentieth delivery is only materially different if written partner certification lets another person do most of it. Annual service without new SKUs, changed equipment, drift or evidence review is an invented annuity and should not be billed. At 36 supported lines, one support engineer plus partner first response is a design assumption to measure; if the founder still debugs night shifts, the mature economics are fiction.</p>
+</section>
+
+<section class="competition">
+<h2>The incumbent gets a turn</h2>
+<p>PackCheck is not a hypothetical future rival. Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. <!-- CHECK: 03-packcheck-product --><!-- CHECK: 03-packcheck-case --> Vision Partners’ EVIS covers date, barcode, text and seal checks and connects to labeling software, MES and PLCs. <!-- CHECK: 03-evis-product --> Both are Dutch, local and broader than this proposal.</p>
+<p>Above them sit the printer vendors. Domino’s R-Series joins printers, cameras and lighting and offers to test a customer’s code on its product before commitment. <!-- CHECK: 03-domino-range-competition --> Videojet-Laetus already offers OCR/OCV, best-before and lot checks, printer synchronisation, SKU management, IP67 camera configurations and diffuse or polarised lighting. <!-- CHECK: 03-videojet-system-competition --> Below them sits the internal automation engineer with a Cognex or Keyence sensor. Taken together, these products cover nearly every functional box in the proposed cell; a generic OCR offer has no credible wedge. <!-- CHECK: 03-incumbent-inference --></p>
+<p>An incumbent response requires no new product. The printer vendor bundles vision into a replacement quote and uses one job setup for print and inspect. The local integrator copies the narrow validation script into its broader platform, adds film and seal inspection, and keeps the customer. The customer’s automation team accepts slightly more false rejects because the camera cost is small and support is already on site.</p>
+<p>Dutch integrators become channels only through a deliberately subordinate deal. The partner owns the end customer, mechanical and PLC scope, machinery-risk work, Dutch training and first-line SLA. The new company publishes a wholesale price, never sells directly into the partner’s registered accounts, supplies the code-specific module and validation, and receives contractual access to anonymised defect and performance data. The partner keeps roughly one-third of the end price in the hurdle model. If a partner will introduce prospects but refuses data rights, margin transparency or non-circumvention, it is not a channel; it is using free specialist presales before internalising the job.</p>
+</section>
+
+<div class="counter">
+<h2>The capable failure</h2>
+<p>The team executes well. Two cheese packers pay for diagnostics. The optical design passes on glossy film, the reject path survives site acceptance, operators like the evidence log, and a respected Dutch integrator sells five cells. Then the integrator learns which dome, lens and thresholds work, while Domino supplies a printer-linked camera in the next fleet refresh. Customers prefer one service number and one recipe entry. The partner recreates the defect checklist in its existing platform and offers seal and film checks alongside the date for a modest premium. It honours every contract, simply stops ordering the module.</p>
+<p>Nothing was stolen. OCR components were available, the acceptance procedure was observable, and five installations did not create enough diverse labelled failures to make the data asset indispensable. The founder built a competent subcontracted feature whose distributor owned acquisition, integration, service and trust. Good engineering accelerated the partner’s learning. This is the central structural risk, not “poor sales”: the channel required for language and scale is also the party best placed to capture the margin.</p>
+</div>
+
+<section class="monday">
+<h2>The first ninety days</h2>
+<ol>
+<li><strong>Write the one-page boundary.</strong> Fix pack form, printer technology, two fields, line position, maximum speed range, fail-closed behaviour and exclusions. Ask PackCheck, Vision Partners and one packaging-line service firm which sentence makes the offer redundant.</li>
+<li><strong>Secure one channel experiment.</strong> Offer Vision Partners first—then at most one other integrator—registered-account protection, 20% of diagnostics, a target wholesale schedule and first-line ownership. Require access to anonymised test/performance data and attendance at buyer interviews. No signed experiment by day 30 means no equipment purchase.</li>
+<li><strong>Run ten event interviews.</strong> Use the named screen, but continue only with plants that can produce a dated code escape, hold, complaint, audit action or upcoming line change. Record frequency, affected units, labour, downtime, retailer consequence, current control and signer. Do not pitch during the evidence half.</li>
+<li><strong>Sell two CodeProof diagnostics at €3,500 each.</strong> Payment, not a letter of interest, is the demand test. Rent camera, lens and lights; use customer packs; quote the €52,000 cell only after the defect and integration envelope is known.</li>
+<li><strong>Challenge the mechanism.</strong> Build the labelled defect set, compare lighting geometries, replay recipe mismatches and test the physical reject states with the partner. Produce the signed acceptance protocol and a fixed bill of materials before quoting.</li>
+<li><strong>Apply the gate.</strong> Spend at most €8,000 before evidence. Pass only if one integrator signs the channel experiment, two independent packers pay full diagnostic price, at least one line meets the optical test, and one buyer gives a conditional order at the price hurdle subject to site acceptance. Kill if any element is absent by day 90, if more than two optical/mechanical variants are needed, or if the partner will not leave the company the modelled margin and data rights.</li>
+</ol>
+</section>
+
+<div class="verdict-box">
+<h2>Verdict</h2>
+<p class="verdict">TEST THROUGH A PARTNER</p>
+<p>The single assumption that would most change the verdict is that Vision Partners, or one equivalent Dutch integrator, will repeatedly resell the narrow module while leaving its maker both the required wholesale contribution and rights to the validation data. Test that before the camera.</p>
+</div>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&amp;uri=CELEX%3A32011R1169">Regulation (EU) No 1169/2011</a>, Article 24 and Annex X; and <a href="https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng">Directive 2011/91/EU</a>, Articles 1–4.</li>
+<li>NVWA, <a href="https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen">“Houdbaarheidsdatum op levensmiddelen”</a> and the <a href="https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps">19 December 2025 Upfront safety warning</a>.</li>
+<li>European Union, <a href="https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng">Regulation (EC) No 852/2004</a>, Annex II, on hygiene and cleanability.</li>
+<li>ISO, <a href="https://www.iso.org/standard/23748.html">ISO 14159:2002</a>; EHEDG, <a href="https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman">the five hygienic-design principles</a>.</li>
+<li>European Union, <a href="https://eur-lex.europa.eu/eli/reg/2023/1230/en">Regulation (EU) 2023/1230 on machinery</a>, Articles 18 and 54.</li>
+<li>Cognex, <a href="https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf">In-Sight 3800 datasheet</a> and <a href="https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2">current specifications</a>.</li>
+<li>Domino, <a href="https://www.domino-printing.com/en-us/products/r-series">R-Series code inspection</a>; Videojet-Laetus, <a href="https://www.videojet.com/us/homepage/products/vision-systems.html">inline vision systems</a>.</li>
+<li>PackCheck, <a href="https://packcheck.nl/vitrack-platform/">Vi-Track Platform</a>; Vision Partners, <a href="https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/">EVIS</a>.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav" aria-label="Essay navigation">
+  <a href="02-white-label-product-security.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="04-asset-intelligence.html">Next →</a>
+</nav>
+</main>
+
+<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+</body>
+</html>
+id	claim	source_url	source_locator	status
+03-date-duty	Dutch guidance says prepacked food generally needs a readable, findable durability date; highly perishable food uses a use-by date and other food a best-before date.	https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen	Sections "Vermeld houdbaarheid leesbaar en vindbaar", "Uiterste consumptiedatum", and "Minimale houdbaarheid"	verified
+03-lot-duty	Directive 2011/91/EU generally prohibits marketing food without a lot indication, subject to listed exemptions, and requires the indication on prepackaging or its label.	https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng	Articles 1-4	verified
+03-trace-withdraw	EU General Food Law Article 18 requires traceability systems and Article 19 requires withdrawal procedures when a food business operator believes food is unsafe.	https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R0178	Articles 18-19	verified
+03-real-warning	The NVWA published a December 2025 safety warning after pita packs lacked a durability date and wrap packs showed 2026 instead of 2025.	https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps	Warning dated 19 December 2025	verified
+03-no-budget-proof	A public warning proves that date-code escapes occur and can have consequences, but does not prove that cheese packers will buy this proposed module.	https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps	Author inference from the warning; no purchasing evidence in source	inference
+03-hygiene-law	Regulation 852/2004 requires food premises and relevant equipment to permit adequate cleaning and, where necessary, disinfection; equipment is to be installed to allow cleaning around it.	https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng	Annex II, Chapters I, II and V	verified
+03-ehedg-principles	EHEDG describes material compatibility, cleanability, drainability, accessibility and segregation as five hygienic-design principles.	https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman	Session description "Hygienic Design Is a Decision, Not a Detail"	verified
+03-iso-hygiene	ISO 14159:2002 is a published standard specifying hygiene requirements for machines used where consumer hygiene risks can occur; ISO lists it as current but under revision.	https://www.iso.org/standard/23748.html	Abstract, status and lifecycle	verified
+03-cognex-ocr	Cognex markets In-Sight 3800 for reading food-and-beverage lot codes and expiration dates on uneven surfaces.	https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf	Page 6, OCR examples	verified
+03-cognex-spec	The In-Sight 3800 documentation lists global-shutter monochrome variants, discrete I/O, Ethernet and IP67 protection when correctly assembled.	https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2	Image sensor and system specifications	verified
+03-domino-range	Domino's R-Series supports code validation, preconfigured camera/lighting options and integration with coding systems; Domino says its sample lab tests customer code and product before commitment.	https://www.domino-printing.com/en-us/products/r-series	Range comparison and FAQ	verified
+03-domino-range-competition	Domino's R-Series supports code validation, preconfigured camera/lighting options and integration with coding systems; Domino says its sample lab tests customer code and product before commitment.	https://www.domino-printing.com/en-us/products/r-series	Range comparison and FAQ; repeated claim in competition section	verified
+03-videojet-system	Videojet-Laetus offers systems for best-before and lot-code presence, OCR/OCV, printer synchronisation and SKU management, with IP67 cameras and polarized or diffuse lighting options.	https://www.videojet.com/us/homepage/products/vision-systems.html	Product features and technical specification table	verified
+03-videojet-system-competition	Videojet-Laetus offers systems for best-before and lot-code presence, OCR/OCV, printer synchronisation and SKU management, with IP67 cameras and polarized or diffuse lighting options.	https://www.videojet.com/us/homepage/products/vision-systems.html	Product features and technical specification table; repeated claim in competition section	verified
+03-packcheck-product	PackCheck's Vi-Track product advertises recipe-controlled THT inspection, API control, eject integration and a web dashboard.	https://packcheck.nl/vitrack-platform/	Sections "Volledig modulair recept beheer", "Tenminste Houdbaar Tot", and platform composition	verified
+03-packcheck-case	PackCheck says Vezet selected it to inspect film, codes and labels on vegetable bagging lines and provide inspection results in a web dashboard.	https://packcheck.nl/	Customer testimonial headed "Ons proces nog beter geborgd"	verified
+03-evis-product	Vision Partners' EVIS supports date, barcode, text and seal checks and integration with labeling software, MES and PLCs.	https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/	"Possible applications" and integration bullets	verified
+03-evis-channel	Vision Partners' published EVIS integrations overlap the proposed module's surrounding labeling, MES and PLC scope, making it a concrete but conflicted channel candidate.	https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/	Author inference from EVIS product scope	inference
+03-incumbent-inference	The named printer vendors and Dutch integrators already cover most functional elements of the proposed inspection cell, so a generic OCR system has no credible product wedge.	https://packcheck.nl/vitrack-platform/	Author inference, cross-checked against Domino, Videojet-Laetus and EVIS product pages	inference
+03-machinery-date	The consolidated EU Machinery Regulation says Regulation 2023/1230 applies from 20 January 2027.	https://eur-lex.europa.eu/eli/reg/2023/1230/en	Article 54, consolidated version dated 29 May 2026	verified
+03-substantial-mod	Under Regulation 2023/1230, a person carrying out a substantial modification is treated as a manufacturer and bears conformity-assessment obligations for the affected machinery.	https://eur-lex.europa.eu/eli/reg/2023/1230/oj	Article 18	verified
+03-prices	All prices, costs, volumes, margins, sample sizes and financial projections in the essay are author-designed validation hurdles, not observed market prices or market facts.	author-model	Tables "Required unit economics" and "Company model" plus the 90-day test	inference
+03-stat-test	Zero misses in 3,000 deliberately defective images is an engineering acceptance hurdle, not a claim that field false-accept probability is zero; correlated production conditions limit probabilistic interpretation.	author-model	Section "How the cell works—and how it is accepted"	inference
+03-prospect-list	The ten company names are an outreach screen, not claims that those companies use an unprotected matching line or have expressed buying intent.	author-model	Section "The first sale"	inference
+# Essay 3 — source index
+
+Accessed 2026-09-01 unless noted. Vendor statements below document current product positioning and capabilities; they are not treated as independent proof of performance or customer savings.
+
+## Law and official guidance
+
+1. **European Union, Regulation (EU) No 1169/2011 on food information to consumers.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX%3A32011R1169). Article 24 and Annex X support the distinction between use-by and minimum-durability dates and the required date form.
+2. **NVWA, “Houdbaarheidsdatum op levensmiddelen.”** [Guidance](https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen). Supports the Dutch-language operational summary: durability dates must be readable and findable; explains use-by versus best-before.
+3. **European Union, Directive 2011/91/EU on indications identifying the lot to which a foodstuff belongs.** [Official text](https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng). Articles 1–4 support the lot-indication claim and its exemptions.
+4. **European Union, Regulation (EC) No 178/2002, General Food Law.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R0178). Articles 18–19 support traceability and withdrawal responsibilities.
+5. **NVWA, “Veiligheidswaarschuwing Upfront Pita’s en Wraps,” 19 December 2025.** [Warning](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps). Concrete Dutch example of missing and wrong durability dates reaching sale; used as consequence evidence, not willingness-to-pay evidence.
+6. **European Union, Regulation (EC) No 852/2004 on the hygiene of foodstuffs.** [Official text](https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng). Annex II supports cleaning, disinfection and installation requirements relevant to a cell on a food line.
+7. **European Union, Regulation (EU) 2023/1230 on machinery.** [Current consolidated text](https://eur-lex.europa.eu/eli/reg/2023/1230/en) and [original Official Journal text](https://eur-lex.europa.eu/eli/reg/2023/1230/oj). Article 18 and Article 54 support the substantial-modification duty and 20 January 2027 application date. This essay does not give conformity advice; the channel integrator must scope it for each installation.
+
+## Hygienic and technical references
+
+8. **ISO, ISO 14159:2002, “Safety of machinery — Hygiene requirements for the design of machinery.”** [Catalogue and abstract](https://www.iso.org/standard/23748.html). Establishes the scope of the current published machinery-hygiene standard and notes that revision is under way.
+9. **EHEDG, “Hygienic Design Is a Decision, Not a Detail,” 2026 World Congress session description.** [Page](https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman). Concise authoritative statement of the five hygienic-design principles used in the essay.
+10. **Cognex, In-Sight 3800 datasheet and current reference manual.** [Datasheet](https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf); [specifications](https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2). Supports the component-level claims about OCR applications, global shutter, I/O and environmental rating. A component rating is not acceptance of the whole cell.
+
+## Named competitors and substitutes
+
+11. **Domino, R-Series code inspection system.** [Product page](https://www.domino-printing.com/en-us/products/r-series). Supports claims about printer-linked validation, preconfigured cameras and lighting, code/product sample testing and the breadth of the R-Series range.
+12. **Videojet-Laetus, inline vision systems.** [Product page and specifications](https://www.videojet.com/us/homepage/products/vision-systems.html). Supports claims about OCR/OCV, best-before and lot inspection, printer synchronisation, SKU control, lighting options and IP67 camera specification.
+13. **PackCheck, Vi-Track Platform.** [Product page](https://packcheck.nl/vitrack-platform/) and [company/customer page](https://packcheck.nl/). Supports the current Dutch competitive product description and PackCheck’s published Vezet customer account.
+14. **Vision Partners, EVIS Label Packaging Inspection System.** [Product page](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/). Supports the current Dutch competitive product description: date/barcode/text/seal inspection and MES/PLC/label-software integration.
+
+## Deliberately not used as market facts
+
+- No market-size report, analyst forecast or unsourced installed-base estimate is used.
+- No public source found a Dutch market price for a comparable turnkey cell. Every euro amount in the essay is therefore labelled as a required price, cost assumption or test budget.
+- Vendor claims that inspection “prevents recalls” or guarantees correctness are not repeated as outcomes. The essay treats validation results and paid buyer evidence as still missing.
+# Review: Chapter 03 — *Inspect the Date, Not “Food”* (`chapters/03-machine-vision-food.html`)
+
+An exhaustive audit of Essay 03 against [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) (Sections 1–7), [AGENT.md](file:///home/diablo/book18/AGENT.md) (priority stack and pre-ship test), and the chapter claim ledger [03.tsv](file:///home/diablo/book18/checks/claims/03.tsv).
+
+---
+
+## 1. Audit Against the 10 Core Criteria
+
+### 1. Never False
+* **Legal & Regulatory Status:** All cited legal frameworks are strictly distinguished between enacted law and upcoming application dates:
+  * *Regulation (EU) No 1169/2011* (Article 24 & Annex X) and *Directive 2011/91/EU* (Articles 1–4) are correctly cited as existing duties.
+  * *Regulation (EU) 2023/1230* (Machinery Regulation) is accurately stated as applying from **20 January 2027** (Article 54), with substantial modification rules (Article 18) correctly scoped.
+* **Pricing & Validation Hurdles:** All prices (€3,500 diagnostic, €52,000 cell, €6,000/yr service) are explicitly qualified as required test hurdles and unit-cost assumptions, never passed off as observed market facts.
+* **Minor Inconsistency:** The footer (`line 152`) states *"Five candidates"* despite the book's expansion to seven essays.
+
+### 2. Buyer and Purchase Event
+* **Payer:** Plant Operations Manager at a private-label cheese slicer or co-packer (with Quality setting acceptance criteria and IT/Engineering signing off on connectivity).
+* **Purchase Event:** A documented wrong-date or missing-code escape requiring corrective action (e.g., following retailer rejection), or an upcoming printer/labeler/line replacement creating a funded change window.
+* **Demand vs. Regulation:** The NVWA December 2025 pita/wrap date escape warning is explicitly treated as proof of operational consequence, while noting that willingness to pay for machine vision remains unproven until paid diagnostic discovery.
+
+### 3. Economics
+* **Labor & Owner Separation:** The financial model explicitly isolates:
+  * Wholesale revenue (€35,000 per cell; €2,800 per diagnostic; €4,500/yr per service contract).
+  * Direct hardware/assembly/warranty pass-through (€19,500 per cell).
+  * Subcontracted delivery & support labor at replacement cost (€6,000 per cell; €1,200 per diagnostic; €1,700/yr per contract).
+  * Founder labor at market replacement cost (€65,000 Year 1; €100,000 mature year).
+  * Retained earnings before corporate tax (−€65,500 Year 1; €74,000 mature year).
+* **Working Capital & Balance Sheet:** Working capital mechanics are concrete (50% deposit on order covers the €18,000 hardware bill). Capital deployment from the €100,000 investor budget is cleanly accounted for (€28,000 demo cell/packs, €32,000 working capital, €15,000 documentation/compliance, €8,000 discovery, €17,000 contingency).
+* **Arithmetic:** 100% internally consistent across unit contributions and company-level models.
+
+### 4. Scalability
+* **Repeatable Acquisition:** Customer 20 is acquired via a partner integrator's installed base rather than founder cold-calling.
+* **Teachable Delivery:** Standardized conveyor widths, fixed optical envelopes, prewired cabinets, versioned PLC handshake blocks, and FAT/SAT checklists allow integrator technicians and trained vision engineers to execute delivery without founder attendance.
+* **Recurring Value:** Grounded in tangible operational state changes (private-label SKU additions, film/artwork revisions, ribbon/printer head swaps, optical drift, audit re-validation).
+* **Accumulating Asset:** A proprietary defect image library mapped to packaging film, lighting geometry, printer type, line speed, and validation results.
+
+### 5. Incumbents and Capture
+* **Competitor Grounding:** Incumbents are treated fairly from their own primary product documentation:
+  * **Domino R-Series:** Printer-vision integration and sample testing lab.
+  * **Videojet-Laetus:** Integrated OCR/OCV, IP67 camera options, and SKU control.
+  * **PackCheck (Vi-Track):** Recipe-controlled THT verification, ejection, and Vezet case study.
+  * **Vision Partners (EVIS):** Date/seal/barcode inspection with MES/PLC integration.
+* **Margin Capture Risk:** Directly addressed. Integrators have the relationships, local presence, and PLC capabilities; printer OEMs have single-vendor procurement appeal.
+
+### 6. Capable Failure
+* **Failure Mechanism:** Avoids straw-man "poor execution." The founder delivers high-quality optical modules across five successful installations; the integrator learns the illumination geometries and software thresholds, while printer vendors bundle inline vision during line refreshes; the integrator expands its own platform to absorb date checking and stops ordering the module without breaching contracts.
+
+### 7. Dutch-Language Dependence & Reader Constraints
+* **Language Strategy:** Cold factory floor outreach, safety compliance discussions, and operator training are delegated to the Dutch integrator; the English-speaking founder conducts technical workshops and commissioning, developing B1/B2 Dutch over time.
+* **Reader Constraints:** €100,000 capital cap and Zaandam base are integrated realistically into travel and staging assumptions.
+
+### 8. Receipts
+* All 24 `<!-- CHECK: id -->` markers in the HTML match the 24 rows in `checks/claims/03.tsv`.
+* Inferences (`03-no-budget-proof`, `03-evis-channel`, `03-incumbent-inference`, `03-prices`, `03-stat-test`, `03-prospect-list`) are transparently labeled.
+
+### 9. Verdict and Kill Assumption
+* **Verdict:** `TEST THROUGH A PARTNER` is the exact verdict earned by the evidence (direct entry fails Dutch language and machinery-integration constraints).
+* **Kill Assumption:** Targets the central vulnerability: whether Vision Partners (or an equivalent integrator) will resell the module while conceding wholesale margin and data rights.
+
+### 10. Readability & Structure
+* All sentences are strictly under 40 words (maximum sentence length is 39 words).
+* Paragraphs are analytical, tightly scoped, and free of startup fluff or ungrounded jargon.
+
+---
+
+## 2. Findings Ranked by Severity
+
+### Finding 1 (Medium Severity): Stacked `CHECK` Markers Across Multi-Clause and Multi-Vendor Sentences (Rule 8)
+
+* **Quote 1 (Lines 40 & 102):**
+  > "Domino’s R-Series packages code validation with preconfigured cameras and lights, while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. `<!-- CHECK: 03-domino-range --><!-- CHECK: 03-videojet-system -->`"
+* **Quote 2 (Line 40):**
+  > "Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. `<!-- CHECK: 03-cognex-ocr --><!-- CHECK: 03-cognex-spec -->`"
+* **Quote 3 (Line 88):**
+  > "From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. `<!-- CHECK: 03-machinery-date --><!-- CHECK: 03-substantial-mod -->`"
+* **Quote 4 (Line 90):**
+  > "EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation—and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. `<!-- CHECK: 03-ehedg-principles --><!-- CHECK: 03-iso-hygiene -->`"
+* **Quote 5 (Line 101):**
+  > "Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. `<!-- CHECK: 03-packcheck-product --><!-- CHECK: 03-packcheck-case -->`"
+* **What the cited sources actually support:**
+  * `03-domino-range` supports Domino's product features, while `03-videojet-system` supports Videojet-Laetus. Stacking them at the end of the sentence breaks the rule that each marker immediately follows the specific claim it receipts.
+  * `03-cognex-ocr` supports the OCR use-case on page 6 of the datasheet; `03-cognex-spec` supports the hardware/interface specifications in the reference manual.
+  * `03-machinery-date` supports Article 54 of Regulation (EU) 2023/1230; `03-substantial-mod` supports Article 18.
+  * `03-ehedg-principles` supports the EHEDG congress abstract; `03-iso-hygiene` supports the ISO 14159 catalogue listing.
+  * `03-packcheck-product` supports Vi-Track features; `03-packcheck-case` supports the Vezet testimonial.
+* **Concrete Fix:** Split compound sentences or place the markers immediately after their respective clauses:
+  ```html
+  <!-- Fix 1: Inline placement for Domino and Videojet -->
+  Domino’s R-Series packages code validation with preconfigured cameras and lights, <!-- CHECK: 03-domino-range --> while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. <!-- CHECK: 03-videojet-system -->
+
+  <!-- Fix 2: Inline placement for Cognex -->
+  Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; <!-- CHECK: 03-cognex-ocr --> its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. <!-- CHECK: 03-cognex-spec -->
+
+  <!-- Fix 3: Inline placement for Machinery Regulation -->
+  From 20 January 2027 the EU Machinery Regulation applies, <!-- CHECK: 03-machinery-date --> and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. <!-- CHECK: 03-substantial-mod -->
+
+  <!-- Fix 4: Inline placement for EHEDG and ISO -->
+  EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation— <!-- CHECK: 03-ehedg-principles --> and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. <!-- CHECK: 03-iso-hygiene -->
+
+  <!-- Fix 5: Inline placement for PackCheck -->
+  Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; <!-- CHECK: 03-packcheck-product --> it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. <!-- CHECK: 03-packcheck-case -->
+  ```
+
+---
+
+### Finding 2 (Medium Severity): Missing Source Excerpt Text Files (Rule 8 / AGENT.md Pre-ship Test)
+
+* **Quote:** N/A (Missing directory [resources/sources/03/excerpts/](file:///home/diablo/book18/resources/sources/03/))
+* **What the cited source supports:** [AGENT.md](file:///home/diablo/book18/AGENT.md) dictates: *"A verified row without an excerpt is not verified."* While [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) Section 9 introduces excerpt files as a strict publishing requirement from Essay 6 onward, satisfying the full pre-ship test for the book requires preserving the exact cited passages locally. Currently, [checks/claims/03.tsv](file:///home/diablo/book18/checks/claims/03.tsv) contains 18 `verified` rows whose `source_locator` fields refer to section headers and page numbers rather than local `.txt` excerpt files.
+* **Concrete Fix:**
+  1. Create `resources/sources/03/excerpts/`.
+  2. Save verbatim extracts for the 18 verified claims (e.g., `nvwa-date-guidance.txt`, `directive-2011-91.txt`, `general-food-law-18-19.txt`, `nvwa-upfront-warning.txt`, `machinery-reg-54.txt`, `machinery-reg-18.txt`, `cognex-3800-ocr.txt`, `packcheck-vitrack.txt`, etc.).
+  3. Update the `source_locator` column in `checks/claims/03.tsv` to reference the excerpt files.
+
+---
+
+### Finding 3 (Low Severity): Stale Footer Text Referencing Five Candidates (Rule 1 & Readability)
+
+* **Quote (Line 152):**
+  > `<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>`
+* **What the cited source supports:** [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) Section 9 confirms that on 2026-09-02, the book expanded from five to seven essays (adding Grid-congestion hubs and EUDI wallets). The chapter kicker (`line 24`) correctly announces `"Essay 3 of 7"`, making the footer's `"Five candidates"` an outdated artifact.
+* **Concrete Fix:** Update `line 152` in `chapters/03-machine-vision-food.html`:
+  ```html
+  <footer class="site-footer"><div class="wrap"><p>Seven candidates. One second engine. Evidence before commitment.</p></div></footer>
+  ```
+
+---
+
+## 3. Verdict and Top Fixes
+
+**Verdict:** **REVISE**
+
+### The Three Fixes That Matter Most:
+1. **Unstack Multi-Claim `CHECK` Markers:** Move the stacked claim markers in lines 40, 88, 90, 101, and 102 so that each marker immediately follows its specific clause (distinguishing Domino vs. Videojet, Machinery application dates vs. substantial modifications, and EHEDG principles vs. ISO 14159).
+2. **Build the Local Excerpt Archive:** Populate `resources/sources/03/excerpts/` with the raw text extracts supporting all 18 verified rows and update `checks/claims/03.tsv` locators to ensure complete offline auditability.
+3. **Synchronize Footer Metadata:** Update the footer text from `"Five candidates"` to `"Seven candidates"` to maintain consistency across the expanded 7-chapter book.
+Here is the review of Essay 3 against the book's rules, ranked by severity.
+
+### Severity 1: Factual Falsehood (Rule 1)
+* **Rule:** Never false. Check dates against the cited primary sources.
+* **Quote:** "From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. `<!-- CHECK: 03-machinery-date -->`"
+* **What the source supports:** The cited primary source (`https://eur-lex.europa.eu/eli/reg/2023/1230/en`, Article 54) explicitly states: *"It shall apply from 14 January 2027."*
+* **Concrete fix:** Change "20 January 2027" to "14 January 2027" in the essay text and update the corresponding claim `03-machinery-date` in `checks/claims/03.tsv` to match.
+
+### Severity 1: Constraint Violation (Rule 7)
+* **Rule:** Reader constraints (A2 Dutch, no founder field work in Dutch) respected. 
+* **Quote:** "The partner owns the Dutch introduction and safety conversation; the founder can conduct the technical workshop in English and build B1/B2 Dutch for commissioning."
+* **What the source supports:** `CONTEXT.md` explicitly states that B1/B2 Dutch is a 1–2 year path, and the founder must not personally execute Dutch-language local field work. The essay expects the founder to "build B1/B2 Dutch" for early commissioning (which happens within the 90-day test window) and execute field work, violating both the timeline and the labor constraints.
+* **Concrete fix:** Revise the sentence to make it clear that the partner assumes all Dutch-language operator interactions and field work during commissioning, while the founder works purely in English. (e.g., *"The partner owns the Dutch introduction, safety conversation, and all Dutch-language field work during commissioning; the founder conducts technical workshops and engineering in English."*)
+
+### Severity 2: Missing Receipts (Rule 8)
+* **Rule:** Receipts: every verified row has an excerpt that says what the claim says.
+* **Quote:** N/A (Missing directory `resources/sources/03/excerpts/`)
+* **What the source supports:** Although `AGENT.md` states excerpts are required "From essay 6 onward", the pre-ship test rule 8 applied to this review demands that *every* verified row has an excerpt. Currently, the `source_locator` column in the TSV file points to generic section titles and articles, and no excerpt text files exist.
+* **Concrete fix:** Create the directory `resources/sources/03/excerpts/`, save the exact text passages from the URLs for all `verified` claims into text files, and update the `source_locator` column in `checks/claims/03.tsv` to point to these file slugs instead of plain text references.
+
+---
+
+### Verdict: REVISE
+
+**The three fixes that matter most:**
+1. Fix the EU Machinery Regulation application date to 14 January 2027 to eliminate the factual falsehood.
+2. Rewrite the commissioning language requirement to remove the founder's reliance on learning B1/B2 Dutch for immediate fieldwork, shifting that burden fully to the integrator partner.
+3. Generate and link the text excerpt files for all `verified` claims in the TSV ledger to comply with the strict receipting rule.
+
+codex
+The two reports already conflict on a central fact: one says the Machinery Regulation date is correct; the other says it is wrong. I’m resolving that from the cited official text rather than inheriting either reviewer’s conclusion, and I’m also checking whether the excerpt requirement actually applies to Essay 3.
+exec
+/bin/bash -lc "nl -ba chapters/03-machine-vision-food.html | sed -n '1,220p'" in /home/diablo/book18
+ succeeded in 247ms:
+     1	<!DOCTYPE html>
+     2	<html lang="en">
+     3	<head>
+     4	<meta charset="utf-8">
+     5	<meta name="viewport" content="width=device-width, initial-scale=1">
+     6	<title>Inspect the Date, Not “Food” — The Second Engine</title>
+     7	<meta name="description" content="A test of one repeatable machine-vision product: recipe-linked best-before and lot-code verification for sliced-cheese thermoform packs, sold through a Dutch integrator.">
+     8	<link rel="stylesheet" href="../static/style.css">
+     9	<script src="../static/theme.js"></script>
+    10	</head>
+    11	<body>
+    12	<header class="site-header">
+    13	  <div class="wrap">
+    14	    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    15	    <nav class="site-nav">
+    16	      <a href="../index.html">Contents</a>
+    17	      <a href="../about.html">Method</a>
+    18	      <button class="theme-toggle" type="button">☾ Dark</button>
+    19	    </nav>
+    20	  </div>
+    21	</header>
+    22	
+    23	<main class="wrap">
+    24	<p class="kicker">Essay 3 of 7 · A narrow machine-vision product for food packaging</p>
+    25	<h1>Inspect the date, not “food”</h1>
+    26	<p class="lede">The sale is not artificial intelligence. It is a stainless cell that rejects a sliced-cheese pack when the thermal-transfer best-before or lot code is missing, unreadable or different from the line recipe. The plant operations manager buys after a code escape, retailer corrective action or line change; a Dutch integrator installs and supports it. That boundary makes successive deliveries similar. It also puts the idea between formidable substitutes: printer makers already join code and camera, and local vision integrators already join camera, PLC, reject and dashboard. The opportunity earns a test only if a partner will resell a validated cheese-specific module without taking all the margin and learning.</p>
+    27	
+    28	<section class="proposition">
+    29	<h2>The proposition</h2>
+    30	<p>Build one thing: an end-of-line verifier for <strong>black thermal-transfer best-before and lot codes on the glossy top film of single-file sliced-cheese thermoform packs</strong>. It sits after cutting and singulation, while the food is sealed. A monochrome camera reads the two fields, compares them with the expected strings supplied by the production recipe, and sends a pack identity and pass/fail result to the line PLC. A confirmed reject removes a failure into a locked bin. The cell stores the image, expected value, decoded value, recipe revision, decision and reject confirmation.</p>
+    31	<p>The buyer is the plant operations manager at a private-label cheese slicer or co-packer. Quality writes the acceptance criteria; engineering and IT approve the connection; operations owns the downtime and signs. The purchase event is not “interest in AI.” It is a documented wrong-date or missing-code escape that requires corrective action, or a printer, labeler or line replacement that creates a funded change window.</p>
+    32	<p>This business refuses five adjacent jobs: seal contamination, wrong-film artwork, barcode grading, foreign bodies and cheese defects. It does not supply a universal vision platform, rewrite the plant’s MES, act as the machine’s conformity assessor or promise that a camera prevents recalls. Each refusal preserves a repeatable field of view, defect vocabulary and acceptance test. If a buyer needs all five inspections, PackCheck, Vision Partners or a broad integrator is the honest answer.</p>
+    33	<p>The default substitute is the operator’s start-up sample plus periodic quality checks. The stronger substitute is a vision option from the printer vendor or existing line integrator. The proposed company therefore sells neither labour nor components. It sells a pre-engineered optical/mechanical module, a demanding validation pack, and continuing evidence that the recipe, optics and reject path remain in control.</p>
+    34	</section>
+    35	
+    36	<section class="changed">
+    37	<h2>What changed</h2>
+    38	<p>The obligation is old, not an approaching regulatory wave. Dutch NVWA guidance says durability information must be readable and findable; highly perishable foods use a use-by date and other foods a minimum-durability or best-before date. <!-- CHECK: 03-date-duty --> EU rules separately require a lot indication for food, with specified exemptions, and place it on the prepackaging or attached label when food is prepacked. <!-- CHECK: 03-lot-duty --> General Food Law requires traceability systems and requires a food business operator that believes food is unsafe to initiate withdrawal procedures once it has left the operator’s immediate control. <!-- CHECK: 03-trace-withdraw --> None of those texts says “buy machine vision.” They establish the consequence and leave the control method to the operator.</p>
+    39	<p>The failure is real. In December 2025 the NVWA published a safety warning after one retailer sold pita packs without a durability date and wraps printed with 5 December 2026 instead of 5 December 2025. <!-- CHECK: 03-real-warning --> That is evidence that missing and wrong dates can pass through production and reach consumers. It is not evidence that Dutch cheese packers will spend €52,000 on this proposed cell. <!-- CHECK: 03-no-budget-proof --> Payment has to be discovered.</p>
+    40	<p>The practical change is that the component stack has become product-like. Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. <!-- CHECK: 03-cognex-ocr --><!-- CHECK: 03-cognex-spec --> Domino’s R-Series packages code validation with preconfigured cameras and lights, while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. <!-- CHECK: 03-domino-range --><!-- CHECK: 03-videojet-system --> These are not proof that the proposed cheese module wins. They mean the founder need not invent OCR—and cannot claim OCR as a moat.</p>
+    41	<p>Buyer pain, legal duty and budget remain separate. A plant may accept manual checks because escapes are rare, buy a printer-integrated camera during the next replacement, or ask its incumbent integrator to add a smart camera. The first paid diagnostic must reveal the frequency and cost of holds, rework, retailer claims and code-related nonconformities at one line. Without those numbers, the regulation is merely atmosphere.</p>
+    42	</section>
+    43	
+    44	<section class="sale">
+    45	<h2>The first sale</h2>
+    46	<p>The first offer is <strong>CodeProof, a fixed €3,500 feasibility and loss diagnostic</strong>. This is a required test price, not an observed market price. Over one production shift and the following cleaning window, the work records pack sizes and spacing, line speed, printer and ribbon, code zones, recipes, PLC family, network policy, available reject length, reject-bin practice and every manual check. The customer supplies 500 representative packs and deliberately bad samples. Bench work compares two lighting geometries and returns a short specification: defect classes, optical layout, I/O map, reject concept, sanitation boundary, validation sample, downtime estimate and fixed cell quotation. It also returns “do not automate” when the defect rate and consequence cannot support the cell.</p>
+    47	<p>The diagnostic is not credited against the build. Crediting turns evidence into free presales engineering. Its purchaser receives a useful line-control specification even if another integrator builds it. The operations manager signs; the quality manager owns the defect labels; the partner integrator attends the line survey because it will later own mechanics, PLC, safety and first-line support.</p>
+    48	<p>The initial screen contains ten names: Royal A-ware, Vergeer Holland, Vandersterre, CONO Kaasmakers, FrieslandCampina, Royal Lactalis Leerdammer, Bouter Cheese, Kaas-Pack Holland, Henri Willig and Vepo Cheese. This is an outreach list, not a claim that any has an unprotected matching line or buying intent. <!-- CHECK: 03-prospect-list --> A partner first checks public pack format and its own installed-base knowledge, then asks the plant operations manager one question: “Show us the last code-related hold, customer complaint or audit action, and what it cost.” Five conversations with no dated event end the segment test early.</p>
+    49	<p>Acquisition should begin through one Dutch packaging or vision integrator, not by the English-speaking founder cold-calling factory floors. The first named channel test is Vision Partners: ask whether it will put a white-label cheese-code module inside EVIS while retaining the mechanics, PLC and customer scope. EVIS’s published integrations make the overlap—and therefore the risk of a quick no—explicit. <!-- CHECK: 03-evis-channel --> The partner owns the Dutch introduction and safety conversation; the founder can conduct the technical workshop in English and build B1/B2 Dutch for commissioning. Zaandam is useful for travel, not a sales advantage. A business that still needs the founder to interpret rapid Dutch operator discussion at customer twenty has failed its own scale test.</p>
+    50	</section>
+    51	
+    52	<section class="economics">
+    53	<h2>Does the money work?</h2>
+    54	<p>No comparable Dutch turnkey price was found in public documentation, so every number below is a hurdle. The customer price must survive a quote against Domino, Videojet-Laetus and local integrators; the company must survive after the channel has been paid. The model assumes the integrator owns the customer contract for mechanics, PLC, machinery conformity and first-line service, while the new company invoices the integrator for the optical module, software, validation and second-line support.</p>
+    55	
+    56	<div class="table-wrap"><table>
+    57	<thead><tr><th>Offer</th><th>End-customer price hurdle</th><th>Company revenue</th><th>Direct cost at replacement rates</th><th>Contribution</th></tr></thead>
+    58	<tbody>
+    59	<tr><td>CodeProof diagnostic</td><td>€3,500</td><td>€2,800 after 20% partner share</td><td>€1,200 labour/travel</td><td>€1,600</td></tr>
+    60	<tr><td>Inspection cell</td><td>€52,000</td><td>€35,000 wholesale</td><td>€18,000 hardware/assembly; €6,000 delivery labour; €1,500 warranty reserve</td><td>€9,500</td></tr>
+    61	<tr><td>Evidence service</td><td>€6,000/year</td><td>€4,500 after partner share</td><td>€1,700 support labour, cloud and spares</td><td>€2,800</td></tr>
+    62	</tbody>
+    63	</table></div>
+    64	<p>The €52,000 is not “a camera.” It includes the partner’s conveyor changes, guarded reject, wiring, PLC program, risk assessment work, installation and first response. If a standard printer-linked camera solves the job for materially less, the proposal loses and should lose. The €9,500 contribution is only 18% of the end-customer price—27% of wholesale revenue—and two revisits can erase it. The acceptance test and physical interfaces must therefore prevent open-ended commissioning.</p>
+    65	
+    66	<div class="table-wrap"><table>
+    67	<thead><tr><th>Company model</th><th>Year 1: learn</th><th>Mature year: prove scale</th></tr></thead>
+    68	<tbody>
+    69	<tr><td>Volume</td><td>6 diagnostics; 3 cells; 3 service contracts</td><td>12 diagnostics; 12 cells; 36 service contracts</td></tr>
+    70	<tr><td>Revenue</td><td>€135,300</td><td>€615,600</td></tr>
+    71	<tr><td>Pass-through hardware, assembly and warranty</td><td>€58,500</td><td>€234,000</td></tr>
+    72	<tr><td>Delivery/support labour at replacement cost</td><td>€30,300</td><td>€147,600</td></tr>
+    73	<tr><td>Gross contribution</td><td>€46,500</td><td>€234,000</td></tr>
+    74	<tr><td>Founder role at replacement cost</td><td>€65,000</td><td>€100,000</td></tr>
+    75	<tr><td>Other operating cost</td><td>€47,000</td><td>€60,000</td></tr>
+    76	<tr><td>Retained result before company tax</td><td>−€65,500</td><td>€74,000</td></tr>
+    77	</tbody>
+    78	</table></div>
+    79	<p>All volumes, prices and costs are designed arithmetic, not market facts. <!-- CHECK: 03-prices --> Year one is intentionally a loss after charging the founder’s labour: it buys proof, not owner income. The mature design pays €100,000 for the founder role and retains €74,000 before company tax. That clears the reader’s income gate without pretending the owner works free.</p>
+    80	<p>The working-capital rule is 50% of the company’s wholesale price at order, 40% after factory acceptance and 10% after site acceptance. A €17,500 deposit almost covers the assumed €18,000 hardware and assembly bill for one cell; two overlapping builds still require cash. After evidence, the maximum €100,000 allocation is €28,000 for a pre-production/demo cell and test packs, €32,000 working capital, €15,000 for insurance/legal/conformity documentation, €8,000 already spent on discovery and €17,000 contingency. No inventory beyond one critical-spares kit is justified until three paid installations pass.</p>
+    81	</section>
+    82	
+    83	<section class="scale">
+    84	<h2>From service to company</h2>
+    85	<h3>How the cell works—and how it is accepted</h3>
+    86	<p>The pack crosses a photoelectric trigger on a controlled single-file conveyor. A global-shutter monochrome camera freezes motion. Cross-polarised diffuse illumination suppresses specular glare from top film; a second low-angle light is tested only when embossed or wrinkled film defeats the first geometry. Lens and working distance are selected from the actual field of view so the thinnest character stroke has enough pixels at the fastest line speed. Those are recipe parameters, not settings an operator improvises.</p>
+    87	<p>The algorithm first locates the print zone from stable pack features, then separates three questions. Presence asks whether ink exists in the expected region. OCR decodes the date and lot. Verification compares the decoded strings with values received from the authoritative line recipe, including allowed date arithmetic and format. “No read,” stale recipe, communications loss and low confidence all fail closed: reject this pack or stop after a configured sequence. A merely present, beautifully legible wrong date must fail.</p>
+    88	<p>The PLC—not cloud software—tracks the pack from camera to reject. A pusher or air blast removes it; a downstream sensor confirms departure; bin-full, missed trigger, unconfirmed reject or encoder discrepancy stops the line. The integrator owns that deterministic state machine, guarding and restart behaviour. From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. <!-- CHECK: 03-machinery-date --><!-- CHECK: 03-substantial-mod --> That is why the vision company does not casually splice into a safety circuit or claim that a CE-marked camera makes a CE-compliant cell.</p>
+    89	<p>Acceptance starts with a jointly signed defect taxonomy: missing print; stale or future date; transposed digit; incomplete character; weak contrast; smear; double print; displacement; glare; wrinkle; condensation; wrong lot format. The factory test runs 3,000 labelled defect images with zero misses, then a site test runs at least 100 physical challenge packs through trigger, decision, tracking and confirmed reject. A 10,000-good-pack production run must stay below the agreed false-reject rate—initial hurdle 0.2%—without bypass. Zero misses in an image library does not prove zero field risk, especially when images from one run are correlated. <!-- CHECK: 03-stat-test --> Results are reported by film, ribbon, line speed and defect class, not as one flattering accuracy percentage.</p>
+    90	<p>Cleaning belongs in the design review. EU hygiene rules require relevant equipment and its installation to permit cleaning and, where necessary, disinfection. <!-- CHECK: 03-hygiene-law --> EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation—and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. <!-- CHECK: 03-ehedg-principles --><!-- CHECK: 03-iso-hygiene --> Even downstream of sealed food, the cell needs sloped stainless surfaces, accessible belt removal, sealed cable entries and documented chemical/temperature limits. An IP67 camera component is not a washdown design. The diagnostic observes the real cleaning method before selecting enclosure, connectors or fasteners.</p>
+    91	
+    92	<h3>First, fifth, twentieth</h3>
+    93	<p><strong>Customer one</strong> consumes the founder. A rented camera and two lights go to the lab; the partner fabricates a one-off bracket and reject; the founder labels defects, tunes every region and stands through both shifts. The deliverable is not just a working cell. It is the first bill of materials, interface control document, defect library, FAT/SAT script, sanitation checklist, recipe schema and support runbook.</p>
+    94	<p><strong>Customer five</strong> gets one of two standard conveyor widths, a fixed camera-to-pack envelope, prewired cabinet, versioned PLC handshakes for the two PLC families actually encountered, and a commissioning fixture that can replay triggers. The partner handles mechanical and electrical installation from drawings. A trained vision engineer performs most recipe work; the founder attends acceptance only for an exception. New film, ribbon, printer head or code format becomes a paid qualification, not free support.</p>
+    95	<p><strong>Customer twenty</strong> arrives through a partner’s installed base. The partner performs survey, installation, Dutch operator training and first response. The company ships a tested module, reviews acceptance evidence remotely and handles optical/software escalation. Recurrence follows real state changes: new private-label SKUs, artwork and film changes, printer/ribbon changes, cleaning damage, lighting drift and retailer audit evidence. The accumulating asset is the consented, anonymised defect image set joined to film, lighting, lens, printer, speed and acceptance result—not generic “AI data.”</p>
+    96	<p>The twentieth delivery is only materially different if written partner certification lets another person do most of it. Annual service without new SKUs, changed equipment, drift or evidence review is an invented annuity and should not be billed. At 36 supported lines, one support engineer plus partner first response is a design assumption to measure; if the founder still debugs night shifts, the mature economics are fiction.</p>
+    97	</section>
+    98	
+    99	<section class="competition">
+   100	<h2>The incumbent gets a turn</h2>
+   101	<p>PackCheck is not a hypothetical future rival. Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. <!-- CHECK: 03-packcheck-product --><!-- CHECK: 03-packcheck-case --> Vision Partners’ EVIS covers date, barcode, text and seal checks and connects to labeling software, MES and PLCs. <!-- CHECK: 03-evis-product --> Both are Dutch, local and broader than this proposal.</p>
+   102	<p>Above them sit the printer vendors. Domino’s R-Series joins printers, cameras and lighting and offers to test a customer’s code on its product before commitment. <!-- CHECK: 03-domino-range-competition --> Videojet-Laetus already offers OCR/OCV, best-before and lot checks, printer synchronisation, SKU management, IP67 camera configurations and diffuse or polarised lighting. <!-- CHECK: 03-videojet-system-competition --> Below them sits the internal automation engineer with a Cognex or Keyence sensor. Taken together, these products cover nearly every functional box in the proposed cell; a generic OCR offer has no credible wedge. <!-- CHECK: 03-incumbent-inference --></p>
+   103	<p>An incumbent response requires no new product. The printer vendor bundles vision into a replacement quote and uses one job setup for print and inspect. The local integrator copies the narrow validation script into its broader platform, adds film and seal inspection, and keeps the customer. The customer’s automation team accepts slightly more false rejects because the camera cost is small and support is already on site.</p>
+   104	<p>Dutch integrators become channels only through a deliberately subordinate deal. The partner owns the end customer, mechanical and PLC scope, machinery-risk work, Dutch training and first-line SLA. The new company publishes a wholesale price, never sells directly into the partner’s registered accounts, supplies the code-specific module and validation, and receives contractual access to anonymised defect and performance data. The partner keeps roughly one-third of the end price in the hurdle model. If a partner will introduce prospects but refuses data rights, margin transparency or non-circumvention, it is not a channel; it is using free specialist presales before internalising the job.</p>
+   105	</section>
+   106	
+   107	<div class="counter">
+   108	<h2>The capable failure</h2>
+   109	<p>The team executes well. Two cheese packers pay for diagnostics. The optical design passes on glossy film, the reject path survives site acceptance, operators like the evidence log, and a respected Dutch integrator sells five cells. Then the integrator learns which dome, lens and thresholds work, while Domino supplies a printer-linked camera in the next fleet refresh. Customers prefer one service number and one recipe entry. The partner recreates the defect checklist in its existing platform and offers seal and film checks alongside the date for a modest premium. It honours every contract, simply stops ordering the module.</p>
+   110	<p>Nothing was stolen. OCR components were available, the acceptance procedure was observable, and five installations did not create enough diverse labelled failures to make the data asset indispensable. The founder built a competent subcontracted feature whose distributor owned acquisition, integration, service and trust. Good engineering accelerated the partner’s learning. This is the central structural risk, not “poor sales”: the channel required for language and scale is also the party best placed to capture the margin.</p>
+   111	</div>
+   112	
+   113	<section class="monday">
+   114	<h2>The first ninety days</h2>
+   115	<ol>
+   116	<li><strong>Write the one-page boundary.</strong> Fix pack form, printer technology, two fields, line position, maximum speed range, fail-closed behaviour and exclusions. Ask PackCheck, Vision Partners and one packaging-line service firm which sentence makes the offer redundant.</li>
+   117	<li><strong>Secure one channel experiment.</strong> Offer Vision Partners first—then at most one other integrator—registered-account protection, 20% of diagnostics, a target wholesale schedule and first-line ownership. Require access to anonymised test/performance data and attendance at buyer interviews. No signed experiment by day 30 means no equipment purchase.</li>
+   118	<li><strong>Run ten event interviews.</strong> Use the named screen, but continue only with plants that can produce a dated code escape, hold, complaint, audit action or upcoming line change. Record frequency, affected units, labour, downtime, retailer consequence, current control and signer. Do not pitch during the evidence half.</li>
+   119	<li><strong>Sell two CodeProof diagnostics at €3,500 each.</strong> Payment, not a letter of interest, is the demand test. Rent camera, lens and lights; use customer packs; quote the €52,000 cell only after the defect and integration envelope is known.</li>
+   120	<li><strong>Challenge the mechanism.</strong> Build the labelled defect set, compare lighting geometries, replay recipe mismatches and test the physical reject states with the partner. Produce the signed acceptance protocol and a fixed bill of materials before quoting.</li>
+   121	<li><strong>Apply the gate.</strong> Spend at most €8,000 before evidence. Pass only if one integrator signs the channel experiment, two independent packers pay full diagnostic price, at least one line meets the optical test, and one buyer gives a conditional order at the price hurdle subject to site acceptance. Kill if any element is absent by day 90, if more than two optical/mechanical variants are needed, or if the partner will not leave the company the modelled margin and data rights.</li>
+   122	</ol>
+   123	</section>
+   124	
+   125	<div class="verdict-box">
+   126	<h2>Verdict</h2>
+   127	<p class="verdict">TEST THROUGH A PARTNER</p>
+   128	<p>The single assumption that would most change the verdict is that Vision Partners, or one equivalent Dutch integrator, will repeatedly resell the narrow module while leaving its maker both the required wholesale contribution and rights to the validation data. Test that before the camera.</p>
+   129	</div>
+   130	
+   131	<div class="reading">
+   132	<h2>Reading</h2>
+   133	<ul>
+   134	<li>European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&amp;uri=CELEX%3A32011R1169">Regulation (EU) No 1169/2011</a>, Article 24 and Annex X; and <a href="https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng">Directive 2011/91/EU</a>, Articles 1–4.</li>
+   135	<li>NVWA, <a href="https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen">“Houdbaarheidsdatum op levensmiddelen”</a> and the <a href="https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps">19 December 2025 Upfront safety warning</a>.</li>
+   136	<li>European Union, <a href="https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng">Regulation (EC) No 852/2004</a>, Annex II, on hygiene and cleanability.</li>
+   137	<li>ISO, <a href="https://www.iso.org/standard/23748.html">ISO 14159:2002</a>; EHEDG, <a href="https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman">the five hygienic-design principles</a>.</li>
+   138	<li>European Union, <a href="https://eur-lex.europa.eu/eli/reg/2023/1230/en">Regulation (EU) 2023/1230 on machinery</a>, Articles 18 and 54.</li>
+   139	<li>Cognex, <a href="https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf">In-Sight 3800 datasheet</a> and <a href="https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2">current specifications</a>.</li>
+   140	<li>Domino, <a href="https://www.domino-printing.com/en-us/products/r-series">R-Series code inspection</a>; Videojet-Laetus, <a href="https://www.videojet.com/us/homepage/products/vision-systems.html">inline vision systems</a>.</li>
+   141	<li>PackCheck, <a href="https://packcheck.nl/vitrack-platform/">Vi-Track Platform</a>; Vision Partners, <a href="https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/">EVIS</a>.</li>
+   142	</ul>
+   143	</div>
+   144	
+   145	<nav class="chapter-nav" aria-label="Essay navigation">
+   146	  <a href="02-white-label-product-security.html">← Previous</a>
+   147	  <a href="../index.html">Contents</a>
+   148	  <a href="04-asset-intelligence.html">Next →</a>
+   149	</nav>
+   150	</main>
+   151	
+   152	<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+   153	</body>
+   154	</html>
+
+exec
+/bin/bash -lc 'nl -ba checks/claims/03.tsv && nl -ba resources/sources/03/SOURCES.md && nl -ba drafts/reviews/03-pro.md' in /home/diablo/book18
+ succeeded in 277ms:
+     1	id	claim	source_url	source_locator	status
+     2	03-date-duty	Dutch guidance says prepacked food generally needs a readable, findable durability date; highly perishable food uses a use-by date and other food a best-before date.	https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen	Sections "Vermeld houdbaarheid leesbaar en vindbaar", "Uiterste consumptiedatum", and "Minimale houdbaarheid"	verified
+     3	03-lot-duty	Directive 2011/91/EU generally prohibits marketing food without a lot indication, subject to listed exemptions, and requires the indication on prepackaging or its label.	https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng	Articles 1-4	verified
+     4	03-trace-withdraw	EU General Food Law Article 18 requires traceability systems and Article 19 requires withdrawal procedures when a food business operator believes food is unsafe.	https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R0178	Articles 18-19	verified
+     5	03-real-warning	The NVWA published a December 2025 safety warning after pita packs lacked a durability date and wrap packs showed 2026 instead of 2025.	https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps	Warning dated 19 December 2025	verified
+     6	03-no-budget-proof	A public warning proves that date-code escapes occur and can have consequences, but does not prove that cheese packers will buy this proposed module.	https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps	Author inference from the warning; no purchasing evidence in source	inference
+     7	03-hygiene-law	Regulation 852/2004 requires food premises and relevant equipment to permit adequate cleaning and, where necessary, disinfection; equipment is to be installed to allow cleaning around it.	https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng	Annex II, Chapters I, II and V	verified
+     8	03-ehedg-principles	EHEDG describes material compatibility, cleanability, drainability, accessibility and segregation as five hygienic-design principles.	https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman	Session description "Hygienic Design Is a Decision, Not a Detail"	verified
+     9	03-iso-hygiene	ISO 14159:2002 is a published standard specifying hygiene requirements for machines used where consumer hygiene risks can occur; ISO lists it as current but under revision.	https://www.iso.org/standard/23748.html	Abstract, status and lifecycle	verified
+    10	03-cognex-ocr	Cognex markets In-Sight 3800 for reading food-and-beverage lot codes and expiration dates on uneven surfaces.	https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf	Page 6, OCR examples	verified
+    11	03-cognex-spec	The In-Sight 3800 documentation lists global-shutter monochrome variants, discrete I/O, Ethernet and IP67 protection when correctly assembled.	https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2	Image sensor and system specifications	verified
+    12	03-domino-range	Domino's R-Series supports code validation, preconfigured camera/lighting options and integration with coding systems; Domino says its sample lab tests customer code and product before commitment.	https://www.domino-printing.com/en-us/products/r-series	Range comparison and FAQ	verified
+    13	03-domino-range-competition	Domino's R-Series supports code validation, preconfigured camera/lighting options and integration with coding systems; Domino says its sample lab tests customer code and product before commitment.	https://www.domino-printing.com/en-us/products/r-series	Range comparison and FAQ; repeated claim in competition section	verified
+    14	03-videojet-system	Videojet-Laetus offers systems for best-before and lot-code presence, OCR/OCV, printer synchronisation and SKU management, with IP67 cameras and polarized or diffuse lighting options.	https://www.videojet.com/us/homepage/products/vision-systems.html	Product features and technical specification table	verified
+    15	03-videojet-system-competition	Videojet-Laetus offers systems for best-before and lot-code presence, OCR/OCV, printer synchronisation and SKU management, with IP67 cameras and polarized or diffuse lighting options.	https://www.videojet.com/us/homepage/products/vision-systems.html	Product features and technical specification table; repeated claim in competition section	verified
+    16	03-packcheck-product	PackCheck's Vi-Track product advertises recipe-controlled THT inspection, API control, eject integration and a web dashboard.	https://packcheck.nl/vitrack-platform/	Sections "Volledig modulair recept beheer", "Tenminste Houdbaar Tot", and platform composition	verified
+    17	03-packcheck-case	PackCheck says Vezet selected it to inspect film, codes and labels on vegetable bagging lines and provide inspection results in a web dashboard.	https://packcheck.nl/	Customer testimonial headed "Ons proces nog beter geborgd"	verified
+    18	03-evis-product	Vision Partners' EVIS supports date, barcode, text and seal checks and integration with labeling software, MES and PLCs.	https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/	"Possible applications" and integration bullets	verified
+    19	03-evis-channel	Vision Partners' published EVIS integrations overlap the proposed module's surrounding labeling, MES and PLC scope, making it a concrete but conflicted channel candidate.	https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/	Author inference from EVIS product scope	inference
+    20	03-incumbent-inference	The named printer vendors and Dutch integrators already cover most functional elements of the proposed inspection cell, so a generic OCR system has no credible product wedge.	https://packcheck.nl/vitrack-platform/	Author inference, cross-checked against Domino, Videojet-Laetus and EVIS product pages	inference
+    21	03-machinery-date	The consolidated EU Machinery Regulation says Regulation 2023/1230 applies from 20 January 2027.	https://eur-lex.europa.eu/eli/reg/2023/1230/en	Article 54, consolidated version dated 29 May 2026	verified
+    22	03-substantial-mod	Under Regulation 2023/1230, a person carrying out a substantial modification is treated as a manufacturer and bears conformity-assessment obligations for the affected machinery.	https://eur-lex.europa.eu/eli/reg/2023/1230/oj	Article 18	verified
+    23	03-prices	All prices, costs, volumes, margins, sample sizes and financial projections in the essay are author-designed validation hurdles, not observed market prices or market facts.	author-model	Tables "Required unit economics" and "Company model" plus the 90-day test	inference
+    24	03-stat-test	Zero misses in 3,000 deliberately defective images is an engineering acceptance hurdle, not a claim that field false-accept probability is zero; correlated production conditions limit probabilistic interpretation.	author-model	Section "How the cell works—and how it is accepted"	inference
+    25	03-prospect-list	The ten company names are an outreach screen, not claims that those companies use an unprotected matching line or have expressed buying intent.	author-model	Section "The first sale"	inference
+     1	# Essay 3 — source index
+     2	
+     3	Accessed 2026-09-01 unless noted. Vendor statements below document current product positioning and capabilities; they are not treated as independent proof of performance or customer savings.
+     4	
+     5	## Law and official guidance
+     6	
+     7	1. **European Union, Regulation (EU) No 1169/2011 on food information to consumers.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX%3A32011R1169). Article 24 and Annex X support the distinction between use-by and minimum-durability dates and the required date form.
+     8	2. **NVWA, “Houdbaarheidsdatum op levensmiddelen.”** [Guidance](https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen). Supports the Dutch-language operational summary: durability dates must be readable and findable; explains use-by versus best-before.
+     9	3. **European Union, Directive 2011/91/EU on indications identifying the lot to which a foodstuff belongs.** [Official text](https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng). Articles 1–4 support the lot-indication claim and its exemptions.
+    10	4. **European Union, Regulation (EC) No 178/2002, General Food Law.** [Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R0178). Articles 18–19 support traceability and withdrawal responsibilities.
+    11	5. **NVWA, “Veiligheidswaarschuwing Upfront Pita’s en Wraps,” 19 December 2025.** [Warning](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps). Concrete Dutch example of missing and wrong durability dates reaching sale; used as consequence evidence, not willingness-to-pay evidence.
+    12	6. **European Union, Regulation (EC) No 852/2004 on the hygiene of foodstuffs.** [Official text](https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng). Annex II supports cleaning, disinfection and installation requirements relevant to a cell on a food line.
+    13	7. **European Union, Regulation (EU) 2023/1230 on machinery.** [Current consolidated text](https://eur-lex.europa.eu/eli/reg/2023/1230/en) and [original Official Journal text](https://eur-lex.europa.eu/eli/reg/2023/1230/oj). Article 18 and Article 54 support the substantial-modification duty and 20 January 2027 application date. This essay does not give conformity advice; the channel integrator must scope it for each installation.
+    14	
+    15	## Hygienic and technical references
+    16	
+    17	8. **ISO, ISO 14159:2002, “Safety of machinery — Hygiene requirements for the design of machinery.”** [Catalogue and abstract](https://www.iso.org/standard/23748.html). Establishes the scope of the current published machinery-hygiene standard and notes that revision is under way.
+    18	9. **EHEDG, “Hygienic Design Is a Decision, Not a Detail,” 2026 World Congress session description.** [Page](https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman). Concise authoritative statement of the five hygienic-design principles used in the essay.
+    19	10. **Cognex, In-Sight 3800 datasheet and current reference manual.** [Datasheet](https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf); [specifications](https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2). Supports the component-level claims about OCR applications, global shutter, I/O and environmental rating. A component rating is not acceptance of the whole cell.
+    20	
+    21	## Named competitors and substitutes
+    22	
+    23	11. **Domino, R-Series code inspection system.** [Product page](https://www.domino-printing.com/en-us/products/r-series). Supports claims about printer-linked validation, preconfigured cameras and lighting, code/product sample testing and the breadth of the R-Series range.
+    24	12. **Videojet-Laetus, inline vision systems.** [Product page and specifications](https://www.videojet.com/us/homepage/products/vision-systems.html). Supports claims about OCR/OCV, best-before and lot inspection, printer synchronisation, SKU control, lighting options and IP67 camera specification.
+    25	13. **PackCheck, Vi-Track Platform.** [Product page](https://packcheck.nl/vitrack-platform/) and [company/customer page](https://packcheck.nl/). Supports the current Dutch competitive product description and PackCheck’s published Vezet customer account.
+    26	14. **Vision Partners, EVIS Label Packaging Inspection System.** [Product page](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/). Supports the current Dutch competitive product description: date/barcode/text/seal inspection and MES/PLC/label-software integration.
+    27	
+    28	## Deliberately not used as market facts
+    29	
+    30	- No market-size report, analyst forecast or unsourced installed-base estimate is used.
+    31	- No public source found a Dutch market price for a comparable turnkey cell. Every euro amount in the essay is therefore labelled as a required price, cost assumption or test budget.
+    32	- Vendor claims that inspection “prevents recalls” or guarantees correctness are not repeated as outcomes. The essay treats validation results and paid buyer evidence as still missing.
+     1	Here is the review of Essay 3 against the book's rules, ranked by severity.
+     2	
+     3	### Severity 1: Factual Falsehood (Rule 1)
+     4	* **Rule:** Never false. Check dates against the cited primary sources.
+     5	* **Quote:** "From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. `<!-- CHECK: 03-machinery-date -->`"
+     6	* **What the source supports:** The cited primary source (`https://eur-lex.europa.eu/eli/reg/2023/1230/en`, Article 54) explicitly states: *"It shall apply from 14 January 2027."*
+     7	* **Concrete fix:** Change "20 January 2027" to "14 January 2027" in the essay text and update the corresponding claim `03-machinery-date` in `checks/claims/03.tsv` to match.
+     8	
+     9	### Severity 1: Constraint Violation (Rule 7)
+    10	* **Rule:** Reader constraints (A2 Dutch, no founder field work in Dutch) respected. 
+    11	* **Quote:** "The partner owns the Dutch introduction and safety conversation; the founder can conduct the technical workshop in English and build B1/B2 Dutch for commissioning."
+    12	* **What the source supports:** `CONTEXT.md` explicitly states that B1/B2 Dutch is a 1–2 year path, and the founder must not personally execute Dutch-language local field work. The essay expects the founder to "build B1/B2 Dutch" for early commissioning (which happens within the 90-day test window) and execute field work, violating both the timeline and the labor constraints.
+    13	* **Concrete fix:** Revise the sentence to make it clear that the partner assumes all Dutch-language operator interactions and field work during commissioning, while the founder works purely in English. (e.g., *"The partner owns the Dutch introduction, safety conversation, and all Dutch-language field work during commissioning; the founder conducts technical workshops and engineering in English."*)
+    14	
+    15	### Severity 2: Missing Receipts (Rule 8)
+    16	* **Rule:** Receipts: every verified row has an excerpt that says what the claim says.
+    17	* **Quote:** N/A (Missing directory `resources/sources/03/excerpts/`)
+    18	* **What the source supports:** Although `AGENT.md` states excerpts are required "From essay 6 onward", the pre-ship test rule 8 applied to this review demands that *every* verified row has an excerpt. Currently, the `source_locator` column in the TSV file points to generic section titles and articles, and no excerpt text files exist.
+    19	* **Concrete fix:** Create the directory `resources/sources/03/excerpts/`, save the exact text passages from the URLs for all `verified` claims into text files, and update the `source_locator` column in `checks/claims/03.tsv` to point to these file slugs instead of plain text references.
+    20	
+    21	---
+    22	
+    23	### Verdict: REVISE
+    24	
+    25	**The three fixes that matter most:**
+    26	1. Fix the EU Machinery Regulation application date to 14 January 2027 to eliminate the factual falsehood.
+    27	2. Rewrite the commissioning language requirement to remove the founder's reliance on learning B1/B2 Dutch for immediate fieldwork, shifting that burden fully to the integrator partner.
+    28	3. Generate and link the text excerpt files for all `verified` claims in the TSV ledger to comply with the strict receipting rule.
+
+exec
+/bin/bash -lc "nl -ba drafts/reviews/03-flash.md | sed -n '1,240p'" in /home/diablo/book18
+ succeeded in 227ms:
+     1	# Review: Chapter 03 — *Inspect the Date, Not “Food”* (`chapters/03-machine-vision-food.html`)
+     2	
+     3	An exhaustive audit of Essay 03 against [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) (Sections 1–7), [AGENT.md](file:///home/diablo/book18/AGENT.md) (priority stack and pre-ship test), and the chapter claim ledger [03.tsv](file:///home/diablo/book18/checks/claims/03.tsv).
+     4	
+     5	---
+     6	
+     7	## 1. Audit Against the 10 Core Criteria
+     8	
+     9	### 1. Never False
+    10	* **Legal & Regulatory Status:** All cited legal frameworks are strictly distinguished between enacted law and upcoming application dates:
+    11	  * *Regulation (EU) No 1169/2011* (Article 24 & Annex X) and *Directive 2011/91/EU* (Articles 1–4) are correctly cited as existing duties.
+    12	  * *Regulation (EU) 2023/1230* (Machinery Regulation) is accurately stated as applying from **20 January 2027** (Article 54), with substantial modification rules (Article 18) correctly scoped.
+    13	* **Pricing & Validation Hurdles:** All prices (€3,500 diagnostic, €52,000 cell, €6,000/yr service) are explicitly qualified as required test hurdles and unit-cost assumptions, never passed off as observed market facts.
+    14	* **Minor Inconsistency:** The footer (`line 152`) states *"Five candidates"* despite the book's expansion to seven essays.
+    15	
+    16	### 2. Buyer and Purchase Event
+    17	* **Payer:** Plant Operations Manager at a private-label cheese slicer or co-packer (with Quality setting acceptance criteria and IT/Engineering signing off on connectivity).
+    18	* **Purchase Event:** A documented wrong-date or missing-code escape requiring corrective action (e.g., following retailer rejection), or an upcoming printer/labeler/line replacement creating a funded change window.
+    19	* **Demand vs. Regulation:** The NVWA December 2025 pita/wrap date escape warning is explicitly treated as proof of operational consequence, while noting that willingness to pay for machine vision remains unproven until paid diagnostic discovery.
+    20	
+    21	### 3. Economics
+    22	* **Labor & Owner Separation:** The financial model explicitly isolates:
+    23	  * Wholesale revenue (€35,000 per cell; €2,800 per diagnostic; €4,500/yr per service contract).
+    24	  * Direct hardware/assembly/warranty pass-through (€19,500 per cell).
+    25	  * Subcontracted delivery & support labor at replacement cost (€6,000 per cell; €1,200 per diagnostic; €1,700/yr per contract).
+    26	  * Founder labor at market replacement cost (€65,000 Year 1; €100,000 mature year).
+    27	  * Retained earnings before corporate tax (−€65,500 Year 1; €74,000 mature year).
+    28	* **Working Capital & Balance Sheet:** Working capital mechanics are concrete (50% deposit on order covers the €18,000 hardware bill). Capital deployment from the €100,000 investor budget is cleanly accounted for (€28,000 demo cell/packs, €32,000 working capital, €15,000 documentation/compliance, €8,000 discovery, €17,000 contingency).
+    29	* **Arithmetic:** 100% internally consistent across unit contributions and company-level models.
+    30	
+    31	### 4. Scalability
+    32	* **Repeatable Acquisition:** Customer 20 is acquired via a partner integrator's installed base rather than founder cold-calling.
+    33	* **Teachable Delivery:** Standardized conveyor widths, fixed optical envelopes, prewired cabinets, versioned PLC handshake blocks, and FAT/SAT checklists allow integrator technicians and trained vision engineers to execute delivery without founder attendance.
+    34	* **Recurring Value:** Grounded in tangible operational state changes (private-label SKU additions, film/artwork revisions, ribbon/printer head swaps, optical drift, audit re-validation).
+    35	* **Accumulating Asset:** A proprietary defect image library mapped to packaging film, lighting geometry, printer type, line speed, and validation results.
+    36	
+    37	### 5. Incumbents and Capture
+    38	* **Competitor Grounding:** Incumbents are treated fairly from their own primary product documentation:
+    39	  * **Domino R-Series:** Printer-vision integration and sample testing lab.
+    40	  * **Videojet-Laetus:** Integrated OCR/OCV, IP67 camera options, and SKU control.
+    41	  * **PackCheck (Vi-Track):** Recipe-controlled THT verification, ejection, and Vezet case study.
+    42	  * **Vision Partners (EVIS):** Date/seal/barcode inspection with MES/PLC integration.
+    43	* **Margin Capture Risk:** Directly addressed. Integrators have the relationships, local presence, and PLC capabilities; printer OEMs have single-vendor procurement appeal.
+    44	
+    45	### 6. Capable Failure
+    46	* **Failure Mechanism:** Avoids straw-man "poor execution." The founder delivers high-quality optical modules across five successful installations; the integrator learns the illumination geometries and software thresholds, while printer vendors bundle inline vision during line refreshes; the integrator expands its own platform to absorb date checking and stops ordering the module without breaching contracts.
+    47	
+    48	### 7. Dutch-Language Dependence & Reader Constraints
+    49	* **Language Strategy:** Cold factory floor outreach, safety compliance discussions, and operator training are delegated to the Dutch integrator; the English-speaking founder conducts technical workshops and commissioning, developing B1/B2 Dutch over time.
+    50	* **Reader Constraints:** €100,000 capital cap and Zaandam base are integrated realistically into travel and staging assumptions.
+    51	
+    52	### 8. Receipts
+    53	* All 24 `<!-- CHECK: id -->` markers in the HTML match the 24 rows in `checks/claims/03.tsv`.
+    54	* Inferences (`03-no-budget-proof`, `03-evis-channel`, `03-incumbent-inference`, `03-prices`, `03-stat-test`, `03-prospect-list`) are transparently labeled.
+    55	
+    56	### 9. Verdict and Kill Assumption
+    57	* **Verdict:** `TEST THROUGH A PARTNER` is the exact verdict earned by the evidence (direct entry fails Dutch language and machinery-integration constraints).
+    58	* **Kill Assumption:** Targets the central vulnerability: whether Vision Partners (or an equivalent integrator) will resell the module while conceding wholesale margin and data rights.
+    59	
+    60	### 10. Readability & Structure
+    61	* All sentences are strictly under 40 words (maximum sentence length is 39 words).
+    62	* Paragraphs are analytical, tightly scoped, and free of startup fluff or ungrounded jargon.
+    63	
+    64	---
+    65	
+    66	## 2. Findings Ranked by Severity
+    67	
+    68	### Finding 1 (Medium Severity): Stacked `CHECK` Markers Across Multi-Clause and Multi-Vendor Sentences (Rule 8)
+    69	
+    70	* **Quote 1 (Lines 40 & 102):**
+    71	  > "Domino’s R-Series packages code validation with preconfigured cameras and lights, while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. `<!-- CHECK: 03-domino-range --><!-- CHECK: 03-videojet-system -->`"
+    72	* **Quote 2 (Line 40):**
+    73	  > "Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. `<!-- CHECK: 03-cognex-ocr --><!-- CHECK: 03-cognex-spec -->`"
+    74	* **Quote 3 (Line 88):**
+    75	  > "From 20 January 2027 the EU Machinery Regulation applies, and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. `<!-- CHECK: 03-machinery-date --><!-- CHECK: 03-substantial-mod -->`"
+    76	* **Quote 4 (Line 90):**
+    77	  > "EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation—and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. `<!-- CHECK: 03-ehedg-principles --><!-- CHECK: 03-iso-hygiene -->`"
+    78	* **Quote 5 (Line 101):**
+    79	  > "Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. `<!-- CHECK: 03-packcheck-product --><!-- CHECK: 03-packcheck-case -->`"
+    80	* **What the cited sources actually support:**
+    81	  * `03-domino-range` supports Domino's product features, while `03-videojet-system` supports Videojet-Laetus. Stacking them at the end of the sentence breaks the rule that each marker immediately follows the specific claim it receipts.
+    82	  * `03-cognex-ocr` supports the OCR use-case on page 6 of the datasheet; `03-cognex-spec` supports the hardware/interface specifications in the reference manual.
+    83	  * `03-machinery-date` supports Article 54 of Regulation (EU) 2023/1230; `03-substantial-mod` supports Article 18.
+    84	  * `03-ehedg-principles` supports the EHEDG congress abstract; `03-iso-hygiene` supports the ISO 14159 catalogue listing.
+    85	  * `03-packcheck-product` supports Vi-Track features; `03-packcheck-case` supports the Vezet testimonial.
+    86	* **Concrete Fix:** Split compound sentences or place the markers immediately after their respective clauses:
+    87	  ```html
+    88	  <!-- Fix 1: Inline placement for Domino and Videojet -->
+    89	  Domino’s R-Series packages code validation with preconfigured cameras and lights, <!-- CHECK: 03-domino-range --> while Videojet-Laetus combines OCR/OCV, printer synchronisation and SKU control. <!-- CHECK: 03-videojet-system -->
+    90	
+    91	  <!-- Fix 2: Inline placement for Cognex -->
+    92	  Cognex currently presents In-Sight 3800 as able to read food-and-beverage lot and expiry codes on uneven surfaces; <!-- CHECK: 03-cognex-ocr --> its documentation lists global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection when correctly assembled. <!-- CHECK: 03-cognex-spec -->
+    93	
+    94	  <!-- Fix 3: Inline placement for Machinery Regulation -->
+    95	  From 20 January 2027 the EU Machinery Regulation applies, <!-- CHECK: 03-machinery-date --> and a party making a substantial modification can be treated as the manufacturer with conformity obligations for the affected machinery. <!-- CHECK: 03-substantial-mod -->
+    96	
+    97	  <!-- Fix 4: Inline placement for EHEDG and ISO -->
+    98	  EHEDG describes five principles—material compatibility, cleanability, drainability, accessibility and segregation— <!-- CHECK: 03-ehedg-principles --> and ISO 14159 covers hygiene requirements for machinery used where consumer risk can arise. <!-- CHECK: 03-iso-hygiene -->
+    99	
+   100	  <!-- Fix 5: Inline placement for PackCheck -->
+   101	  Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; <!-- CHECK: 03-packcheck-product --> it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines. <!-- CHECK: 03-packcheck-case -->
+   102	  ```
+   103	
+   104	---
+   105	
+   106	### Finding 2 (Medium Severity): Missing Source Excerpt Text Files (Rule 8 / AGENT.md Pre-ship Test)
+   107	
+   108	* **Quote:** N/A (Missing directory [resources/sources/03/excerpts/](file:///home/diablo/book18/resources/sources/03/))
+   109	* **What the cited source supports:** [AGENT.md](file:///home/diablo/book18/AGENT.md) dictates: *"A verified row without an excerpt is not verified."* While [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) Section 9 introduces excerpt files as a strict publishing requirement from Essay 6 onward, satisfying the full pre-ship test for the book requires preserving the exact cited passages locally. Currently, [checks/claims/03.tsv](file:///home/diablo/book18/checks/claims/03.tsv) contains 18 `verified` rows whose `source_locator` fields refer to section headers and page numbers rather than local `.txt` excerpt files.
+   110	* **Concrete Fix:**
+   111	  1. Create `resources/sources/03/excerpts/`.
+   112	  2. Save verbatim extracts for the 18 verified claims (e.g., `nvwa-date-guidance.txt`, `directive-2011-91.txt`, `general-food-law-18-19.txt`, `nvwa-upfront-warning.txt`, `machinery-reg-54.txt`, `machinery-reg-18.txt`, `cognex-3800-ocr.txt`, `packcheck-vitrack.txt`, etc.).
+   113	  3. Update the `source_locator` column in `checks/claims/03.tsv` to reference the excerpt files.
+   114	
+   115	---
+   116	
+   117	### Finding 3 (Low Severity): Stale Footer Text Referencing Five Candidates (Rule 1 & Readability)
+   118	
+   119	* **Quote (Line 152):**
+   120	  > `<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>`
+   121	* **What the cited source supports:** [CONTEXT.md](file:///home/diablo/book18/CONTEXT.md) Section 9 confirms that on 2026-09-02, the book expanded from five to seven essays (adding Grid-congestion hubs and EUDI wallets). The chapter kicker (`line 24`) correctly announces `"Essay 3 of 7"`, making the footer's `"Five candidates"` an outdated artifact.
+   122	* **Concrete Fix:** Update `line 152` in `chapters/03-machine-vision-food.html`:
+   123	  ```html
+   124	  <footer class="site-footer"><div class="wrap"><p>Seven candidates. One second engine. Evidence before commitment.</p></div></footer>
+   125	  ```
+   126	
+   127	---
+   128	
+   129	## 3. Verdict and Top Fixes
+   130	
+   131	**Verdict:** **REVISE**
+   132	
+   133	### The Three Fixes That Matter Most:
+   134	1. **Unstack Multi-Claim `CHECK` Markers:** Move the stacked claim markers in lines 40, 88, 90, 101, and 102 so that each marker immediately follows its specific clause (distinguishing Domino vs. Videojet, Machinery application dates vs. substantial modifications, and EHEDG principles vs. ISO 14159).
+   135	2. **Build the Local Excerpt Archive:** Populate `resources/sources/03/excerpts/` with the raw text extracts supporting all 18 verified rows and update `checks/claims/03.tsv` locators to ensure complete offline auditability.
+   136	3. **Synchronize Footer Metadata:** Update the footer text from `"Five candidates"` to `"Seven candidates"` to maintain consistency across the expanded 7-chapter book.
+
+web search: 
+web search: https://eur-lex.europa.eu/eli/reg/2023/1230/en
+web search: 
+web search: site:eur-lex.europa.eu Regulation EU 2023/1230 Article 54 apply 20 January 2027 ...
+exec
+/bin/bash -lc "curl -L --max-time 20 -sS 'https://eur-lex.europa.eu/eli/reg/2023/1230/en' | rg -o -m 5 '.{0,120}(20 January 2027|14 January 2027).{0,120}'" in /home/diablo/book18
+ exited 1 in 293ms:
+curl: (6) Could not resolve host: eur-lex.europa.eu
+
+web search: 
+web search: Regulation EU 2023/1230 Article 54 application date 20 January 2027
+web search: 
+web search: site:eur-lex.europa.eu/eli/reg/2023/1230 Article 18 substantial modification treated manufacturer conformity assessment obligations affected machinery ...
+exec
+/bin/bash -lc "python - <<'PY'
+from html.parser import HTMLParser
+import re
+p='chapters/03-machine-vision-food.html'
+class P(HTMLParser):
+ def __init__(self): super().__init__(); self.parts=[]
+ def handle_data(self,d): self.parts.append(d)
+h=P(); h.feed(open(p).read()); txt=' '.join(h.parts)
+txt=re.sub(r'\\s+',' ',txt)
+ss=re.split(r'(?<=[."'!?])'"\\s+(?=[A-Z“\\\"€])',txt)
+rows=[]
+for s in ss:
+ w=re.findall(r\"\\b[\\w€−–'’/-]+\\b\",s)
+ if len(w)>35: rows.append((len(w),s))
+for n,s in sorted(rows,reverse=True): print(n, s)
+PY" in /home/diablo/book18
+ exited 127 in 402ms:
+/bin/bash: line 1: python: command not found
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+from html.parser import HTMLParser
+import re
+p='chapters/03-machine-vision-food.html'
+class P(HTMLParser):
+ def __init__(self): super().__init__(); self.parts=[]
+ def handle_data(self,d): self.parts.append(d)
+h=P(); h.feed(open(p).read()); txt=' '.join(h.parts)
+txt=re.sub(r'\\s+',' ',txt)
+ss=re.split(r'(?<=[."'!?])'"\\s+(?=[A-Z“\\\"€])',txt)
+rows=[]
+for s in ss:
+ w=re.findall(r\"\\b[\\w€−–'’/-]+\\b\",s)
+ if len(w)>35: rows.append((len(w),s))
+for n,s in sorted(rows,reverse=True): print(n, s)
+PY" in /home/diablo/book18
+ succeeded in 349ms:
+90 Offer End-customer price hurdle Company revenue Direct cost at replacement rates Contribution CodeProof diagnostic €3,500 €2,800 after 20% partner share €1,200 labour/travel €1,600 Inspection cell €52,000 €35,000 wholesale €18,000 hardware/assembly; €6,000 delivery labour; €1,500 warranty reserve €9,500 Evidence service €6,000/year €4,500 after partner share €1,700 support labour, cloud and spares €2,800 The €52,000 is not “a camera.” It includes the partner’s conveyor changes, guarded reject, wiring, PLC program, risk assessment work, installation and first response.
+89 Company model Year 1: learn Mature year: prove scale Volume 6 diagnostics; 3 cells; 3 service contracts 12 diagnostics; 12 cells; 36 service contracts Revenue €135,300 €615,600 Pass-through hardware, assembly and warranty €58,500 €234,000 Delivery/support labour at replacement cost €30,300 €147,600 Gross contribution €46,500 €234,000 Founder role at replacement cost €65,000 €100,000 Other operating cost €47,000 €60,000 Retained result before company tax −€65,500 €74,000 All volumes, prices and costs are designed arithmetic, not market facts.
+46 A partner first checks public pack format and its own installed-base knowledge, then asks the plant operations manager one question: “Show us the last code-related hold, customer complaint or audit action, and what it cost.” Five conversations with no dated event end the segment test early.
+44 Verdict TEST THROUGH A PARTNER The single assumption that would most change the verdict is that Vision Partners, or one equivalent Dutch integrator, will repeatedly resell the narrow module while leaving its maker both the required wholesale contribution and rights to the validation data.
+42 The accumulating asset is the consented, anonymised defect image set joined to film, lighting, lens, printer, speed and acceptance result—not generic “AI data.” The twentieth delivery is only materially different if written partner certification lets another person do most of it.
+39 Pass only if one integrator signs the channel experiment, two independent packers pay full diagnostic price, at least one line meets the optical test, and one buyer gives a conditional order at the price hurdle subject to site acceptance.
+37 Over one production shift and the following cleaning window, the work records pack sizes and spacing, line speed, printer and ribbon, code zones, recipes, PLC family, network policy, available reject length, reject-bin practice and every manual check.
+36 Its Vi-Track material advertises recipe-controlled THT inspection, API control, ejection and a web dashboard; it also publishes a customer account in which Vezet selected the company to inspect film, codes and labels on vegetable bagging lines.
+36 After evidence, the maximum €100,000 allocation is €28,000 for a pre-production/demo cell and test packs, €32,000 working capital, €15,000 for insurance/legal/conformity documentation, €8,000 already spent on discovery and €17,000 contingency.
+36  Inspect the Date, Not “Food” — The Second Engine The Second Engine Contents Method ☾ Dark Essay 3 of 7 · A narrow machine-vision product for food packaging Inspect the date, not “food” The sale is not artificial intelligence.
+
+exec
+/bin/bash -lc "for s in \\
+'The single assumption that would most change the verdict is that Vision Partners, or one equivalent Dutch integrator, will repeatedly resell the narrow module while leaving its maker both the required wholesale contribution and rights to the validation data.' \\
+'The accumulating asset is the consented, anonymised defect image set joined to film, lighting, lens, printer, speed and acceptance result—not generic “AI data.”' \\
+'A partner first checks public pack format and its own installed-base knowledge, then asks the plant operations manager one question: “Show us the last code-related hold, customer complaint or audit action, and what it cost.”'; do printf '%s\\n' \""'$s" | wc -w; done' in /home/diablo/book18
+ succeeded in 247ms:
+39
+23
+35
+
+exec
+/bin/bash -lc "rg -o '<"'!-- CHECK: [''^ ]+ -->'"' chapters/03-machine-vision-food.html | sort | uniq -c && printf 'markers '; rg -o '<"'!-- CHECK: [''^ ]+ -->'"' chapters/03-machine-vision-food.html | wc -l && printf 'rows '; tail -n +2 checks/claims/03.tsv | wc -l && printf 'words '; sed -n '24,129p' chapters/03-machine-vision-food.html | sed 's/<["'^>]*>/ /g'"' | wc -w" in /home/diablo/book18
+ succeeded in 282ms:
+      1 <!-- CHECK: 03-cognex-ocr -->
+      1 <!-- CHECK: 03-cognex-spec -->
+      1 <!-- CHECK: 03-date-duty -->
+      1 <!-- CHECK: 03-domino-range -->
+      1 <!-- CHECK: 03-domino-range-competition -->
+      1 <!-- CHECK: 03-ehedg-principles -->
+      1 <!-- CHECK: 03-evis-channel -->
+      1 <!-- CHECK: 03-evis-product -->
+      1 <!-- CHECK: 03-hygiene-law -->
+      1 <!-- CHECK: 03-incumbent-inference -->
+      1 <!-- CHECK: 03-iso-hygiene -->
+      1 <!-- CHECK: 03-lot-duty -->
+      1 <!-- CHECK: 03-machinery-date -->
+      1 <!-- CHECK: 03-no-budget-proof -->
+      1 <!-- CHECK: 03-packcheck-case -->
+      1 <!-- CHECK: 03-packcheck-product -->
+      1 <!-- CHECK: 03-prices -->
+      1 <!-- CHECK: 03-prospect-list -->
+      1 <!-- CHECK: 03-real-warning -->
+      1 <!-- CHECK: 03-stat-test -->
+      1 <!-- CHECK: 03-substantial-mod -->
+      1 <!-- CHECK: 03-trace-withdraw -->
+      1 <!-- CHECK: 03-videojet-system -->
+      1 <!-- CHECK: 03-videojet-system-competition -->
+markers 24
+rows 24
+words 3104
+
+web search: 
+web search: site:nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen "leesbaar" "vindbaar" ...
+web search: 
+web search: site:eur-lex.europa.eu/eli/reg/2004/852/oj/eng Annex II equipment installed allow adequate cleaning disinfection ...
+web search: 
+web search: site:docs.cognex.com/isvs_2530/is3800-manual In-Sight 3800 specifications global shutter monochrome discrete IO Ethernet IP67 ...
+web search: 
+web search: site:visionpartners.nl/en/products/evis-label-packaging-inspection-system date barcode text seal labeling software MES PLC ...
+web search: 
+web search: https://packcheck.nl/
+web search: 
+web search: 
+web search: 
+web search: site:docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/ "Protection" "IP67" "Discrete Inputs" ...
+web search: 
+web search: site:docs.baslerweb.com global shutter motion blur exposure time ...
+exec
+/bin/bash -lc "rg --files scripts | sort && rg -n \"claims|CHECK|html|word|sentence|link\" scripts -g '*.sh' -g '*.py' -g '*.js'" in /home/diablo/book18
+ succeeded in 256ms:
+scripts/draft-codex.sh
+scripts/prompts/essay-brief.md
+scripts/prompts/review-checklist.md
+scripts/review.sh
+scripts/draft-codex.sh:11:    if ls chapters/$n-*.html >/dev/null 2>&1; then echo "chapter $n exists; done" >> "$log"; exit 0; fi
+scripts/draft-codex.sh:18:ls chapters/$n-*.html >/dev/null 2>&1 && echo "chapter $n exists; done" >> "$log" || echo "no chapter $n after retries" >> "$log"
+scripts/review.sh:2:# scripts/review.sh NN — panel review of chapters/NN-*.html.
+scripts/review.sh:10:f=$(ls chapters/${n}-*.html 2>/dev/null | head -1); [ -n "$f" ] || { echo "no chapters/${n}-*.html"; exit 1; }
+scripts/review.sh:22:Read CONTEXT.md, AGENT.md, the chapter, checks/claims/$n.tsv, resources/sources/$n/, and both reports. Be adversarial toward
+
+codex
+The regulation conflict is resolved: the current corrected/consolidated EU text says 20 January 2027, so the “14 January” review finding is wrong. I’ve also found a separate receipt defect the reviewers missed: the Cognex URL in the ledger only contains sensor specifications, not the I/O, Ethernet, and IP67 facts attributed to it.
+exec
+/bin/bash -lc "nl -ba CONTEXT.md | sed -n '18,100p' && nl -ba AGENT.md | sed -n '15,68p' && nl -ba scripts/prompts/review-checklist.md" in /home/diablo/book18
+ succeeded in 256ms:
+    18	technology, a buyer with an expensive consequence, and a delivery model that begins with
+    19	expert service but can become recurring, teachable, and productised.
+    20	
+    21	The candidates are not recommendations. Each is a hypothesis subjected to the same
+    22	sequence inherited from Book 4, *The Going Concern*:
+    23	
+    24	**demand -> payment -> economics -> operations -> resilience**
+    25	
+    26	An essay passes only if it can identify all five. A large market is not demand; a legal duty
+    27	is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+    28	not protection from competition.
+    29	
+    30	## 2. Reader and fixed assumptions
+    31	
+    32	- About forty, ten-plus years in enterprise full-stack development.
+    33	- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+    34	- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+    35	  the founder personally to win and execute Dutch-language local field work.
+    36	- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+    37	- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+    38	- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+    39	
+    40	## 3. Economic gate
+    41	
+    42	Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+    43	before personal tax, after operating expenses, with enough retained cash that the company is
+    44	not emptied to pay its owner. Figures must separate:
+    45	
+    46	- revenue;
+    47	- pass-through hardware or subcontracting;
+    48	- gross margin;
+    49	- operating costs;
+    50	- owner labour at replacement cost;
+    51	- recurring revenue;
+    52	- working capital and capital expenditure.
+    53	
+    54	Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+    55	as a market fact. Market prices require sources or live buyer evidence.
+    56	
+    57	## 4. Scalability test
+    58	
+    59	"Later a platform" is not evidence. Each essay must say what concretely changes between the
+    60	first and twentieth customer. Score the option against four tests:
+    61	
+    62	1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+    63	   depend solely on the founder's personal network.
+    64	2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+    65	   written playbook.
+    66	3. **Recurring value:** some work recurs because the customer's state changes, not because an
+    67	   annual report was artificially invented.
+    68	4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+    69	   workflow or distribution becomes more valuable with use.
+    70	
+    71	An expert practice is a legitimate outcome, but it must not be called a scalable company.
+    72	
+    73	## 5. Evidence and honesty rules
+    74	
+    75	- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+    76	  European Commission, Dutch government, regulators, standards bodies).
+    77	- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+    78	  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+    79	- Competition: name existing vendors and the substitute, including internal implementation.
+    80	- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+    81	- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+    82	  and a row in `checks/claims/NN.tsv`.
+    83	- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+    84	  from practical enforcement.
+    85	- Each essay must make the strongest case against itself. If the case cannot be answered,
+    86	  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+    87	- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+    88	  publisher, date accessed, and the claim supported.
+    89	
+    90	## 6. Essay contracts
+    91	
+    92	### 1. Connected Product Compliance Operations
+    93	
+    94	Test a managed operation combining the Cyber Resilience Act and Data Act for European
+    95	connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+    96	platform. The essay must define one initial customer segment, identify the exact recurring
+    97	state changes, distinguish legal interpretation from technical implementation, and test
+    98	whether a small manufacturer will buy an external operating function rather than a one-off
+    99	consultant or generic GRC tool.
+   100	
+    15	   this purchase outrank other work.
+    16	3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+    17	   and owner income are separate.
+    18	4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+    19	   accumulates. Never use "platform" as a magic word.
+    20	5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+    21	   uncertainty and partner capture belong in the main argument.
+    22	6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+    23	   resigning or buying the full equipment stack.
+    24	
+    25	## Research rules
+    26	
+    27	- Browse because laws, deadlines, standards, products and competitors are current.
+    28	- Prefer primary sources for law and technical requirements.
+    29	- For competitors, use their own product documentation and pricing where published; label
+    30	  marketing claims as marketing claims.
+    31	- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+    32	- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+    33	  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+    34	  `inference`, or `open`. HTML may ship only with no `open` claims.
+    35	- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+    36	- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+    37	  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+    38	  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+    39	  not verified.
+    40	- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+    41	  concise paraphrases are normally enough.
+    42	
+    43	## Voice
+    44	
+    45	Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+    46	or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+    47	case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+    48	
+    49	## Required challenge
+    50	
+    51	Each essay must contain at least one credible path by which capable execution still loses. This
+    52	is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+    53	post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+    54	
+    55	## Pre-ship test
+    56	
+    57	1. Can the reader name the buyer, purchase event and substitute?
+    58	2. Is demand evidence distinct from regulation and market size?
+    59	3. Does the economic model pay replacement-cost labour and still reach the owner target?
+    60	4. Is the twentieth delivery visibly different from the first?
+    61	5. Does the essay name why an incumbent, partner or customer might capture the margin?
+    62	6. Is Dutch-language dependence stated for this exact channel?
+    63	7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+    64	8. Are all external claims receipted and all arithmetic labelled?
+    65	
+    66	## Coordination
+    67	
+    68	Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+     1	Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+     2	stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+     3	cited source (excerpt file or URL) actually supports, and give a concrete fix.
+     4	
+     5	1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+     6	   hurdle as market price? Check dates against the cited primary sources.
+     7	2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+     8	   regulation standing in for demand?
+     9	3. Economics: does the model pay replacement-cost labour, working capital and the owner
+    10	   separately, and is the arithmetic internally consistent?
+    11	4. Scalability: is the twentieth customer concretely different from the first, or is
+    12	   "platform" doing the work?
+    13	5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+    14	   the margin-capture risk by partner or customer confronted?
+    15	6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+    16	7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+    17	   EUR 100k, no founder field work in Dutch) respected.
+    18	8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+    19	   an excerpt that says what the claim says; inference rows are honest about what they infer.
+    20	9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+    21	10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+    22	
+    23	End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+
+codex
+**Verdict: REVISE — the business argument is strong, but one technical sentence is false, one verified receipt is incomplete, and validation/liability need tightening before publication.**
+
+## Ranked consolidated findings
+
+### 1. Medium — Global shutter does not itself “freeze motion”
+
+> “A global-shutter monochrome camera freezes motion.” ([chapter line 86](/home/diablo/book18/chapters/03-machine-vision-food.html:86))
+
+A global shutter exposes all sensor rows together, avoiding rolling-shutter distortion. Motion blur still depends on exposure duration, object speed, magnification and available illumination. Cognex’s own documentation says shorter exposure durations are what stop motion.
+
+Fix: replace with something like:
+
+> “A global shutter avoids line-by-line distortion; sufficiently short exposure, supported by adequate or strobed illumination, limits motion blur at line speed.”
+
+Add a CHECK row and cite the [Cognex exposure documentation](https://docs.cognex.com/isvidi_150/web/EN/Help_ISViDi/Content/Topics/Spreadsheet/VisionTools/AcquireImage.htm).
+
+### 2. Medium — `03-cognex-spec` is only partially verified
+
+> “...global-shutter monochrome sensors, discrete I/O, Ethernet and IP67 protection...” ([chapter line 40](/home/diablo/book18/chapters/03-machine-vision-food.html:40))
+
+The ledger URL for [`03-cognex-spec`](/home/diablo/book18/checks/claims/03.tsv:11) opens only the image-sensor table. It supports monochrome variants and global shutter, but contains nothing about discrete I/O, Ethernet or IP67. Those facts are true, but not verified by the recorded URL.
+
+Fix: split the claim or add Cognex’s [system-specifications page](https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm), which actually lists the I/O, Ethernet and conditional IP67 rating. Also receipt or remove the otherwise unsupported Keyence mention at chapter line 102.
+
+### 3. Medium — False-accept liability is absent from the economics
+
+The chapter assigns the integrator mechanics, PLC work, machinery conformity and the end-customer contract, while the new company owns optical/software validation and second-line support. It budgets only €1,500 per cell as a warranty reserve.
+
+No passage says who pays when a software or optical false accept contributes to a retailer claim, product hold, withdrawal or recall. “We do not promise to prevent recalls” is sensible positioning, but does not prevent contractual claims from the integrator.
+
+Fix: add the proposed liability boundary, indemnity/cap assumptions, required product/professional-liability cover, and an insurance quote or explicit validation hurdle. Stress-test the mature result against one material claim rather than treating two commissioning revisits as the largest downside.
+
+### 4. Medium — The acceptance test lacks an independent holdout design
+
+> “The factory test runs 3,000 labelled defect images with zero misses, then a site test runs at least 100 physical challenge packs...” ([chapter line 89](/home/diablo/book18/chapters/03-machine-vision-food.html:89))
+
+The chapter correctly warns that correlated images do not establish zero field risk, but still makes “zero misses” the FAT gate without saying whether the 3,000 images are independent of tuning. The 100 physical packs are not allocated across the twelve defect classes, films, speeds or print conditions.
+
+Fix: specify an untouched holdout set, minimum trials per defect class and condition, provenance separation from tuning data, and separately reported false-accept and false-reject confidence bounds.
+
+### 5. Low — Stale five-candidate footer
+
+> “Five candidates. One second engine.” ([chapter line 152](/home/diablo/book18/chapters/03-machine-vision-food.html:152))
+
+This conflicts with “Essay 3 of 7” and the current seven-essay book structure.
+
+Fix: change “Five” to “Seven.”
+
+## Reviewer findings adjudicated
+
+| Reviewer finding | Status | Verification |
+|---|---|---|
+| Flash: food-date, lot, traceability and hygiene claims are accurate | **CONFIRMED** | The cited [NVWA guidance](https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen), [lot directive](https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng), General Food Law and hygiene regulation support the restrained wording. |
+| Flash: Machinery Regulation applies from 20 January 2027 | **CONFIRMED** | The corrected consolidated text says 20 January 2027. The original 14 January date was corrected by the [official corrigendum](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1230R%2801%29). |
+| Pro: 20 January is false and must become 14 January | **REJECTED** | The reviewer relied on the uncorrected original text and misreported it as the current consolidated text. Both the chapter and ledger are correct. |
+| Flash: prices are clearly labelled as hurdles | **CONFIRMED** | The €3,500 offer is explicitly “not an observed market price”; line 79 labels all modeled volumes, prices and costs. |
+| Flash: buyer and purchase event are named | **CONFIRMED** | Plant operations manager and code escape/corrective action or funded equipment change are explicit. |
+| Flash: buyer/event are proven plausible | **UNVERIFIABLE** | No buyer interview, procurement or cheese-packer payment evidence exists. The chapter honestly treats this as the 90-day demand test. |
+| Flash: demand is separated from regulation | **CONFIRMED** | The chapter explicitly says the NVWA warning is not evidence of willingness to pay. |
+| Flash: economic arithmetic is internally consistent | **CONFIRMED** | Unit revenue, direct costs, mature revenue, €234,000 contribution and €74,000 retained result all recalculate correctly; the €100,000 capital allocation also sums correctly. |
+| Flash: working capital is sufficient | **UNVERIFIABLE** | The deposit arithmetic is correct, but sufficiency depends on payment timing, VAT, claims, commissioning overruns and overlapping builds. It remains a design assumption. |
+| Flash: the first/fifth/twentieth-customer model addresses scalability | **CONFIRMED** | Acquisition, teachable delivery, recurring state changes and the accumulating data asset are all concretely described. |
+| Flash: that scaling model will work operationally | **UNVERIFIABLE** | Partner certification, one-engineer support capacity and access to usable anonymised data are expressly untested assumptions. |
+| Flash: competitors are treated fairly | **CONFIRMED** | The descriptions match current vendor material from [Domino](https://www.domino-printing.com/en-us/products/r-series), [Videojet-Laetus](https://www.videojet.com/us/homepage/products/vision-systems.html), [PackCheck](https://packcheck.nl/vitrack-platform/) and [Vision Partners](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/). |
+| Flash: margin capture is confronted | **CONFIRMED** | The partner-copying mechanism is the chapter’s central capable-failure case rather than a footnote. |
+| Flash: capable failure is non-straw-man | **CONFIRMED** | It assumes successful engineering and sales, then failure through channel learning and bundling. |
+| Flash: Dutch-language dependence is delegated appropriately | **CONFIRMED** | The partner owns Dutch introduction, safety discussion, training and first response. |
+| Pro: the founder must achieve B1/B2 and perform Dutch commissioning inside 90 days | **REJECTED** | The chapter says the founder can work in English and “build” Dutch; it does not require B1/B2 within 90 days. The 90-day plan contains diagnostics and mechanism testing, not a completed production commissioning. The wording “for commissioning” is ambiguous and could still be clarified. |
+| Flash: 24 markers match 24 ledger rows | **CONFIRMED** | Mechanical count confirms one marker for every ledger ID and no orphan row. |
+| Flash: inference rows are honestly labelled | **CONFIRMED** | All six cited inference rows are marked `inference`. This does not cure the incomplete Cognex verified receipt noted above. |
+| Flash and Pro: Essay 3 must have local excerpt files | **REJECTED** | Both reviewers omit the controlling qualifier in [AGENT.md](/home/diablo/book18/AGENT.md:36): excerpt files are mandatory “From essay 6 onward.” The generic checklist wording is overbroad for Essay 3. |
+| Flash: stacked CHECK markers violate the immediate-placement rule | **REJECTED** | [AGENT.md](/home/diablo/book18/AGENT.md:35) permits a marker after the factual sentence or paragraph; it does not demand clause-level placement. Moreover, line 102 does not stack markers at all. Splitting compound claims may improve auditability, but it is not a rule violation. |
+| Flash: stale footer | **CONFIRMED** | The chapter and CONTEXT now describe seven essays. |
+| Flash: all sentences are under 40 words | **CONFIRMED** | Mechanical inspection found a maximum of 39 words. |
+| Flash: prose is entirely free of readability problems | **UNVERIFIABLE** | This is subjective; no material wall-paragraph or jargon problem was found. |
+| Flash: `TEST THROUGH A PARTNER` and its kill assumption are earned | **CONFIRMED** | The evidence supports bounded partner-led testing, not investment or direct entry. The partner-margin/data-rights assumption is correctly made the gate. |
+
+## Three fixes that matter most
+
+1. Correct and receipt the global-shutter/motion-blur explanation.
+2. Repair `03-cognex-spec` and audit the remaining unmarked technical/competitor assertions.
+3. Add independent validation criteria and an explicit false-accept liability/insurance model.
+
+**Final verdict: REVISE.**
+tokens used
+150,176

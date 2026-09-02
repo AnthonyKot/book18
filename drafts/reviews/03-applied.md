@@ -1,0 +1,5 @@
+1. Replaced the false “global shutter freezes motion” sentence: global exposure now addresses line-by-line distortion, while short exposure and adequate or strobed illumination address motion blur; added Cognex shutter and exposure receipts.
+2. Split `03-cognex-spec`: the sensor page now carries global-shutter monochrome variants, and the current system-specifications page carries discrete I/O, Ethernet and conditional IP67; removed the unsupported Keyence mention.
+3. Added the false-accept liability boundary, reciprocal indemnity scope, proposed per-cell and rolling-annual caps, required €2 million professional/product cover, exclusions check, and mature-result stress against one €100,000 uninsured claim.
+4. Rebuilt acceptance around a separately sourced untouched holdout, explicit condition matrix, minimum image and physical trials per defect-class and condition, and separately reported one-sided 95% false-accept and false-reject bounds.
+5. Confirmed the footer already reads “Seven candidates” in the reviewed working tree and retained that corrected text.
