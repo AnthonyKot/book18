@@ -1,0 +1,11 @@
+https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement
+Fetched 2026-09-02
+Bij het contract met afroep heeft u de plicht om op ons verzoek het benodigde vermogen aan te passen. U bepaalt zelf wat u aan flexibel vermogen kunt aanbieden. Wij roepen nooit meer af dan met u overeengekomen.
+
+Bij het contract zonder afroep spreken we rechtstreeks met u af dat u het vermogen aanpast op de afgesproken vaste momenten.
+
+Via een redispatch biedplichtcontract: Uw CSP plaatst altijd een bod wanneer wij een oproep voor flexibel vermogen op GOPACS doen.
+
+GOPACS is een platform waar flexibel vermogen wordt verhandeld. Netbeheerders geven hun capaciteitsvraag aan en deelnemers kunnen hierop bieden.
+
+CSP staat voor Congestie Service Provider. Dit is een partij die namens de klant handelt op het GOPACS-platform om flexibel vermogen aan te bieden en congestie op het elektriciteitsnet te verminderen.

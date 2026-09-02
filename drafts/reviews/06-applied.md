@@ -1,0 +1,7 @@
+1. Rebuilt the base table on net wholesale receipts: the 25% installer discount now applies explicitly to onboarding and recurring service, delivery cost is split into engineer headcount, specialist cover and cloud, and every downstream margin, surplus, working-capital, peak-cash and €100,000-capital hurdle is recomputed.
+2. Tightened the 90-day pass rule to require a production order at the stated hurdles, a non-refundable €10,000 onboarding deposit or a paid €4,500 first month; a paid baseline without that commitment now kills the recurring-company thesis and downgrades the offer to occasional integration work.
+3. Narrowed the ACM sentence to its decision not to prescribe civil agreements between connected parties or groups and grid operators; member, installer and software-supplier allocation is now explicitly a private-contract design question.
+4. Added the CBC-specific `06-cbc-compensation` claim row and saved excerpt, leaving `06-contract-taxonomy` scoped to the contract list.
+5. Replaced the economics fragment with a complete sentence assigning integrations, tested commands, exceptions, overrides and incident reviews to the two delivery engineers.
+6. Explained a CSP as the intermediary bidding customer flexibility on the GOPACS trading platform, and defined peak shaving as suppressing short demand spikes to remain below a limit.
+7. Skipped the three-chapter navigation change as instructed; the coordinating session owns finding 7.

@@ -1,0 +1,383 @@
+Reading additional input from stdin...
+OpenAI Codex v0.148.0
+--------
+workdir: /home/diablo/book18
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: high
+reasoning summaries: none
+session id: 01a060b4-5691-7f91-af94-39afb6b62d48
+--------
+user
+# Drafting brief — Book 18 essay 06
+
+You are drafting one essay for *The Second Engine* (`/home/diablo/book18`), a book of
+evidence-led option screens for an experienced enterprise developer deciding where to put two
+years and EUR 100,000. Work only inside that directory. Read, in order: `CONTEXT.md` (all of it;
+your contract is in section 6 under essay 06), `AGENT.md`, `TEMPLATE.md`, then
+`chapters/01-connected-product-operations.html` and `chapters/04-asset-intelligence.html` as
+finished examples of tone, HTML skeleton, ledger and reading list. Also read
+`checks/claims/01.tsv` and `resources/sources/04/SOURCES.md` as format examples.
+
+## Files you own (create; never touch anything else)
+
+- `chapters/06-grid-capacity-hubs.html` — the essay. Copy the exact skeleton of chapter 01: same head, header,
+  `p.kicker` ("Essay 06 of 7 · <candidate name>"), argued `h1`, `p.lede`, the sections
+  `proposition, changed, sale, economics, scale, competition`, then `div.counter`,
+  `section.monday`, `div.verdict-box`, `div.reading`, `nav.chapter-nav`, footer. The economics
+  table sits in `div.ledger-wrap > table.ledger`. Use `../static/style.css` and `../static/theme.js`.
+  Leave the chapter-nav as `<span></span>` / Contents / `<span></span>`; the coordinator wires it.
+- `checks/claims/06.tsv` — header `id	claim	source_url	source_locator	status`, tab-separated,
+  exactly five columns, ids `06-slug`, status `verified` / `inference` / `open`. Ship with
+  zero `open`.
+- `resources/sources/06/SOURCES.md` — numbered index: publisher, title, URL, accessed date,
+  what it supports (claim ids).
+- `resources/sources/06/excerpts/<slug>.txt` — one file per `verified` row: first line the
+  URL, second line the fetch date, then the verbatim supporting passage. Name the file in the
+  TSV `source_locator` column. A `verified` row without an excerpt is not verified.
+- `drafts/06.notes.md` — optional working notes.
+
+## What the essay must do
+
+Follow the contract in CONTEXT section 6 exactly, the priority stack in AGENT.md, and the
+beats in TEMPLATE.md. 2,400–3,600 visible words. Lede ≤130 words. One exact verdict string
+from CONTEXT section 7 inside `div.verdict-box`, followed by the single assumption that would
+most change it. A "capable failure" that is not "poor sales". A ninety-day plan with a price,
+maximum pre-evidence spend, pass rule and kill rule.
+
+Research live. Laws, deadlines, contract forms, programme status, vendor products and prices
+change; use WebSearch/WebFetch and prefer primary sources (EUR-Lex, Commission, ACM, the grid
+operators, Rijksoverheid, standards bodies, vendors' own documentation). Distinguish enacted
+from proposed, deadlines from expectations, obligation from budget. If a fact the contract
+asks for cannot be established from a source, say so in the essay and do not invent it.
+
+Every external factual statement in the HTML carries `<!-- CHECK: id -->`. Every price, margin,
+customer count or cost in the economics section is a design hurdle labelled as such, never a
+market fact, unless it has its own verified row. Name real competitors from their own pages
+and label marketing language as marketing.
+
+Voice: plain, adult, analytical, no cheerleading, no market-size theatre, no fake scenes.
+Paragraphs under 150 words, sentences under 40.
+
+## Before you finish
+
+Run `python3 checks/structure.py 06` from `/home/diablo/book18` until it passes with no
+FAIL lines. Then walk AGENT.md's eight-point pre-ship test and fix what fails. Reply in at most
+200 words: the checker's line for your essay, the verdict, the count of verified / inference
+rows, the excerpt count, and anything the contract asked for that the record could not settle.
+codex
+I’ll first read the contract and house style in the specified order, then research only the claims the essay needs, draft the owned files, and run the structural and pre-ship checks.
+  → Read the contract, instructions, template, examples, and source formats in order
+  • Research current primary sources and assemble the five-column claim ledger with excerpts
+  • Draft the essay and source index in the required HTML skeleton
+  • Run structure checks and the eight-point pre-ship test; fix all failures
+exec
+/bin/bash -lc "sed -n '1,260p' CONTEXT.md" in /home/diablo/book18
+ succeeded in 0ms:
+# Book 18 — CONTEXT
+
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
+a second, scalable business before 2030.
+
+This is an investment book, not a prediction that software employment will disappear. The
+reader has one good career, up to EUR 100,000 available, twelve to twenty-four months to
+learn, Dutch at A2 with a path to B1/B2, a base in Zaandam, and willingness to travel and do
+physical work. The question is which option earns the right to consume time and capital.
+
+Precedence: this file -> `AGENT.md` -> essay contracts (section 6) -> `TEMPLATE.md` -> prose.
+
+## 1. Thesis
+
+The mistake is to choose between "modern but still software" and "AI-resistant but an old
+Dutch trade." A better second engine sits at an interface: a new EU obligation or industrial
+technology, a buyer with an expensive consequence, and a delivery model that begins with
+expert service but can become recurring, teachable, and productised.
+
+The candidates are not recommendations. Each is a hypothesis subjected to the same
+sequence inherited from Book 4, *The Going Concern*:
+
+**demand -> payment -> economics -> operations -> resilience**
+
+An essay passes only if it can identify all five. A large market is not demand; a legal duty
+is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+not protection from competition.
+
+## 2. Reader and fixed assumptions
+
+- About forty, ten-plus years in enterprise full-stack development.
+- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+  the founder personally to win and execute Dutch-language local field work.
+- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+
+## 3. Economic gate
+
+Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+before personal tax, after operating expenses, with enough retained cash that the company is
+not emptied to pay its owner. Figures must separate:
+
+- revenue;
+- pass-through hardware or subcontracting;
+- gross margin;
+- operating costs;
+- owner labour at replacement cost;
+- recurring revenue;
+- working capital and capital expenditure.
+
+Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+as a market fact. Market prices require sources or live buyer evidence.
+
+## 4. Scalability test
+
+"Later a platform" is not evidence. Each essay must say what concretely changes between the
+first and twentieth customer. Score the option against four tests:
+
+1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+   depend solely on the founder's personal network.
+2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+   written playbook.
+3. **Recurring value:** some work recurs because the customer's state changes, not because an
+   annual report was artificially invented.
+4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+   workflow or distribution becomes more valuable with use.
+
+An expert practice is a legitimate outcome, but it must not be called a scalable company.
+
+## 5. Evidence and honesty rules
+
+- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+  European Commission, Dutch government, regulators, standards bodies).
+- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+- Competition: name existing vendors and the substitute, including internal implementation.
+- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+  and a row in `checks/claims/NN.tsv`.
+- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+  from practical enforcement.
+- Each essay must make the strongest case against itself. If the case cannot be answered,
+  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+  publisher, date accessed, and the claim supported.
+
+## 6. Essay contracts
+
+### 1. Connected Product Compliance Operations
+
+Test a managed operation combining the Cyber Resilience Act and Data Act for European
+connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+platform. The essay must define one initial customer segment, identify the exact recurring
+state changes, distinguish legal interpretation from technical implementation, and test
+whether a small manufacturer will buy an external operating function rather than a one-off
+consultant or generic GRC tool.
+
+### 2. White-label Product Security for Engineering Consultancies
+
+Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+machine integrators keep the customer relationship and resell a specialist product-security
+back office. The essay must confront channel conflict, margin sharing, trust, professional
+liability, partner enablement, and the risk that the partner learns the work and removes the
+supplier.
+
+### 3. A Narrow Machine-vision Product for Food or Packaging
+
+Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+inspection job in food/packaging for which successive installations could become materially
+similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+channels rather than competitors.
+
+### 4. White-label Industrial Asset Intelligence
+
+Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+data, the need for labelled failures, and whether the software layer has enough value to retain
+margin.
+
+### 5. Digital Product Passport / Battery-passport Integration
+
+Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+integration/managed-data business rather than generic DPP consulting. Separate the Battery
+Regulation's live requirements from the broader ESPR rollout and standards still being made.
+Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+data collection, access control, data verification, and the danger of building before delegated
+acts and customer budgets settle.
+
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
+## 7. Common verdict
+
+Each essay ends with exactly one provisional verdict:
+
+- **TEST NOW** — evidence supports spending a bounded amount on paid discovery.
+- **TEST THROUGH A PARTNER** — plausible only with a named channel or domain partner.
+- **WATCH** — timing or standards are too unsettled for material investment.
+- **ACQUIRE, DO NOT BUILD** — the capability is attractive but greenfield entry is structurally weak.
+- **DO NOT ENTER** — no credible route under the reader's constraints.
+
+The verdict is provisional until customer payment exists.
+
+## 8. Book shape
+
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
+and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
+final ranking.
+
+## 9. Decision record
+
+- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+  dependent on Dutch language and entrenched small-business competition.
+- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+  scalability test and explicit negative verdicts were added because these are option screens,
+  not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+
+exec
+/bin/bash -lc "sed -n '1,320p' AGENT.md" in /home/diablo/book18
+ succeeded in 0ms:
+# AGENT.md — instructions for Book 18 research and writing
+
+## Who is reading
+
+An experienced enterprise developer considering a serious second business. He can understand
+systems, integrations, unit economics and technical detail. He is not asking to be reassured.
+He wants to know which idea deserves two years and EUR 100,000, and which seductive idea should
+be killed before it consumes either.
+
+## Priority stack
+
+1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+   hypotheses are not presented as observed prices.
+2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+   this purchase outrank other work.
+3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+   and owner income are separate.
+4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+   accumulates. Never use "platform" as a magic word.
+5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+   uncertainty and partner capture belong in the main argument.
+6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+   resigning or buying the full equipment stack.
+
+## Research rules
+
+- Browse because laws, deadlines, standards, products and competitors are current.
+- Prefer primary sources for law and technical requirements.
+- For competitors, use their own product documentation and pricing where published; label
+  marketing claims as marketing claims.
+- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+  `inference`, or `open`. HTML may ship only with no `open` claims.
+- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
+- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+  concise paraphrases are normally enough.
+
+## Voice
+
+Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+
+## Required challenge
+
+Each essay must contain at least one credible path by which capable execution still loses. This
+is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+
+## Pre-ship test
+
+1. Can the reader name the buyer, purchase event and substitute?
+2. Is demand evidence distinct from regulation and market size?
+3. Does the economic model pay replacement-cost labour and still reach the owner target?
+4. Is the twentieth delivery visibly different from the first?
+5. Does the essay name why an incumbent, partner or customer might capture the margin?
+6. Is Dutch-language dependence stated for this exact channel?
+7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+8. Are all external claims receipted and all arithmetic labelled?
+
+## Coordination
+
+Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+`index.html`, `about.html`, static assets and cross-essay comparisons.
+
+exec
+/bin/bash -lc "sed -n '1,360p' TEMPLATE.md" in /home/diablo/book18
+ succeeded in 0ms:
+# Book 18 — essay template
+
+Kicker: `Essay N of 7 · Candidate name`
+
+H1: an argued title, not merely the candidate label.
+
+Lede (`p.lede`, no more than 130 words): the purchase decision and the tension that could
+make the idea attractive or fatal.
+
+1. **The proposition** (`section.proposition`) — one buyer, purchase event, deliverable,
+   substitute and initial boundary. State what the business refuses to be.
+2. **What changed** (`section.changed`) — dated regulation/technology/supply-chain change and
+   evidence of practical buyer pain. Separate obligation, enforcement and budget.
+3. **The first sale** (`section.sale`) — how ten named-prospect types would be reached, what
+   fixed paid diagnostic is sold, who signs and why now. Address language and geography.
+4. **Does the money work?** (`section.economics`) — bottom-up year 1 and plausible mature-year
+   model. Separate sourced prices from required-price arithmetic; include working capital.
+5. **From service to company** (`section.scale`) — first, fifth and twentieth customer; people,
+   process, recurring work, accumulating asset, and founder bottleneck.
+6. **The incumbent gets a turn** (`section.competition`) — named competitors and substitutes;
+   how they respond; why partners might capture the customer or margin.
+7. **The capable failure** (`div.counter`) — a non-straw-man path where good execution loses.
+8. **The first ninety days** (`section.monday`) — 4–6 numbered actions, maximum pre-evidence
+   spend, paid test, pass rule and kill rule.
+9. **Verdict** (`div.verdict-box`) — one exact `CONTEXT.md` verdict and the single assumption
+   that would most change it.
+10. **Reading** (`div.reading`) — 5–10 primary/authoritative sources actually used.
+
+Navigation: previous / contents / next. Use the shared static paths `../static/style.css` and
+`../static/theme.js`. External factual statements carry `<!-- CHECK: id -->`.
+
+ERROR: Selected model is at capacity. Please try a different model.
+ERROR: Selected model is at capacity. Please try a different model.
+tokens used
+7,658

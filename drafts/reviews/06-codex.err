@@ -1,0 +1,1262 @@
+Reading additional input from stdin...
+OpenAI Codex v0.148.0
+--------
+workdir: /home/diablo/book18
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a060db-bc23-7ab2-9a91-4f3f474458d5
+--------
+user
+Two reviewers assessed chapters/06-grid-capacity-hubs.html independently; their reports are in drafts/reviews/06-flash.md and drafts/reviews/06-pro.md (either may be empty).
+Read CONTEXT.md, AGENT.md, the chapter, checks/claims/06.tsv, resources/sources/06/, and both reports. Be adversarial toward
+the REVIEWERS: for each of their findings, verify it against the chapter and the sources and mark it CONFIRMED / REJECTED
+(with why) / UNVERIFIABLE. Then add findings they both missed, using the checklist in scripts/prompts/review-checklist.md.
+Output one consolidated markdown report, ranked, with a one-line ship / revise / block verdict at the top.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+codex
+I’ll audit the two reviews against the actual chapter, claims ledger, source bundle, and the repository’s review checklist, then write a single ranked report with explicit dispositions for every reviewer finding.
+exec
+/bin/bash -lc "pwd && rg --files -g 'CONTEXT.md' -g 'AGENT.md' -g 'AGENTS.md' -g 'chapters/06-grid-capacity-hubs.html' -g 'checks/claims/06.tsv' -g 'drafts/reviews/06-flash.md' -g 'drafts/reviews/06-pro.md' -g 'scripts/prompts/review-checklist.md' -g 'resources/sources/06/**'" in /home/diablo/book18
+ succeeded in 271ms:
+/home/diablo/book18
+AGENT.md
+scripts/prompts/review-checklist.md
+CONTEXT.md
+chapters/06-grid-capacity-hubs.html
+resources/sources/06/SOURCES.md
+resources/sources/06/excerpts/sympower.txt
+resources/sources/06/excerpts/liander-cbc.txt
+resources/sources/06/excerpts/liander-route.txt
+resources/sources/06/excerpts/gto-final.txt
+resources/sources/06/excerpts/stedin-hub.txt
+resources/sources/06/excerpts/gto-liability.txt
+resources/sources/06/excerpts/contract-taxonomy.txt
+resources/sources/06/excerpts/enexis-gto.txt
+resources/sources/06/excerpts/atr-date.txt
+resources/sources/06/excerpts/scholt.txt
+resources/sources/06/excerpts/enexis-atr-status.txt
+resources/sources/06/excerpts/withthegrid.txt
+resources/sources/06/excerpts/gto-sanctions.txt
+resources/sources/06/excerpts/enervalis.txt
+resources/sources/06/excerpts/public-support.txt
+resources/sources/06/excerpts/enexis-rollout.txt
+checks/claims/06.tsv
+drafts/reviews/06-pro.md
+drafts/reviews/06-flash.md
+
+exec
+/bin/bash -lc 'wc -l CONTEXT.md AGENT.md scripts/prompts/review-checklist.md chapters/06-grid-capacity-hubs.html checks/claims/06.tsv drafts/reviews/06-flash.md drafts/reviews/06-pro.md resources/sources/06/SOURCES.md resources/sources/06/excerpts/*.txt' in /home/diablo/book18
+ succeeded in 237ms:
+  192 CONTEXT.md
+   70 AGENT.md
+   23 scripts/prompts/review-checklist.md
+  143 chapters/06-grid-capacity-hubs.html
+   18 checks/claims/06.tsv
+  168 drafts/reviews/06-flash.md
+   33 drafts/reviews/06-pro.md
+   77 resources/sources/06/SOURCES.md
+    7 resources/sources/06/excerpts/atr-date.txt
+   11 resources/sources/06/excerpts/contract-taxonomy.txt
+    3 resources/sources/06/excerpts/enervalis.txt
+    5 resources/sources/06/excerpts/enexis-atr-status.txt
+    5 resources/sources/06/excerpts/enexis-gto.txt
+    3 resources/sources/06/excerpts/enexis-rollout.txt
+    6 resources/sources/06/excerpts/gto-final.txt
+    3 resources/sources/06/excerpts/gto-liability.txt
+    7 resources/sources/06/excerpts/gto-sanctions.txt
+    7 resources/sources/06/excerpts/liander-cbc.txt
+    5 resources/sources/06/excerpts/liander-route.txt
+    5 resources/sources/06/excerpts/public-support.txt
+    7 resources/sources/06/excerpts/scholt.txt
+    9 resources/sources/06/excerpts/stedin-hub.txt
+    7 resources/sources/06/excerpts/sympower.txt
+    3 resources/sources/06/excerpts/withthegrid.txt
+  817 total
+
+exec
+/bin/bash -lc "sed -n '1,260p' CONTEXT.md && sed -n '1,180p' AGENT.md && sed -n '1,120p' scripts/prompts/review-checklist.md && sed -n '1,240p' drafts/reviews/06-flash.md && sed -n '1,120p' drafts/reviews/06-pro.md" in /home/diablo/book18
+ succeeded in 211ms:
+# Book 18 — CONTEXT
+
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
+a second, scalable business before 2030.
+
+This is an investment book, not a prediction that software employment will disappear. The
+reader has one good career, up to EUR 100,000 available, twelve to twenty-four months to
+learn, Dutch at A2 with a path to B1/B2, a base in Zaandam, and willingness to travel and do
+physical work. The question is which option earns the right to consume time and capital.
+
+Precedence: this file -> `AGENT.md` -> essay contracts (section 6) -> `TEMPLATE.md` -> prose.
+
+## 1. Thesis
+
+The mistake is to choose between "modern but still software" and "AI-resistant but an old
+Dutch trade." A better second engine sits at an interface: a new EU obligation or industrial
+technology, a buyer with an expensive consequence, and a delivery model that begins with
+expert service but can become recurring, teachable, and productised.
+
+The candidates are not recommendations. Each is a hypothesis subjected to the same
+sequence inherited from Book 4, *The Going Concern*:
+
+**demand -> payment -> economics -> operations -> resilience**
+
+An essay passes only if it can identify all five. A large market is not demand; a legal duty
+is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+not protection from competition.
+
+## 2. Reader and fixed assumptions
+
+- About forty, ten-plus years in enterprise full-stack development.
+- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+  the founder personally to win and execute Dutch-language local field work.
+- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+
+## 3. Economic gate
+
+Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+before personal tax, after operating expenses, with enough retained cash that the company is
+not emptied to pay its owner. Figures must separate:
+
+- revenue;
+- pass-through hardware or subcontracting;
+- gross margin;
+- operating costs;
+- owner labour at replacement cost;
+- recurring revenue;
+- working capital and capital expenditure.
+
+Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+as a market fact. Market prices require sources or live buyer evidence.
+
+## 4. Scalability test
+
+"Later a platform" is not evidence. Each essay must say what concretely changes between the
+first and twentieth customer. Score the option against four tests:
+
+1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+   depend solely on the founder's personal network.
+2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+   written playbook.
+3. **Recurring value:** some work recurs because the customer's state changes, not because an
+   annual report was artificially invented.
+4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+   workflow or distribution becomes more valuable with use.
+
+An expert practice is a legitimate outcome, but it must not be called a scalable company.
+
+## 5. Evidence and honesty rules
+
+- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+  European Commission, Dutch government, regulators, standards bodies).
+- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+- Competition: name existing vendors and the substitute, including internal implementation.
+- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+  and a row in `checks/claims/NN.tsv`.
+- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+  from practical enforcement.
+- Each essay must make the strongest case against itself. If the case cannot be answered,
+  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+  publisher, date accessed, and the claim supported.
+
+## 6. Essay contracts
+
+### 1. Connected Product Compliance Operations
+
+Test a managed operation combining the Cyber Resilience Act and Data Act for European
+connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+platform. The essay must define one initial customer segment, identify the exact recurring
+state changes, distinguish legal interpretation from technical implementation, and test
+whether a small manufacturer will buy an external operating function rather than a one-off
+consultant or generic GRC tool.
+
+### 2. White-label Product Security for Engineering Consultancies
+
+Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+machine integrators keep the customer relationship and resell a specialist product-security
+back office. The essay must confront channel conflict, margin sharing, trust, professional
+liability, partner enablement, and the risk that the partner learns the work and removes the
+supplier.
+
+### 3. A Narrow Machine-vision Product for Food or Packaging
+
+Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+inspection job in food/packaging for which successive installations could become materially
+similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+channels rather than competitors.
+
+### 4. White-label Industrial Asset Intelligence
+
+Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+data, the need for labelled failures, and whether the software layer has enough value to retain
+margin.
+
+### 5. Digital Product Passport / Battery-passport Integration
+
+Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+integration/managed-data business rather than generic DPP consulting. Separate the Battery
+Regulation's live requirements from the broader ESPR rollout and standards still being made.
+Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+data collection, access control, data verification, and the danger of building before delegated
+acts and customer budgets settle.
+
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
+## 7. Common verdict
+
+Each essay ends with exactly one provisional verdict:
+
+- **TEST NOW** — evidence supports spending a bounded amount on paid discovery.
+- **TEST THROUGH A PARTNER** — plausible only with a named channel or domain partner.
+- **WATCH** — timing or standards are too unsettled for material investment.
+- **ACQUIRE, DO NOT BUILD** — the capability is attractive but greenfield entry is structurally weak.
+- **DO NOT ENTER** — no credible route under the reader's constraints.
+
+The verdict is provisional until customer payment exists.
+
+## 8. Book shape
+
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
+and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
+final ranking.
+
+## 9. Decision record
+
+- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+  dependent on Dutch language and entrenched small-business competition.
+- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+  scalability test and explicit negative verdicts were added because these are option screens,
+  not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+# AGENT.md — instructions for Book 18 research and writing
+
+## Who is reading
+
+An experienced enterprise developer considering a serious second business. He can understand
+systems, integrations, unit economics and technical detail. He is not asking to be reassured.
+He wants to know which idea deserves two years and EUR 100,000, and which seductive idea should
+be killed before it consumes either.
+
+## Priority stack
+
+1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+   hypotheses are not presented as observed prices.
+2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+   this purchase outrank other work.
+3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+   and owner income are separate.
+4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+   accumulates. Never use "platform" as a magic word.
+5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+   uncertainty and partner capture belong in the main argument.
+6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+   resigning or buying the full equipment stack.
+
+## Research rules
+
+- Browse because laws, deadlines, standards, products and competitors are current.
+- Prefer primary sources for law and technical requirements.
+- For competitors, use their own product documentation and pricing where published; label
+  marketing claims as marketing claims.
+- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+  `inference`, or `open`. HTML may ship only with no `open` claims.
+- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
+- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+  concise paraphrases are normally enough.
+
+## Voice
+
+Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+
+## Required challenge
+
+Each essay must contain at least one credible path by which capable execution still loses. This
+is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+
+## Pre-ship test
+
+1. Can the reader name the buyer, purchase event and substitute?
+2. Is demand evidence distinct from regulation and market size?
+3. Does the economic model pay replacement-cost labour and still reach the owner target?
+4. Is the twentieth delivery visibly different from the first?
+5. Does the essay name why an incumbent, partner or customer might capture the margin?
+6. Is Dutch-language dependence stated for this exact channel?
+7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+8. Are all external claims receipted and all arithmetic labelled?
+
+## Coordination
+
+Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+`index.html`, `about.html`, static assets and cross-essay comparisons.
+Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+cited source (excerpt file or URL) actually supports, and give a concrete fix.
+
+1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+   hurdle as market price? Check dates against the cited primary sources.
+2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+   regulation standing in for demand?
+3. Economics: does the model pay replacement-cost labour, working capital and the owner
+   separately, and is the arithmetic internally consistent?
+4. Scalability: is the twentieth customer concretely different from the first, or is
+   "platform" doing the work?
+5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+   the margin-capture risk by partner or customer confronted?
+6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+   EUR 100k, no founder field work in Dutch) respected.
+8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+   an excerpt that says what the claim says; inference rows are honest about what they infer.
+9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+
+End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+# Comprehensive Review: Essay 06 — Grid-congestion Capacity Control for Business Parks
+
+**File:** [`chapters/06-grid-capacity-hubs.html`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html)  
+**Ledger:** [`checks/claims/06.tsv`](file:///home/diablo/book18/checks/claims/06.tsv)  
+**Sources & Excerpts:** [`resources/sources/06/SOURCES.md`](file:///home/diablo/book18/resources/sources/06/SOURCES.md) and [`resources/sources/06/excerpts/`](file:///home/diablo/book18/resources/sources/06/excerpts/)
+
+---
+
+## Executive Summary & Quality Gate Status
+
+The essay is thoroughly researched, rigorously argued, and grounded in primary Dutch regulatory and grid operator documentation. It adheres closely to the thesis and reader constraints in [`CONTEXT.md`](file:///home/diablo/book18/CONTEXT.md) and [`AGENT.md`](file:///home/diablo/book18/AGENT.md). 
+
+All external factual assertions have corresponding primary source entries in the claim ledger and verbatim excerpt files in `resources/sources/06/excerpts/`. The bottom-up financial model correctly separates founder replacement labour, owner distributions, working capital, and retained capital. The capable failure scenario avoids straw men, and the channel strategy strictly respects the reader’s A2 Dutch language constraint.
+
+A few minor editorial, structural, and check-marker placement issues require correction before publication.
+
+---
+
+## Detailed Evaluation Against the 10 Review Dimensions
+
+### 1. Never False
+* **Dates & Regulatory Status:**
+  * **GTO Decision Date & Obligation:** Correctly dates the ACM decision to 19 December 2025, identifies that hubs can apply now, and distinguishes this from the grid operators' statutory obligation to offer GTOs from 1 January 2027 (`06-gto-final`).
+  * **Alternative Transport Rights (ATR):** Accurately dates the ACM decision to 19 July 2024, noting regional time-block availability from 1 April 2025 and the TenneT 85% duration-bound contract (`06-atr-date`).
+  * **Operator Offerings:** Accurately distinguishes Enexis's live *Blokstroom* (consumption, 1 April 2025) from its not-yet-live *Reststroom* (`06-enexis-atr-status`), and Liander's 2-year average GTO lead time (`06-liander-route`).
+* **Design Hurdles vs. Market Prices:** Sourced public figures (€62M blocked business subsidy, €166M hub fund) are explicitly labelled as public programme budgets, not customer willingness to pay (`06-public-support`). All baseline and subscription figures (€6,000 baseline, €20,000 onboarding, €4,500/month recurring) are explicitly labelled as design and validation hurdles.
+
+### 2. Buyer and Event
+* **Economic Buyer:** Explicitly named as the operations or investment director of an anchor tenant at a business park whose expansion, fleet electrification, or process equipment is blocked by lack of grid capacity. Park management acts as coordinator.
+* **Purchase Event:** A signed, costed industrial capital project that cannot be energised under individual connection limits.
+* **Separation from Regulation:** The essay explicitly rejects the assumption that a DSO code change or public subsidy creates customer demand, identifying that willingness to pay stems solely from unblocking the anchor tenant's capital investment.
+
+### 3. Economics
+* **Internal Consistency:** Arithmetic in the financial ledger table is 100% consistent:
+  * Year 1 Revenue: €18k (3 baselines @ €6k) + €20k (1 onboarding) + €81k (3 sites × 6 mos @ €4.5k) = **€119k**. Gross Margin: €119k − €55k delivery = **€64k (54%)**. Operating surplus after €43k OpEx and €85k founder replacement labour = **−€64k**.
+  * Mature Revenue: €64k (8 baselines @ €8k) + €100k (5 onboardings) + €810k (15 sites × 12 mos @ €4.5k) = **€974k**. Gross Margin: €974k − €245k delivery = **€729k (75%)**. Operating surplus after €100k OpEx and €110k founder replacement labour = **€519k**. Retained surplus after €100k owner distribution = **€419k**.
+* **Separation of Cash & Capital:** Working capital reserves (€70k Year 1, €80k Mature) and capex (€5k Year 1, €10k Mature) are clearly distinguished from P&L operating expenses.
+
+### 4. Scalability
+* **Evolution of Delivery:** Concretely distinguishes Customer 1 (founder-led manual discovery, setpoint testing, and mapping), Customer 5 (standard connector kit, standard allocation schema, delivery engineer execution), and Customer 20 (3–5 enabled installer partners, multi-tenant policy library, routine operational exception handling).
+* **Four Tests:** Evaluates repeatable acquisition, teachable delivery, recurring value (recurrent state changes from fleet/load changes and overrides), and accumulating asset (tested adapter library, failure logs, and simulation fixtures) without resorting to "platform" hand-waving.
+
+### 5. Incumbents and Capture
+* **Competitors & DSOs:** Named competitors (Sympower, Withthegrid, Scholt Energy, Enervalis) and grid operators (Liander, Enexis, Stedin) are evaluated fairly using their own published documentation and portal surfaces.
+* **Capture Risk:** Confronts the reality that the electrical installer owns the physical switchgear, customer relationship, and 24/7 on-call presence, while traders and aggregators offer bundled VPP dispatch.
+
+### 6. Capable Failure
+* **Non-Straw-Man Path:** The failure mechanism is rigorous: the software executes perfectly, safe curtailment tests succeed, and no group breach occurs. However, because the evidence product makes the exception handling and mappings transparent, the installer internalises the playbook, the trader offers dispatch, and at renewal the park folds monitoring into the installer's general maintenance contract, eroding software margins.
+
+### 7. Dutch-Language Dependence & Reader Constraints
+* **Channel Division:** Acknowledges the reader's A2 Dutch constraint and Zaandam base. Mandates that the Dutch-speaking installer and energy consultant lead local discovery, workshops, and on-call operations, while the founder delivers technical architecture, reconciliations, and software in English.
+* **Refusal Rule:** Sets an explicit kill rule if a partner expects the founder to act as the park’s on-site Dutch energy manager.
+
+### 8. Receipts
+* **Receipt Integrity:** All 16 `verified` claims in [`checks/claims/06.tsv`](file:///home/diablo/book18/checks/claims/06.tsv) have matching verbatim excerpt files in [`resources/sources/06/excerpts/`](file:///home/diablo/book18/resources/sources/06/excerpts/). The single `inference` claim (`06-enervalis-boundary`) is explicitly acknowledged as an inference boundary.
+* **Marker Placement:** Two minor marker placement issues identified (stacked markers on line 93; loose reuse on line 41).
+
+### 9. Verdict
+* **Earned Verdict:** `TEST THROUGH A PARTNER` is the exact verdict warranted by the evidence, given that direct sales are blocked by electrical licensing, local trust, safety authority, and language barriers.
+* **90-Day Experiment:** Structured with 6 clear steps, a €15,000 maximum pre-evidence spend, €6,000 paid baseline hurdle, and concrete pass/kill gates.
+
+### 10. Readability
+* **Paragraph & Sentence Metrics:** Lede is 116 words (target ≤ 130). Total word count is 2,516 words (target 2,400–3,600). No sentence exceeds 40 words.
+* **Issues:** One verbless sentence fragment in the economics section and missing navigation links.
+
+---
+
+## Findings Ranked by Severity
+
+### Finding 1 (Medium Severity): Sentence Fragment in Economics Text
+* **Location:** [`chapters/06-grid-capacity-hubs.html:74`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L74)
+* **Quote:**
+  > `"The 7.5-site load is a design hurdle. Time-log integrations, tested commands, exceptions, overrides and incident reviews. If each peak needs founder judgement, the margin is fictional."`
+* **What is Supported / Required:**
+  [`AGENT.md`](file:///home/diablo/book18/AGENT.md) mandates plain, adult, analytical prose that explains technical mechanisms cleanly. The second sentence is a verbless list fragment that interrupts the explanation of delivery staff workload.
+* **Concrete Fix:**
+  Join the fragment into a complete explanatory sentence:
+  ```html
+  The 7.5-site load is a design hurdle: two delivery engineers must handle time-log integrations, tested commands, exceptions, overrides and incident reviews. If each peak needs founder judgement, the margin is fictional.
+  ```
+
+---
+
+### Finding 2 (Medium Severity): Stacked / Concatenated `CHECK` Markers on a Single Sentence
+* **Location:** [`chapters/06-grid-capacity-hubs.html:93`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L93)
+* **Quote:**
+  > `"Enexis has ten development sites, expects wider availability in 2027 and requires an EMS. <!-- CHECK: 06-enexis-rollout --> <!-- CHECK: 06-enexis-gto -->"`
+* **What is Supported / Required:**
+  [`AGENT.md`](file:///home/diablo/book18/AGENT.md) requires `<!-- CHECK: id -->` to immediately follow the factual statement it supports. 
+  * `06-enexis-rollout` supports the statement that Enexis is working with 10 business parks and expects wider availability in 2027 ([`enexis-rollout.txt`](file:///home/diablo/book18/resources/sources/06/excerpts/enexis-rollout.txt)).
+  * `06-enexis-gto` supports the EMS requirement ([`enexis-gto.txt`](file:///home/diablo/book18/resources/sources/06/excerpts/enexis-gto.txt)).
+  Stacking both markers at the end of the sentence blurs the receipt mapping.
+* **Concrete Fix:**
+  Split the sentence so each clause is followed immediately by its respective check marker:
+  ```html
+  Enexis is working with ten development sites and expects wider availability in 2027. <!-- CHECK: 06-enexis-rollout --> It also requires an EMS to manage group capacity. <!-- CHECK: 06-enexis-gto -->
+  ```
+
+---
+
+### Finding 3 (Low Severity): Loose Alignment of Reused `CHECK` Marker
+* **Location:** [`chapters/06-grid-capacity-hubs.html:41`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L41)
+* **Quote:**
+  > `"These forms can create a control duty and a payment mechanism. <!-- CHECK: 06-contract-taxonomy --> They do not prove that a park will fund a separate evidence layer."`
+* **What is Supported / Required:**
+  In [`06.tsv`](file:///home/diablo/book18/checks/claims/06.tsv), claim `06-contract-taxonomy` states: *"ACM's 2 June 2026 implementation dashboard distinguishes CBC, CSC, group CBC/CSC, TBTR, TDTR and fully non-firm VVTR contract forms."* In line 39, `<!-- CHECK: 06-contract-taxonomy -->` correctly receipts the sentence listing the taxonomy. In line 41, the marker is reused after an analytical synthesis sentence stating that these contracts create a control duty and payment mechanism. While the excerpt [`contract-taxonomy.txt`](file:///home/diablo/book18/resources/sources/06/excerpts/contract-taxonomy.txt) mentions a *vergoeding* (fee), the preceding sentence already carries `<!-- CHECK: 06-liander-cbc -->` which covers the contract terms.
+* **Concrete Fix:**
+  Remove the redundant marker on line 41, or refine the sentence to refer directly to the dashboard's definitions:
+  ```html
+  Liander describes a CBC with call-up, a CBC with fixed adjustment times, and redispatch through GOPACS via a Congestion Service Provider. <!-- CHECK: 06-liander-cbc --> These forms establish defined curtailment duties and tariff compensations, but they do not prove that a park will fund a separate evidence layer.
+  ```
+
+---
+
+### Finding 4 (Low Severity): Incomplete Chapter Navigation Markup
+* **Location:** [`chapters/06-grid-capacity-hubs.html:135-139`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L135-L139)
+* **Quote:**
+  ```html
+  <nav class="chapter-nav" aria-label="Essay navigation">
+    <span></span>
+    <a href="../index.html">Contents</a>
+    <span></span>
+  </nav>
+  ```
+* **What is Supported / Required:**
+  [`TEMPLATE.md`](file:///home/diablo/book18/TEMPLATE.md) specifies: *"Navigation: previous / contents / next."* The template expects active links to the preceding and succeeding essays.
+* **Concrete Fix:**
+  Add the previous and next links to the navigation element:
+  ```html
+  <nav class="chapter-nav" aria-label="Essay navigation">
+    <a href="05-product-passports.html">← Previous</a>
+    <a href="../index.html">Contents</a>
+    <a href="07-eudi-wallet-acceptance.html">Next →</a>
+  </nav>
+  ```
+
+---
+
+### Finding 5 (Low Severity): Multi-Clause Semicolon Strings Approaching 40 Words
+* **Location:** [`chapters/06-grid-capacity-hubs.html:32, 49`](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L32)
+* **Quote 1 (38 words):**
+  > `"The substitute is substantial: a park manager's spreadsheet and WhatsApp group; an installer-supplied energy-management system; a trader or aggregator's virtual power plant; a consultant's feasibility model; or a member choosing a smaller project and keeping its individual limit."`
+* **Quote 2 (38 words):**
+  > `"It reconciles fifteen-minute data against the group's proposed limit; maps controllable loads and their local owners; rehearses one safe curtailment path in a test window; specifies the command/acknowledgement/evidence log; and produces an exception and liability schedule."`
+* **What is Supported / Required:**
+  Both sentences are under the 40-word ceiling, but their heavy semicolon list structures create dense, breathy prose.
+* **Concrete Fix:**
+  * **Quote 1:** Break into two crisp sentences:  
+    `"The substitute is substantial. It includes a park manager's spreadsheet and WhatsApp group, an installer-supplied energy-management system, a trader's virtual power plant, a consultant's feasibility model, or a member downsizing its project to fit an individual limit."`
+  * **Quote 2:** Split into two sentences:  
+    `"It reconciles fifteen-minute data against the group's proposed limit and maps controllable loads with their local owners. It then rehearses one safe curtailment path in a test window, specifies the command and evidence log, and produces an exception schedule."`
+
+---
+
+## Final Verdict & Action Plan
+
+### **Verdict:** `REVISE`
+
+The essay is structurally and evidentially sound and meets the book's strict commercial and analytical standards. It requires minor editorial and receipt-formatting revisions before publication.
+
+### **The Three Fixes That Matter Most:**
+
+1. **Repair the verbless sentence fragment in the economics section ([line 74](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L74)):**  
+   Replace the list fragment with a complete explanatory sentence detailing how the two delivery engineers manage the 7.5-site workload.
+2. **Unstack and precision-align the `CHECK` markers ([lines 93](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L93) and [41](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L41)):**  
+   Split the combined Enexis sentence on line 93 so `06-enexis-rollout` and `06-enexis-gto` each attach to their exact factual clause, and clean up the duplicate `06-contract-taxonomy` citation on line 41.
+3. **Complete the chapter navigation bar ([lines 135–139](file:///home/diablo/book18/chapters/06-grid-capacity-hubs.html#L135-L139)):**  
+   Replace the empty `<span></span>` tags with active links to [`05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html) and [`07-eudi-wallet-acceptance.html`](file:///home/diablo/book18/chapters/07-eudi-wallet-acceptance.html).
+I have reviewed the essay against the rules in `CONTEXT.md` and `AGENT.md`. The essay is of extremely high quality, demonstrating rigorous economic modeling, strict adherence to reader constraints, and a highly credible "capable failure" scenario. 
+
+However, there are a few minor compliance issues regarding receipt boundaries and readability rules.
+
+### Findings Ranked by Severity
+
+**1. Severity: Medium — Receipt mismatch in the TSV ledger (Rule 8)**
+* **Quote:** "These forms can create a control duty and a payment mechanism. `<!-- CHECK: 06-contract-taxonomy -->`" (Paragraph 41)
+* **What the source supports:** The underlying text excerpt (`contract-taxonomy.txt`) *does* support this, noting that a Capaciteitsbeperkingscontract (CBC) involves a company voluntarily reducing consumption "in ruil voor een vergoeding" (in exchange for compensation). However, the TSV row for `06-contract-taxonomy` only says: *"ACM's 2 June 2026 implementation dashboard distinguishes CBC, CSC, group CBC/CSC, TBTR, TDTR and fully non-firm VVTR contract forms."* It omits the control duty and payment mechanism entirely. Because the marker is used twice (once in paragraph 39 to list the acronyms, and once in paragraph 41 for the payment mechanism), the ledger row fails to support the second sentence it follows.
+* **Concrete fix:** Expand the `06-contract-taxonomy` row in `checks/claims/06.tsv` so the claim text explicitly captures both elements. For example: *"ACM's 2 June 2026 implementation dashboard distinguishes CBC, CSC, group CBC/CSC, TBTR, TDTR and VVTR contract forms, which include agreements to adjust load in exchange for compensation."* Alternatively, create a new TSV row/marker specifically for the payment mechanism.
+
+**2. Severity: Low — Jargon without mechanism (Rule 10)**
+* **Quote:** "...and redispatch through GOPACS via a Congestion Service Provider." (Paragraph 41)
+* **What the source supports:** N/A (Prose rule). While this accurately reflects the source material (`liander-cbc.txt`), "GOPACS" and "Congestion Service Provider (CSP)" are highly specific Dutch energy market jargon that are dropped into the text without explaining the actual mechanism to the reader.
+* **Concrete fix:** Briefly explain the mechanism instead of just using the acronyms. For example: *"...and market-based redispatch where an intermediary (Congestion Service Provider) bids the site's flexibility on a trading platform (GOPACS)."*
+
+**3. Severity: Low — Minor jargon without mechanism (Rule 10)**
+* **Quote:** "Withthegrid markets Dutch local control strategies including static and dynamic limitations, grid-operator endpoints and peak shaving." (Paragraph 91)
+* **What the source supports:** N/A (Prose rule). "Peak shaving" is industry jargon that, while common, describes a mechanism the reader needs to visualize in the context of a capacity limit.
+* **Concrete fix:** Add a short descriptive mechanism. For example: *"...and peak shaving (flattening short consumption spikes to stay under a limit)."*
+
+***
+
+### Conclusion
+
+**Verdict: REVISE**
+
+The essay is operationally sound and logically airtight, passing the critical economic, scalability, and "never false" gates with flying colors. It requires only minor revisions to enforce the strict receipt ledger and readability rules. 
+
+**The three fixes that matter most:**
+1. Update the `06-contract-taxonomy` claim row in the TSV so it explicitly mentions the duty/compensation mechanism to properly support paragraph 41. 
+2. Add a brief mechanism explanation for "GOPACS" and "Congestion Service Provider".
+3. Add a brief mechanism explanation for "peak shaving".
+
+codex
+The reviewers agree the essay is essentially sound, but that consensus is itself something to test. I’m now checking every cited sentence at marker-level granularity, including whether the excerpt supports the whole sentence—not merely a nearby idea.
+exec
+/bin/bash -lc "nl -ba chapters/06-grid-capacity-hubs.html && printf '\\n--- CLAIMS ---\\n' && nl -ba checks/claims/06.tsv && printf '\\n--- SOURCES INDEX ---\\n' && nl -ba resources/sources/06/SOURCES.md" in /home/diablo/book18
+ succeeded in 216ms:
+     1	<!DOCTYPE html>
+     2	<html lang="en">
+     3	<head>
+     4	<meta charset="utf-8">
+     5	<meta name="viewport" content="width=device-width, initial-scale=1">
+     6	<title>A shared limit is a real operating system — The Second Engine</title>
+     7	<meta name="description" content="A test of a control-and-evidence layer for Dutch business-park energy hubs, and of whether it can retain margin beside installers, traders and grid operators.">
+     8	<link rel="stylesheet" href="../static/style.css">
+     9	<script src="../static/theme.js"></script>
+    10	</head>
+    11	<body>
+    12	<header class="site-header">
+    13	  <div class="wrap">
+    14	    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    15	    <nav class="site-nav">
+    16	      <a href="../index.html">Contents</a>
+    17	      <a href="../about.html">Method</a>
+    18	      <button class="theme-toggle" type="button">☾ Dark</button>
+    19	    </nav>
+    20	  </div>
+    21	</header>
+    22	<main class="wrap">
+    23	<p class="kicker">Essay 06 of 7 · Grid-congestion Capacity Control for Business Parks</p>
+    24	<h1>A shared limit is a real operating system, not an energy dashboard</h1>
+    25	<p class="lede">A factory that cannot electrify a process, add a charger depot or energise an expansion has a purchase event; a sustainability officer does not. Dutch energy hubs can now apply for a group transport agreement, but grid operators do not have to offer one until 2027. <!-- CHECK: 06-gto-final --> The opportunity is a control-and-evidence layer that keeps a qualified group inside its shared limit and explains every intervention. The fatal possibility is that the installer, trader, aggregator or grid operator already owns the controls, hardware and Dutch-language relationship. This is not a thesis about selling optimisation software to every business park. It tests whether one blocked site will buy a neutral operating layer through the party it already trusts.</p>
+    26	
+    27	<section class="proposition">
+    28	<h2>The proposition</h2>
+    29	<p>The first customer is a group of four to eight large connections behind one eligible electricity station in Liander territory. It is an existing business park where transport capacity blocks one member's signed expansion, electrified fleet, cold store or production equipment. The economic buyer is that member's operations or investment director, with park management as organiser. The group, not an individual sustainability lead, must choose who may use shared headroom and who pays when it is scarce.</p>
+    30	<p>The product is a fixed-scope <em>capacity operating baseline</em>, followed by a managed control-and-evidence service. It reconciles revenue-meter and controller readings against the group limit, member allocations and operating state. It can issue a proposed curtailment order and record the command, acknowledgement, response and override. A monthly report explains exceptions. The company does not trade energy, sell a battery, procure a grid connection, promise capacity, or sign the group's transport contract.</p>
+    31	<p>The practical boundary is important. A group transport agreement shares transport capacity; it does not make unrelated sites one electrical installation. At Enexis, each participant retains its own connection, the group has one transport contract, and an energy-management system is required to apply the allocation and remain within the group capacity. <!-- CHECK: 06-enexis-gto --> The business can connect to an installer's battery, charger, building-management or process controller, but it must not take over safety interlocks or process sequencing. The equipment owner retains final local authority.</p>
+    32	<p>The substitute is substantial: a park manager's spreadsheet and WhatsApp group; an installer-supplied energy-management system; a trader or aggregator's virtual power plant; a consultant's feasibility model; or a member choosing a smaller project and keeping its individual limit. The proposed layer wins only when it makes the shared promise more operable and auditable than those substitutes. A prettier load chart does not justify a new supplier.</p>
+    33	</section>
+    34	
+    35	<section class="changed">
+    36	<h2>What changed</h2>
+    37	<p>The group contract has moved from proposal to code, but availability still needs qualification. On 19 December 2025, ACM said energy-hub companies can apply and grid operators must offer the form from 1 January 2027. <!-- CHECK: 06-gto-final --> The legal route is live; a universal service obligation is not. Neither fact guarantees a useful group limit or approves a control vendor.</p>
+    38	<p>Implementation is uneven. Liander describes a current group-contract application route for large connections above 3×80 A, requiring a formed hub, high-frequency metering and all members on the same electricity station. It says at least one member must have contracted transport capacity and gives an average two-year lead time for forming the group and agreeing the contract. <!-- CHECK: 06-liander-route --> Enexis says it is working with ten business parks and expects to offer GTOs more broadly from 2027. <!-- CHECK: 06-enexis-rollout --> An entrant should therefore sell neither “a Dutch GTO product” nor a deadline. It should qualify the operator, station topology, connection class and application status before a software proposal.</p>
+    39	<p>Other contract forms solve different operating problems. In a decision announced on 19 July 2024, ACM allowed regional operators to offer time-block transport from 1 April 2025. It also described a TenneT duration-bound right that permits maximum use at least 85% of the time. <!-- CHECK: 06-atr-date --> ACM's 2 June 2026 dashboard separately lists capacity-restriction and capacity-steering contracts, group variants, time-block and duration-bound rights, and a fully non-firm right tied to actual grid loading. <!-- CHECK: 06-contract-taxonomy --></p>
+    40	<p>The difference between code and product is visible at Enexis. Its Blokstroom application route for consumption started on 1 April 2025. Its fully variable Reststroom is still under investigation because available capacity cannot yet be seen well enough. <!-- CHECK: 06-enexis-atr-status --> A project needing a firm evening peak cannot be sold either form and called solved.</p>
+    41	<p>Capacity-limiting contracts are also concrete. Liander describes a CBC with call-up, a CBC with fixed adjustment times, and redispatch through GOPACS via a Congestion Service Provider. <!-- CHECK: 06-liander-cbc --> These forms can create a control duty and a payment mechanism. <!-- CHECK: 06-contract-taxonomy --> They do not prove that a park will fund a separate evidence layer.</p>
+    42	<p>The public response is material but is not customer revenue. Rijksoverheid says €62 million is available for advice and investments for organisations blocked by a full grid, and €166 million for stimulating energy hubs. <!-- CHECK: 06-public-support --> Those are programme budgets, not a price list, award to this company, or proof that an installer will share margin. The demand evidence that matters is narrower: a member has a blocked, costed investment and the group has reached a contract and governance choice that must be operated.</p>
+    43	</section>
+    44	
+    45	<section class="sale">
+    46	<h2>The first sale</h2>
+    47	<p>Use an actual operator map to build a ten-type prospect list. Include park-management foundations, estates with an approved hub study, and cold-storage, food, logistics, metals, waste and fleet-depot anchor tenants. Include the electrical installer or energy adviser already analysing their profiles. Screen out parks without common station eligibility, a committed anchor investment, or agreement to share interval data. An ambitious solar plan is not enough.</p>
+    48	<p>The opening route is through a Dutch-speaking electrical installer and an energy consultant, not independent English-language outbound. They already explain switchgear, meter access, permits, operation limits and member politics. The founder can lead integration design and a transparent evidence model in English; the channel partner must lead Dutch workshops, contractual discovery and on-call discussions. If the partner asks the founder to become the park's Dutch-speaking energy manager, the model violates the reader's constraint and should be declined.</p>
+    49	<p>Sell a four-week, <strong>€6,000 paid capacity operating baseline</strong>. That is a required test price, not an observed market rate. It reconciles fifteen-minute data against the group's proposed limit; maps controllable loads and their local owners; rehearses one safe curtailment path in a test window; specifies the command/acknowledgement/evidence log; and produces an exception and liability schedule. It excludes hardware, switchgear changes, protection settings, a grid-operator application, energy-market trading and any promise that the hub will be admitted.</p>
+    50	<p>The signers should be the anchor member's investment director and the hub entity or delegated park manager, because a control order reallocates a shared commercial right. The production offer is a required hurdle of <strong>€20,000 onboarding plus €4,500 per live site per month</strong>, billed through the installer under a disclosed wholesale schedule. Hardware and installation remain on the installer's invoice. Before proposing it, require a written allocation policy, a 24/7 contact at every member and a controller test interface. The group must also decide who bears the consequence when a member overrides a curtailment instruction.</p>
+    51	</section>
+    52	
+    53	<section class="economics">
+    54	<h2>Does the money work?</h2>
+    55	<p>This is design arithmetic, not a survey of Dutch prices. Every price, conversion and cost below is a validation hurdle. The model deliberately keeps batteries, meters, gateways, electrical works and installation off this company's revenue and warranty line.</p>
+    56	<div class="ledger-wrap"><table class="ledger">
+    57	<thead><tr><th>€000</th><th>Year 1 design hurdle</th><th>Mature design hurdle</th></tr></thead>
+    58	<tbody>
+    59	<tr><td>Paid baselines</td><td>3 × €6k = 18</td><td>8 × €8k = 64</td></tr>
+    60	<tr><td>Onboarding</td><td>1 × €20k = 20</td><td>5 × €20k = 100</td></tr>
+    61	<tr><td>Recurring control/evidence</td><td>3 sites × 6 months × €4.5k = 81</td><td>15 sites × 12 months × €4.5k = 810</td></tr>
+    62	<tr><td><strong>Revenue</strong></td><td><strong>119</strong></td><td><strong>974</strong></td></tr>
+    63	<tr><td>Pass-through hardware and installation</td><td>0</td><td>0</td></tr>
+    64	<tr><td>Direct delivery: engineers, specialist cover, cloud</td><td>55</td><td>245</td></tr>
+    65	<tr><td><strong>Gross margin</strong></td><td><strong>64 (54%)</strong></td><td><strong>729 (75%)</strong></td></tr>
+    66	<tr><td>Insurance, security, partner enablement, travel, admin</td><td>43</td><td>100</td></tr>
+    67	<tr><td>Founder labour at replacement cost</td><td>85</td><td>110</td></tr>
+    68	<tr><td><strong>Operating surplus after founder replacement</strong></td><td><strong>−64</strong></td><td><strong>519</strong></td></tr>
+    69	<tr><td>Owner distribution, separate from replacement labour</td><td>0</td><td>100</td></tr>
+    70	<tr><td><strong>Retained surplus before tax</strong></td><td><strong>−64</strong></td><td><strong>419</strong></td></tr>
+    71	<tr><td>Peak working-capital reserve (cash requirement, not expense)</td><td>70</td><td>80</td></tr>
+    72	<tr><td>Owned test equipment and connectivity capex</td><td>5</td><td>10</td></tr>
+    73	</tbody></table></div>
+    74	<p>Year one pays replacement-cost founder labour in the model but no owner distribution. It also loses €64,000, so it cannot continue without capital. The mature case pays €110,000 for the founder's operating role, a separate €100,000 owner distribution, and retains €419,000 before tax. That works only if two delivery engineers can run fifteen sites while an on-call electrical-control specialist handles exceptions. The 7.5-site load is a design hurdle. Time-log integrations, tested commands, exceptions, overrides and incident reviews. If each peak needs founder judgement, the margin is fictional.</p>
+    75	<p>The 75% gross-margin hurdle is not licence economics. It pays for integration variance, secure hosting, observability, control testing, audit records, specialist review and a response path. A 25% wholesale discount on the €810,000 recurring line removes €202,500 before costs change. That is why the installer cannot simply be “the channel” and take whatever margin it requests. The wholesale card has to cover responsibilities and show the anchor member an outcome worth buying.</p>
+    76	<p>Working capital is not an expense, so the table shows it separately. The year-one design reserves €70,000 for the operating loss and receivables gap, plus €5,000 for owned test equipment and secure connectivity. Production customers fund site hardware directly. They pay onboarding 50% in advance and recurring service monthly in advance. These are required terms, not observed supplier practice. Do not hire a second engineer, buy a gateway fleet or promise response times before signed receipts fund them.</p>
+    77	</section>
+    78	
+    79	<section class="scale">
+    80	<h2>From service to company</h2>
+    81	<p><strong>Customer one</strong> is a site study with a thin control path. The founder traces meter identifiers, discovers whether a charger, battery or process load actually accepts an external setpoint, and watches a supervised test. The useful output is not a dashboard. It is a signed map from contractual constraint to meter, controller, local owner, safety boundary, permitted action, acknowledgement and recovery procedure.</p>
+    82	<p><strong>Customer five</strong> uses a versioned connector kit for the few controller classes actually encountered, a standard allocation-policy schema and a repeatable test protocol. A trained implementation engineer can onboard data, perform reconciliation and produce an exception report. The electrical-control specialist approves control boundaries; the founder handles only unresolved integration and commercial escalation. The installer sells the baseline from a fixed scope, not from a fresh technical essay.</p>
+    83	<p><strong>Customer twenty</strong> is possible only through three to five enabled installer/adviser partners. Recurrence follows changing state. Members join or leave, allocations change, equipment is maintained and controllers go offline. New loads change profiles, contract calls change permitted actions, overrides need investigation and group settlement needs evidence. The accumulating asset is a tested library of controller adapters, policy templates, simulator fixtures, failure modes and evidence records. Raw interval data belongs to the member or group under the agreed contracts.</p>
+    84	<p>The four tests are severe. Acquisition repeats only when partners originate qualified baselines without the founder's personal introductions. Delivery is teachable only when someone other than the founder can pass a simulated command-and-recovery test from the playbook. Value recurs only because allocations, equipment and constraints change. The asset accumulates only when the next compatible controller and agreement can be onboarded faster without exposing a prior site's data. If two of these fail, call it specialist integration work and price it accordingly; do not call it a software company.</p>
+    85	<p>Liability starts with the transport right, not the software warranty. Stedin says the group is jointly responsible for staying within capacity and must record its internal allocation in an agreement. It also says an EMS is needed. <!-- CHECK: 06-stedin-hub --> Under ACM's GTO code decision, every breach is reported to the group's representative. Two or more breaches may lead to suspension. A further breach after remedies may ultimately end the transport right. <!-- CHECK: 06-gto-sanctions --></p>
+    86	<p>The code does not say who reimburses a member whose investment stops after a controller failure. ACM expressly declined to set civil-liability terms because it lacks that power. <!-- CHECK: 06-gto-liability --> The hub therefore faces the operator first, then relies on its private contracts. The paid baseline must propose a fault allocation: the member bears deliberate overrides; the installer bears proven hardware or wiring faults; and the software supplier bears proven command or logging defects, subject to a negotiated cap. Lost production, safety and upstream communication need explicit treatment. A Dutch lawyer and insurer must test that schedule before live control.</p>
+    87	</section>
+    88	
+    89	<section class="competition">
+    90	<h2>The incumbent gets a turn</h2>
+    91	<p>There is no empty category to enter. Sympower markets a stack that connects, aggregates, optimises and trades energy assets, including hardware or API interfaces, for commercial and industrial companies. <!-- CHECK: 06-sympower --> Withthegrid markets Dutch local control strategies including static and dynamic limitations, grid-operator endpoints and peak shaving. <!-- CHECK: 06-withthegrid --> Those are vendor descriptions, not independent evidence of outcomes, but they show that control, integration and market access are already purchasable together.</p>
+    92	<p>Scholt Energy markets flexibility around renewable generation, storage and industrial consumption. It says its virtual power plant connects those assets to energy markets. <!-- CHECK: 06-scholt --> Enervalis' accessible portal says only “Creating more value with energy.” <!-- CHECK: 06-enervalis --> That is too little own-material evidence to attribute a current control product, outcome or price. <!-- CHECK: 06-enervalis-boundary --> It is not proof that Enervalis has no such capability. It makes vendor discovery necessary before claiming differentiation.</p>
+    93	<p>The grid operators have their own hub programmes. Liander publishes the eligibility route and process. <!-- CHECK: 06-liander-route --> Enexis has ten development sites, expects wider availability in 2027 and requires an EMS. <!-- CHECK: 06-enexis-rollout --> <!-- CHECK: 06-enexis-gto --> Stedin describes the same control need and offers a Netburenscan to identify possible group members. <!-- CHECK: 06-stedin-hub --> The operator cannot be displaced from capacity allocation. An installer can retain the controller, and a trader can bundle dispatch. A park can also buy a consultant and an EMS. Any of them can make a separate evidence layer look redundant.</p>
+    94	<p>The narrow response is neutrality between equipment and market counterparties, not superiority in dispatch. Keep an independent contract-to-control evidence record, support the awkward mixed fleet an installer inherited, and make the installer more credible with its end customer. The partner receives branded reports, first-line relationship ownership and a clear wholesale margin. The new company retains the reconciliation engine, test fixtures, secure audit trail and specialist control policy. If the partner demands the source, the customer data and unrestricted reuse while paying a thin fee, it is buying know-how to internalise.</p>
+    95	</section>
+    96	
+    97	<div class="counter">
+    98	<h2>The capable failure</h2>
+    99	<p>The company executes well. It finds an eligible park, maps the limits correctly, conducts safe control tests, documents overrides and never breaches a contracted group limit. The anchor tenant gets its investment moving. The installer presents the result to members, owns the hardware warranty and becomes the person called at 02:00. At renewal, the group treats evidence as a project appendix and asks the installer to fold the monitoring into its maintenance agreement.</p>
+   100	<p>The installer then has the protocol, the controller mappings and a working relationship with the energy adviser. The trader offers dispatch and reporting as part of its flexibility contract. The GTO has made the operating problem clearer, but not proprietary. The evidence product has also made every exception legible enough for a competent integrator to copy. Customer count rises, yet each site demands partner-specific integration and the wholesale price falls. No sales failure occurred; the layer created value but did not control a budget, a contractual choke point or a learning asset that the channel could not reclaim.</p>
+   101	</div>
+   102	
+   103	<section class="monday">
+   104	<h2>The first ninety days</h2>
+   105	<ol>
+   106	<li><strong>Days 1–15:</strong> choose Liander territory only. Interview ten installer, energy-adviser, park-manager and anchor-member prospects. For each, capture the blocked investment, network operator, station topology, connection category, contract form considered, controller estate and decision owner. Spend no more than €2,000 on travel and Dutch technical assistance.</li>
+   107	<li><strong>Days 10–25:</strong> retain an independent Dutch electrical-control engineer for up to €3,500 to define the safety boundary, test witness requirements and the manual-fallback protocol. If no qualified partner will own local safety and switching authority, stop before building control software.</li>
+   108	<li><strong>Days 20–35:</strong> pay a Dutch energy-contract lawyer up to €3,500 to review one GTO or hub cooperation agreement and draft the allocation, override, evidence-access and liability schedule. Do not pretend a technical log substitutes for a member agreement.</li>
+   109	<li><strong>Days 30–55:</strong> build only a simulator, interval-data reconciler, policy store, command/acknowledgement log and monthly exception report. Cap build, secure hosting and test connectivity at €6,000. No production gateway fleet, optimiser, trading desk or battery purchase.</li>
+   110	<li><strong>Days 45–70:</strong> offer the same <strong>€6,000 paid baseline</strong>, 50% in advance, to five qualified installer-led groups. It is valid only where an anchor member will expose redacted interval data and a safe controller-test interface.</li>
+   111	<li><strong>Days 70–90:</strong> deliver one baseline and seek the stated €20,000 onboarding plus €4,500 monthly production hurdle through the installer. Total pre-evidence spend is capped at <strong>€15,000</strong>.</li>
+   112	</ol>
+   113	<p><strong>Pass:</strong> one qualified group pays the baseline and completes a witnessed safe-control rehearsal. The anchor member and installer must then sign a production order or dated authority at the stated price hurdles, with written allocation and liability terms. <strong>Kill:</strong> no paid baseline after five qualified offers; no group can name a blocked investment and eligible connection arrangement; or installers will sell only if they own all evidence, customer contact and reusable control work. In any kill state, offer occasional integration consulting only if premium self-employment is acceptable—do not call it the second engine.</p>
+   114	</section>
+   115	
+   116	<div class="verdict-box">
+   117	<h2>Verdict</h2>
+   118	<p class="verdict"><strong>TEST THROUGH A PARTNER</strong></p>
+   119	<p>The single assumption most likely to change the verdict is that an installer or energy adviser can sell this recurring layer separately to a blocked anchor tenant.</p>
+   120	</div>
+   121	
+   122	<div class="reading">
+   123	<h2>Reading</h2>
+   124	<ul>
+   125	<li>ACM, <a href="https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf">GTO code decision</a> and <a href="https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder">application announcement</a>.</li>
+   126	<li>Liander, <a href="https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen">Groepscontracten: zo werkt het</a> and <a href="https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement">congestion-management choice guide</a>.</li>
+   127	<li>ACM, <a href="https://www.acm.nl/nl/publicaties/acm-stelt-maatregelen-tegen-netcongestie-vast-en-publiceert-uitgangspunten-voor-toekomstige-tariefaanpassingen">alternative transport rights decision</a> and <a href="https://www.acm.nl/nl/publicaties/voortgangsdashboard-bestuurlijke-afspraken-en-verbeterplannen-netbeheerders">implementation dashboard</a>.</li>
+   128	<li>Enexis, <a href="https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst">Groepstransportovereenkomst</a> and <a href="https://www.enexis.nl/zakelijk/netcapaciteit/transportcapaciteit/alternatieve-transportrechten">alternative-right status</a>.</li>
+   129	<li>Stedin, <a href="https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst">GTO, EMS and Netburenscan description</a>.</li>
+   130	<li>Rijksoverheid, <a href="https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/duurzame-energie/kabinet-neemt-maatregelen-tegen-vol-elektriciteitsnet-netcongestie">measures for a full electricity grid</a>.</li>
+   131	<li>Sympower, <a href="https://sympower.net/">platform overview</a>; Withthegrid, <a href="https://withthegrid.com/teleport/whitepaper/">Dutch congestion-control guide</a>; Scholt Energy, <a href="https://scholt.com/flex-services-for-energy-assets-scholt-energy">Flex Services</a>; Enervalis, <a href="https://portal.enervalis.com/">portal</a>. These are vendor descriptions, not independent performance evidence.</li>
+   132	</ul>
+   133	</div>
+   134	
+   135	<nav class="chapter-nav" aria-label="Essay navigation">
+   136	  <span></span>
+   137	  <a href="../index.html">Contents</a>
+   138	  <span></span>
+   139	</nav>
+   140	</main>
+   141	<footer class="site-footer"><div class="wrap"><p>Seven candidates. One second engine. Evidence before commitment.</p></div></footer>
+   142	</body>
+   143	</html>
+
+--- CLAIMS ---
+     1	id	claim	source_url	source_locator	status
+     2	06-gto-final	On 19 December 2025 ACM said energy-hub companies can apply for a group transport agreement to share capacity, while grid operators become obliged to offer the form from 1 January 2027.	https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder	gto-final.txt	verified
+     3	06-liander-route	Liander describes group-contract eligibility above 3x80 A, a formed hub, high-frequency metering and one electricity station; it says at least one member needs GTV and gives an average two-year lead time.	https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen	liander-route.txt	verified
+     4	06-enexis-gto	Enexis says a GTO leaves individual connections in place, gives the group one transport contract, and needs an EMS to distribute capacity and remain within group capacity.	https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst	enexis-gto.txt	verified
+     5	06-enexis-rollout	Enexis says it is working with ten business parks on GTO development and expects broader customer availability from 2027.	https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst	enexis-rollout.txt	verified
+     6	06-atr-date	In a decision announced on 19 July 2024, ACM said regional operators could offer time-block-bound transport contracts from 1 April 2025, while the transmission-network duration-bound form provides maximum transport use at least 85% of the time.	https://www.acm.nl/nl/publicaties/acm-stelt-maatregelen-tegen-netcongestie-vast-en-publiceert-uitgangspunten-voor-toekomstige-tariefaanpassingen	atr-date.txt	verified
+     7	06-contract-taxonomy	ACM's 2 June 2026 implementation dashboard distinguishes CBC, CSC, group CBC/CSC, TBTR, TDTR and fully non-firm VVTR contract forms.	https://www.acm.nl/nl/publicaties/voortgangsdashboard-bestuurlijke-afspraken-en-verbeterplannen-netbeheerders	contract-taxonomy.txt	verified
+     8	06-enexis-atr-status	Enexis says Blokstroom applications for electricity consumption started on 1 April 2025, while fully variable Reststroom cannot yet be deployed because available capacity is insufficiently visible and further work is underway.	https://www.enexis.nl/zakelijk/netcapaciteit/transportcapaciteit/alternatieve-transportrechten	enexis-atr-status.txt	verified
+     9	06-liander-cbc	Liander describes CBCs with or without call-up and redispatch via GOPACS through a CSP.	https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement	liander-cbc.txt	verified
+    10	06-stedin-hub	Stedin says a GTO group is jointly responsible for not exceeding capacity, needs an EMS, and can use its Netburenscan to identify companies on the same grid section.	https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst	stedin-hub.txt	verified
+    11	06-gto-sanctions	ACM's GTO code decision says each breach is reported to the group's representative; after two or more breaches the operator may suspend transport rights, and a further breach after remedial measures may ultimately cause the right to lapse.	https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf	gto-sanctions.txt	verified
+    12	06-gto-liability	ACM's GTO code decision sets no civil-liability terms because ACM says it lacks power to regulate civil agreements between connected parties or groups and grid operators.	https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf	gto-liability.txt	verified
+    13	06-public-support	Rijksoverheid says €62 million is available for organisations blocked by a full grid and €166 million to stimulate energy hubs.	https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/duurzame-energie/kabinet-neemt-maatregelen-tegen-vol-elektriciteitsnet-netcongestie	public-support.txt	verified
+    14	06-sympower	Sympower markets connection, aggregation, optimisation and trading of energy assets, including hardware or API integration, for commercial and industrial companies.	https://sympower.net/	sympower.txt	verified
+    15	06-withthegrid	Withthegrid markets Dutch local control strategies, including static and dynamic limitations, grid-operator endpoints and peak shaving.	https://withthegrid.com/teleport/whitepaper/	withthegrid.txt	verified
+    16	06-scholt	Scholt markets flexibility services for generation, storage and flexible industrial consumption and says its VPP connects assets to energy markets.	https://scholt.com/flex-services-for-energy-assets-scholt-energy	scholt.txt	verified
+    17	06-enervalis	Enervalis' current portal uses the marketing line “Creating more value with energy.”	https://portal.enervalis.com/	enervalis.txt	verified
+    18	06-enervalis-boundary	The accessible Enervalis portal is insufficient evidence of a current control-product surface, customer outcome or price.	https://portal.enervalis.com/	enervalis.txt	inference
+
+--- SOURCES INDEX ---
+     1	# Essay 6 — source index
+     2	
+     3	Accessed 2026-09-02. Vendor pages support only their described marketing surface; they are not evidence of customer outcomes, prices or market share.
+     4	
+     5	1. **Autoriteit Consument & Markt, “ACM: Energiehubs kunnen groepstransportovereenkomst aanvragen bij hun netbeheerder.”**
+     6	   URL: https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder
+     7	   Accessed: 2026-09-02.
+     8	   Supports: the 19 December 2025 decision, present application route, shared-capacity description and operator obligation from 1 January 2027 (`06-gto-final`).
+     9	
+    10	2. **Autoriteit Consument & Markt, “Codebesluit groepstransportovereenkomst,” Staatscourant 2025, 43262.**
+    11	   URL: https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
+    12	   Accessed: 2026-09-02.
+    13	   Supports: consequences of repeated GTO breaches and ACM's explicit decision not to regulate the civil-liability allocation (`06-gto-sanctions`, `06-gto-liability`).
+    14	
+    15	3. **Liander, “Groepscontracten: zo werkt het.”**
+    16	   URL: https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen
+    17	   Accessed: 2026-09-02.
+    18	   Supports: current Liander conditions, group process, GTV requirement and stated timing (`06-liander-route`).
+    19	
+    20	4. **Enexis Netbeheer, “Groepstransportovereenkomst (GTO).”**
+    21	   URL: https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
+    22	   Accessed: 2026-09-02.
+    23	   Supports: GTO mechanics, EMS need, ten development sites and expected wider availability (`06-enexis-gto`, `06-enexis-rollout`).
+    24	
+    25	5. **Stedin, “Groepstransportovereenkomst: samen transportvermogen delen.”**
+    26	   URL: https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst
+    27	   Accessed: 2026-09-02.
+    28	   Supports: joint responsibility for the capacity limit, EMS need and Stedin's own Netburenscan (`06-stedin-hub`).
+    29	
+    30	6. **Autoriteit Consument & Markt, “ACM stelt maatregelen tegen netcongestie vast en publiceert uitgangspunten voor toekomstige tariefaanpassingen.”**
+    31	   URL: https://www.acm.nl/nl/publicaties/acm-stelt-maatregelen-tegen-netcongestie-vast-en-publiceert-uitgangspunten-voor-toekomstige-tariefaanpassingen
+    32	   Accessed: 2026-09-02.
+    33	   Supports: the 19 July 2024 decision, 1 April 2025 time-block availability date and 85% duration-bound high-voltage form (`06-atr-date`).
+    34	
+    35	7. **Autoriteit Consument & Markt, “Voortgangsdashboard, bestuurlijke afspraken en verbeterplannen netbeheerders.”**
+    36	   URL: https://www.acm.nl/nl/publicaties/voortgangsdashboard-bestuurlijke-afspraken-en-verbeterplannen-netbeheerders
+    37	   Accessed: 2026-09-02.
+    38	   Supports: the 2 June 2026 taxonomy of CBC, CSC, group forms, TBTR, TDTR and VVTR (`06-contract-taxonomy`).
+    39	
+    40	8. **Enexis Netbeheer, “Alternatieve transportrechten.”**
+    41	   URL: https://www.enexis.nl/zakelijk/netcapaciteit/transportcapaciteit/alternatieve-transportrechten
+    42	   Accessed: 2026-09-02.
+    43	   Supports: the live Blokstroom application route from 1 April 2025 and the not-yet-live status of fully variable Reststroom (`06-enexis-atr-status`).
+    44	
+    45	9. **Liander, “Keuzehulp deelname congestiemanagement.”**
+    46	   URL: https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement
+    47	   Accessed: 2026-09-02.
+    48	   Supports: CBC forms, redispatch, GOPACS and the CSP route (`06-liander-cbc`).
+    49	
+    50	10. **Rijksoverheid, “Maatregelen tegen vol elektriciteitsnet (netcongestie).”**
+    51	    URL: https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/duurzame-energie/kabinet-neemt-maatregelen-tegen-vol-elektriciteitsnet-netcongestie
+    52	    Accessed: 2026-09-02.
+    53	    Supports: public funding for blocked organisations and energy hubs, distinguished here from customer budget (`06-public-support`).
+    54	
+    55	11. **Sympower, “Turn your energy into profit.”**
+    56	    URL: https://sympower.net/
+    57	    Accessed: 2026-09-02.
+    58	    Supports: Sympower's marketed integration, aggregation, optimisation and trading surface (`06-sympower`).
+    59	
+    60	12. **Withthegrid, “Managing grid congestion in the Netherlands with local control strategies.”**
+    61	    URL: https://withthegrid.com/teleport/whitepaper/
+    62	    Accessed: 2026-09-02.
+    63	    Supports: Withthegrid's marketed local-control surface (`06-withthegrid`).
+    64	
+    65	13. **Scholt Energy, “Flex Services for Energy Assets.”**
+    66	    URL: https://scholt.com/flex-services-for-energy-assets-scholt-energy
+    67	    Accessed: 2026-09-02.
+    68	    Supports: Scholt's marketed VPP and flexibility-service surface (`06-scholt`).
+    69	
+    70	14. **Enervalis, customer portal.**
+    71	    URL: https://portal.enervalis.com/
+    72	    Accessed: 2026-09-02.
+    73	    Supports: the portal's own marketing line only (`06-enervalis`); the absence of a public product specification is treated as an inference boundary, not proof that no product exists (`06-enervalis-boundary`).
+    74	
+    75	## Evidence boundary
+    76	
+    77	The code record establishes the consequences a grid operator may impose after repeated GTO breaches, but it does not allocate civil damages among the hub, a member, an installer and a software provider. ACM says that allocation is outside its power. No primary source found establishes that a blocked business park will pay the proposed diagnostic or recurring price; that an installer will preserve a separately priced wholesale line; or that a group will grant the required operating and evidence rights. Those questions remain the paid-test gates. Programme budgets and contract availability are not evidence of customer payment.
+
+exec
+/bin/bash -lc "for f in resources/sources/06/excerpts/*.txt; do printf '\\n===== %s =====\\n' \""'$f"; nl -ba "$f"; done' in /home/diablo/book18
+ succeeded in 256ms:
+
+===== resources/sources/06/excerpts/atr-date.txt =====
+     1	https://www.acm.nl/nl/publicaties/acm-stelt-maatregelen-tegen-netcongestie-vast-en-publiceert-uitgangspunten-voor-toekomstige-tariefaanpassingen
+     2	Fetched 2026-09-02
+     3	Publicatiedatum 19-07-2024
+     4	
+     5	Daarnaast kunnen netbeheerders vanaf 1 april 2025 ook contracten aanbieden waarbij grootverbruikers – in ruil voor een lager tarief - de aansluiting helemaal niet mogen gebruiken tijdens bepaalde drukke uren. Grootverbruikers op regionale netten met zo’n contract kunnen hun aansluiting dan alleen gebruiken tijdens afgesproken uren (tijdsblokgebonden contract).
+     6	
+     7	Voor grootverbruikers die zijn aangesloten op het hoogspanningsnet geldt dat zij met de nieuwe contractvorm tenminste 85% van de tijd hun aansluiting kunnen gebruiken (tijdsduurgebonden contract).
+
+===== resources/sources/06/excerpts/contract-taxonomy.txt =====
+     1	https://www.acm.nl/nl/publicaties/voortgangsdashboard-bestuurlijke-afspraken-en-verbeterplannen-netbeheerders
+     2	Fetched 2026-09-02
+     3	Publicatiedatum 02-06-2026
+     4	
+     5	CBC: Een Capaciteitsbeperkingscontract is een afspraak tussen een grootverbruiker en een netbeheerder. Het bedrijf belooft om (vrijwillig en tijdelijk) minder stroom af te nemen of terug te leveren aan het elektriciteitsnet op momenten dat dit overbelast dreigt te raken, in ruil voor een vergoeding.
+     6	
+     7	CSC: Een capaciteitssturingscontract is een flexibele overeenkomst tussen een netbeheerder en een grootverbruiker (zoals een bedrijf met zonnepanelen of batterijen) om het elektriciteitsnet op drukke momenten te ontlasten.
+     8	
+     9	GroepsCBC/CSC: Een contract waarmee een groep bedrijven afspreekt om gezamenlijk (of als collectief) het stroomverbruik of de teruglevering tijdelijk te verminderen op momenten dat het elektriciteitsnet overbelast dreigt te raken.
+    10	
+    11	TBTR: Een contractvorm voor de midden- en laagspanningsnetten waarmee grootverbruikers het recht krijgen om op vooraf afgesproken, vaste tijdsblokken elektriciteit af te nemen of terug te leveren. TDTR: Een contractvorm aangeboden door TenneT waarbij de afnemer minimaal 85% van de tijd gebruik kan maken van zijn maximale transportrecht. De overige 15% kan TenneT het transport beperken of afsluiten om het stroomnet te ontlasten. VVTR: Een contractvorm waarbij de afnemer geen gegarandeerd recht op transport heeft. Het is volledig afhankelijk van de actuele belasting op het elektriciteitsnet.
+
+===== resources/sources/06/excerpts/enervalis.txt =====
+     1	https://portal.enervalis.com/
+     2	Fetched 2026-09-02
+     3	Creating more value with energy
+
+===== resources/sources/06/excerpts/enexis-atr-status.txt =====
+     1	https://www.enexis.nl/zakelijk/netcapaciteit/transportcapaciteit/alternatieve-transportrechten
+     2	Fetched 2026-09-02
+     3	Blokstroom: het aanvraagproces voor Blokstroom voor afname van elektriciteit is gestart op 1 april 2025. Kijk voor meer informatie en het aanvraagformulier op onze pagina over Blokstroom. Let op: Blokstroom voor teruglevering van elektriciteit is nog niet mogelijk.
+     4	
+     5	Reststroom (volledig variabel transportrecht): op dit moment is er onvoldoende zicht op hoeveel transportcapaciteit er beschikbaar is om volledig variabel transportrecht in te zetten. Dit wordt de komende periode verder onderzocht.
+
+===== resources/sources/06/excerpts/enexis-gto.txt =====
+     1	https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
+     2	Fetched 2026-09-02
+     3	Als u met een groep bedrijven een GTO aangaat, behoudt u een eigen aansluiting op het elektriciteitsnet. De groep heeft gezamenlijk 1 transportcontract met ons. Dit betekent dat u samen met de groep bepaalt hoe de beschikbare capaciteit verdeeld wordt.
+     4	
+     5	Voor het verdelen van de capaciteit is een energiemanagementsysteem nodig om de gemaakte afspraken uit te kunnen voeren en binnen de groepscapaciteit te kunnen blijven.
+
+===== resources/sources/06/excerpts/enexis-rollout.txt =====
+     1	https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
+     2	Fetched 2026-09-02
+     3	We werken samen met 10 bedrijventerreinen aan de ontwikkeling van onze groepstransportovereenkomst. Met deze 1e gebruikers verzamelen we waardevolle inzichten om verbeteringen door te voeren. Vanaf 2027 verwachten we de GTO aan een bredere groep klanten aan te bieden.
+
+===== resources/sources/06/excerpts/gto-final.txt =====
+     1	https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder
+     2	Fetched 2026-09-02
+     3	Publicatiedatum 19-12-2025.
+     4	De Autoriteit Consument & Markt (ACM) maakt het voor bedrijven die in een energiehub willen samenwerken mogelijk om een groepstransportovereenkomst (GTO) aan te vragen bij hun netbeheerder. Met deze nieuwe contractvorm kunnen bedrijven transportcapaciteit samen delen. Zo kunnen zij lokaal vraag en aanbod van elektriciteit op elkaar afstemmen.
+     5	
+     6	De ACM heeft met een wijziging van de energiecodes geregeld dat netbeheerders groepstransportovereenkomsten kunnen aanbieden aan grootverbruikers met een aansluiting. Vanaf 1 januari 2027 zijn de netbeheerders hier ook toe verplicht.
+
+===== resources/sources/06/excerpts/gto-liability.txt =====
+     1	https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
+     2	Fetched 2026-09-02
+     3	De ACM begrijpt dat partijen aansprakelijkheid een belangrijk onderwerp vinden. De ACM erkent ook dat vergaande aansprakelijkheidseisen een drempel zouden kunnen vormen om deel te nemen aan een groepstransportovereenkomst. De ACM is echter niet bevoegd om eisen te stellen aan de civielrechtelijke afspraken tussen (groepen van) aangeslotenen en netbeheerders. De ACM stelt daarom in dit besluit geen eisen aan de wijze waarop aansprakelijkheid wordt geregeld.
+
+===== resources/sources/06/excerpts/gto-sanctions.txt =====
+     1	https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
+     2	Fetched 2026-09-02
+     3	Artikel 7.1h van de Netcode regelt dat het transportrecht van de groep eerst kan worden opgeschort en in het uiterste geval kan komen te vervallen indien de groep de voorwaarden van een groepstransportovereenkomst heeft geschonden. Deze mogelijke sancties moeten de groep ervan weerhouden om de aan haar beschikbaar gestelde capaciteit te overschrijden.
+     4	
+     5	Artikel 7.1h, eerste lid, van de Netcode schrijft voor dat de netbeheerder de gemachtigde informeert bij elke schending van de voorwaarden van artikel 7.1e of artikel 7.1f van de Netcode door de groep. Als een groep twee keer of vaker de voorwaarden van de groepstransportovereenkomst heeft geschonden, kan de netbeheerder het recht op transport volgens artikel 7.1h, tweede lid, van de Netcode opschorten. Bij de beslissing om het transportrecht op te schorten houdt de netbeheerder rekening met de mate en frequentie van de schending van de voorwaarden.
+     6	
+     7	Als de groep na het opheffen van de opschorting, ondanks de getroffen maatregelen, opnieuw de voorwaarden schendt, kan de conclusie worden getrokken dat de groep niet aan de voorwaarden van een groepstransportovereenkomst voldoet. Naar het oordeel van de ACM kan het in het uiterste geval dan redelijk zijn dat de netbeheerder de uiteindelijke mogelijkheid heeft om het betreffende recht op transport van de groep te laten vervallen.
+
+===== resources/sources/06/excerpts/liander-cbc.txt =====
+     1	https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement
+     2	Fetched 2026-09-02
+     3	Bij het contract met afroep heeft u de plicht om op ons verzoek het benodigde vermogen aan te passen. U bepaalt zelf wat u aan flexibel vermogen kunt aanbieden. Wij roepen nooit meer af dan met u overeengekomen.
+     4	
+     5	Bij het contract zonder afroep spreken we rechtstreeks met u af dat u het vermogen aanpast op de afgesproken vaste momenten.
+     6	
+     7	Via een redispatch biedplichtcontract: Uw CSP plaatst altijd een bod wanneer wij een oproep voor flexibel vermogen op GOPACS doen.
+
+===== resources/sources/06/excerpts/liander-route.txt =====
+     1	https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen
+     2	Fetched 2026-09-02
+     3	U bent een grootzakelijke klant met een elektriciteitsaansluiting groter dan 3x80 Ampère; U vormt een energiehub met andere bedrijven; Uw aansluiting beschikt over een meetinrichting met een hoge meetfrequentie; Alle deelnemende bedrijven zijn op hetzelfde elektriciteitsstation aangesloten.
+     4	
+     5	Zelfs met 0 gecontracteerd vermogen (GTV) kunt u meedoen, omdat u gebruikmaakt van capaciteit in de groep. Wie het vermogen gebruikt, betaalt ervoor. Hierbij geldt wel de voorwaarde dat tenminste één klant in de groep over vermogen moet beschikken. Houd daarnaast rekening met een gemiddelde doorlooptijd van 2 jaar voor het vormen van een groep en het overeenkomen van een groepscontract.
+
+===== resources/sources/06/excerpts/public-support.txt =====
+     1	https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/duurzame-energie/kabinet-neemt-maatregelen-tegen-vol-elektriciteitsnet-netcongestie
+     2	Fetched 2026-09-02
+     3	Bedrijven en instellingen die vastlopen door het volle stroomnet kunnen subsidie aanvragen om advies in te huren of investeringen te doen om verder te kunnen met hun groei- of verduurzamingsplannen. Het doel is dat bedrijven hierdoor niet eerst hoeven te wachten op een zwaardere aansluiting op het stroomnet. Voor de regeling is € 62 miljoen beschikbaar.
+     4	
+     5	Er is € 166 miljoen beschikbaar om zogeheten energiehubs te stimuleren. Bij zo’n energiehub stemmen bedrijven die bij elkaar in de buurt zitten hun vraag en aanbod van energie met elkaar af.
+
+===== resources/sources/06/excerpts/scholt.txt =====
+     1	https://scholt.com/flex-services-for-energy-assets-scholt-energy
+     2	Fetched 2026-09-02
+     3	Scholt works with renewable generation, battery storage and flexible industrial consumption, allowing flexibility to be assessed in its wider energy context.
+     4	
+     5	Scholt combines asset information, agreed operating limits, market access and optimisation to determine when flexibility should be available or activated.
+     6	
+     7	Scholt Energy connects these assets to the relevant energy markets through its Virtual Power Plant (VPP).
+
+===== resources/sources/06/excerpts/stedin-hub.txt =====
+     1	https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst
+     2	Fetched 2026-09-02
+     3	De groep heeft samen één contract voor transportvermogen.
+     4	De bedrijven spreken af hoe ze de capaciteit verdelen. De groep is ook samen verantwoordelijk voor het niet overschrijden van de capaciteit.
+     5	Deze afspraken worden vastgelegd in een onderlinge overeenkomst.
+     6	Voor de verdeling is een energiemanagementsysteem nodig. Dit gebruikt slimme software die op basis van realtime data en aansturing de opwek, opslag en verbruik op elkaar afstemt binnen de beschikbare capaciteit.
+     7	
+     8	Netburenscan: met welke bedrijven kunt u samen in een GTO
+     9	Deze scan geeft inzicht in de bedrijven die op hetzelfde deel van het elektriciteitsnet zijn aangesloten. U kunt mogelijk met deze bedrijven samenwerken in een GTO.
+
+===== resources/sources/06/excerpts/sympower.txt =====
+     1	https://sympower.net/
+     2	Fetched 2026-09-02
+     3	Battery storage, demand response, BRP solutions: we connect, aggregate, optimise and trade your energy across markets.
+     4	
+     5	We operate and deliver the entire value chain in-house and independently, managing hundreds of assets across Europe for BESS projects, commercial and industrial companies, BRPs and RES developers.
+     6	
+     7	We connect resources and manage hardware or API interfaces for market access.
+
+===== resources/sources/06/excerpts/withthegrid.txt =====
+     1	https://withthegrid.com/teleport/whitepaper/
+     2	Fetched 2026-09-02
+     3	Regulatory compliance: Realtime Interface in the Netherlands; The grid operator endpoint; The customer endpoint; Local control strategies for congestion management; Static and dynamic limitations; Grid guard; Peak shaving; Hybrid control.
+
+exec
+/bin/bash -lc "rg -n \"Navigation|chapter-nav|previous|next|Essay navigation\" TEMPLATE.md chapters/*.html | head -120 && printf '\\n--- chapter files ---\\n' && rg --files chapters | sort" in /home/diablo/book18
+ succeeded in 271ms:
+chapters/07-eudi-wallet-acceptance.html:153:<nav class="chapter-nav">
+chapters/05-product-passports.html:29:<p>The first customer is a Benelux company that assembles stationary energy-storage systems from batteries previously used in vehicles or other applications and expects to place its finished industrial batteries on the EU market after 18 February 2027. It is not a cell manufacturer or a vehicle OEM. It buys or receives donor packs or modules, tests and grades them, changes their purpose or configuration, integrates a BMS and enclosure, and becomes the economic operator for the second-life battery.</p>
+chapters/05-product-passports.html:54:<p>The required production price is €30,000 for integration/onboarding, then €3,500 per month for managed evidence and change operations plus €12 per newly issued or materially updated passport event. These are hurdles, not market facts. The platform licence, identifier issuance, lab work and legal opinions are billed directly to the customer. If a ten-unit sprint cannot justify that next-stage order, do not assume thousands of future passports will.</p>
+chapters/05-product-passports.html:124:<nav class="chapter-nav" aria-label="Essay navigation">
+chapters/06-grid-capacity-hubs.html:84:<p>The four tests are severe. Acquisition repeats only when partners originate qualified baselines without the founder's personal introductions. Delivery is teachable only when someone other than the founder can pass a simulated command-and-recovery test from the playbook. Value recurs only because allocations, equipment and constraints change. The asset accumulates only when the next compatible controller and agreement can be onboarded faster without exposing a prior site's data. If two of these fail, call it specialist integration work and price it accordingly; do not call it a software company.</p>
+chapters/06-grid-capacity-hubs.html:135:<nav class="chapter-nav" aria-label="Essay navigation">
+chapters/03-machine-vision-food.html:41:<p>Buyer pain, legal duty and budget remain separate. A plant may accept manual checks because escapes are rare, buy a printer-integrated camera during the next replacement, or ask its incumbent integrator to add a smart camera. The first paid diagnostic must reveal the frequency and cost of holds, rework, retailer claims and code-related nonconformities at one line. Without those numbers, the regulation is merely atmosphere.</p>
+chapters/03-machine-vision-food.html:109:<p>The team executes well. Two cheese packers pay for diagnostics. The optical design passes on glossy film, the reject path survives site acceptance, operators like the evidence log, and a respected Dutch integrator sells five cells. Then the integrator learns which dome, lens and thresholds work, while Domino supplies a printer-linked camera in the next fleet refresh. Customers prefer one service number and one recipe entry. The partner recreates the defect checklist in its existing platform and offers seal and film checks alongside the date for a modest premium. It honours every contract, simply stops ordering the module.</p>
+chapters/03-machine-vision-food.html:145:<nav class="chapter-nav" aria-label="Essay navigation">
+TEMPLATE.md:29:Navigation: previous / contents / next. Use the shared static paths `../static/style.css` and
+chapters/04-asset-intelligence.html:119:<nav class="chapter-nav" aria-label="Essay navigation">
+chapters/02-white-label-product-security.html:82:<p>Acquisition repeats only when enabled partners originate qualified work without founder prospecting. Delivery is teachable only when another reviewer can reproduce a finding and the partner can explain it. Value recurs because components, releases, vulnerabilities and support state change. The asset accumulates only when the next engagement becomes faster without reusing confidential customer material. If quality requires the founder on every client call, the channel has multiplied meetings, not capacity.</p>
+chapters/02-white-label-product-security.html:132:<nav class="chapter-nav">
+chapters/01-connected-product-operations.html:80:<p>The four scalability tests are therefore explicit. Acquisition repeats only if two channels each create several paid baselines a year. Delivery is teachable only if analysts close most queue items from written procedures. Value recurs only while releases, vulnerabilities, requests and support states change. The asset accumulates only if integrations and evidence history reduce the next customer's labour. Fail any two and the honest outcome is a good expert practice, not a scalable company.</p>
+chapters/01-connected-product-operations.html:129:<nav class="chapter-nav">
+
+--- chapter files ---
+chapters/01-connected-product-operations.html
+chapters/02-white-label-product-security.html
+chapters/03-machine-vision-food.html
+chapters/04-asset-intelligence.html
+chapters/05-product-passports.html
+chapters/06-grid-capacity-hubs.html
+chapters/07-eudi-wallet-acceptance.html
+
+exec
+/bin/bash -lc "nl -ba TEMPLATE.md | sed -n '1,80p'; for f in chapters/05-product-passports.html chapters/07-eudi-wallet-acceptance.html; do printf '\\n--- %s ---\\n' \""'$f"; rg -n -A5 -B1 '"'<nav class=\"chapter-nav\"' \""'$f"; done' in /home/diablo/book18
+ succeeded in 250ms:
+     1	# Book 18 — essay template
+     2	
+     3	Kicker: `Essay N of 7 · Candidate name`
+     4	
+     5	H1: an argued title, not merely the candidate label.
+     6	
+     7	Lede (`p.lede`, no more than 130 words): the purchase decision and the tension that could
+     8	make the idea attractive or fatal.
+     9	
+    10	1. **The proposition** (`section.proposition`) — one buyer, purchase event, deliverable,
+    11	   substitute and initial boundary. State what the business refuses to be.
+    12	2. **What changed** (`section.changed`) — dated regulation/technology/supply-chain change and
+    13	   evidence of practical buyer pain. Separate obligation, enforcement and budget.
+    14	3. **The first sale** (`section.sale`) — how ten named-prospect types would be reached, what
+    15	   fixed paid diagnostic is sold, who signs and why now. Address language and geography.
+    16	4. **Does the money work?** (`section.economics`) — bottom-up year 1 and plausible mature-year
+    17	   model. Separate sourced prices from required-price arithmetic; include working capital.
+    18	5. **From service to company** (`section.scale`) — first, fifth and twentieth customer; people,
+    19	   process, recurring work, accumulating asset, and founder bottleneck.
+    20	6. **The incumbent gets a turn** (`section.competition`) — named competitors and substitutes;
+    21	   how they respond; why partners might capture the customer or margin.
+    22	7. **The capable failure** (`div.counter`) — a non-straw-man path where good execution loses.
+    23	8. **The first ninety days** (`section.monday`) — 4–6 numbered actions, maximum pre-evidence
+    24	   spend, paid test, pass rule and kill rule.
+    25	9. **Verdict** (`div.verdict-box`) — one exact `CONTEXT.md` verdict and the single assumption
+    26	   that would most change it.
+    27	10. **Reading** (`div.reading`) — 5–10 primary/authoritative sources actually used.
+    28	
+    29	Navigation: previous / contents / next. Use the shared static paths `../static/style.css` and
+    30	`../static/theme.js`. External factual statements carry `<!-- CHECK: id -->`.
+
+--- chapters/05-product-passports.html ---
+123-
+124:<nav class="chapter-nav" aria-label="Essay navigation">
+125-  <a href="04-asset-intelligence.html">← Previous</a>
+126-  <a href="../index.html">Contents</a>
+127-  <a href="07-eudi-wallet-acceptance.html">Next →</a>
+128-</nav>
+129-</main>
+
+--- chapters/07-eudi-wallet-acceptance.html ---
+152-
+153:<nav class="chapter-nav">
+154-  <a href="05-product-passports.html">← Previous</a>
+155-  <a href="../index.html">Contents</a>
+156-  <span></span>
+157-</nav>
+158-</main>
+
+exec
+/bin/bash -lc "python - <<'PY'
+from bs4 import BeautifulSoup
+import re
+p='chapters/06-grid-capacity-hubs.html'
+s=BeautifulSoup(open(p), 'html.parser')
+for tag in s(['script','style']): tag.decompose()
+for el in s.find_all(['p','li','h1','h2','td','th']):
+    text=' '.join(el.stripped_strings)
+    for sent in re.split(r'(?<=[."'!?])'"\\s+', text):
+        n=len(re.findall(r\"\\b[\\w€×–—'’/-]+\\b\",sent))
+        if n>=35:
+            print(n, sent)
+lede=s.select_one('.lede').get_text(' ',strip=True)
+print('LEDE',len(re.findall(r\"\\b[\\w€×–—'’/-]+\\b\",lede)))
+PY" in /home/diablo/book18
+ exited 127 in 357ms:
+/bin/bash: line 1: python: command not found
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+from html.parser import HTMLParser
+import re
+class P(HTMLParser):
+ def __init__(self): super().__init__(); self.cur=None; self.parts=[]; self.blocks=[]
+ def handle_starttag(self,t,a):
+  if t in {'p','li','h1','h2','td','th'}: self.cur=t; self.parts=[]
+ def handle_data(self,d):
+  if self.cur: self.parts.append(d)
+ def handle_endtag(self,t):
+  if t==self.cur:
+   self.blocks.append((t,' '.join(''.join(self.parts).split()))); self.cur=None
+p=P(); p.feed(open('chapters/06-grid-capacity-hubs.html').read())
+for tag,text in p.blocks:
+ for sent in re.split(r'(?<=[."'!?])'"\\s+',text):
+  n=len(re.findall(r\"\\b[\\w€×–—'’/-]+\\b\",sent))
+  if n>=35: print(n,sent)
+for tag,text in p.blocks:
+ if tag=='p' and text.startswith('A factory that cannot'): print('LEDE',len(re.findall(r\"\\b[\\w€×–—'’/-]+\\b\",text)))
+PY" in /home/diablo/book18
+ succeeded in 241ms:
+38 The substitute is substantial: a park manager's spreadsheet and WhatsApp group; an installer-supplied energy-management system; a trader or aggregator's virtual power plant; a consultant's feasibility model; or a member choosing a smaller project and keeping its individual limit.
+36 It reconciles fifteen-minute data against the group's proposed limit; maps controllable loads and their local owners; rehearses one safe curtailment path in a test window; specifies the command/acknowledgement/evidence log; and produces an exception and liability schedule.
+36 The paid baseline must propose a fault allocation: the member bears deliberate overrides; the installer bears proven hardware or wiring faults; and the software supplier bears proven command or logging defects, subject to a negotiated cap.
+35 Kill: no paid baseline after five qualified offers; no group can name a blocked investment and eligible connection arrangement; or installers will sell only if they own all evidence, customer contact and reusable control work.
+LEDE 116
+
+codex
+Two likely gaps are emerging beyond the reviewers’ lists: the liability passage appears broader than ACM’s stated jurisdictional boundary, and the 90-day experiment may leave its most important failed outcome unclassified. I’m checking the live primary pages before ranking either one.
+web search: 
+web search: https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder
+web search: 
+web search: https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
+web search: 
+web search: 'CBC'
+exec
+/bin/bash -lc "rg -n \"CHECK|claims|sentence|word count|chapter-nav|review\" scripts -g '*.sh' -g '*.py' -g '*.js' -g '*.mjs' | head -200" in /home/diablo/book18
+ succeeded in 260ms:
+scripts/check_sentences.py:8:sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+scripts/check_sentences.py:9:for s in sentences:
+scripts/review.sh:2:# scripts/review.sh NN — panel review of chapters/NN-*.html.
+scripts/review.sh:3:# Two Gemini reviewers via agy review independently; codex (gpt-5.6-sol) consolidates,
+scripts/review.sh:4:# adversarial toward their findings. Outputs: drafts/reviews/NN-{flash,pro,codex}.md.
+scripts/review.sh:6:# produced text. `--codex-only` skips agy and has codex review directly.
+scripts/review.sh:11:out=drafts/reviews; mkdir -p "$out"
+scripts/review.sh:12:prompt="$(cat scripts/prompts/review-checklist.md)
+scripts/review.sh:21:  cons="Two reviewers assessed $f independently; their reports are in $out/$n-flash.md and $out/$n-pro.md (either may be empty).
+scripts/review.sh:22:Read CONTEXT.md, AGENT.md, the chapter, checks/claims/$n.tsv, resources/sources/$n/, and both reports. Be adversarial toward
+scripts/review.sh:24:(with why) / UNVERIFIABLE. Then add findings they both missed, using the checklist in scripts/prompts/review-checklist.md.
+scripts/draft-codex.sh:5:# and must be rewritten by gpt-5.6-sol (or the coordinating Claude session) before review or publication.
+scripts/draft-codex.sh:17:      [ "$m" = gpt-5.6-terra ] && ls chapters/$n-*.html >/dev/null 2>&1 && echo "terra draft $(date +%F) — rewrite with sol before review" > "drafts/$n.terra-draft"
+scripts/revise-codex.sh:12:[ -f "drafts/reviews/$n-applied.md" ] && echo "revise $n complete" >> "$log" || echo "revise $n ended without applied log" >> "$log"
+
+exec
+/bin/bash -lc "sed -n '1,160p' scripts/check_sentences.py && python3 scripts/check_sentences.py chapters/06-grid-capacity-hubs.html" in /home/diablo/book18
+ succeeded in 267ms:
+import re
+
+with open("/home/diablo/book18/chapters/06-grid-capacity-hubs.html", "r") as f:
+    text = f.read()
+
+# strip html tags roughly
+text = re.sub(r'<[^>]+>', ' ', text)
+sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+for s in sentences:
+    s = s.strip()
+    words = s.split()
+    if len(words) > 40:
+        print(f"LONG SENTENCE ({len(words)} words): {s}")
+
+LONG SENTENCE (66 words): A shared limit is a real operating system — The Second Engine 
+ 
+ 
+  
+ 
+ 
+ 
+   
+     The Second  Engine  
+     
+       Contents 
+       Method 
+       ☾ Dark 
+     
+   
+ 
+ 
+ Essay 06 of 7 · Grid-congestion Capacity Control for Business Parks 
+ A shared limit is a real operating system, not an energy dashboard 
+ A factory that cannot electrify a process, add a charger depot or energise an expansion has a purchase event; a sustainability officer does not.
+LONG SENTENCE (140 words): €000  Year 1 design hurdle  Mature design hurdle   
+ 
+  Paid baselines  3 × €6k = 18  8 × €8k = 64  
+  Onboarding  1 × €20k = 20  5 × €20k = 100  
+  Recurring control/evidence  3 sites × 6 months × €4.5k = 81  15 sites × 12 months × €4.5k = 810  
+   Revenue    119    974   
+  Pass-through hardware and installation  0  0  
+  Direct delivery: engineers, specialist cover, cloud  55  245  
+   Gross margin    64 (54%)    729 (75%)   
+  Insurance, security, partner enablement, travel, admin  43  100  
+  Founder labour at replacement cost  85  110  
+   Operating surplus after founder replacement    −64    519   
+  Owner distribution, separate from replacement labour  0  100  
+   Retained surplus before tax    −64    419   
+  Peak working-capital reserve (cash requirement, not expense)  70  80  
+  Owned test equipment and connectivity capex  5  10  
+   
+ Year one pays replacement-cost founder labour in the model but no owner distribution.
+
+codex
+**REVISE — the regulatory core is sound, but the channel economics and 90-day decision gate are not yet reliable enough to ship.**
+
+# Consolidated review: Chapter 06
+
+## Reviewer-finding dispositions
+
+| Reviewer finding | Disposition | Verification |
+|---|---|---|
+| Flash 1: sentence fragment in economics | **CONFIRMED** | “Time-log integrations, tested commands…” is a verbless fragment in [the economics discussion](/home/diablo/book18/chapters/06-grid-capacity-hubs.html:74). |
+| Flash 2: stacked Enexis CHECK markers | **REJECTED** | Both markers immediately follow the sentence and support distinct clauses: rollout supports ten sites/2027; GTO supports the EMS requirement. Splitting would improve precision but is not required by `AGENT.md`. |
+| Flash 3: loose reuse of `06-contract-taxonomy` | **CONFIRMED**, but its proposed removal is wrong | The excerpt mentions a CBC duty and compensation, but the TSV row records only the taxonomy. Removing the marker would leave the sentence unreceipted; add or expand a claim instead. |
+| Flash 4: incomplete navigation | **CONFIRMED** | [TEMPLATE.md](/home/diablo/book18/TEMPLATE.md:29) requires previous/contents/next. The fix must also update chapter 05’s next link and chapter 07’s previous link, which currently bypass chapter 06. |
+| Flash 5: dense 38-word semicolon lists | **REJECTED** | The sentences are below the checklist’s 40-word trigger and are coherent enumerations. This is stylistic preference, not a demonstrated defect. |
+| Pro 1: TSV mismatch for control duty/payment | **CONFIRMED** | This is the same substantive issue as Flash 3. |
+| Pro 2: unexplained GOPACS/CSP jargon | **CONFIRMED** | The chapter names both without explaining that GOPACS is the flexibility-trading platform and a CSP bids for the customer. Liander itself provides that mechanism in its [congestion-management guide](https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement). |
+| Pro 3: unexplained “peak shaving” | **CONFIRMED — Low** | A short explanation such as “suppressing short load spikes to remain below the limit” would make the vendor comparison more accessible. |
+
+No reviewer finding was unverifiable.
+
+## Ranked consolidated findings
+
+### 1. High — The mandatory channel margin is omitted from the model it is meant to test
+
+The production offer is “billed through the installer under a disclosed wholesale schedule,” yet the mature table records the full retail recurring amount:
+
+> “15 sites × 12 months × €4.5k = €810k”
+
+Only afterward does the prose observe that a 25% wholesale discount removes €202,500. That discount is not incorporated into revenue, gross margin, operating surplus, working capital, or the €100,000-capital test.
+
+At the chapter’s own example discount, mature revenue falls from €974,000 to at most €771,500, gross margin from €729,000 to €526,500, and retained surplus after the stated operating costs, founder replacement and distribution from €419,000 to €216,500. Year-one loss grows from €64,000 to at least €84,250 if the same discount applies to recurring revenue.
+
+The result may still pass, but the displayed 75% gross margin and cash reserve do not represent the prescribed route to market. The reviewers verified arithmetic while missing this commercial inconsistency. The direct-delivery bucket also does not show the cost assumptions behind “two delivery engineers,” specialist cover and cloud, weakening the required bottom-up test.
+
+**Fix:** Put net wholesale receipts in the base table, state exactly which lines receive partner discounts, break the €245,000 delivery cost into headcount/specialist/cloud drivers, and recalculate peak cash need.
+
+### 2. High — The 90-day test leaves the decisive failed outcome outside its kill rule
+
+The verdict depends on whether an installer can sell the recurring layer separately. The pass rule therefore requires a production order—or a loosely defined “dated authority”—after the paid baseline. But the kill rule covers only:
+
+- no paid baseline;
+- no eligible blocked investment; or
+- installer demands for all evidence and reusable work.
+
+It does not classify the most revealing outcome: a customer pays €6,000 for the baseline but refuses the €20,000 onboarding and €4,500 monthly service. A non-binding “dated authority” could also be counted as a pass without validating payment.
+
+**Fix:** Require a binding production order, deposit, or paid first month at the stated hurdle. Explicitly make failure to secure it after a successful baseline a kill or downgrade condition.
+
+### 3. Medium — The civil-liability statement exceeds ACM’s stated boundary
+
+The chapter says:
+
+> “ACM expressly declined to set civil-liability terms because it lacks that power.”
+
+The cited decision is narrower: ACM says it lacks authority to prescribe civil agreements between connected parties or groups and grid operators. It does not establish a general lack of authority over every relationship among members, installers and software suppliers. See [the saved excerpt](/home/diablo/book18/resources/sources/06/excerpts/gto-liability.txt:3) and the [official GTO decision](https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf).
+
+The TSV row preserves that scope; the chapter drops it.
+
+**Fix:** Write that ACM declined to prescribe liability allocation between the group and grid operator, then identify supplier/member allocation as a private-contract design question rather than an ACM holding.
+
+### 4. Medium — `06-contract-taxonomy` does not receipt the second sentence that uses it
+
+The sentence says:
+
+> “These forms can create a control duty and a payment mechanism.”
+
+The saved excerpt supports a narrower proposition: a CBC entails temporary voluntary load adjustment in exchange for compensation. The TSV row, however, says only that ACM distinguishes CBC, CSC, group variants, TBTR, TDTR and VVTR. See [06.tsv](/home/diablo/book18/checks/claims/06.tsv:7) and [contract-taxonomy.txt](/home/diablo/book18/resources/sources/06/excerpts/contract-taxonomy.txt:5).
+
+“These forms” may also imply that every preceding form contains both duty and payment, which the excerpt does not establish.
+
+**Fix:** Replace it with a CBC-specific sentence and a dedicated claim row, or expand the ledger claim while preserving the narrower scope.
+
+### 5. Low — The economics paragraph contains a sentence fragment
+
+> “Time-log integrations, tested commands, exceptions, overrides and incident reviews.”
+
+This interrupts an otherwise clear explanation and leaves uncertain whether these are the engineers’ duties or additional cost drivers.
+
+**Fix:** Join it to the preceding sentence: “The 7.5-site load is a design hurdle in which two delivery engineers handle integrations, tested commands, exceptions, overrides and incident reviews.”
+
+### 6. Low — Two competitor/mechanism terms need explanation
+
+“GOPACS via a Congestion Service Provider” and “peak shaving” are accurate but unexplained. This is especially noticeable because the business case depends on distinguishing market redispatch from local limit control.
+
+**Fix:** Explain GOPACS/CSP on first use and define peak shaving as suppressing short demand spikes to stay below a limit.
+
+### 7. Low — Chapter navigation is incomplete
+
+[Chapter 06](/home/diablo/book18/chapters/06-grid-capacity-hubs.html:135) has empty previous and next positions despite the template requirement. Chapter 05 currently links directly to chapter 07, and chapter 07 links back to chapter 05.
+
+**Fix:** Wire 05 → 06 → 07 in all three chapter files.
+
+## What the reviewers got right
+
+The live primary pages continue to support the central regulatory chronology: GTO applications are permitted now, while operators become obliged to offer them from 1 January 2027; Enexis still describes ten development parks and broader availability from 2027; and Liander publishes an active application route and roughly two-year formation timeline. [ACM](https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder), [Enexis](https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst), [Liander](https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen).
+
+The buyer, blocked-investment event, Dutch-speaking channel, scalability milestones, capable-failure path and provisional `TEST THROUGH A PARTNER` verdict are otherwise credible.
+
+## Three fixes that matter most
+
+1. Rebuild the financial table using net wholesale revenue and bottom-up delivery costs.
+2. Make refusal of the production order an explicit kill outcome.
+3. Narrow the ACM liability sentence and repair the CBC receipt.
+
+**Final verdict: REVISE.**
+tokens used
+75,496
