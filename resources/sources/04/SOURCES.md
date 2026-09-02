@@ -1,10 +1,10 @@
 # Essay 4 — source index
 
-Accessed 2026-09-01. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
+Re-fetched 2026-09-02. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
 
 1. **Siemens, “Machine Data,” Senseye developer documentation.**
    URL: https://developer.siemens.com/senseye/machine/index.html
-   Supports: ingestion routes, supported time-series and vibration inputs, 1 Hz ordinary time-series limit and preprocessing requirement (`04-senseye-ingestion`).
+   Supports: predictive-maintenance use, ingestion routes, supported time-series and vibration inputs, and the 1 Hz ordinary time-series limit (`04-senseye-ingestion`).
 
 2. **Siemens, “Structure,” Senseye work-order developer documentation.**
    URL: https://developer.siemens.com/senseye/workorders/structure.html
@@ -26,9 +26,9 @@ Accessed 2026-09-01. Vendor pages support only the described product or service 
    URL: https://www.spie-nl.com/oplossing/maintenance-solutions
    Supports: SPIE's machine-maintenance and asset-management scope and linked IFS Ultimo partnership (`04-spie-offer`).
 
-7. **ERIKS Nederland, “Predictive Maintenance.”**
-   URL: https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/
-   Supports: ERIKS's described Smart Asset Management team and platform (`04-eriks-offer`). The current URL may redirect into ERIKS's redesigned Dutch site; claim checked against the indexed page content available on the access date.
+7. **ERIKS, “Total Cost of Ownership.”**
+   URL: https://eriks.com/be/nl/oplossingen/engineering-maatwerkoplossingen/tco-total-cost-of-ownership
+   Supports: ERIKS's description of sensor- and data-analysis-based Smart Asset Management providing real-time machine-fleet insight (`04-eriks-offer`). This current official page replaces the former redirecting receipt; the team-composition wording was removed.
 
 8. **VIBRO, company and services page.**
    URL: https://vibro.nl/en/

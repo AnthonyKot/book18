@@ -1,6 +1,6 @@
 # Essay 01 — sources
 
-Accessed 2026-09-01. Vendor pages describe their own products and projects; they are used only to establish that an offer or capability is marketed, not that it performs as claimed or that buyers pay the proposed prices.
+Re-fetched 2026-09-02. Vendor pages describe their own products and projects; they are used only to establish that an offer or capability is marketed, not that it performs as claimed or that buyers pay the proposed prices.
 
 1. **European Union — Regulation (EU) 2024/2847 (Cyber Resilience Act).** 23 October 2024.
    https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
@@ -15,15 +15,15 @@ Accessed 2026-09-01. Vendor pages describe their own products and projects; they
    Corroborates: 24-hour, 72-hour and final-report sequence; SRP timetable. Used in Reading and to cross-check `01-cra-dates` and `01-srp` against the regulation.
 
 4. **European Union — Regulation (EU) 2023/2854 (Data Act).** 13 December 2023.
-   https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854
+   https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng
    Supports: connected-product and product-data definitions, accessibility and request duties, trade-secret controls, and application dates. Claims `01-data-scope`, `01-data-duty`, `01-data-dates`, `01-data-secrets`.
 
 5. **European Commission — Data Act explained.** Current explanatory page.
    https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained
-   Supports: industrial machines and robots as connected-product examples and Chapter II's raw/pre-processed data scope. Used to cross-check `01-data-scope` and in Reading.
+   Supports: industrial machines and robots as connected-product examples and Chapter II's raw/pre-processed data scope. Claim `01-data-examples`.
 
 6. **Roosa Risto, Mohit Sethi and Mika Katara — “Effects of the Cyber Resilience Act (CRA) on Industrial Equipment Manufacturing Companies.”** 20 May 2025.
-   https://arxiv.org/abs/2505.14325
+   https://arxiv.org/html/2505.14325v2
    Supports: study design, sample limits, reported operational pain and expected cost/role changes. Claims `01-survey-sample`, `01-survey-pain`, `01-survey-budget`. This is a small qualitative primary survey, not payment evidence.
 
 7. **CEN and CENELEC — 2026 Work Programme, Digital Society.** 2026.

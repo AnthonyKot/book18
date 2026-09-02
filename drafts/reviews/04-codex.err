@@ -1,0 +1,1434 @@
+Reading additional input from stdin...
+OpenAI Codex v0.148.0
+--------
+workdir: /home/diablo/book18
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a060bd-4ec0-7002-8c0c-bcde73a65a21
+--------
+user
+Two reviewers assessed chapters/04-asset-intelligence.html independently; their reports are in drafts/reviews/04-flash.md and drafts/reviews/04-pro.md (either may be empty).
+Read CONTEXT.md, AGENT.md, the chapter, checks/claims/04.tsv, resources/sources/04/, and both reports. Be adversarial toward
+the REVIEWERS: for each of their findings, verify it against the chapter and the sources and mark it CONFIRMED / REJECTED
+(with why) / UNVERIFIABLE. Then add findings they both missed, using the checklist in scripts/prompts/review-checklist.md.
+Output one consolidated markdown report, ranked, with a one-line ship / revise / block verdict at the top.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+codex
+I’ll audit the chapter and its evidence set, then reconcile every reviewer claim before adding an independent checklist pass. I’ll keep this read-only and produce the consolidated report directly.
+exec
+/bin/bash -lc "pwd && rg --files -g 'CONTEXT.md' -g 'AGENT.md' -g 'chapters/04-asset-intelligence.html' -g 'checks/claims/04.tsv' -g 'drafts/reviews/04-flash.md' -g 'drafts/reviews/04-pro.md' -g 'scripts/prompts/review-checklist.md' -g 'resources/sources/04/**'" in /home/diablo/book18
+ succeeded in 290ms:
+/home/diablo/book18
+AGENT.md
+CONTEXT.md
+scripts/prompts/review-checklist.md
+chapters/04-asset-intelligence.html
+resources/sources/04/SOURCES.md
+checks/claims/04.tsv
+drafts/reviews/04-pro.md
+drafts/reviews/04-flash.md
+
+exec
+/bin/bash -lc "wc -l CONTEXT.md AGENT.md scripts/prompts/review-checklist.md chapters/04-asset-intelligence.html checks/claims/04.tsv drafts/reviews/04-flash.md drafts/reviews/04-pro.md resources/sources/04/SOURCES.md && sed -n '1,240p' CONTEXT.md && sed -n '1,260p' AGENT.md && sed -n '1,260p' scripts/prompts/review-checklist.md" in /home/diablo/book18
+ succeeded in 276ms:
+  192 CONTEXT.md
+   70 AGENT.md
+   23 scripts/prompts/review-checklist.md
+  127 chapters/04-asset-intelligence.html
+   10 checks/claims/04.tsv
+  108 drafts/reviews/04-flash.md
+   38 drafts/reviews/04-pro.md
+   43 resources/sources/04/SOURCES.md
+  611 total
+# Book 18 — CONTEXT
+
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
+a second, scalable business before 2030.
+
+This is an investment book, not a prediction that software employment will disappear. The
+reader has one good career, up to EUR 100,000 available, twelve to twenty-four months to
+learn, Dutch at A2 with a path to B1/B2, a base in Zaandam, and willingness to travel and do
+physical work. The question is which option earns the right to consume time and capital.
+
+Precedence: this file -> `AGENT.md` -> essay contracts (section 6) -> `TEMPLATE.md` -> prose.
+
+## 1. Thesis
+
+The mistake is to choose between "modern but still software" and "AI-resistant but an old
+Dutch trade." A better second engine sits at an interface: a new EU obligation or industrial
+technology, a buyer with an expensive consequence, and a delivery model that begins with
+expert service but can become recurring, teachable, and productised.
+
+The candidates are not recommendations. Each is a hypothesis subjected to the same
+sequence inherited from Book 4, *The Going Concern*:
+
+**demand -> payment -> economics -> operations -> resilience**
+
+An essay passes only if it can identify all five. A large market is not demand; a legal duty
+is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+not protection from competition.
+
+## 2. Reader and fixed assumptions
+
+- About forty, ten-plus years in enterprise full-stack development.
+- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+  the founder personally to win and execute Dutch-language local field work.
+- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+
+## 3. Economic gate
+
+Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+before personal tax, after operating expenses, with enough retained cash that the company is
+not emptied to pay its owner. Figures must separate:
+
+- revenue;
+- pass-through hardware or subcontracting;
+- gross margin;
+- operating costs;
+- owner labour at replacement cost;
+- recurring revenue;
+- working capital and capital expenditure.
+
+Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+as a market fact. Market prices require sources or live buyer evidence.
+
+## 4. Scalability test
+
+"Later a platform" is not evidence. Each essay must say what concretely changes between the
+first and twentieth customer. Score the option against four tests:
+
+1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+   depend solely on the founder's personal network.
+2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+   written playbook.
+3. **Recurring value:** some work recurs because the customer's state changes, not because an
+   annual report was artificially invented.
+4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+   workflow or distribution becomes more valuable with use.
+
+An expert practice is a legitimate outcome, but it must not be called a scalable company.
+
+## 5. Evidence and honesty rules
+
+- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+  European Commission, Dutch government, regulators, standards bodies).
+- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+- Competition: name existing vendors and the substitute, including internal implementation.
+- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+  and a row in `checks/claims/NN.tsv`.
+- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+  from practical enforcement.
+- Each essay must make the strongest case against itself. If the case cannot be answered,
+  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+  publisher, date accessed, and the claim supported.
+
+## 6. Essay contracts
+
+### 1. Connected Product Compliance Operations
+
+Test a managed operation combining the Cyber Resilience Act and Data Act for European
+connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+platform. The essay must define one initial customer segment, identify the exact recurring
+state changes, distinguish legal interpretation from technical implementation, and test
+whether a small manufacturer will buy an external operating function rather than a one-off
+consultant or generic GRC tool.
+
+### 2. White-label Product Security for Engineering Consultancies
+
+Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+machine integrators keep the customer relationship and resell a specialist product-security
+back office. The essay must confront channel conflict, margin sharing, trust, professional
+liability, partner enablement, and the risk that the partner learns the work and removes the
+supplier.
+
+### 3. A Narrow Machine-vision Product for Food or Packaging
+
+Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+inspection job in food/packaging for which successive installations could become materially
+similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+channels rather than competitors.
+
+### 4. White-label Industrial Asset Intelligence
+
+Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+data, the need for labelled failures, and whether the software layer has enough value to retain
+margin.
+
+### 5. Digital Product Passport / Battery-passport Integration
+
+Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+integration/managed-data business rather than generic DPP consulting. Separate the Battery
+Regulation's live requirements from the broader ESPR rollout and standards still being made.
+Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+data collection, access control, data verification, and the danger of building before delegated
+acts and customer budgets settle.
+
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
+## 7. Common verdict
+
+Each essay ends with exactly one provisional verdict:
+
+- **TEST NOW** — evidence supports spending a bounded amount on paid discovery.
+- **TEST THROUGH A PARTNER** — plausible only with a named channel or domain partner.
+- **WATCH** — timing or standards are too unsettled for material investment.
+- **ACQUIRE, DO NOT BUILD** — the capability is attractive but greenfield entry is structurally weak.
+- **DO NOT ENTER** — no credible route under the reader's constraints.
+
+The verdict is provisional until customer payment exists.
+
+## 8. Book shape
+
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
+and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
+final ranking.
+
+## 9. Decision record
+
+- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+  dependent on Dutch language and entrenched small-business competition.
+- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+  scalability test and explicit negative verdicts were added because these are option screens,
+  not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+# AGENT.md — instructions for Book 18 research and writing
+
+## Who is reading
+
+An experienced enterprise developer considering a serious second business. He can understand
+systems, integrations, unit economics and technical detail. He is not asking to be reassured.
+He wants to know which idea deserves two years and EUR 100,000, and which seductive idea should
+be killed before it consumes either.
+
+## Priority stack
+
+1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+   hypotheses are not presented as observed prices.
+2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+   this purchase outrank other work.
+3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+   and owner income are separate.
+4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+   accumulates. Never use "platform" as a magic word.
+5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+   uncertainty and partner capture belong in the main argument.
+6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+   resigning or buying the full equipment stack.
+
+## Research rules
+
+- Browse because laws, deadlines, standards, products and competitors are current.
+- Prefer primary sources for law and technical requirements.
+- For competitors, use their own product documentation and pricing where published; label
+  marketing claims as marketing claims.
+- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+  `inference`, or `open`. HTML may ship only with no `open` claims.
+- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
+- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+  concise paraphrases are normally enough.
+
+## Voice
+
+Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+
+## Required challenge
+
+Each essay must contain at least one credible path by which capable execution still loses. This
+is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+
+## Pre-ship test
+
+1. Can the reader name the buyer, purchase event and substitute?
+2. Is demand evidence distinct from regulation and market size?
+3. Does the economic model pay replacement-cost labour and still reach the owner target?
+4. Is the twentieth delivery visibly different from the first?
+5. Does the essay name why an incumbent, partner or customer might capture the margin?
+6. Is Dutch-language dependence stated for this exact channel?
+7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+8. Are all external claims receipted and all arithmetic labelled?
+
+## Coordination
+
+Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+`index.html`, `about.html`, static assets and cross-essay comparisons.
+Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+cited source (excerpt file or URL) actually supports, and give a concrete fix.
+
+1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+   hurdle as market price? Check dates against the cited primary sources.
+2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+   regulation standing in for demand?
+3. Economics: does the model pay replacement-cost labour, working capital and the owner
+   separately, and is the arithmetic internally consistent?
+4. Scalability: is the twentieth customer concretely different from the first, or is
+   "platform" doing the work?
+5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+   the margin-capture risk by partner or customer confronted?
+6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+   EUR 100k, no founder field work in Dutch) respected.
+8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+   an excerpt that says what the claim says; inference rows are honest about what they infer.
+9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+
+End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+
+codex
+The governing standard is strict: this chapter must distinguish evidence from inference, separate owner income from replacement-cost labor, and show exactly how the maintenance partner can capture the margin. I’m now checking reviewer statements claim-by-claim against the cited receipts rather than accepting their severity labels.
+exec
+/bin/bash -lc "sed -n '1,220p' chapters/04-asset-intelligence.html && sed -n '1,220p' checks/claims/04.tsv && sed -n '1,220p' resources/sources/04/SOURCES.md && sed -n '1,240p' drafts/reviews/04-flash.md && sed -n '1,180p' drafts/reviews/04-pro.md" in /home/diablo/book18
+ succeeded in 273ms:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Partner Owns the Wrench. Can You Keep the Margin? — The Second Engine</title>
+<meta name="description" content="A test of a white-label condition-monitoring and asset-intelligence layer sold through industrial maintenance firms.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Essay 4 of 7 · White-label industrial asset intelligence</p>
+<h1>The Partner Owns the Wrench. Can You Keep the Margin?</h1>
+<p class="lede">A regional maintenance company already visits the plant, reads the machines and earns trust by fixing what fails. You offer it a branded data layer: one asset history, disciplined alert triage, specialist review and reports its customers can use. That division looks elegant. It also gives the partner the customer, the measurements, the repair evidence and the right to replace you. The purchase decision is therefore not “can a developer build condition-monitoring software?” It is whether a maintenance firm will pay enough, share enough feedback and leave enough control with the software layer for a second company to exist.</p>
+
+<section class="proposition">
+<h2>The proposition</h2>
+<p>The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team. The purchase event is a contract renewal or competitive tender in which its industrial customer asks for continuous monitoring, consolidated asset history or evidence that route measurements cause action. The partner fears losing the account to a national technical-services group or an equipment vendor with a digital offer.</p>
+<p>The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS. A contracted vibration or reliability specialist reviews escalations. The local partner installs sensors, owns the route, speaks Dutch with technicians, recommends and performs repairs, and invoices the plant.</p>
+<p>The business refuses five things at the outset: supplying sensor hardware, promising remaining useful life, remotely declaring a machine safe, taking emergency calls from the plant, or selling around the partner. It returns one of three controlled outputs—observe, re-measure, or specialist escalation—with the evidence and confidence attached. A maintenance recommendation is issued only by the named partner analyst. This boundary is not legal decoration. Without it, one missed bearing fault can turn a software subscription into an argument about consequential production loss.</p>
+<p>The substitute is not a clipboard. The partner can keep reporting in Excel and PDFs, deploy a customer's incumbent EAM/APM suite, resell an equipment vendor's portal, or hire one analyst and assemble dashboards from commodity telemetry tools. The proposed layer wins only if it makes those routes and reports cheaper to operate while preserving the partner's brand. “Better AI” is neither the opening claim nor a defensible boundary.</p>
+</section>
+
+<section class="changed">
+<h2>What changed</h2>
+<p>There is no new law forcing this purchase. The change is that the pieces have become easier to connect while the complete offer has become harder to differentiate. Siemens documents Senseye ingestion through API, MQTT, email, S3 or Azure Blob Storage, or directly from a historian. Its ordinary time-series interface accepts up to 1 Hz and requires preprocessing above that rate; it also accepts vibration waveforms and spectra. <!-- CHECK: 04-senseye-ingestion --> A small entrant no longer needs to invent transport or charting. It does need to decide what every source means and whether two names describe the same motor.</p>
+<p>The feedback record matters more than the dashboard. Senseye's work-event API requires an asset, timestamp, message, routine/non-routine flag and work-activity type; “failure mode” is optional. Siemens says that a timely completion event lets its system learn how degradation evolved and relate subsequent data changes to the work. <!-- CHECK: 04-senseye-work-events --> That optional field exposes the commercial problem. A service report reading “checked, OK” closes a job for invoicing but does not say whether an alarm was a bearing defect, misalignment, process upset, loose sensor or false positive. Without a disciplined closeout, the dataset grows and the diagnostic asset does not.</p>
+<p>Incumbents already sell the whole loop. Augury describes a subscription combining industrial sensors, AI diagnostics, expert validation and connection into maintenance workflow, and markets coverage across more than 200 asset types. <!-- CHECK: 04-augury-bundle --> SKF describes software connected to CMMS/EAM, collection by the customer, a service partner or SKF, and subscription access to certified remote analysts. <!-- CHECK: 04-skf-bundle --> IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions inside an enterprise asset suite. <!-- CHECK: 04-maximo-bundle --> These are vendor descriptions, not independent proof of outcomes. They are decisive evidence of product surface area: software, expertise and workflow are not an empty niche.</p>
+<p>The Dutch channel is not waiting to be digitised either. SPIE Nederland presents machine maintenance, asset-management advice, maintenance-system implementation and a partnership with IFS Ultimo on the same service page. <!-- CHECK: 04-spie-offer --> ERIKS has marketed a Smart Asset Management team including software and application engineers and a platform that collects and presents machine data. <!-- CHECK: 04-eriks-offer --> At the specialist end, VIBRO offers condition monitoring, telemonitoring, vibration analysis, maintenance advice and sensor calibration. <!-- CHECK: 04-vibro-offer --> Istec says it combines vibration hardware, certified experts and analysis. <!-- CHECK: 04-istec-offer --> The plausible partner is therefore not “a maintenance firm that lacks software.” It is one whose current tool is too narrow, too expensive, tied to one sensor family, or weak under its own brand.</p>
+<p>That distinction separates obligation from budget. There is no statutory deadline and no public procurement trail here showing small maintenance firms buying a neutral intelligence layer. Vendor breadth shows a real job; it does not show willingness to pay this entrant. The budget must be discovered inside a live renewal: what revenue is at risk, what analyst hours are being consumed, and whether a branded evidence trail changes the partner's win rate or service margin. Until a partner pays, demand remains a hypothesis.</p>
+</section>
+
+<section class="sale">
+<h2>The first sale</h2>
+<p>Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider. Exclude OEM-only dealers whose economics depend on pulling the customer into their own cloud, and exclude national groups already selling an APM stack.</p>
+<p>The account list should include firms such as VIBRO and Istec as tests of the specialist end, not as assertions that they need the product. The opening is not “we built predictive AI.” It is: “Give us one redacted route export, one asset list and twenty closed work orders. In four weeks we will show whether your reports can become a repeatable branded service.” A warm introduction from a reliability engineer, sensor distributor or CMMS implementer is more credible than English-language outbound to a Dutch service director. The founder's A2 Dutch is adequate for technical preparation, not for discovering ambiguity in a plant-floor failure account. The partner must lead those conversations; an independent Dutch-speaking reliability specialist must join the first deliveries.</p>
+<p>The first product is a four-week, fixed-scope <strong>€7,500 paid data-and-service diagnostic</strong>. This is a proposed test price, not an observed market rate. It covers up to forty assets and three input formats: identity reconciliation; a data-quality and connectivity map; a failure/closeout taxonomy; two sample customer reports; an escalation runbook; and a proposed data-rights schedule. It does not include production connectors, model training or hardware. Half is payable before work. Free pilots select for curiosity and leave the core question—whether the partner can resell the layer—untested.</p>
+<p>The service director signs, but the diagnostic does not begin until a named end customer approves use of its data and the partner nominates both a route technician and someone who closes work orders. The production offer is quoted at a required-price hurdle: €18,000 onboarding, then €2,000 per monitored site per month plus €12 per active asset per month, with a 100-asset minimum. Hardware and field labour remain on the partner's invoice. The partner chooses its markup. If it cannot place that price inside a maintenance contract with a measurable gross-margin improvement or retention benefit, a cheaper portal will not fix the problem.</p>
+</section>
+
+<section class="economics">
+<h2>Does the money work?</h2>
+<p>The arithmetic below is a design gate. None of the prices, conversion rates or costs is reported as a market average. They state what must become true.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Model</th><th>Revenue</th><th>Direct cost / gross margin</th><th>Operating result</th></tr></thead>
+<tbody>
+<tr><td><strong>Year 1:</strong> four diagnostics; two production onboardings; four sites and 500 assets live for an average six months.</td><td>Diagnostics €30k; onboarding €36k; site fees €48k; asset fees €36k. <strong>Total €150k.</strong></td><td>Contract analyst €32k; telemetry/cloud €12k. <strong>Gross margin €106k (71%).</strong></td><td>Founder delivery at €75k replacement cost plus €35k legal, insurance, security, travel and sales leaves <strong>–€4k</strong>. No distributable owner income.</td></tr>
+<tr><td><strong>Mature test:</strong> twelve sites, average 160 assets; four new onboardings in the year.</td><td>Site fees €288k; asset fees €276k; onboarding €72k. <strong>Total €636k.</strong></td><td>Analyst review €84k; hosting/telemetry €42k. <strong>Gross margin €510k (80%).</strong></td><td>Delivery engineer €82k; partner success/technical writing €60k; founder replacement salary €100k; sales/travel €30k; insurance, legal and security €50k. <strong>€188k remains</strong> before corporation tax and financing.</td></tr>
+</tbody></table></div>
+<p>In the mature case the company can pay the target owner compensation and retain meaningful cash. It also reveals how little room there is for channel discounting. Cut recurring prices by 25% while direct review costs stay fixed and revenue falls by €141,000; most of the retained margin disappears. The partner may still add its own markup, but the software company cannot behave like a wholesale licence with a token fee. Its defendable share must pay for analyst review, integration variance, professional liability and support.</p>
+<p>Gross margin is protected by refusing pass-through hardware. Sensors, gateways, installation and replacement are specified and invoiced by the maintenance partner; putting them through this company's books would inflate revenue, create warranty exposure and consume working capital without creating software margin. Annual subscriptions should be billed quarterly in advance, onboarding 50% in advance and 50% on acceptance. Even then, the year-one company needs roughly €60,000–€80,000 for a six-month founder gap, legal drafting, insurance, a contracted analyst and security work before two partners are live. Keep at least two months of mature payroll and contractor cost—about €70,000 under this model—rather than treating all cash as owner income.</p>
+<p>The fragile input is analyst time. If every alarm takes bespoke investigation and every report needs founder editing, direct cost scales with assets while price is negotiated down as “software.” The operational metric is not assets connected. It is reviewed exceptions per 1,000 asset-days, minutes per reviewed exception, percentage resolved from the runbook, and percentage of escalations with a coded work outcome. A partner that will not return outcomes should pay a higher service price or not be onboarded.</p>
+</section>
+
+<section class="scale">
+<h2>From service to company</h2>
+<p><strong>Customer one</strong> is mostly integration and vocabulary. The founder maps motor “P-04 DE” to the CMMS asset, discovers time-zone and sampling errors, watches the analyst triage alerts and writes the report with the partner. Nothing about that delivery is scalable, but each exception should produce a fixture, validation rule or runbook step.</p>
+<p><strong>Customer five</strong> should use a canonical asset schema, a versioned importer kit and one escalation taxonomy. A trained implementation engineer handles the majority of ingestion and identity work. The partner's technician resolves low-confidence measurements from a checklist. The specialist sees only a queue with operating context, prior measurements and recent work. Reports are generated from approved findings, not rewritten in prose. The founder attends the service review, not every alert.</p>
+<p><strong>Customer twenty</strong> is viable only if acquisition is through three to five enabled maintenance partners and most delivery is teachable. The recurring work is genuine: new measurements arrive, assets change duty, sensors move, thresholds need review, work closes and failure labels alter future triage. The accumulating asset is not the customer's raw waveform. It is a tested connector library, asset-identity mappings, de-identified diagnostic features where contracts permit them, alert-to-work histories, calibrated partner playbooks and evidence of false-alert and escalation performance by asset class.</p>
+<p>Those rights must be written before data arrives. The plant owns its raw operating data and asset history; the maintenance partner owns its service notes and commercial relationship; the software company gets a limited licence to process both for the service. Any right to retain de-identified derived features after termination is separate and explicit. The contract must specify export format, deletion, sub-processors, model-training permission, who may contact the plant, and a transition period. If the partner insists that every derived field is its confidential data and can demand a full export while prohibiting reuse, it is buying labour and hosting, not funding an accumulating software asset.</p>
+<p>Diagnostic liability needs the same precision. The service-level agreement can promise ingestion freshness, queue response and report delivery. It should not warrant detection of every fault or prescribe that a machine continue running. Each output records source quality, analyst, confidence, evidence and disposition; critical findings require partner acknowledgement; silence escalates through a named route. Professional-indemnity and cyber cover, contract caps and exclusions are necessary but not sufficient. The operational defence is the audit trail that shows what was measured, what was missing, what the layer said and who accepted the decision.</p>
+</section>
+
+<section class="competition">
+<h2>The incumbent gets a turn</h2>
+<p>Siemens can pair broad ingestion with an established predictive-maintenance workflow. <!-- CHECK: 04-senseye-ingestion --> IBM can tell an existing Maximo customer that asset health and work history belong in the system already running maintenance. <!-- CHECK: 04-maximo-bundle --> Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut. It is one purchase order, one liability framework and an installed base.</p>
+<p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module, or hire the analyst after the white-label offer proves demand. The plant may insist on its corporate APM system, making the proposed layer an exporter with no user interface. At the low end, an InfluxDB/Grafana-style stack plus PDFs may be good enough because the scarce value is the technician who knows the machine.</p>
+<p>The entrant therefore competes on neutrality and partner economics: mixed sensors, fast onboarding of ugly route exports, the partner's brand, auditable review and no direct sale. But neutrality becomes a feature incumbents can copy. The harder defence is reciprocal dependency: the software layer makes the partner's analysts and technicians more productive, while their closed work orders improve its runbooks. If only one side learns, that side eventually captures the margin.</p>
+</section>
+
+<div class="counter">
+<h2>The capable failure</h2>
+<p>The company executes well. Two respected maintenance firms resell it, reports arrive on time, alerts are responsibly reviewed and several failures are caught. Customers praise their maintenance provider, because that is the logo, relationship and repair crew they see. At renewal, procurement treats the portal as part of the field contract rather than a separate outcome. The partners now have three years of report templates and know which alerts merit attention. One hires a reliability engineer; the other moves to a bundled OEM platform. Both demand a 40% lower wholesale rate before leaving.</p>
+<p>Meanwhile the software company cannot demonstrate a unique diagnostic corpus. Most closed work orders still say “inspected” or “replaced”; customer data licences prohibit cross-account learning; operating regimes differ enough that each threshold remains local. Good software and good service have created value, but the channel owns the proof, the customer and the exit. The company survives only by accepting lower prices and more analyst work. It has become a subcontracted expert practice wearing SaaS margins in its plan. Nothing in better execution repairs that allocation of power.</p>
+</div>
+
+<section class="monday">
+<h2>The first ninety days</h2>
+<ol>
+<li><strong>Days 1–15:</strong> interview ten owners or service directors across the ten prospect types. Ask for the last renewal where digital reporting mattered, current report-production hours, the software substitute and who owns raw data and work outcomes. Obtain two redacted route exports and matching closeouts under a simple NDA. Spend no more than €2,500 on travel and Dutch technical support.</li>
+<li><strong>Days 10–25:</strong> retain an independent Category III/IV vibration or reliability specialist for up to €4,000. Have that person score the samples for diagnostic sufficiency and write the three-level output boundary. If the data cannot support responsible triage, stop before software.</li>
+<li><strong>Days 20–40:</strong> pay an industrial-contract lawyer up to €4,000 to draft the white-label, data-rights, non-circumvention, export and liability schedule. Put the unresolved terms in front of both candidate partners; do not hide them until procurement.</li>
+<li><strong>Days 30–60:</strong> build only the thin path needed for one sample: importer, asset reconciliation, analyst queue, evidence record and branded report. Cap build and hosted-tool spend at €7,500. No custom sensor, general model or mobile app.</li>
+<li><strong>Days 45–75:</strong> offer the €7,500 diagnostic, 50% in advance, to at least five prospects. It is valid only with one named end-customer dataset, a route technician and closed-work-order access.</li>
+<li><strong>Days 60–90:</strong> deliver the first paid diagnostic and ask for a production order at the stated €18,000 onboarding and recurring price hurdle. Total pre-evidence spend is capped at <strong>€20,000</strong>.</li>
+</ol>
+<p><strong>Pass:</strong> one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee. <strong>Kill:</strong> no paid diagnostic after five properly scoped offers; no partner will return coded work outcomes; or every credible partner requires ownership/control terms that prevent a reusable connector and runbook asset. In any kill state, offer individual integration consulting only if premium self-employment is acceptable—do not call it the second engine.</p>
+</section>
+
+<div class="verdict-box">
+<h2>Verdict</h2>
+<p class="verdict">TEST THROUGH A PARTNER</p>
+<p>The partner is not just a route to market; it supplies language, plant access, measurement discipline, repair execution and the labels that could make the layer improve. The single assumption that would most change the verdict is that a regional maintenance firm will grant enough outcome feedback and derived-data rights while paying a recurring wholesale price that sustains at least roughly 75% gross margin. If the paid diagnostic disproves that, the software layer does not retain the economics.</p>
+</div>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>Siemens, <a href="https://developer.siemens.com/senseye/machine/index.html">Senseye machine-data integration</a> and <a href="https://developer.siemens.com/senseye/workorders/structure.html">work-event structure</a>.</li>
+<li>Augury, <a href="https://www.augury.com/machine-health/">Machine Health</a>.</li>
+<li>SKF, <a href="https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf">Assessing, managing and monitoring machine health</a>.</li>
+<li>IBM, <a href="https://www.ibm.com/products/maximo/asset-performance-management">Maximo Asset Performance Management</a>.</li>
+<li>SPIE Nederland, <a href="https://www.spie-nl.com/oplossing/maintenance-solutions">Maintenance Solutions</a>; ERIKS Nederland, <a href="https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/">Predictive Maintenance</a>.</li>
+<li>VIBRO, <a href="https://vibro.nl/en/">condition monitoring services</a>; Istec, <a href="https://www.istec.com/">vibration monitoring and analysis</a>.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav" aria-label="Essay navigation">
+  <a href="03-machine-vision-food.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="05-product-passports.html">Next →</a>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+</body>
+</html>
+id	claim	source_url	source_locator	status
+04-senseye-ingestion	Siemens documents Senseye ingestion by API, MQTT, email, S3/Azure Blob Storage or historian; ordinary time-series input is capped at 1 Hz and higher-rate data needs preprocessing, while vibration waveforms and spectra are supported.	https://developer.siemens.com/senseye/machine/index.html	Machine Data, lines 106-128	verified
+04-senseye-work-events	Senseye work events require timestamp, message, asset, routine flag and activity; failure mode is optional, and Siemens says work timing lets the system relate degradation and intervention.	https://developer.siemens.com/senseye/workorders/structure.html	Structure, lines 115-177	verified
+04-augury-bundle	Augury markets a combined subscription surface of IoT sensors, AI diagnostics, expert validation, workflow connection and coverage across more than 200 asset types.	https://www.augury.com/machine-health/	Machine Health, lines 189-238 and 442-456	verified
+04-skf-bundle	SKF describes CMMS/EAM-connected condition-monitoring software, data collection by customer/service partner/SKF, certified remote analysts and subscription access.	https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf	Assessing, managing and monitoring machine health, p.3, lines 182-216	verified
+04-maximo-bundle	IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions in an enterprise asset suite.	https://www.ibm.com/products/maximo/asset-performance-management	Move from reactive maintenance / Built for modern maintenance operations, lines 18-90	verified
+04-spie-offer	SPIE Nederland presents machine maintenance and asset-management services, maintenance-system work and a partnership with IFS Ultimo.	https://www.spie-nl.com/oplossing/maintenance-solutions	Maintenance Solutions, lines 81-109 and linked partnership at line 102	verified
+04-eriks-offer	ERIKS marketed a Smart Asset Management team including software and application engineers and a platform collecting and presenting machine data.	https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/	Predictive Maintenance, sections Smart Asset Management Team and Total Cost of Ownership	verified
+04-vibro-offer	VIBRO offers condition monitoring including telemonitoring, vibration analysis, maintenance advice and sensor/equipment calibration.	https://vibro.nl/en/	VIBRO Services	verified
+04-istec-offer	Istec describes vibration-monitoring hardware, certified vibration experts and data-analysis services.	https://www.istec.com/	Homepage, Products & services and Facts & Figures	verified
+# Essay 4 — source index
+
+Accessed 2026-09-01. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
+
+1. **Siemens, “Machine Data,” Senseye developer documentation.**
+   URL: https://developer.siemens.com/senseye/machine/index.html
+   Supports: ingestion routes, supported time-series and vibration inputs, 1 Hz ordinary time-series limit and preprocessing requirement (`04-senseye-ingestion`).
+
+2. **Siemens, “Structure,” Senseye work-order developer documentation.**
+   URL: https://developer.siemens.com/senseye/workorders/structure.html
+   Supports: required work-event fields, optional failure mode, and the role of work timing in learning from interventions (`04-senseye-work-events`).
+
+3. **Augury, “AI for Predictive Maintenance Solutions / Machine Health.”**
+   URL: https://www.augury.com/machine-health/
+   Supports: Augury's marketed bundle of sensors, AI diagnostics, expert validation, workflows and stated asset-type coverage (`04-augury-bundle`).
+
+4. **SKF, “Assessing, managing and monitoring machine health.”**
+   URL: https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf
+   Supports: SKF software interfaces, collection routes, remote diagnostic analysts and subscription service (`04-skf-bundle`).
+
+5. **IBM, “Asset Performance Management Software — Maximo Application Suite.”**
+   URL: https://www.ibm.com/products/maximo/asset-performance-management
+   Supports: Maximo's current combination of condition monitoring, reliability, work history, failure modes and recommendations (`04-maximo-bundle`).
+
+6. **SPIE Nederland, “Maintenance Solutions.”**
+   URL: https://www.spie-nl.com/oplossing/maintenance-solutions
+   Supports: SPIE's machine-maintenance and asset-management scope and linked IFS Ultimo partnership (`04-spie-offer`).
+
+7. **ERIKS Nederland, “Predictive Maintenance.”**
+   URL: https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/
+   Supports: ERIKS's described Smart Asset Management team and platform (`04-eriks-offer`). The current URL may redirect into ERIKS's redesigned Dutch site; claim checked against the indexed page content available on the access date.
+
+8. **VIBRO, company and services page.**
+   URL: https://vibro.nl/en/
+   Supports: Dutch specialist services in condition monitoring, telemonitoring, vibration analysis, advice and calibration (`04-vibro-offer`).
+
+9. **Istec, company and services page.**
+   URL: https://www.istec.com/
+   Supports: Dutch vibration-monitoring hardware, certified expertise and analysis capability (`04-istec-offer`).
+
+## Evidence boundary
+
+No primary source found in this research establishes that a regional maintenance company will pay the proposed white-label prices, grant reusable derived-data rights, or return coded work outcomes. Those are deliberately left as the paid 90-day test. All monetary figures are design arithmetic, not observed market prices.
+# Editorial & Technical Review: Essay 04 (*White-Label Industrial Asset Intelligence*)
+
+**File Reviewed:** `chapters/04-asset-intelligence.html`  
+**Claim Ledger:** `checks/claims/04.tsv`  
+**Source Index:** `resources/sources/04/SOURCES.md`  
+**Rules & Standards:** `CONTEXT.md` (Sections 1–7), `AGENT.md` (Priority Stack & Pre-Ship Test)
+
+---
+
+## Executive Summary & Systematic Rule Audit
+
+| Rule / Criteria | Status | Audit Summary |
+| :--- | :---: | :--- |
+| **1. Never false** | **PASS** | No proposal is presented as enacted law; text explicitly states there is no statutory mandate driving purchase. Design hurdles (€7,500 diagnostic, €18,000 onboarding, €2,000/mo site fee, €12/mo asset fee) are explicitly labelled as required design gates, never reported as market averages. Primary source vendor citations are accurate. |
+| **2. Buyer & event** | **PASS** | Managing Director or Service Director of a Benelux rotating-equipment maintenance contractor. Purchase event is an industrial contract renewal or competitive tender where the client demands digital evidence and continuous monitoring. |
+| **3. Economics** | **PASS** | Separates revenue, gross margin, operating expenses, founder replacement labour (€75k Y1 / €100k mature), working capital (€60k–€80k startup gap, €70k cash buffer), and owner income. Arithmetic is internally consistent across all tiers (Year 1: €150k rev, 71% GM, –€4k operating result; Mature: €636k rev, 80% GM, €188k pretax retained profit). Refuses hardware pass-through. |
+| **4. Scalability** | **PASS** | Concretely differentiates Customer 1 (bespoke mapping, alert triage shadowing), Customer 5 (canonical schema, trained delivery engineer, technician checklists), and Customer 20 (3–5 enabled maintenance partners, accumulating connector library, alert-to-work history, partner playbooks). Avoids treating "platform" as magic. |
+| **5. Incumbents & capture** | **PASS** | Incumbents (Siemens Senseye, IBM Maximo, Augury, SKF) and Dutch channels (SPIE, ERIKS, VIBRO, Istec) are evaluated fairly from their technical capabilities. Margin capture by the maintenance partner and plant APM disintermediation are directly confronted. |
+| **6. Capable failure** | **PASS** | Non-straw-man failure mode: the software executes well, prevents machine failures, and generates timely reports, but the partner captures customer goodwill and learning, hires an in-house engineer or switches to an OEM bundle, demands a 40% wholesale discount, and squeezes the software entrant into an unprofitable subcontractor. |
+| **7. Language & constraints** | **PASS** | Reader constraints respected (A2 Dutch, EUR 100k capital, no field work). Channel dependency is explicit: the local partner owns the wrench, Dutch plant-floor conversations, sensor installation, and physical repairs. A Dutch-speaking reliability specialist is budgeted for initial deliveries. |
+| **8. Receipts** | **FAIL** | Multiple `CHECK` markers are stacked together at the end of multi-clause sentences instead of immediately following the supported clause. Furthermore, local text excerpt files under `resources/sources/04/excerpts/` are missing for the 9 `verified` ledger rows. |
+| **9. Verdict** | **PASS** | Earns `TEST THROUGH A PARTNER`. The kill criteria correctly identify the existential assumptions: failure of partners to pay the diagnostic, refusal to return coded work outcomes, or restrictive data terms that prevent building a reusable runbook asset. |
+| **10. Readability** | **FAIL** | Contains 4 sentences exceeding the strict 40-word limit. Paragraph lengths and jargon mechanisms are otherwise well-managed. |
+
+---
+
+## Detailed Findings Ranked by Severity
+
+### Finding 1 (Severity: High) — Stacked & Misplaced `CHECK` Markers (Rule 8)
+
+* **Quote 1 (Lines 77):**
+  > `"Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle -->"`
+* **Quote 2 (Line 78):**
+  > `"The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer -->"`
+
+* **What the cited sources actually support:**
+  * `04-augury-bundle` points to Augury's Machine Health page (`https://www.augury.com/machine-health/`), supporting only the first clause regarding Augury's sensor, diagnostic, and expert bundle.
+  * `04-skf-bundle` points to SKF's condition monitoring brochure (`cdn.skfmediahub.skf.com/...`), supporting only the second clause regarding SKF's CMMS interfaces and certified analysts.
+  * `04-eriks-offer` points to ERIKS Predictive Maintenance (`eriks.nl/...`), supporting only ERIKS's Smart Asset Management platform and team.
+  * `04-spie-offer` points to SPIE Nederland Maintenance Solutions (`spie-nl.com/...`), supporting only SPIE's maintenance services and IFS Ultimo partnership.
+  * Placing stacked comments at the end of compound sentences violates the rule that each `<!-- CHECK: id -->` marker must immediately follow the sentence or clause it substantiates.
+
+* **Concrete Fix:**
+  Move the first marker in each pair to immediately follow its corresponding semicolon clause:
+  ```html
+  <!-- Fix for Quote 1 (Line 77) -->
+  <p>Augury can bundle sensors, diagnostics and expert validation; <!-- CHECK: 04-augury-bundle --> SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut.</p>
+
+  <!-- Fix for Quote 2 (Line 78) -->
+  <p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; <!-- CHECK: 04-eriks-offer --> SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module...</p>
+  ```
+
+---
+
+### Finding 2 (Severity: Medium) — Missing Text Excerpt Files for Verified Claims (Rule 8)
+
+* **Passage / Location:** `checks/claims/04.tsv` (Lines 2–10) and missing directory `resources/sources/04/excerpts/`.
+* **What the cited sources actually support:**
+  * `AGENT.md` and Rule 8 state: *"every verified row has an excerpt that says what the claim says; A verified row without an excerpt is not verified."*
+  * All 9 claims in `checks/claims/04.tsv` are marked `verified`, but the `source_locator` column contains free-form text references (e.g. `Machine Data, lines 106-128`, `VIBRO Services`) rather than pointing to saved verbatim text files in `resources/sources/04/excerpts/<slug>.txt`.
+* **Concrete Fix:**
+  1. Create directory `resources/sources/04/excerpts/`.
+  2. Save the verbatim quoted text from the 9 URLs into individual text files (e.g., `resources/sources/04/excerpts/04-senseye-ingestion.txt`, `04-augury-bundle.txt`, etc.), formatted with the source URL, access date, and exact quote.
+  3. Update `checks/claims/04.tsv` so that each `source_locator` references its respective `.txt` excerpt filename.
+
+---
+
+### Finding 3 (Severity: Medium) — Sentences Exceeding the 40-Word Limit (Rule 10)
+
+Four sentences in the chapter exceed the 40-word readability ceiling:
+
+#### Passage 3A (52 words, Line 46):
+* **Quote:**
+  > `"Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider."`
+* **Concrete Fix:** Split the introductory clause and convert the prospect categories into concise sentences or list structure:
+  > *"Start with ten prospect types close enough to rotating machinery to own the outcome. These include independent vibration-analysis practices, pump repairers, motor and gearbox workshops, industrial lubrication contractors, compressor-service firms, marine rotating-equipment specialists, food-factory contractors, water utilities contractors, HVAC/chiller service firms, and regional electro-mechanical providers."*
+
+#### Passage 3B (48 words, Line 98):
+* **Quote:**
+  > `"Pass: one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."`
+* **Concrete Fix:** Split into two sentences at the signature event:
+  > *"Pass: one partner pays for the diagnostic, introduces an end customer, and accepts the liability boundary and data feedback. The partner then signs the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."*
+
+#### Passage 3C (47 words, Line 30):
+* **Quote:**
+  > `"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS."`
+* **Concrete Fix:** Split at the analyst queue transition:
+  > *"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and online streams, reconciles asset identities, and preserves measurements, alarms, reviews and work outcomes. It then gives an analyst a queue, publishes a white-label monthly report, and opens a documented route into the customer's CMMS."*
+
+#### Passage 3D (42 words, Line 29):
+* **Quote:**
+  > `"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team."`
+* **Concrete Fix:** Split into two distinct sentences:
+  > *"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company. The business is large enough to run scheduled condition-monitoring routes for several factories, but lacks a credible customer portal and analytics team."*
+
+---
+
+## Verdict & Action Plan
+
+### Final Verdict: `REVISE`
+
+The essay is substantively excellent: its commercial logic, unit economics, non-straw-man failure analysis, and reader constraints are fully aligned with the book's thesis. It requires straightforward mechanical revisions before shipping.
+
+### The Three Fixes That Matter Most
+
+1. **Unstack the CHECK Markers (Finding 1):** Place `04-augury-bundle` and `04-eriks-offer` immediately after the individual clauses they support in Section 5 (`competition`).
+2. **Generate Verbatim Excerpt Files (Finding 2):** Create `resources/sources/04/excerpts/` containing the exact passages for all 9 `verified` claims, and update `checks/claims/04.tsv` locators to point to these files.
+3. **Refactor the Four 40+ Word Sentences (Finding 3):** Split the dense sentences in lines 29, 30, 46, and 98 to comply with the 40-word maximum.
+I have reviewed `chapters/04-asset-intelligence.html` against the strict criteria in `CONTEXT.md` and `AGENT.md`. 
+
+The essay is remarkably strong. It successfully establishes a plausible buyer and event, isolates the founder’s A2 Dutch language constraint, brilliantly models the economics (explicitly labelling them as a design hurdle rather than market facts), and presents a devastatingly credible "capable failure."
+
+However, there are three areas requiring revision, ranked below by severity.
+
+### 1. Receipts: Missing Excerpt Files (Severity: High)
+* **Rule:** "Receipts: ... every verified row has an excerpt that says what the claim says"
+* **Quote:** N/A (applies to all 9 `verified` claims in `checks/claims/04.tsv`)
+* **What the cited source actually supports:** The live URLs and TSV claims verify the data correctly, but the physical excerpt files themselves do not exist. While `CONTEXT.md` notes this standard applies "From essay 6 onward," applying your explicit pre-ship test rule reveals that the directory `resources/sources/04/excerpts/` is missing entirely. 
+* **Concrete fix:** Create the directory `resources/sources/04/excerpts/` and save a `.txt` excerpt for each of the 9 claims containing the URL, fetch date, and verbatim supporting text to guarantee offline auditability.
+
+### 2. Readability: Sentences over 40 words (Severity: Medium)
+* **Rule:** "Readability: wall paragraphs, sentences over 40 words, jargon without mechanism."
+* **Quote(s):** 
+  1. *"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team."* (43 words)
+  2. *"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS."* (47 words)
+  3. *"Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider."* (52 words)
+  4. *"Pass: one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."* (47 words)
+* **What the cited source actually supports:** Prose issue (no external source).
+* **Concrete fix:** Split these sentences. For example, the 52-word list can be split into two sentences: *"Start with ten prospect types close enough to rotating machinery to own the outcome. Examples include an independent vibration-analysis practice, pump repairer, motor and gearbox workshop, industrial lubrication contractor, or compressor-service firm..."* The pass condition can be rewritten: *"Pass: one partner pays for the diagnostic, introduces an end customer, and accepts the liability boundary and data feedback. The partner must then sign either the production order or a dated letter authorising it at the hurdle price (no less than €18,000 onboarding plus €2,000 per site per month and an asset fee)."*
+
+### 3. Receipts: Misaligned CHECK marker (Severity: Minor)
+* **Rule:** "Receipts: every CHECK marker's row supports the sentence it follows"
+* **Quote:** *"Siemens can pair broad ingestion with an established predictive-maintenance workflow. `<!-- CHECK: 04-senseye-ingestion -->`"*
+* **What the cited source actually supports:** The TSV claim for `04-senseye-ingestion` explicitly details ingestion formats (API, MQTT, S3) and frequency limits (1 Hz, waveforms, spectra). It does not contain evidence supporting the "established predictive-maintenance workflow" half of the sentence, even though Senseye itself is a predictive maintenance tool.
+* **Concrete fix:** Create a new claim row (e.g., `04-senseye-workflow`) that explicitly cites Senseye's workflow capabilities, or amend the TSV text for `04-senseye-ingestion` to capture the introductory text on the Siemens page stating the product is used for predictive maintenance. 
+
+***
+
+### Verdict and Fixes
+
+**REVISE**
+
+The three fixes that matter most:
+1. Generate and save the 9 verbatim text excerpts in `resources/sources/04/excerpts/` to meet the strict receipt rule.
+2. Break the four 40+ word sentences into shorter, punchier prose. 
+3. Fix the `04-senseye-ingestion` marker in paragraph 7 so the TSV claim fully covers the "predictive-maintenance workflow" assertion.
+
+exec
+/bin/bash -lc "nl -ba chapters/04-asset-intelligence.html | sed -n '1,180p'; nl -ba checks/claims/04.tsv; find resources/sources/04 -maxdepth 3 -type f -print -exec wc -l {} \\;" in /home/diablo/book18
+ succeeded in 230ms:
+     1	<!DOCTYPE html>
+     2	<html lang="en">
+     3	<head>
+     4	<meta charset="utf-8">
+     5	<meta name="viewport" content="width=device-width, initial-scale=1">
+     6	<title>The Partner Owns the Wrench. Can You Keep the Margin? — The Second Engine</title>
+     7	<meta name="description" content="A test of a white-label condition-monitoring and asset-intelligence layer sold through industrial maintenance firms.">
+     8	<link rel="stylesheet" href="../static/style.css">
+     9	<script src="../static/theme.js"></script>
+    10	</head>
+    11	<body>
+    12	<header class="site-header">
+    13	  <div class="wrap">
+    14	    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    15	    <nav class="site-nav">
+    16	      <a href="../index.html">Contents</a>
+    17	      <a href="../about.html">Method</a>
+    18	      <button class="theme-toggle" type="button">☾ Dark</button>
+    19	    </nav>
+    20	  </div>
+    21	</header>
+    22	<main class="wrap">
+    23	<p class="kicker">Essay 4 of 7 · White-label industrial asset intelligence</p>
+    24	<h1>The Partner Owns the Wrench. Can You Keep the Margin?</h1>
+    25	<p class="lede">A regional maintenance company already visits the plant, reads the machines and earns trust by fixing what fails. You offer it a branded data layer: one asset history, disciplined alert triage, specialist review and reports its customers can use. That division looks elegant. It also gives the partner the customer, the measurements, the repair evidence and the right to replace you. The purchase decision is therefore not “can a developer build condition-monitoring software?” It is whether a maintenance firm will pay enough, share enough feedback and leave enough control with the software layer for a second company to exist.</p>
+    26	
+    27	<section class="proposition">
+    28	<h2>The proposition</h2>
+    29	<p>The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team. The purchase event is a contract renewal or competitive tender in which its industrial customer asks for continuous monitoring, consolidated asset history or evidence that route measurements cause action. The partner fears losing the account to a national technical-services group or an equipment vendor with a digital offer.</p>
+    30	<p>The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS. A contracted vibration or reliability specialist reviews escalations. The local partner installs sensors, owns the route, speaks Dutch with technicians, recommends and performs repairs, and invoices the plant.</p>
+    31	<p>The business refuses five things at the outset: supplying sensor hardware, promising remaining useful life, remotely declaring a machine safe, taking emergency calls from the plant, or selling around the partner. It returns one of three controlled outputs—observe, re-measure, or specialist escalation—with the evidence and confidence attached. A maintenance recommendation is issued only by the named partner analyst. This boundary is not legal decoration. Without it, one missed bearing fault can turn a software subscription into an argument about consequential production loss.</p>
+    32	<p>The substitute is not a clipboard. The partner can keep reporting in Excel and PDFs, deploy a customer's incumbent EAM/APM suite, resell an equipment vendor's portal, or hire one analyst and assemble dashboards from commodity telemetry tools. The proposed layer wins only if it makes those routes and reports cheaper to operate while preserving the partner's brand. “Better AI” is neither the opening claim nor a defensible boundary.</p>
+    33	</section>
+    34	
+    35	<section class="changed">
+    36	<h2>What changed</h2>
+    37	<p>There is no new law forcing this purchase. The change is that the pieces have become easier to connect while the complete offer has become harder to differentiate. Siemens documents Senseye ingestion through API, MQTT, email, S3 or Azure Blob Storage, or directly from a historian. Its ordinary time-series interface accepts up to 1 Hz and requires preprocessing above that rate; it also accepts vibration waveforms and spectra. <!-- CHECK: 04-senseye-ingestion --> A small entrant no longer needs to invent transport or charting. It does need to decide what every source means and whether two names describe the same motor.</p>
+    38	<p>The feedback record matters more than the dashboard. Senseye's work-event API requires an asset, timestamp, message, routine/non-routine flag and work-activity type; “failure mode” is optional. Siemens says that a timely completion event lets its system learn how degradation evolved and relate subsequent data changes to the work. <!-- CHECK: 04-senseye-work-events --> That optional field exposes the commercial problem. A service report reading “checked, OK” closes a job for invoicing but does not say whether an alarm was a bearing defect, misalignment, process upset, loose sensor or false positive. Without a disciplined closeout, the dataset grows and the diagnostic asset does not.</p>
+    39	<p>Incumbents already sell the whole loop. Augury describes a subscription combining industrial sensors, AI diagnostics, expert validation and connection into maintenance workflow, and markets coverage across more than 200 asset types. <!-- CHECK: 04-augury-bundle --> SKF describes software connected to CMMS/EAM, collection by the customer, a service partner or SKF, and subscription access to certified remote analysts. <!-- CHECK: 04-skf-bundle --> IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions inside an enterprise asset suite. <!-- CHECK: 04-maximo-bundle --> These are vendor descriptions, not independent proof of outcomes. They are decisive evidence of product surface area: software, expertise and workflow are not an empty niche.</p>
+    40	<p>The Dutch channel is not waiting to be digitised either. SPIE Nederland presents machine maintenance, asset-management advice, maintenance-system implementation and a partnership with IFS Ultimo on the same service page. <!-- CHECK: 04-spie-offer --> ERIKS has marketed a Smart Asset Management team including software and application engineers and a platform that collects and presents machine data. <!-- CHECK: 04-eriks-offer --> At the specialist end, VIBRO offers condition monitoring, telemonitoring, vibration analysis, maintenance advice and sensor calibration. <!-- CHECK: 04-vibro-offer --> Istec says it combines vibration hardware, certified experts and analysis. <!-- CHECK: 04-istec-offer --> The plausible partner is therefore not “a maintenance firm that lacks software.” It is one whose current tool is too narrow, too expensive, tied to one sensor family, or weak under its own brand.</p>
+    41	<p>That distinction separates obligation from budget. There is no statutory deadline and no public procurement trail here showing small maintenance firms buying a neutral intelligence layer. Vendor breadth shows a real job; it does not show willingness to pay this entrant. The budget must be discovered inside a live renewal: what revenue is at risk, what analyst hours are being consumed, and whether a branded evidence trail changes the partner's win rate or service margin. Until a partner pays, demand remains a hypothesis.</p>
+    42	</section>
+    43	
+    44	<section class="sale">
+    45	<h2>The first sale</h2>
+    46	<p>Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider. Exclude OEM-only dealers whose economics depend on pulling the customer into their own cloud, and exclude national groups already selling an APM stack.</p>
+    47	<p>The account list should include firms such as VIBRO and Istec as tests of the specialist end, not as assertions that they need the product. The opening is not “we built predictive AI.” It is: “Give us one redacted route export, one asset list and twenty closed work orders. In four weeks we will show whether your reports can become a repeatable branded service.” A warm introduction from a reliability engineer, sensor distributor or CMMS implementer is more credible than English-language outbound to a Dutch service director. The founder's A2 Dutch is adequate for technical preparation, not for discovering ambiguity in a plant-floor failure account. The partner must lead those conversations; an independent Dutch-speaking reliability specialist must join the first deliveries.</p>
+    48	<p>The first product is a four-week, fixed-scope <strong>€7,500 paid data-and-service diagnostic</strong>. This is a proposed test price, not an observed market rate. It covers up to forty assets and three input formats: identity reconciliation; a data-quality and connectivity map; a failure/closeout taxonomy; two sample customer reports; an escalation runbook; and a proposed data-rights schedule. It does not include production connectors, model training or hardware. Half is payable before work. Free pilots select for curiosity and leave the core question—whether the partner can resell the layer—untested.</p>
+    49	<p>The service director signs, but the diagnostic does not begin until a named end customer approves use of its data and the partner nominates both a route technician and someone who closes work orders. The production offer is quoted at a required-price hurdle: €18,000 onboarding, then €2,000 per monitored site per month plus €12 per active asset per month, with a 100-asset minimum. Hardware and field labour remain on the partner's invoice. The partner chooses its markup. If it cannot place that price inside a maintenance contract with a measurable gross-margin improvement or retention benefit, a cheaper portal will not fix the problem.</p>
+    50	</section>
+    51	
+    52	<section class="economics">
+    53	<h2>Does the money work?</h2>
+    54	<p>The arithmetic below is a design gate. None of the prices, conversion rates or costs is reported as a market average. They state what must become true.</p>
+    55	<div class="table-wrap"><table>
+    56	<thead><tr><th>Model</th><th>Revenue</th><th>Direct cost / gross margin</th><th>Operating result</th></tr></thead>
+    57	<tbody>
+    58	<tr><td><strong>Year 1:</strong> four diagnostics; two production onboardings; four sites and 500 assets live for an average six months.</td><td>Diagnostics €30k; onboarding €36k; site fees €48k; asset fees €36k. <strong>Total €150k.</strong></td><td>Contract analyst €32k; telemetry/cloud €12k. <strong>Gross margin €106k (71%).</strong></td><td>Founder delivery at €75k replacement cost plus €35k legal, insurance, security, travel and sales leaves <strong>–€4k</strong>. No distributable owner income.</td></tr>
+    59	<tr><td><strong>Mature test:</strong> twelve sites, average 160 assets; four new onboardings in the year.</td><td>Site fees €288k; asset fees €276k; onboarding €72k. <strong>Total €636k.</strong></td><td>Analyst review €84k; hosting/telemetry €42k. <strong>Gross margin €510k (80%).</strong></td><td>Delivery engineer €82k; partner success/technical writing €60k; founder replacement salary €100k; sales/travel €30k; insurance, legal and security €50k. <strong>€188k remains</strong> before corporation tax and financing.</td></tr>
+    60	</tbody></table></div>
+    61	<p>In the mature case the company can pay the target owner compensation and retain meaningful cash. It also reveals how little room there is for channel discounting. Cut recurring prices by 25% while direct review costs stay fixed and revenue falls by €141,000; most of the retained margin disappears. The partner may still add its own markup, but the software company cannot behave like a wholesale licence with a token fee. Its defendable share must pay for analyst review, integration variance, professional liability and support.</p>
+    62	<p>Gross margin is protected by refusing pass-through hardware. Sensors, gateways, installation and replacement are specified and invoiced by the maintenance partner; putting them through this company's books would inflate revenue, create warranty exposure and consume working capital without creating software margin. Annual subscriptions should be billed quarterly in advance, onboarding 50% in advance and 50% on acceptance. Even then, the year-one company needs roughly €60,000–€80,000 for a six-month founder gap, legal drafting, insurance, a contracted analyst and security work before two partners are live. Keep at least two months of mature payroll and contractor cost—about €70,000 under this model—rather than treating all cash as owner income.</p>
+    63	<p>The fragile input is analyst time. If every alarm takes bespoke investigation and every report needs founder editing, direct cost scales with assets while price is negotiated down as “software.” The operational metric is not assets connected. It is reviewed exceptions per 1,000 asset-days, minutes per reviewed exception, percentage resolved from the runbook, and percentage of escalations with a coded work outcome. A partner that will not return outcomes should pay a higher service price or not be onboarded.</p>
+    64	</section>
+    65	
+    66	<section class="scale">
+    67	<h2>From service to company</h2>
+    68	<p><strong>Customer one</strong> is mostly integration and vocabulary. The founder maps motor “P-04 DE” to the CMMS asset, discovers time-zone and sampling errors, watches the analyst triage alerts and writes the report with the partner. Nothing about that delivery is scalable, but each exception should produce a fixture, validation rule or runbook step.</p>
+    69	<p><strong>Customer five</strong> should use a canonical asset schema, a versioned importer kit and one escalation taxonomy. A trained implementation engineer handles the majority of ingestion and identity work. The partner's technician resolves low-confidence measurements from a checklist. The specialist sees only a queue with operating context, prior measurements and recent work. Reports are generated from approved findings, not rewritten in prose. The founder attends the service review, not every alert.</p>
+    70	<p><strong>Customer twenty</strong> is viable only if acquisition is through three to five enabled maintenance partners and most delivery is teachable. The recurring work is genuine: new measurements arrive, assets change duty, sensors move, thresholds need review, work closes and failure labels alter future triage. The accumulating asset is not the customer's raw waveform. It is a tested connector library, asset-identity mappings, de-identified diagnostic features where contracts permit them, alert-to-work histories, calibrated partner playbooks and evidence of false-alert and escalation performance by asset class.</p>
+    71	<p>Those rights must be written before data arrives. The plant owns its raw operating data and asset history; the maintenance partner owns its service notes and commercial relationship; the software company gets a limited licence to process both for the service. Any right to retain de-identified derived features after termination is separate and explicit. The contract must specify export format, deletion, sub-processors, model-training permission, who may contact the plant, and a transition period. If the partner insists that every derived field is its confidential data and can demand a full export while prohibiting reuse, it is buying labour and hosting, not funding an accumulating software asset.</p>
+    72	<p>Diagnostic liability needs the same precision. The service-level agreement can promise ingestion freshness, queue response and report delivery. It should not warrant detection of every fault or prescribe that a machine continue running. Each output records source quality, analyst, confidence, evidence and disposition; critical findings require partner acknowledgement; silence escalates through a named route. Professional-indemnity and cyber cover, contract caps and exclusions are necessary but not sufficient. The operational defence is the audit trail that shows what was measured, what was missing, what the layer said and who accepted the decision.</p>
+    73	</section>
+    74	
+    75	<section class="competition">
+    76	<h2>The incumbent gets a turn</h2>
+    77	<p>Siemens can pair broad ingestion with an established predictive-maintenance workflow. <!-- CHECK: 04-senseye-ingestion --> IBM can tell an existing Maximo customer that asset health and work history belong in the system already running maintenance. <!-- CHECK: 04-maximo-bundle --> Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut. It is one purchase order, one liability framework and an installed base.</p>
+    78	<p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module, or hire the analyst after the white-label offer proves demand. The plant may insist on its corporate APM system, making the proposed layer an exporter with no user interface. At the low end, an InfluxDB/Grafana-style stack plus PDFs may be good enough because the scarce value is the technician who knows the machine.</p>
+    79	<p>The entrant therefore competes on neutrality and partner economics: mixed sensors, fast onboarding of ugly route exports, the partner's brand, auditable review and no direct sale. But neutrality becomes a feature incumbents can copy. The harder defence is reciprocal dependency: the software layer makes the partner's analysts and technicians more productive, while their closed work orders improve its runbooks. If only one side learns, that side eventually captures the margin.</p>
+    80	</section>
+    81	
+    82	<div class="counter">
+    83	<h2>The capable failure</h2>
+    84	<p>The company executes well. Two respected maintenance firms resell it, reports arrive on time, alerts are responsibly reviewed and several failures are caught. Customers praise their maintenance provider, because that is the logo, relationship and repair crew they see. At renewal, procurement treats the portal as part of the field contract rather than a separate outcome. The partners now have three years of report templates and know which alerts merit attention. One hires a reliability engineer; the other moves to a bundled OEM platform. Both demand a 40% lower wholesale rate before leaving.</p>
+    85	<p>Meanwhile the software company cannot demonstrate a unique diagnostic corpus. Most closed work orders still say “inspected” or “replaced”; customer data licences prohibit cross-account learning; operating regimes differ enough that each threshold remains local. Good software and good service have created value, but the channel owns the proof, the customer and the exit. The company survives only by accepting lower prices and more analyst work. It has become a subcontracted expert practice wearing SaaS margins in its plan. Nothing in better execution repairs that allocation of power.</p>
+    86	</div>
+    87	
+    88	<section class="monday">
+    89	<h2>The first ninety days</h2>
+    90	<ol>
+    91	<li><strong>Days 1–15:</strong> interview ten owners or service directors across the ten prospect types. Ask for the last renewal where digital reporting mattered, current report-production hours, the software substitute and who owns raw data and work outcomes. Obtain two redacted route exports and matching closeouts under a simple NDA. Spend no more than €2,500 on travel and Dutch technical support.</li>
+    92	<li><strong>Days 10–25:</strong> retain an independent Category III/IV vibration or reliability specialist for up to €4,000. Have that person score the samples for diagnostic sufficiency and write the three-level output boundary. If the data cannot support responsible triage, stop before software.</li>
+    93	<li><strong>Days 20–40:</strong> pay an industrial-contract lawyer up to €4,000 to draft the white-label, data-rights, non-circumvention, export and liability schedule. Put the unresolved terms in front of both candidate partners; do not hide them until procurement.</li>
+    94	<li><strong>Days 30–60:</strong> build only the thin path needed for one sample: importer, asset reconciliation, analyst queue, evidence record and branded report. Cap build and hosted-tool spend at €7,500. No custom sensor, general model or mobile app.</li>
+    95	<li><strong>Days 45–75:</strong> offer the €7,500 diagnostic, 50% in advance, to at least five prospects. It is valid only with one named end-customer dataset, a route technician and closed-work-order access.</li>
+    96	<li><strong>Days 60–90:</strong> deliver the first paid diagnostic and ask for a production order at the stated €18,000 onboarding and recurring price hurdle. Total pre-evidence spend is capped at <strong>€20,000</strong>.</li>
+    97	</ol>
+    98	<p><strong>Pass:</strong> one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee. <strong>Kill:</strong> no paid diagnostic after five properly scoped offers; no partner will return coded work outcomes; or every credible partner requires ownership/control terms that prevent a reusable connector and runbook asset. In any kill state, offer individual integration consulting only if premium self-employment is acceptable—do not call it the second engine.</p>
+    99	</section>
+   100	
+   101	<div class="verdict-box">
+   102	<h2>Verdict</h2>
+   103	<p class="verdict">TEST THROUGH A PARTNER</p>
+   104	<p>The partner is not just a route to market; it supplies language, plant access, measurement discipline, repair execution and the labels that could make the layer improve. The single assumption that would most change the verdict is that a regional maintenance firm will grant enough outcome feedback and derived-data rights while paying a recurring wholesale price that sustains at least roughly 75% gross margin. If the paid diagnostic disproves that, the software layer does not retain the economics.</p>
+   105	</div>
+   106	
+   107	<div class="reading">
+   108	<h2>Reading</h2>
+   109	<ul>
+   110	<li>Siemens, <a href="https://developer.siemens.com/senseye/machine/index.html">Senseye machine-data integration</a> and <a href="https://developer.siemens.com/senseye/workorders/structure.html">work-event structure</a>.</li>
+   111	<li>Augury, <a href="https://www.augury.com/machine-health/">Machine Health</a>.</li>
+   112	<li>SKF, <a href="https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf">Assessing, managing and monitoring machine health</a>.</li>
+   113	<li>IBM, <a href="https://www.ibm.com/products/maximo/asset-performance-management">Maximo Asset Performance Management</a>.</li>
+   114	<li>SPIE Nederland, <a href="https://www.spie-nl.com/oplossing/maintenance-solutions">Maintenance Solutions</a>; ERIKS Nederland, <a href="https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/">Predictive Maintenance</a>.</li>
+   115	<li>VIBRO, <a href="https://vibro.nl/en/">condition monitoring services</a>; Istec, <a href="https://www.istec.com/">vibration monitoring and analysis</a>.</li>
+   116	</ul>
+   117	</div>
+   118	
+   119	<nav class="chapter-nav" aria-label="Essay navigation">
+   120	  <a href="03-machine-vision-food.html">← Previous</a>
+   121	  <a href="../index.html">Contents</a>
+   122	  <a href="05-product-passports.html">Next →</a>
+   123	</nav>
+   124	</main>
+   125	<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+   126	</body>
+   127	</html>
+     1	id	claim	source_url	source_locator	status
+     2	04-senseye-ingestion	Siemens documents Senseye ingestion by API, MQTT, email, S3/Azure Blob Storage or historian; ordinary time-series input is capped at 1 Hz and higher-rate data needs preprocessing, while vibration waveforms and spectra are supported.	https://developer.siemens.com/senseye/machine/index.html	Machine Data, lines 106-128	verified
+     3	04-senseye-work-events	Senseye work events require timestamp, message, asset, routine flag and activity; failure mode is optional, and Siemens says work timing lets the system relate degradation and intervention.	https://developer.siemens.com/senseye/workorders/structure.html	Structure, lines 115-177	verified
+     4	04-augury-bundle	Augury markets a combined subscription surface of IoT sensors, AI diagnostics, expert validation, workflow connection and coverage across more than 200 asset types.	https://www.augury.com/machine-health/	Machine Health, lines 189-238 and 442-456	verified
+     5	04-skf-bundle	SKF describes CMMS/EAM-connected condition-monitoring software, data collection by customer/service partner/SKF, certified remote analysts and subscription access.	https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf	Assessing, managing and monitoring machine health, p.3, lines 182-216	verified
+     6	04-maximo-bundle	IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions in an enterprise asset suite.	https://www.ibm.com/products/maximo/asset-performance-management	Move from reactive maintenance / Built for modern maintenance operations, lines 18-90	verified
+     7	04-spie-offer	SPIE Nederland presents machine maintenance and asset-management services, maintenance-system work and a partnership with IFS Ultimo.	https://www.spie-nl.com/oplossing/maintenance-solutions	Maintenance Solutions, lines 81-109 and linked partnership at line 102	verified
+     8	04-eriks-offer	ERIKS marketed a Smart Asset Management team including software and application engineers and a platform collecting and presenting machine data.	https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/	Predictive Maintenance, sections Smart Asset Management Team and Total Cost of Ownership	verified
+     9	04-vibro-offer	VIBRO offers condition monitoring including telemonitoring, vibration analysis, maintenance advice and sensor/equipment calibration.	https://vibro.nl/en/	VIBRO Services	verified
+    10	04-istec-offer	Istec describes vibration-monitoring hardware, certified vibration experts and data-analysis services.	https://www.istec.com/	Homepage, Products & services and Facts & Figures	verified
+resources/sources/04/SOURCES.md
+43 resources/sources/04/SOURCES.md
+
+web search: 
+web search: https://developer.siemens.com/senseye/machine/index.html
+web search: 
+web search: 
+exec
+/bin/bash -lc "python - <<'PY'
+from pathlib import Path
+from bs4 import BeautifulSoup
+import re
+p=Path('chapters/04-asset-intelligence.html')
+s=BeautifulSoup(p.read_text(), 'html.parser')
+main=s.find('main')
+text=main.get_text(' ', strip=True)
+words=re.findall(r\"\\b[\\w€%–—'’/-]+\\b\", text)
+print('main words',len(words))
+for el in main.find_all(['p','li','td']):
+    t=el.get_text(' ',strip=True)
+    for sent in re.split(r'(?<=[."'!?])'"\\s+(?=[A-Z“\\\"€])', t):
+        n=len(re.findall(r\"\\b[\\w€%–—'’/-]+\\b\",sent))
+        if n>40:
+            print(n, el.name, sent)
+PY
+
+rg -n '<"'!-- CHECK:'"' chapters/04-asset-intelligence.html
+rg -o '<"'!-- CHECK: [''^ ]+ -->'"' chapters/04-asset-intelligence.html | sort | uniq -c" in /home/diablo/book18
+ succeeded in 462ms:
+/bin/bash: line 1: python: command not found
+37:<p>There is no new law forcing this purchase. The change is that the pieces have become easier to connect while the complete offer has become harder to differentiate. Siemens documents Senseye ingestion through API, MQTT, email, S3 or Azure Blob Storage, or directly from a historian. Its ordinary time-series interface accepts up to 1 Hz and requires preprocessing above that rate; it also accepts vibration waveforms and spectra. <!-- CHECK: 04-senseye-ingestion --> A small entrant no longer needs to invent transport or charting. It does need to decide what every source means and whether two names describe the same motor.</p>
+38:<p>The feedback record matters more than the dashboard. Senseye's work-event API requires an asset, timestamp, message, routine/non-routine flag and work-activity type; “failure mode” is optional. Siemens says that a timely completion event lets its system learn how degradation evolved and relate subsequent data changes to the work. <!-- CHECK: 04-senseye-work-events --> That optional field exposes the commercial problem. A service report reading “checked, OK” closes a job for invoicing but does not say whether an alarm was a bearing defect, misalignment, process upset, loose sensor or false positive. Without a disciplined closeout, the dataset grows and the diagnostic asset does not.</p>
+39:<p>Incumbents already sell the whole loop. Augury describes a subscription combining industrial sensors, AI diagnostics, expert validation and connection into maintenance workflow, and markets coverage across more than 200 asset types. <!-- CHECK: 04-augury-bundle --> SKF describes software connected to CMMS/EAM, collection by the customer, a service partner or SKF, and subscription access to certified remote analysts. <!-- CHECK: 04-skf-bundle --> IBM Maximo APM combines condition data, asset history, failure patterns, reliability workflows and recommended actions inside an enterprise asset suite. <!-- CHECK: 04-maximo-bundle --> These are vendor descriptions, not independent proof of outcomes. They are decisive evidence of product surface area: software, expertise and workflow are not an empty niche.</p>
+40:<p>The Dutch channel is not waiting to be digitised either. SPIE Nederland presents machine maintenance, asset-management advice, maintenance-system implementation and a partnership with IFS Ultimo on the same service page. <!-- CHECK: 04-spie-offer --> ERIKS has marketed a Smart Asset Management team including software and application engineers and a platform that collects and presents machine data. <!-- CHECK: 04-eriks-offer --> At the specialist end, VIBRO offers condition monitoring, telemonitoring, vibration analysis, maintenance advice and sensor calibration. <!-- CHECK: 04-vibro-offer --> Istec says it combines vibration hardware, certified experts and analysis. <!-- CHECK: 04-istec-offer --> The plausible partner is therefore not “a maintenance firm that lacks software.” It is one whose current tool is too narrow, too expensive, tied to one sensor family, or weak under its own brand.</p>
+77:<p>Siemens can pair broad ingestion with an established predictive-maintenance workflow. <!-- CHECK: 04-senseye-ingestion --> IBM can tell an existing Maximo customer that asset health and work history belong in the system already running maintenance. <!-- CHECK: 04-maximo-bundle --> Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut. It is one purchase order, one liability framework and an installed base.</p>
+78:<p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module, or hire the analyst after the white-label offer proves demand. The plant may insist on its corporate APM system, making the proposed layer an exporter with no user interface. At the low end, an InfluxDB/Grafana-style stack plus PDFs may be good enough because the scarce value is the technician who knows the machine.</p>
+      2 <!-- CHECK: 04-augury-bundle -->
+      2 <!-- CHECK: 04-eriks-offer -->
+      1 <!-- CHECK: 04-istec-offer -->
+      2 <!-- CHECK: 04-maximo-bundle -->
+      2 <!-- CHECK: 04-senseye-ingestion -->
+      1 <!-- CHECK: 04-senseye-work-events -->
+      2 <!-- CHECK: 04-skf-bundle -->
+      2 <!-- CHECK: 04-spie-offer -->
+      1 <!-- CHECK: 04-vibro-offer -->
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+from pathlib import Path
+from html.parser import HTMLParser
+import re
+class P(HTMLParser):
+ def __init__(self): super().__init__(); self.parts=[]; self.stack=[]; self.units=[]
+ def handle_starttag(self,t,a): self.stack.append(t)
+ def handle_endtag(self,t):
+  if t in ('p','li','td'):
+   txt=' '.join(self.parts).strip(); self.units.append((t,txt)); self.parts=[]
+  if self.stack: self.stack.pop()
+ def handle_data(self,d):
+  if any(x in self.stack for x in ('main',)) and not any(x in self.stack for x in ('script','style')): self.parts.append(d)
+p=P(); p.feed(Path('chapters/04-asset-intelligence.html').read_text());
+# Parser simplistic units sufficient; strip until main footer manually for whole count
+raw=Path('chapters/04-asset-intelligence.html').read_text()
+raw=raw[raw.index('<main'):raw.index('</main>')]
+text=re.sub('<["'^>]+>'"',' ',raw)
+text=re.sub(r'<"'!--.*?-->'"',' ',text)
+words=re.findall(r\"\\b[\\w€%–—'’/-]+\\b\",text)
+print('main words',len(words))
+for tag,t in p.units:
+ for sent in re.split(r'(?<=[."'!?])'"\\s+(?=[A-Z“\\\"€])', t):
+  n=len(re.findall(r\"\\b[\\w€%–—'’/-]+\\b\",sent))
+  if n>40: print(n,tag,sent)
+PY" in /home/diablo/book18
+ succeeded in 293ms:
+main words 3033
+44 p The proposition 
+ The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team.
+47 p The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS.
+54 p The first sale 
+ Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider.
+48 p Pass:  one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee.
+
+web search: 
+web search: 
+web search: 
+web search: site:eriks.nl "Smart Asset Management Team" software application engineers ...
+codex
+A first important discrepancy has emerged: the excerpt-file criticism conflicts with the book’s explicit “essay 6 onward” rule, so it does not apply to essay 4. Conversely, both reviewers missed a real scalability ambiguity—the text switches “customer” from the paying maintenance partner to the partner’s end sites. I’m checking the economics and source currency for similar unit mismatches.
+web search: 
+web search: site:skf.com Remote Diagnostic Services certified analysts subscription condition monitoring current ...
+web search: 
+web search: 'valid'
+exec
+/bin/bash -lc "nl -ba drafts/reviews/04-flash.md | sed -n '1,150p'; nl -ba drafts/reviews/04-pro.md | sed -n '1,100p'; nl -ba resources/sources/04/SOURCES.md | sed -n '1,100p'; nl -ba CONTEXT.md | sed -n '35,120p'; nl -ba AGENT.md | sed -n '10,70p'; nl -ba scripts/prompts/review-checklist.md" in /home/diablo/book18
+ succeeded in 273ms:
+     1	# Editorial & Technical Review: Essay 04 (*White-Label Industrial Asset Intelligence*)
+     2	
+     3	**File Reviewed:** `chapters/04-asset-intelligence.html`  
+     4	**Claim Ledger:** `checks/claims/04.tsv`  
+     5	**Source Index:** `resources/sources/04/SOURCES.md`  
+     6	**Rules & Standards:** `CONTEXT.md` (Sections 1–7), `AGENT.md` (Priority Stack & Pre-Ship Test)
+     7	
+     8	---
+     9	
+    10	## Executive Summary & Systematic Rule Audit
+    11	
+    12	| Rule / Criteria | Status | Audit Summary |
+    13	| :--- | :---: | :--- |
+    14	| **1. Never false** | **PASS** | No proposal is presented as enacted law; text explicitly states there is no statutory mandate driving purchase. Design hurdles (€7,500 diagnostic, €18,000 onboarding, €2,000/mo site fee, €12/mo asset fee) are explicitly labelled as required design gates, never reported as market averages. Primary source vendor citations are accurate. |
+    15	| **2. Buyer & event** | **PASS** | Managing Director or Service Director of a Benelux rotating-equipment maintenance contractor. Purchase event is an industrial contract renewal or competitive tender where the client demands digital evidence and continuous monitoring. |
+    16	| **3. Economics** | **PASS** | Separates revenue, gross margin, operating expenses, founder replacement labour (€75k Y1 / €100k mature), working capital (€60k–€80k startup gap, €70k cash buffer), and owner income. Arithmetic is internally consistent across all tiers (Year 1: €150k rev, 71% GM, –€4k operating result; Mature: €636k rev, 80% GM, €188k pretax retained profit). Refuses hardware pass-through. |
+    17	| **4. Scalability** | **PASS** | Concretely differentiates Customer 1 (bespoke mapping, alert triage shadowing), Customer 5 (canonical schema, trained delivery engineer, technician checklists), and Customer 20 (3–5 enabled maintenance partners, accumulating connector library, alert-to-work history, partner playbooks). Avoids treating "platform" as magic. |
+    18	| **5. Incumbents & capture** | **PASS** | Incumbents (Siemens Senseye, IBM Maximo, Augury, SKF) and Dutch channels (SPIE, ERIKS, VIBRO, Istec) are evaluated fairly from their technical capabilities. Margin capture by the maintenance partner and plant APM disintermediation are directly confronted. |
+    19	| **6. Capable failure** | **PASS** | Non-straw-man failure mode: the software executes well, prevents machine failures, and generates timely reports, but the partner captures customer goodwill and learning, hires an in-house engineer or switches to an OEM bundle, demands a 40% wholesale discount, and squeezes the software entrant into an unprofitable subcontractor. |
+    20	| **7. Language & constraints** | **PASS** | Reader constraints respected (A2 Dutch, EUR 100k capital, no field work). Channel dependency is explicit: the local partner owns the wrench, Dutch plant-floor conversations, sensor installation, and physical repairs. A Dutch-speaking reliability specialist is budgeted for initial deliveries. |
+    21	| **8. Receipts** | **FAIL** | Multiple `CHECK` markers are stacked together at the end of multi-clause sentences instead of immediately following the supported clause. Furthermore, local text excerpt files under `resources/sources/04/excerpts/` are missing for the 9 `verified` ledger rows. |
+    22	| **9. Verdict** | **PASS** | Earns `TEST THROUGH A PARTNER`. The kill criteria correctly identify the existential assumptions: failure of partners to pay the diagnostic, refusal to return coded work outcomes, or restrictive data terms that prevent building a reusable runbook asset. |
+    23	| **10. Readability** | **FAIL** | Contains 4 sentences exceeding the strict 40-word limit. Paragraph lengths and jargon mechanisms are otherwise well-managed. |
+    24	
+    25	---
+    26	
+    27	## Detailed Findings Ranked by Severity
+    28	
+    29	### Finding 1 (Severity: High) — Stacked & Misplaced `CHECK` Markers (Rule 8)
+    30	
+    31	* **Quote 1 (Lines 77):**
+    32	  > `"Augury can bundle sensors, diagnostics and expert validation; SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-augury-bundle --><!-- CHECK: 04-skf-bundle -->"`
+    33	* **Quote 2 (Line 78):**
+    34	  > `"The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-eriks-offer --><!-- CHECK: 04-spie-offer -->"`
+    35	
+    36	* **What the cited sources actually support:**
+    37	  * `04-augury-bundle` points to Augury's Machine Health page (`https://www.augury.com/machine-health/`), supporting only the first clause regarding Augury's sensor, diagnostic, and expert bundle.
+    38	  * `04-skf-bundle` points to SKF's condition monitoring brochure (`cdn.skfmediahub.skf.com/...`), supporting only the second clause regarding SKF's CMMS interfaces and certified analysts.
+    39	  * `04-eriks-offer` points to ERIKS Predictive Maintenance (`eriks.nl/...`), supporting only ERIKS's Smart Asset Management platform and team.
+    40	  * `04-spie-offer` points to SPIE Nederland Maintenance Solutions (`spie-nl.com/...`), supporting only SPIE's maintenance services and IFS Ultimo partnership.
+    41	  * Placing stacked comments at the end of compound sentences violates the rule that each `<!-- CHECK: id -->` marker must immediately follow the sentence or clause it substantiates.
+    42	
+    43	* **Concrete Fix:**
+    44	  Move the first marker in each pair to immediately follow its corresponding semicolon clause:
+    45	  ```html
+    46	  <!-- Fix for Quote 1 (Line 77) -->
+    47	  <p>Augury can bundle sensors, diagnostics and expert validation; <!-- CHECK: 04-augury-bundle --> SKF can bundle sensors, CMMS interfaces, certified analysts and field service. <!-- CHECK: 04-skf-bundle --> Their most effective response is not a price cut.</p>
+    48	
+    49	  <!-- Fix for Quote 2 (Line 78) -->
+    50	  <p>The channel is equally dangerous. ERIKS already describes its own Smart Asset Management platform and software team; <!-- CHECK: 04-eriks-offer --> SPIE already spans maintenance advice, implementation and an EAM partnership. <!-- CHECK: 04-spie-offer --> A capable regional partner can standardise on SKF, Siemens or a CMMS module...</p>
+    51	  ```
+    52	
+    53	---
+    54	
+    55	### Finding 2 (Severity: Medium) — Missing Text Excerpt Files for Verified Claims (Rule 8)
+    56	
+    57	* **Passage / Location:** `checks/claims/04.tsv` (Lines 2–10) and missing directory `resources/sources/04/excerpts/`.
+    58	* **What the cited sources actually support:**
+    59	  * `AGENT.md` and Rule 8 state: *"every verified row has an excerpt that says what the claim says; A verified row without an excerpt is not verified."*
+    60	  * All 9 claims in `checks/claims/04.tsv` are marked `verified`, but the `source_locator` column contains free-form text references (e.g. `Machine Data, lines 106-128`, `VIBRO Services`) rather than pointing to saved verbatim text files in `resources/sources/04/excerpts/<slug>.txt`.
+    61	* **Concrete Fix:**
+    62	  1. Create directory `resources/sources/04/excerpts/`.
+    63	  2. Save the verbatim quoted text from the 9 URLs into individual text files (e.g., `resources/sources/04/excerpts/04-senseye-ingestion.txt`, `04-augury-bundle.txt`, etc.), formatted with the source URL, access date, and exact quote.
+    64	  3. Update `checks/claims/04.tsv` so that each `source_locator` references its respective `.txt` excerpt filename.
+    65	
+    66	---
+    67	
+    68	### Finding 3 (Severity: Medium) — Sentences Exceeding the 40-Word Limit (Rule 10)
+    69	
+    70	Four sentences in the chapter exceed the 40-word readability ceiling:
+    71	
+    72	#### Passage 3A (52 words, Line 46):
+    73	* **Quote:**
+    74	  > `"Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider."`
+    75	* **Concrete Fix:** Split the introductory clause and convert the prospect categories into concise sentences or list structure:
+    76	  > *"Start with ten prospect types close enough to rotating machinery to own the outcome. These include independent vibration-analysis practices, pump repairers, motor and gearbox workshops, industrial lubrication contractors, compressor-service firms, marine rotating-equipment specialists, food-factory contractors, water utilities contractors, HVAC/chiller service firms, and regional electro-mechanical providers."*
+    77	
+    78	#### Passage 3B (48 words, Line 98):
+    79	* **Quote:**
+    80	  > `"Pass: one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."`
+    81	* **Concrete Fix:** Split into two sentences at the signature event:
+    82	  > *"Pass: one partner pays for the diagnostic, introduces an end customer, and accepts the liability boundary and data feedback. The partner then signs the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."*
+    83	
+    84	#### Passage 3C (47 words, Line 30):
+    85	* **Quote:**
+    86	  > `"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS."`
+    87	* **Concrete Fix:** Split at the analyst queue transition:
+    88	  > *"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and online streams, reconciles asset identities, and preserves measurements, alarms, reviews and work outcomes. It then gives an analyst a queue, publishes a white-label monthly report, and opens a documented route into the customer's CMMS."*
+    89	
+    90	#### Passage 3D (42 words, Line 29):
+    91	* **Quote:**
+    92	  > `"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team."`
+    93	* **Concrete Fix:** Split into two distinct sentences:
+    94	  > *"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company. The business is large enough to run scheduled condition-monitoring routes for several factories, but lacks a credible customer portal and analytics team."*
+    95	
+    96	---
+    97	
+    98	## Verdict & Action Plan
+    99	
+   100	### Final Verdict: `REVISE`
+   101	
+   102	The essay is substantively excellent: its commercial logic, unit economics, non-straw-man failure analysis, and reader constraints are fully aligned with the book's thesis. It requires straightforward mechanical revisions before shipping.
+   103	
+   104	### The Three Fixes That Matter Most
+   105	
+   106	1. **Unstack the CHECK Markers (Finding 1):** Place `04-augury-bundle` and `04-eriks-offer` immediately after the individual clauses they support in Section 5 (`competition`).
+   107	2. **Generate Verbatim Excerpt Files (Finding 2):** Create `resources/sources/04/excerpts/` containing the exact passages for all 9 `verified` claims, and update `checks/claims/04.tsv` locators to point to these files.
+   108	3. **Refactor the Four 40+ Word Sentences (Finding 3):** Split the dense sentences in lines 29, 30, 46, and 98 to comply with the 40-word maximum.
+     1	I have reviewed `chapters/04-asset-intelligence.html` against the strict criteria in `CONTEXT.md` and `AGENT.md`. 
+     2	
+     3	The essay is remarkably strong. It successfully establishes a plausible buyer and event, isolates the founder’s A2 Dutch language constraint, brilliantly models the economics (explicitly labelling them as a design hurdle rather than market facts), and presents a devastatingly credible "capable failure."
+     4	
+     5	However, there are three areas requiring revision, ranked below by severity.
+     6	
+     7	### 1. Receipts: Missing Excerpt Files (Severity: High)
+     8	* **Rule:** "Receipts: ... every verified row has an excerpt that says what the claim says"
+     9	* **Quote:** N/A (applies to all 9 `verified` claims in `checks/claims/04.tsv`)
+    10	* **What the cited source actually supports:** The live URLs and TSV claims verify the data correctly, but the physical excerpt files themselves do not exist. While `CONTEXT.md` notes this standard applies "From essay 6 onward," applying your explicit pre-ship test rule reveals that the directory `resources/sources/04/excerpts/` is missing entirely. 
+    11	* **Concrete fix:** Create the directory `resources/sources/04/excerpts/` and save a `.txt` excerpt for each of the 9 claims containing the URL, fetch date, and verbatim supporting text to guarantee offline auditability.
+    12	
+    13	### 2. Readability: Sentences over 40 words (Severity: Medium)
+    14	* **Rule:** "Readability: wall paragraphs, sentences over 40 words, jargon without mechanism."
+    15	* **Quote(s):** 
+    16	  1. *"The initial buyer is the managing director or service director of a Benelux rotating-equipment maintenance company: large enough to run scheduled vibration, temperature, oil or electrical routes for several factories, small enough not to have a credible customer portal and analytics team."* (43 words)
+    17	  2. *"The deliverable is deliberately narrower than “predictive maintenance.” It ingests the partner's route files and selected online streams; reconciles asset identities; preserves measurements, alarms, reviews and work outcomes; gives an analyst a queue; publishes a white-label monthly report; and opens a documented route into the customer's CMMS."* (47 words)
+    18	  3. *"Start with ten prospect types, each close enough to rotating machinery to own the outcome: an independent vibration-analysis practice; pump repairer; motor and gearbox workshop; industrial lubrication contractor; compressor-service firm; marine rotating-equipment specialist; food-factory maintenance contractor; water and wastewater service company; multi-brand HVAC/chiller service firm; and a regional electrical-mechanical maintenance provider."* (52 words)
+    19	  4. *"Pass: one partner pays for the diagnostic, introduces an end customer, accepts the liability boundary and data feedback, then signs either the production order or a dated letter authorising it at no less than €18,000 onboarding plus €2,000 per site per month and an asset fee."* (47 words)
+    20	* **What the cited source actually supports:** Prose issue (no external source).
+    21	* **Concrete fix:** Split these sentences. For example, the 52-word list can be split into two sentences: *"Start with ten prospect types close enough to rotating machinery to own the outcome. Examples include an independent vibration-analysis practice, pump repairer, motor and gearbox workshop, industrial lubrication contractor, or compressor-service firm..."* The pass condition can be rewritten: *"Pass: one partner pays for the diagnostic, introduces an end customer, and accepts the liability boundary and data feedback. The partner must then sign either the production order or a dated letter authorising it at the hurdle price (no less than €18,000 onboarding plus €2,000 per site per month and an asset fee)."*
+    22	
+    23	### 3. Receipts: Misaligned CHECK marker (Severity: Minor)
+    24	* **Rule:** "Receipts: every CHECK marker's row supports the sentence it follows"
+    25	* **Quote:** *"Siemens can pair broad ingestion with an established predictive-maintenance workflow. `<!-- CHECK: 04-senseye-ingestion -->`"*
+    26	* **What the cited source actually supports:** The TSV claim for `04-senseye-ingestion` explicitly details ingestion formats (API, MQTT, S3) and frequency limits (1 Hz, waveforms, spectra). It does not contain evidence supporting the "established predictive-maintenance workflow" half of the sentence, even though Senseye itself is a predictive maintenance tool.
+    27	* **Concrete fix:** Create a new claim row (e.g., `04-senseye-workflow`) that explicitly cites Senseye's workflow capabilities, or amend the TSV text for `04-senseye-ingestion` to capture the introductory text on the Siemens page stating the product is used for predictive maintenance. 
+    28	
+    29	***
+    30	
+    31	### Verdict and Fixes
+    32	
+    33	**REVISE**
+    34	
+    35	The three fixes that matter most:
+    36	1. Generate and save the 9 verbatim text excerpts in `resources/sources/04/excerpts/` to meet the strict receipt rule.
+    37	2. Break the four 40+ word sentences into shorter, punchier prose. 
+    38	3. Fix the `04-senseye-ingestion` marker in paragraph 7 so the TSV claim fully covers the "predictive-maintenance workflow" assertion.
+     1	# Essay 4 — source index
+     2	
+     3	Accessed 2026-09-01. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
+     4	
+     5	1. **Siemens, “Machine Data,” Senseye developer documentation.**
+     6	   URL: https://developer.siemens.com/senseye/machine/index.html
+     7	   Supports: ingestion routes, supported time-series and vibration inputs, 1 Hz ordinary time-series limit and preprocessing requirement (`04-senseye-ingestion`).
+     8	
+     9	2. **Siemens, “Structure,” Senseye work-order developer documentation.**
+    10	   URL: https://developer.siemens.com/senseye/workorders/structure.html
+    11	   Supports: required work-event fields, optional failure mode, and the role of work timing in learning from interventions (`04-senseye-work-events`).
+    12	
+    13	3. **Augury, “AI for Predictive Maintenance Solutions / Machine Health.”**
+    14	   URL: https://www.augury.com/machine-health/
+    15	   Supports: Augury's marketed bundle of sensors, AI diagnostics, expert validation, workflows and stated asset-type coverage (`04-augury-bundle`).
+    16	
+    17	4. **SKF, “Assessing, managing and monitoring machine health.”**
+    18	   URL: https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf
+    19	   Supports: SKF software interfaces, collection routes, remote diagnostic analysts and subscription service (`04-skf-bundle`).
+    20	
+    21	5. **IBM, “Asset Performance Management Software — Maximo Application Suite.”**
+    22	   URL: https://www.ibm.com/products/maximo/asset-performance-management
+    23	   Supports: Maximo's current combination of condition monitoring, reliability, work history, failure modes and recommendations (`04-maximo-bundle`).
+    24	
+    25	6. **SPIE Nederland, “Maintenance Solutions.”**
+    26	   URL: https://www.spie-nl.com/oplossing/maintenance-solutions
+    27	   Supports: SPIE's machine-maintenance and asset-management scope and linked IFS Ultimo partnership (`04-spie-offer`).
+    28	
+    29	7. **ERIKS Nederland, “Predictive Maintenance.”**
+    30	   URL: https://eriks.nl/nl/Services/onderhoud/predictive-maintenance/
+    31	   Supports: ERIKS's described Smart Asset Management team and platform (`04-eriks-offer`). The current URL may redirect into ERIKS's redesigned Dutch site; claim checked against the indexed page content available on the access date.
+    32	
+    33	8. **VIBRO, company and services page.**
+    34	   URL: https://vibro.nl/en/
+    35	   Supports: Dutch specialist services in condition monitoring, telemonitoring, vibration analysis, advice and calibration (`04-vibro-offer`).
+    36	
+    37	9. **Istec, company and services page.**
+    38	   URL: https://www.istec.com/
+    39	   Supports: Dutch vibration-monitoring hardware, certified expertise and analysis capability (`04-istec-offer`).
+    40	
+    41	## Evidence boundary
+    42	
+    43	No primary source found in this research establishes that a regional maintenance company will pay the proposed white-label prices, grant reusable derived-data rights, or return coded work outcomes. Those are deliberately left as the paid 90-day test. All monetary figures are design arithmetic, not observed market prices.
+    35	  the founder personally to win and execute Dutch-language local field work.
+    36	- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+    37	- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+    38	- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+    39	
+    40	## 3. Economic gate
+    41	
+    42	Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+    43	before personal tax, after operating expenses, with enough retained cash that the company is
+    44	not emptied to pay its owner. Figures must separate:
+    45	
+    46	- revenue;
+    47	- pass-through hardware or subcontracting;
+    48	- gross margin;
+    49	- operating costs;
+    50	- owner labour at replacement cost;
+    51	- recurring revenue;
+    52	- working capital and capital expenditure.
+    53	
+    54	Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+    55	as a market fact. Market prices require sources or live buyer evidence.
+    56	
+    57	## 4. Scalability test
+    58	
+    59	"Later a platform" is not evidence. Each essay must say what concretely changes between the
+    60	first and twentieth customer. Score the option against four tests:
+    61	
+    62	1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+    63	   depend solely on the founder's personal network.
+    64	2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+    65	   written playbook.
+    66	3. **Recurring value:** some work recurs because the customer's state changes, not because an
+    67	   annual report was artificially invented.
+    68	4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+    69	   workflow or distribution becomes more valuable with use.
+    70	
+    71	An expert practice is a legitimate outcome, but it must not be called a scalable company.
+    72	
+    73	## 5. Evidence and honesty rules
+    74	
+    75	- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+    76	  European Commission, Dutch government, regulators, standards bodies).
+    77	- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+    78	  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+    79	- Competition: name existing vendors and the substitute, including internal implementation.
+    80	- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+    81	- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+    82	  and a row in `checks/claims/NN.tsv`.
+    83	- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+    84	  from practical enforcement.
+    85	- Each essay must make the strongest case against itself. If the case cannot be answered,
+    86	  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+    87	- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+    88	  publisher, date accessed, and the claim supported.
+    89	
+    90	## 6. Essay contracts
+    91	
+    92	### 1. Connected Product Compliance Operations
+    93	
+    94	Test a managed operation combining the Cyber Resilience Act and Data Act for European
+    95	connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+    96	platform. The essay must define one initial customer segment, identify the exact recurring
+    97	state changes, distinguish legal interpretation from technical implementation, and test
+    98	whether a small manufacturer will buy an external operating function rather than a one-off
+    99	consultant or generic GRC tool.
+   100	
+   101	### 2. White-label Product Security for Engineering Consultancies
+   102	
+   103	Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+   104	machine integrators keep the customer relationship and resell a specialist product-security
+   105	back office. The essay must confront channel conflict, margin sharing, trust, professional
+   106	liability, partner enablement, and the risk that the partner learns the work and removes the
+   107	supplier.
+   108	
+   109	### 3. A Narrow Machine-vision Product for Food or Packaging
+   110	
+   111	Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+   112	inspection job in food/packaging for which successive installations could become materially
+   113	similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+   114	food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+   115	channels rather than competitors.
+   116	
+   117	### 4. White-label Industrial Asset Intelligence
+   118	
+   119	Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+   120	maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+    10	## Priority stack
+    11	
+    12	1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+    13	   hypotheses are not presented as observed prices.
+    14	2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+    15	   this purchase outrank other work.
+    16	3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+    17	   and owner income are separate.
+    18	4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+    19	   accumulates. Never use "platform" as a magic word.
+    20	5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+    21	   uncertainty and partner capture belong in the main argument.
+    22	6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+    23	   resigning or buying the full equipment stack.
+    24	
+    25	## Research rules
+    26	
+    27	- Browse because laws, deadlines, standards, products and competitors are current.
+    28	- Prefer primary sources for law and technical requirements.
+    29	- For competitors, use their own product documentation and pricing where published; label
+    30	  marketing claims as marketing claims.
+    31	- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+    32	- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+    33	  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+    34	  `inference`, or `open`. HTML may ship only with no `open` claims.
+    35	- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+    36	- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+    37	  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+    38	  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+    39	  not verified.
+    40	- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+    41	  concise paraphrases are normally enough.
+    42	
+    43	## Voice
+    44	
+    45	Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+    46	or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+    47	case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+    48	
+    49	## Required challenge
+    50	
+    51	Each essay must contain at least one credible path by which capable execution still loses. This
+    52	is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+    53	post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+    54	
+    55	## Pre-ship test
+    56	
+    57	1. Can the reader name the buyer, purchase event and substitute?
+    58	2. Is demand evidence distinct from regulation and market size?
+    59	3. Does the economic model pay replacement-cost labour and still reach the owner target?
+    60	4. Is the twentieth delivery visibly different from the first?
+    61	5. Does the essay name why an incumbent, partner or customer might capture the margin?
+    62	6. Is Dutch-language dependence stated for this exact channel?
+    63	7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+    64	8. Are all external claims receipted and all arithmetic labelled?
+    65	
+    66	## Coordination
+    67	
+    68	Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+    69	The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+    70	`index.html`, `about.html`, static assets and cross-essay comparisons.
+     1	Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+     2	stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+     3	cited source (excerpt file or URL) actually supports, and give a concrete fix.
+     4	
+     5	1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+     6	   hurdle as market price? Check dates against the cited primary sources.
+     7	2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+     8	   regulation standing in for demand?
+     9	3. Economics: does the model pay replacement-cost labour, working capital and the owner
+    10	   separately, and is the arithmetic internally consistent?
+    11	4. Scalability: is the twentieth customer concretely different from the first, or is
+    12	   "platform" doing the work?
+    13	5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+    14	   the margin-capture risk by partner or customer confronted?
+    15	6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+    16	7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+    17	   EUR 100k, no founder field work in Dutch) respected.
+    18	8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+    19	   an excerpt that says what the claim says; inference rows are honest about what they infer.
+    20	9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+    21	10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+    22	
+    23	End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+
+exec
+/bin/bash -lc "nl -ba CONTEXT.md | sed -n '117,142p'; nl -ba CONTEXT.md | sed -n '180,195p'" in /home/diablo/book18
+ succeeded in 208ms:
+   117	### 4. White-label Industrial Asset Intelligence
+   118	
+   119	Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+   120	maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+   121	company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+   122	Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+   123	data, the need for labelled failures, and whether the software layer has enough value to retain
+   124	margin.
+   125	
+   126	### 5. Digital Product Passport / Battery-passport Integration
+   127	
+   128	Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+   129	integration/managed-data business rather than generic DPP consulting. Separate the Battery
+   130	Regulation's live requirements from the broader ESPR rollout and standards still being made.
+   131	Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+   132	data collection, access control, data verification, and the danger of building before delegated
+   133	acts and customer budgets settle.
+   134	
+   135	### 6. Grid-congestion Capacity Control for Business Parks
+   136	
+   137	Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+   138	that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+   139	connection. The essay must establish from primary sources what contract forms the grid
+   140	operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+   141	limiting transport agreements) and their dates, and must not present a proposal as a live
+   142	product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+   180	## 9. Decision record
+   181	
+   182	- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+   183	  dependent on Dutch language and entrenched small-business competition.
+   184	- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+   185	- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+   186	  scalability test and explicit negative verdicts were added because these are option screens,
+   187	  not operating chapters.
+   188	- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+   189	  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+   190	  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+   191	  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+   192	  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+
+codex
+**VERDICT: REVISE — the thesis is strong, but the scalability unit, production-payment test, economics bridge, and several receipts are not yet ship-ready.**
+
+# Consolidated review: Chapter 04
+
+## Ranked findings
+
+### 1. High — “Customer twenty” changes meaning halfway through the scalability test
+
+> “Customer twenty is viable only if acquisition is through three to five enabled maintenance partners…”
+
+The paying customer was previously defined as the maintenance company, while the production economics count monitored sites. At “customer twenty,” the text silently starts treating maintenance partners as a channel to end-customer sites. Consequently, it never demonstrates how the twentieth paying maintenance partner is acquired, or whether the intended scalable company actually has only three to five highly concentrated customers.
+
+This contradicts the requirement that “the twentieth buyer” have a repeatable acquisition route.
+
+**Fix:** Define three separate units throughout: paying maintenance partner, end-customer plant, and monitored site. State the expected partner/site ratio, then describe either the twentieth paying partner or explicitly justify why twenty sites across three to five partners is the relevant scalability gate. Add partner-concentration and churn assumptions to the mature case.
+
+### 2. High — The 90-day pass rule can pass without validating recurring production payment
+
+> “Pass: one partner pays for the diagnostic … then signs either the production order or a dated letter authorising it…”
+
+A €7,500 diagnostic validates paid discovery, not the existential assumption stated in the verdict: willingness to pay a recurring wholesale price while providing outcomes and data rights. An unspecified “dated letter” may be non-binding and need not prove that the end customer will fund the production service.
+
+The source index correctly admits that no evidence presently establishes willingness to pay the proposed recurring prices.
+
+**Fix:** Require a signed production order, paid onboarding deposit, and first recurring invoice—or a binding end-customer-backed commitment. Record the partner’s resale price and gross margin so the test validates both sides of the channel.
+
+### 3. Medium — The mature economics contain a mislabeled cash-buffer calculation
+
+> “Keep at least two months of mature payroll and contractor cost—about €70,000 under this model…”
+
+The listed mature payroll and contractor costs are:
+
+- Analyst: €84k
+- Delivery engineer: €82k
+- Partner success: €60k
+- Founder replacement salary: €100k
+
+That is €326k annually, or approximately **€54k for two months**, not €70k. Approximately €70k is defensible only if it includes most hosting, sales, insurance, legal, and security costs as well.
+
+The remaining table arithmetic is correct: €636k revenue less €126k direct costs and €322k operating costs leaves €188k.
+
+**Fix:** Change the description to approximately €54k for payroll and contractor costs, or relabel approximately €70k–€75k as two months of total mature cash operating costs.
+
+### 4. Medium — “Mature” is not connected to the required three-to-five-year path
+
+The model jumps from four sites in year one to twelve sites in an undated “mature test.” It does not show when twelve sites are reached, how many partners supply them, onboarding cadence, churn, or whether retained cash survives the transition.
+
+That is insufficient to establish the required plausible three-to-five-year route to €100k owner compensation.
+
+**Fix:** Add a compact year 1/year 3/year 5 bridge showing partners, sites, active assets, onboarding, recurring revenue, staffing, churn, owner compensation, and retained cash.
+
+### 5. Medium — Three receipt defects remain, although the reviewers identified only one
+
+#### 5a. Senseye marker mismatch — confirmed from the pro review
+
+> “Siemens can pair broad ingestion with an established predictive-maintenance workflow. `<!-- CHECK: 04-senseye-ingestion -->`”
+
+The Siemens page does say the ingested data is used for predictive-maintenance purposes, but the ledger row covers only ingestion routes and formats. It does not receipt the “established … workflow” wording. [Siemens Machine Data](https://developer.siemens.com/senseye/machine/index.html)
+
+**Fix:** Expand the ledger claim to cover the page’s predictive-maintenance statement and define “workflow,” or cite a separate Senseye workflow/work-order claim.
+
+#### 5b. Two broad negative claims have no receipt
+
+> “There is no new law forcing this purchase.”
+
+> “There is no statutory deadline and no public procurement trail here…”
+
+The source set contains only vendor material, so neither the legal negative nor the procurement-search result can be verified from the evidence packet.
+
+**Fix:** Recast the first as “The proposition does not rely on a legal mandate.” Recast the second as “This research found no relevant public procurement evidence,” then record the databases, queries, and search date—or remove it.
+
+#### 5c. The ERIKS receipt is not durable
+
+The cited ERIKS URL now redirects to its general Dutch storefront rather than the supporting page. Search-indexed text supports the historical claim, and a current ERIKS page still describes Smart Asset Management, but the ledger’s live receipt no longer exposes the cited team composition. [Current ERIKS Smart Asset Management material](https://eriks.com/be/nl/oplossingen/engineering-maatwerkoplossingen/tco-total-cost-of-ownership)
+
+**Fix:** Replace it with an accessible official source that supports both the platform and team claims, or narrow the claim and preserve an excerpt voluntarily.
+
+### 6. Low — Four sentences exceed the checklist’s 40-word readability trigger
+
+Both reviewers correctly identified the long sentences at chapter lines 29, 30, 46, and 98. Depending on hyphen-counting, they contain roughly 42–54 words.
+
+This is a readability warning, not a substantive blocker or a formally stated absolute ceiling.
+
+**Fix:** Split the buyer definition, product-surface enumeration, prospect list, and pass condition. The pass sentence especially needs splitting because it contains several logically distinct requirements.
+
+### 7. Low — The footer still says there are five candidates
+
+> “Five candidates. One second engine.”
+
+The book now contains seven essays and the chapter itself says “Essay 4 of 7.”
+
+**Fix:** Change “Five” to “Seven” or use wording that will not become stale.
+
+## Claim-ledger audit
+
+| Claim | Result | Source check |
+|---|---|---|
+| `04-senseye-ingestion` | **CONFIRMED** for the ingestion paragraph | API/MQTT/email/storage/historian routes, 1 Hz limit, preprocessing and vibration formats are supported. [Siemens](https://developer.siemens.com/senseye/machine/index.html) |
+| `04-senseye-work-events` | **CONFIRMED** | Required fields, optional failure mode, and learning from intervention timing are explicit. [Siemens](https://developer.siemens.com/senseye/workorders/structure.html) |
+| `04-augury-bundle` | **CONFIRMED** | Sensors, subscription, AI diagnostics, expert validation, workflow integration and 200+ asset types are supported as vendor claims. [Augury](https://www.augury.com/machine-health/) |
+| `04-skf-bundle` | **CONFIRMED** | CMMS/EAM interface, collection routes, certified analysts and subscription service are supported. [SKF PDF](https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf) |
+| `04-maximo-bundle` | **CONFIRMED** | Condition and historical data, failure patterns, maintenance history, workflows and recommended actions are supported. [IBM](https://www.ibm.com/products/maximo/asset-performance-management) |
+| `04-spie-offer` | **CONFIRMED** | Maintenance, asset management, maintenance-system implementation and the IFS Ultimo partnership are present. [SPIE](https://www.spie-nl.com/oplossing/maintenance-solutions) |
+| `04-eriks-offer` | **UNVERIFIABLE from the cited live page** | The claim appears true from indexed and other official material, but the cited URL now redirects and is not a durable receipt. |
+| `04-vibro-offer` | **CONFIRMED** | The enumerated services are explicit. [VIBRO](https://vibro.nl/en/) |
+| `04-istec-offer` | **CONFIRMED** | Hardware, certified experts and data-analysis capability are explicit. [Istec](https://www.istec.com/) |
+
+## Adversarial reconciliation of the reviewers
+
+| Reviewer assertion | Disposition | Reason |
+|---|---|---|
+| Missing excerpt files for all nine claims | **REJECTED** | Both reviewers overrode the controlling scope. `CONTEXT.md` and `AGENT.md` explicitly introduce mandatory excerpt files **from essay 6 onward**; this is essay 4. The generic checklist cannot erase that limitation. |
+| Stacked CHECK markers are a high-severity violation | **REJECTED** | The rule requires markers immediately after a factual sentence or paragraph, not after each semicolon clause. The paired markers jointly receipt their compound sentences. Splitting them would improve auditability but is not a shipping violation. |
+| Four sentences exceed 40 words | **CONFIRMED** | All four trip the checklist’s readability trigger, although “strict ceiling” overstates the governing text. |
+| Senseye ingestion row does not receipt “established predictive-maintenance workflow” | **CONFIRMED** | The source contains predictive-maintenance language, but the TSV claim does not; the marker-to-row alignment is incomplete. |
+| Buyer and purchase event are named | **CONFIRMED** | Managing/service director and renewal/tender are clearly stated; the chapter honestly labels payment as a hypothesis. |
+| Economics are fully internally consistent | **REJECTED** | Core revenue arithmetic is sound, but the €70k “payroll and contractor” buffer is not, and the mature case lacks a three-to-five-year bridge. |
+| Scalability test passes | **REJECTED** | The first/fifth/twentieth delivery description is useful, but “customer” switches from maintenance partner to end site and never proves acquisition of the twentieth paying buyer. |
+| Incumbents and margin capture are adequately confronted | **CONFIRMED** | Vendor surfaces are represented as vendor claims, substitutes are named, and partner capture is central rather than incidental. |
+| Capable failure is credible | **CONFIRMED** | It assumes competent execution and still fails through channel power, data restrictions and weak learning—not generic poor sales. |
+| Dutch-language and capital constraints are respected | **CONFIRMED** | The partner owns Dutch field interaction; specialist help and the €20k pre-evidence cap fit the reader’s constraints. |
+| `TEST THROUGH A PARTNER` is the earned verdict | **CONFIRMED** | The label is correct given absent payment evidence and channel dependence. The production pass condition beneath it still needs strengthening. |
+| Blanket “never false / all vendor receipts accurate” pass | **UNVERIFIABLE** | The checked vendor claims are substantially accurate, but the law/procurement negatives are unreceipted and the ERIKS source is no longer directly accessible. |
+
+## Three fixes that matter most
+
+1. Separate paying partners, end customers, and sites; rebuild the scalability and concentration case around those units.
+2. Make the 90-day pass require binding, paid production evidence and explicit partner resale economics.
+3. Repair the economics/receipt layer: correct the cash-buffer label, add the three-to-five-year ramp, receipt the negative claims, and replace the ERIKS link.
+tokens used
+113,579
