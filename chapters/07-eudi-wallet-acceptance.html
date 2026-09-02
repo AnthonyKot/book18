@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Deadline Opens the Interface. It Does Not Reserve the Margin. — The Second Engine</title>
+<meta name="description" content="A test of verifier-as-a-service and relying-party registration operations for mid-size pre-employment screening providers accepting European Digital Identity Wallet credentials.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Essay 07 of 7 · EUDI Wallet Acceptance for Regulated Onboarding</p>
+<h1>A Deadline Opens the Interface. It Does Not Reserve the Margin.</h1>
+<p class="lede">European law will make wallet acceptance mandatory for some public services and some non-small private organisations, but not for every company that checks an identity. <!-- CHECK: 07-acceptance-scope --> A mid-size pre-employment screener may still be pushed by clients to accept verified identity and qualification credentials. The proposed company supplies the verifier, registers the relying party and keeps trust, policy and evidence current. The opening is dated; the margin is not. Signicat, Datakeeper, Yivi, Ver.iD and Sphereon already cover parts of the path. The decision is whether a screening partner will pay for an independent operating layer before a broad identity vendor makes wallet acceptance one more included connector.</p>
+
+<section class="proposition">
+<h2>The proposition</h2>
+<p>The first buyer is a mid-size Netherlands-based pre-employment screening provider. It checks identity, education or professional evidence for employers, but does not maintain its own digital-identity protocol team. Its product or operations director signs. The purchase event is an enterprise client asking for a wallet option in a tender, or a production wallet and useful credential becoming available before the screener has a safe acceptance path.</p>
+<p>The offer is a verifier-as-a-service plus relying-party operation for one screening workflow. It creates the wallet request, receives the presentation, validates holder binding, signatures, issuer trust and credential status, and returns a narrow result to the screening case system. It also prepares registration data, manages access-certificate changes, tests supported wallets, monitors failed flows and preserves a decision record.</p>
+<p>The customer still decides what evidence satisfies a check, which issuers it trusts, which attributes are necessary, how long results are retained and when a human reviews an exception. Counsel determines the legal basis, the strong-authentication duty and the data-protection boundary. The service verifies cryptographic and policy conditions; it does not promise that every issuing source is accurate or that a credential proves suitability for employment.</p>
+<p>This business refuses to issue wallets, become a general identity provider, conduct the underlying background investigation or sell directly to the screener's employer clients. It also refuses a universal “accept every credential” claim. The first boundary is person-identification data plus one education or professional credential used inside an existing screening case. Passport-image checking and the current manual route remain available as fallback.</p>
+<p>The substitute is a project in the screener's own engineering team, using an open-source verifier and its existing identity vendor. A second substitute is to wait until the incumbent screening platform exposes a wallet button. The entrant wins only if registration, trust changes, evidence and exception handling remain costly after the first connection. A clean API alone is ordinary software integration.</p>
+</section>
+
+<section class="changed">
+<h2>What changed</h2>
+<p>Regulation (EU) 2024/1183 is enacted law. It requires each Member State to provide at least one certified wallet within 24 months after the relevant implementation and certification acts entered into force. Use remains voluntary, and people who do not use a wallet must retain access through existing identification and authentication means. <!-- CHECK: 07-wallet-availability --></p>
+<p>The certification act was published on 4 December 2024 and entered into force twenty days later. Reading that date with the Regulation's 24- and 36-month clocks gives working dates of 24 December 2026 for Member State provision and 24 December 2027 for covered private acceptance. This is direct date arithmetic, not a separately announced Dutch launch date. <!-- CHECK: 07-clock-start --> <!-- CHECK: 07-deadline-calculation --></p>
+<p>The acceptance obligation has three different edges. A public body must accept a conforming wallet where its Member State requires electronic identification and authentication for an online service. A private relying party must accept one only if it is not a micro or small enterprise and law or contract already requires strong user authentication for online identification. Very large online platforms that require user authentication also have an acceptance duty, on the user's voluntary request and for minimum necessary data. <!-- CHECK: 07-acceptance-scope --></p>
+<p>Transport, energy, banking, financial services, social security, health, drinking water, postal services, digital infrastructure, education and telecommunications appear as examples in the private rule. Pre-employment screening, housing and notarial work are not named. <!-- CHECK: 07-private-list --> A screener is not automatically obliged merely because it verifies identity. Whether a particular workflow meets the legal or contractual strong-authentication test needs counsel and the underlying contract. <!-- CHECK: 07-target-not-automatic --></p>
+<p>Registration creates a separate operating surface. Any relying party intending to use wallets for a digital public or private service must register where it is established. It must state its identity, contact details, intended use and requested data; request no other data; report changes without delay; identify itself to the user; and validate the requested credentials. An intermediary acting for a relying party is itself treated as a relying party and may not store transaction-content data. <!-- CHECK: 07-rp-duties --></p>
+<p>Commission Implementing Regulation (EU) 2025/848 applies from 24 December 2026. It requires national registers, published registration policies, human- and machine-readable access, and at least one authorised access-certificate authority. A separate relying-party registration certificate is optional for a Member State. Registrars verify identity, authority and entitlement; registered parties must keep their information accurate and current. <!-- CHECK: 07-registration-act --></p>
+<p>That is not yet a complete Dutch production path. The Dutch government's current page says the public NL Wallet is still being developed and will arrive later because the national implementation act is still being prepared. It expects that act to enter public consultation near the end of 2026. <!-- CHECK: 07-nl-status --> The government repository has nevertheless published pre-release artefacts. Version 0.5.0, dated 27 March 2026, includes issuance and verification servers plus a web integration helper. <!-- CHECK: 07-nl-prerelease --></p>
+<p>The European technical baseline is moving too. The Commission records that Implementing Regulation (EU) 2026/1731 amended the earlier acts for protocols, trust, person-identification data and core wallet functions. <!-- CHECK: 07-spec-update --> That does not erase the statutory clock. It does make a hard-coded verifier more fragile and strengthens the case for an adapter and conformance-test operation.</p>
+<p>Timeline slippage is a commercial risk even when the legal dates remain unchanged. If a production Dutch wallet, register or useful qualification credential arrives six months later than a buyer plans, the integration budget can pause. The company must not hire against a compliance date when its target is driven by client pressure rather than a direct obligation.</p>
+<p>None of this establishes budget. The NL Wallet repository uses sharing a diploma during a job application as an example, so the chosen workflow is technically intended, not invented. <!-- CHECK: 07-job-use-case --> But no primary source found here shows a mid-size Dutch screener paying an independent operator to accept EUDI credentials. <!-- CHECK: 07-demand-gap --> Regulation creates a possible purchase event. Only a paid diagnostic can distinguish it from a backlog item assigned to the existing identity supplier.</p>
+</section>
+
+<section class="sale">
+<h2>The first sale</h2>
+<p>Build a ten-account list inside one segment. Include general employment, education, healthcare staffing, regulated-role and international-hire screeners. Add an industrial-licence checker, contractor-compliance platform, temporary-workforce provider, executive due-diligence firm and screening API sold through HR software.</p>
+<p>Each account must already receive identity or qualification evidence digitally, sell to more than one employer, and control an integration point in its case system. Exclude banks and telecom operators with identity teams. Exclude a direct sale to a housing corporation or notary until the company can prove the workflow with a screening partner. Those buyers add Dutch domain rules before the verifier boundary is learned.</p>
+<p>The opening question is not “Are you ready for eIDAS 2?” Reconstruct the last client tender that changed an evidence requirement. Ask who owns the identity vendor, which credential would replace which document, how exceptions are cleared, and whether the client would accept a wallet-derived result. Then show the exact legal boundary: direct duty, client-contract pressure or neither.</p>
+<p>The first product is a four-week <strong>€8,000 paid acceptance diagnostic</strong>, a required-price hypothesis. It covers one workflow and one case-system sandbox. Deliverables are an obligation memo reviewed by counsel, attribute-minimisation map, trust and credential policy, registration-data pack, working test presentation, exception route, evidence record, fallback route and production quote. It does not promise access to a Dutch production register before that route exists.</p>
+<p>The production test is a <strong>€15,000 onboarding fee plus €2,000 per month</strong>, also a design hurdle rather than an observed market price. Transaction volume above an agreed band is separately priced only after real load is known. The retainer pays for certificate and registration changes, wallet compatibility, trust and status updates, failure triage, monthly evidence review and quarterly recovery tests.</p>
+<p>The screening partner leads Dutch employer conversations and remains accountable for the screening conclusion. The founder can sell and deliver the technical layer in English, but A2 Dutch is insufficient for legal-purpose workshops or Dutch exception notices. Budget a bilingual identity lawyer and require the partner to own Dutch client discovery. If buyers demand founder-led Dutch sales and policy interpretation, the route fails the reader's constraint.</p>
+</section>
+
+<section class="economics">
+<h2>Does the money work?</h2>
+<p>Every number below is a design hurdle, not a market fact. The model excludes credential-issuer fees and identity-document checks. Those remain on the customer's incumbent contract rather than becoming pass-through revenue.</p>
+<div class="ledger-wrap"><table class="ledger">
+<thead><tr><th>€000 design hurdle</th><th>Year 1 design hurdle</th><th>Mature design hurdle</th></tr></thead>
+<tbody>
+<tr><td>Paid diagnostics</td><td>5 × €8k = 40</td><td>8 × €8k = 64</td></tr>
+<tr><td>Production onboarding</td><td>3 × €15k = 45</td><td>8 × €15k = 120</td></tr>
+<tr><td>Recurring operations</td><td>3 × 6 months × €2k = 36</td><td>20 × 12 months × €2.5k = 600</td></tr>
+<tr><td><strong>Revenue</strong></td><td><strong>121</strong></td><td><strong>784</strong></td></tr>
+<tr><td>Pass-through identity checks</td><td>0</td><td>0</td></tr>
+<tr><td>Delivery labour, cloud and support</td><td>28</td><td>210</td></tr>
+<tr><td><strong>Gross margin</strong></td><td><strong>93 (77%)</strong></td><td><strong>574 (73%)</strong></td></tr>
+<tr><td>Sales, legal, insurance and admin</td><td>24</td><td>150</td></tr>
+<tr><td>Founder labour at replacement cost</td><td>90</td><td>100</td></tr>
+<tr><td><strong>Surplus after founder replacement</strong></td><td><strong>−21</strong></td><td><strong>324</strong></td></tr>
+</tbody></table></div>
+<p>Year one deliberately misses the owner-income gate. It buys evidence and a reusable adapter, not a salary illusion. The mature design can pay €100,000 owner compensation before personal tax and retain €324,000 before corporation tax. That surplus must fund protocol changes, security assurance, hiring and a bad quarter; it is not all distributable income.</p>
+<p>Recurring revenue is €600,000, or 77% of mature revenue, in this design. It is earned only if customer state changes: registrations and purposes change, certificates rotate, wallets and credential schemas change, trust or status data changes, failures enter the queue, and client policies are revised. If those events consume less than two hours per customer per month, €2,500 is unlikely to survive procurement.</p>
+<p>The mature labour assumption is one implementation engineer, two operations and support analysts, and limited specialist security review supporting twenty customers. Founder replacement cost is separate from those delivery costs. The operational gate is that routine onboarding and monthly operation consume no more than six person-days per customer annually after the first five accounts.</p>
+<p>Working capital remains material despite no hardware. The design requires a €75,000 reserve before the second full-time hire, covering roughly three months of payroll, contractors, cloud and insurance while receivables lag. Diagnostics are billed 50% in advance, onboarding 50% in advance, and retainers quarterly in advance. Do not spend the reader's full €100,000 before repeatable payment.</p>
+<p>The model breaks first on price, not compute. If a broad identity vendor includes wallet acceptance inside an existing contract, a screening partner compares €30,000 annual recurring cost with zero visible incremental licence cost. The entrant must then prove that registration custody, policy evidence and cross-wallet recovery avoid enough client-specific labour or contract risk to remain a separate line item.</p>
+</section>
+
+<section class="scale">
+<h2>From service to company</h2>
+<p><strong>Customer one</strong> is a controlled integration project. The founder maps one screening decision to the minimum attributes, deploys the verifier beside the customer's sandbox, records every trust decision and writes the fallback route. The assets are a threat model, policy schema, evidence format and a precise list of what still requires counsel or screening judgement.</p>
+<p><strong>Customer five</strong> uses a versioned adapter, not five forks. An implementation engineer connects the case system. An analyst prepares registration changes, runs conformance cases and investigates failures from a written queue. The founder handles unusual trust and liability decisions. At least 65% of delivery hours must be performed without the founder, and two partners must reach the same acceptance result from the same policy fixture.</p>
+<p><strong>Customer twenty</strong> operates through three to five screening or HR-technology partners. Each partner owns employer acquisition, Dutch process language and the substantive screening outcome. The company owns the verifier release, certificate calendar, wallet compatibility matrix, registration-change workflow, policy engine and exportable evidence history. Its staff escalate issuer or wallet anomalies; they do not read every ordinary screening case.</p>
+<p>Acquisition repeats only if partners resell a fixed acceptance package in their client tenders. Delivery is teachable only if an analyst can complete most registration and test work from playbooks. Value recurs only while certificates, trust, policies, credentials and wallets change. The accumulating asset is the conformance corpus, case-system adapters, failure taxonomy and signed history of policy versions.</p>
+<p>Data accumulation is deliberately limited. The valuable corpus is not a warehouse of applicants' credentials. Store the verification result, policy version, issuer and credential references, timestamps and error evidence needed for the agreed purpose. Keep disclosed attributes in the customer's controlled system unless retention is necessary and contracted. A thin evidence trail reduces breach impact and makes partner exit possible.</p>
+<p>The founder bottleneck is legal-technical translation. A verifier can reject a bad signature automatically; it cannot decide whether a nursing qualification is sufficient, whether identity matching is proportionate or whether a new attribute has lawful purpose. Those remain partner and counsel decisions. If every policy change returns to the founder, the result is a boutique identity consultancy.</p>
+<p>The dated interface does not, by itself, make this more than “still software.” The possible second engine is the operating boundary around registration, policy, conformance and recovery. If buyers treat those as implementation chores, the interface produces a temporary software project, not a scalable company.</p>
+</section>
+
+<section class="competition">
+<h2>The incumbent gets a turn</h2>
+<p>Signicat markets one integration to 27-plus wallets and more than 35 electronic identities, plus help with assessment, technical integration and relying-party registration. <!-- CHECK: 07-signicat --> That is nearly the proposed surface, attached to a larger identity platform and trust-service position. Its obvious response is to include EUDI acceptance in an existing contract.</p>
+<p>Datakeeper already markets identity, income and financial-data sharing for real estate and social housing. Its developer documentation exposes a verifier API with QR initiation, webhooks and multi-tenant use by service providers. <!-- CHECK: 07-datakeeper-market --> <!-- CHECK: 07-datakeeper-api --> For housing, rental and sharing platforms, this is an operating substitute rather than a future logo on a competitor slide.</p>
+<p>Yivi documents operational OpenID4VP disclosure of SD-JWT credentials and provides an end-to-end verifier route. <!-- CHECK: 07-yivi --> Ver.iD lists Datakeeper, Digidentity and Yivi integrations as production, but places EUDI Wallet and NL Wallet integrations in testing. <!-- CHECK: 07-verid --> Those are vendor status labels, not independent assurance, but they show how quickly one integration layer can span old and new wallets.</p>
+<p>Sphereon markets verification, trust resolution, policy enforcement, status checking and audit evidence for EUDI credentials. <!-- CHECK: 07-sphereon --> Again, that is marketing evidence of product scope, not proof of outcomes. Together these firms can sell the protocol, the adjacent identity checks and the procurement comfort. The entrant offers less breadth and carries new-vendor security review.</p>
+<p>The internal substitute also improves. The Dutch repository already publishes pre-release verification-server binaries and a web helper. <!-- CHECK: 07-nl-prerelease --> A capable enterprise developer can deploy that path and keep policy in the case system. The national registration process is required to be electronic, easy to use and automated where possible. <!-- CHECK: 07-registration-act --> If it works as intended, “we manage your registration” may be a modest administrative task rather than recurring value.</p>
+<p>The response is not another proprietary verifier. Use the public components where sound, test several wallets, and sell custody of the acceptance outcome: declared purpose matches requested data; certificates are valid; trust and status are evaluated; failures recover; evidence reaches the screening case; and fallback remains usable. Even this is vulnerable to bundling. The partner must buy measurable operating assurance, not protocol access.</p>
+</section>
+
+<div class="counter">
+<div class="case-head"><span class="who">The capable failure</span></div>
+<p>The company executes well. It joins the Dutch test environment, passes security review, integrates three screening systems and maintains a disciplined conformance suite. Wallets arrive and applicants use them. The national register is straightforward, certificates rotate predictably, and the common protocols settle. Precisely because the ecosystem works, the recurring exception load is small.</p>
+<p>At the same time, each screener's incumbent identity provider adds wallet presentations to its existing API at no incremental licence charge. The provider already supplies document checks, fraud signals, service support and procurement assurances. Employer clients accept its evidence format. Screeners keep the entrant only for migration and unusual credentials, then cancel the retainer after twelve months.</p>
+<p>Nothing here is poor execution. Standardisation removes bespoke work; good national infrastructure removes registration friction; bundling moves the remaining margin to vendors with an installed identity contract. The company has built a useful adapter and delivered the transition responsibly. It has not created a durable operating boundary. Revenue returns to projects, and the twentieth customer needs another enterprise sale for less work than the subscription price must justify.</p>
+</div>
+
+<section class="monday">
+<h2>The first ninety days</h2>
+<ol>
+<li><strong>Days 1–15:</strong> retain a Dutch digital-identity lawyer for a fixed €2,500 review. Produce a two-page test separating direct Article 5f duty, contractual pressure and voluntary adoption. Apply it to ten screening accounts without claiming that the segment is automatically obliged.</li>
+<li><strong>Days 10–30:</strong> interview ten product or operations directors and five employer clients introduced by them. Reconstruct one tender, one failed document check and one qualification-verification exception. Ask what the incumbent identity provider has committed, who owns budget and which evidence can be replaced.</li>
+<li><strong>Days 20–45:</strong> deploy the Dutch pre-release verifier only in a disposable test environment. Add one alternative test wallet, a minimal policy fixture, synthetic credentials and an export to a mock screening case. Spend at most €2,500 on cloud, test support and security review.</li>
+<li><strong>Days 31–60:</strong> offer the same €8,000 diagnostic to eight qualified prospects. Require 50% in advance, one named workflow, access to a sandbox and the participation of compliance, product and the employer-facing owner. Free technical demonstrations do not count.</li>
+<li><strong>Days 46–80:</strong> deliver no more than two diagnostics. Time registration preparation, integration, policy decisions, test maintenance and exception handling separately. Put the €15,000 onboarding and €2,000 monthly production price in the closeout proposal.</li>
+<li><strong>Days 81–90:</strong> maximum total pre-evidence spend is <strong>€7,500</strong>, including legal review, Dutch support, travel, cloud and test security. No employee, certification claim or general wallet platform is funded before payment.</li>
+</ol>
+<p><strong>Pass:</strong> two of eight qualified offers become paid €8,000 diagnostics, and at least one buyer signs the €15,000 onboarding plus a six-month €2,000 monthly pilot. That pilot must include ongoing registration, policy and compatibility work, not only integration. <strong>Kill:</strong> no paid diagnostic after eight offers, every buyer's incumbent includes acceptance without a separate budget, or delivered diagnostics reveal less than one analyst-day of recurring work per month. In a kill state, take premium integration projects only if consultancy is acceptable.</p>
+</section>
+
+<div class="verdict-box">
+<h2>Verdict</h2>
+<p class="verdict"><strong>TEST THROUGH A PARTNER</strong></p>
+<p>The single assumption that would most change this verdict is that a pre-employment screening partner will pay a separate recurring price for registration, policy evidence and wallet compatibility after its incumbent identity provider exposes EUDI acceptance.</p>
+</div>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>European Union, <a href="https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng">Regulation (EU) 2024/1183</a>, especially Articles 5a, 5b and 5f.</li>
+<li>European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981">Commission Implementing Regulation (EU) 2024/2981</a>, certification and entry into force.</li>
+<li>European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0848">Commission Implementing Regulation (EU) 2025/848</a>, relying-party registration.</li>
+<li>Dutch Digital Government, <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/id-wallet/">De EDI-wallet Identiteit</a>; and Ministry of the Interior, <a href="https://github.com/MinBZK/nl-wallet">NL Wallet repository</a>.</li>
+<li>Signicat, <a href="https://www.signicat.com/eudi-wallet-integration-checklist">EUDI Wallet integration checklist</a> and <a href="https://www.signicat.com/use-cases/eudi-wallet">wallet product page</a>.</li>
+<li>Datakeeper, <a href="https://www.datakeeper.nl/">business product page</a>; Rabobank developer portal, <a href="https://docs.developer.rabobank.com/identity-risk/reference/datakeeper-documentation">Datakeeper API Verifier</a>.</li>
+<li>Yivi, <a href="https://docs.yivi.app/openid4vp-introduction/">OpenID4VP documentation</a>; Ver.iD, <a href="https://docs.ver.id/overview/apps/wallets/introduction">wallet integration catalogue</a>.</li>
+<li>Sphereon, <a href="https://sphereon.com/sphereon-vdx-verifiable-data-exchange/">VDX verifier and policy product page</a>. Vendor descriptions are treated only as marketed scope.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav">
+  <a href="05-product-passports.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seven candidates. One second engine. Evidence before commitment.</p></div></footer>
+</body>
+</html>

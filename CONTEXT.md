@@ -1,7 +1,7 @@
 # Book 18 — CONTEXT
 
-**Working title: *The Second Engine*.** Five evidence-led essays for an experienced
-software developer deciding whether one of five modern technical opportunities can become
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
 a second, scalable business before 2030.
 
 This is an investment book, not a prediction that software employment will disappear. The
@@ -18,7 +18,7 @@ Dutch trade." A better second engine sits at an interface: a new EU obligation o
 technology, a buyer with an expensive consequence, and a delivery model that begins with
 expert service but can become recurring, teachable, and productised.
 
-The five candidates are not recommendations. Each is a hypothesis subjected to the same
+The candidates are not recommendations. Each is a hypothesis subjected to the same
 sequence inherited from Book 4, *The Going Concern*:
 
 **demand -> payment -> economics -> operations -> resilience**
@@ -132,6 +132,32 @@ Confront platform incumbents, interoperability, identifier/data-carrier requirem
 data collection, access control, data verification, and the danger of building before delegated
 acts and customer budgets settle.
 
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
 ## 7. Common verdict
 
 Each essay ends with exactly one provisional verdict:
@@ -146,7 +172,7 @@ The verdict is provisional until customer payment exists.
 
 ## 8. Book shape
 
-Five essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
 how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
 and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
 final ranking.
@@ -159,3 +185,8 @@ final ranking.
 - 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
   scalability test and explicit negative verdicts were added because these are option screens,
   not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.

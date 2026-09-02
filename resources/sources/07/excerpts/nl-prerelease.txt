@@ -1,0 +1,15 @@
+https://github.com/MinBZK/nl-wallet/releases
+2026-09-02
+Wallet 0.5.0
+
+Pre-release
+
+Release date: 27th of March, 2026
+
+We have the following artifacts as a part of this release:
+
+wallet-issuance-server_v0.5.0_x86_64-linux-glibc.zip: The wallet issuance server for issuers with migrations binary, for glibc-based Linux systems built with Debian trixie.
+
+wallet-verification-server_v0.5.0_x86_64-linux-glibc.zip: The wallet verification server for relying parties with migrations binary, for glibc-based Linux systems built with Debian trixie.
+
+wallet-web_v0.5.0_generic.zip: The javascript helper library for issuers and relying parties, to assist with integrating issuers and relying party applications with the wallet platform.

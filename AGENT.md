@@ -33,6 +33,10 @@ be killed before it consumes either.
   `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
   `inference`, or `open`. HTML may ship only with no `open` claims.
 - Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
 - Do not download or reproduce copyrighted reports unless needed and permitted; links and
   concise paraphrases are normally enough.
 

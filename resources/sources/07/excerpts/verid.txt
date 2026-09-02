@@ -1,0 +1,18 @@
+https://docs.ver.id/overview/apps/wallets/introduction
+2026-09-02
+Last reviewed: 20 August 2026.
+
+Production
+
+These digital identity wallet integrations are available for production use.
+
+Datakeeper — Production
+Digidentity — Production
+Yivi — Production
+
+Testing
+
+These digital identity wallet integrations can be used for testing. They are not available for production use.
+
+EUDI Wallet — Testing
+NL Wallet — Testing

@@ -1,6 +1,6 @@
 # Book 18 — essay template
 
-Kicker: `Essay N of 5 · Candidate name`
+Kicker: `Essay N of 7 · Candidate name`
 
 H1: an argued title, not merely the candidate label.
 

@@ -16,6 +16,8 @@ ESSAYS = {
     "03": "03-machine-vision-food.html",
     "04": "04-asset-intelligence.html",
     "05": "05-product-passports.html",
+    "06": "06-grid-capacity-hubs.html",
+    "07": "07-eudi-wallet-acceptance.html",
 }
 REQUIRED_CLASSES = (
     "proposition",

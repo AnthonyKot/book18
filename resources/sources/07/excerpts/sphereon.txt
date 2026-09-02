@@ -1,0 +1,7 @@
+https://sphereon.com/sphereon-vdx-verifiable-data-exchange/
+2026-09-02
+For relying parties: It handles the complex credential verification against the eIDAS 2.0 trust frameworks, plus applying your specific business rules to return auditable decisions into your existing systems.
+
+Capture the request, the proof, the trust context, and the policy outcome in one defensible record.
+
+Sphereon provides standards-based infrastructure for verifiable digital credentials, EUDI and Business Wallet ecosystems, trust registries, credential issuance, verification, policy enforcement and audit-ready evidence exchange.

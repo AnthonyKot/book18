@@ -1,0 +1,12 @@
+https://www.signicat.com/eudi-wallet-integration-checklist
+2026-09-02
+Follow the four main phases of preparing for EUDI Wallet integration:
+
+1. Assessment: Assess whether eIDAS 2 or AMLR requirements apply, and map your identity use cases, channels, and required attributes.
+2. Technical integration: Choose an integration strategy and protocol, connect to the wallet API, process incoming data, and design user journeys.
+3. Relying Party registration: Register your organisation and intended use, obtain the required certificates, and establish data minimisation policies.
+4. Testing and launch: Test authentication flows and different use cases and prepare to move your integration into production.
+
+Access 27+ wallets and more than 35 eIDs through one integration with Signicat’s eID and Wallet Hub.
+
+Signicat is a Qualified Trust Service Provider and is listed on the EU Trusted Service list.
