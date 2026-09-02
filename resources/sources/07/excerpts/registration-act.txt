@@ -22,6 +22,12 @@ Article 6
 
 3. Where possible, registrars shall verify in an automated manner: (a) the accuracy, validity, authenticity and integrity of the information required under Article 5; (b) where applicable, the power of attorney of representatives of the wallet-relying parties; (c) the type of entitlement or entitlements of the wallet-relying parties; (d) the absence of an existing registration in another national register.
 
+4. Registrars shall verify the information set out in paragraph 3 against the supporting documentation provided by the wallet-relying parties or against appropriate authentic sources or other official electronic records in the Member State where the national register is established and to which the registrars have access in accordance with the applicable national laws and procedures.
+
+5. The verification of entitlements of wallet-relying parties referred to in paragraph 3, point (c) shall be carried out in accordance with Annex III.
+
+6. Where the registrar cannot verify the information in accordance with paragraphs 3 to 5, the registrar shall reject the registration.
+
 Article 7
 
 1. Member States shall authorise at least one certificate authority to issue wallet-relying party access certificates.

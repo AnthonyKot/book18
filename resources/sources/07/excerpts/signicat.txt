@@ -7,6 +7,10 @@ Follow the four main phases of preparing for EUDI Wallet integration:
 3. Relying Party registration: Register your organisation and intended use, obtain the required certificates, and establish data minimisation policies.
 4. Testing and launch: Test authentication flows and different use cases and prepare to move your integration into production.
 
+How Signicat can help
+
+Signicat can support your organisation throughout the EUDI Wallet integration process, from expert-led guidance during your assessment process to a full suite of wallet-based solutions you can integrate into your application.
+
 Access 27+ wallets and more than 35 eIDs through one integration with Signicat’s eID and Wallet Hub.
 
 Signicat is a Qualified Trust Service Provider and is listed on the EU Trusted Service list.

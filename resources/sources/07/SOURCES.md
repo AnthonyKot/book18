@@ -10,44 +10,48 @@ Accessed 2026-09-02. Vendor pages support only the product surfaces and status l
    URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981
    Supports: publication and entry-into-force date used for the statutory clock (`07-clock-start`, and the arithmetic in `07-deadline-calculation`).
 
-3. **European Union, “Commission Implementing Regulation (EU) 2025/848.”**
+3. **European Union, “Commission Implementing Regulation (EU) 2024/2982.”**
+   URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2982
+   Supports: protocols and interfaces under Article 5a(23), publication and entry-into-force date used as the second statutory trigger (`07-protocol-clock`, and the arithmetic in `07-deadline-calculation`).
+
+4. **European Union, “Commission Implementing Regulation (EU) 2025/848.”**
    URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0848
    Supports: application date, national registers and policies, registration verification, access certificates and optional registration certificates (`07-registration-act`).
 
-4. **European Commission, “The European Digital Identity Regulation.”**
+5. **European Commission, “The European Digital Identity Regulation.”**
    URL: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation
    Supports: current implementing-act status and the 2026 amendment to protocols, trust, PID and core-function rules (`07-spec-update`).
 
-5. **Digitale Overheid, “De EDI-wallet Identiteit.”**
+6. **Digitale Overheid, “De EDI-wallet Identiteit.”**
    URL: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/id-wallet/
    Supports: the Dutch public wallet's development status, delayed availability and expected national-law consultation (`07-nl-status`).
 
-6. **Ministry of the Interior and Kingdom Relations, “NL Wallet” repository and releases.**
+7. **Ministry of the Interior and Kingdom Relations, “NL Wallet” repository and releases.**
    URL: https://github.com/MinBZK/nl-wallet
    URL: https://github.com/MinBZK/nl-wallet/releases
    Supports: the job-application diploma example and v0.5.0 pre-release verifier/issuer/web artefacts (`07-nl-prerelease`, `07-job-use-case`).
 
-7. **Signicat, “EUDI Wallet integration checklist” and “EUDI Wallet solutions.”**
+8. **Signicat, “EUDI Wallet integration checklist” and “EUDI Wallet solutions.”**
    URL: https://www.signicat.com/eudi-wallet-integration-checklist
    URL: https://www.signicat.com/use-cases/eudi-wallet
    URL: https://www.signicat.com/blog/the-eudi-wallet-questions-from-around-the-world
    Supports: Signicat's marketed wallet/eID coverage plus integration and registration help (`07-signicat`).
 
-8. **Datakeeper, business product page; Rabobank, “Datakeeper API Verifier.”**
+9. **Datakeeper, business product page; Rabobank, “Datakeeper API Verifier.”**
    URL: https://www.datakeeper.nl/
    URL: https://docs.developer.rabobank.com/identity-risk/reference/datakeeper-documentation
    Supports: Datakeeper's marketed real-estate and social-housing workflows and its verifier/API/multi-tenant architecture (`07-datakeeper-market`, `07-datakeeper-api`).
 
-9. **Yivi, “OpenID4VP Introduction” and “What is Yivi?”**
+10. **Yivi, “OpenID4VP Introduction” and “What is Yivi?”**
    URL: https://docs.yivi.app/openid4vp-introduction/
    URL: https://docs.yivi.app/what-is-yivi/
    Supports: operational SD-JWT disclosure through OpenID4VP and the verifier flow (`07-yivi`).
 
-10. **Ver.iD, “All Digital Identity Wallets.”**
+11. **Ver.iD, “All Digital Identity Wallets.”**
     URL: https://docs.ver.id/overview/apps/wallets/introduction
     Supports: vendor-labelled production and testing status for wallet integrations as reviewed 20 August 2026 (`07-verid`).
 
-11. **Sphereon, “Sphereon VDX.”**
+12. **Sphereon, “Sphereon VDX.”**
     URL: https://sphereon.com/sphereon-vdx-verifiable-data-exchange/
     Supports: marketed verifier, trust, status, policy and audit-evidence capabilities (`07-sphereon`).
 
