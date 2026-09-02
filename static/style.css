@@ -156,3 +156,6 @@ tr:last-child td { border-bottom: 0; }
   main.wrap { max-width: 44rem; }
   a { color: black; }
 }
+
+.toc li.pending{opacity:.65}
+.toc li.pending strong{display:block}
