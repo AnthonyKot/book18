@@ -1,0 +1,7 @@
+1. Replaced the false €90,000 reserve with the €232,500 six-month obligation and bridged it with €126,000 advance retainers, €40,000 retained profit, a €40,000 facility and €26,500 founder cash; the verdict remains `TEST THROUGH A PARTNER` because these are hiring gates, not proven financing.
+2. Rebuilt the Circularise comparison field by field from its product page, limited the defensible offer to provider neutrality, tested second-life lineage and managed exceptions, and added a two-buyer native-workflow kill rule.
+3. Added a 3,940-hour workload bridge for 4,000 events, four onboardings, twelve reviews, support and maintenance against 4,800 team hours, with 18% contingency and an 85%-automation capacity gate.
+4. Changed Minespider's unsupported “open API” to receipted “advanced API connectivity,” updated Spherity's channel wording, and added immediate markers to the repeated lede, legal-duty, vendor, Circularise and ERP occurrences.
+5. Named TÜV SÜD as the candidate domain partner, defined its paid interpretation/testing role and account-capture risk, and required a partner-supported prospect introduction for a pass.
+6. Confirmed the footer already carries the corrected “Seven candidates” wording and left it intact.
+7. Split the flagged Article 13, deliverable, prospect, sprint-output and kill-rule sentences, and broke up the dense statutory paragraph while preserving the adjudicated receipt and excerpt dispositions.

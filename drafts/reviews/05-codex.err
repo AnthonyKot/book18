@@ -1,0 +1,1396 @@
+Reading additional input from stdin...
+OpenAI Codex v0.148.0
+--------
+workdir: /home/diablo/book18
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a060c8-5e03-7550-910a-608b17ce1eef
+--------
+user
+Two reviewers assessed chapters/05-product-passports.html independently; their reports are in drafts/reviews/05-flash.md and drafts/reviews/05-pro.md (either may be empty).
+Read CONTEXT.md, AGENT.md, the chapter, checks/claims/05.tsv, resources/sources/05/, and both reports. Be adversarial toward
+the REVIEWERS: for each of their findings, verify it against the chapter and the sources and mark it CONFIRMED / REJECTED
+(with why) / UNVERIFIABLE. Then add findings they both missed, using the checklist in scripts/prompts/review-checklist.md.
+Output one consolidated markdown report, ranked, with a one-line ship / revise / block verdict at the top.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+codex
+I’ll audit the chapter and source pack directly, then treat every reviewer claim as a hypothesis rather than accepted evidence. After that I’ll run the repository’s checklist and produce a single ranked report.
+exec
+/bin/bash -lc "pwd && rg --files -g 'CONTEXT.md' -g 'AGENT.md' -g 'chapters/05-product-passports.html' -g 'checks/claims/05.tsv' -g 'drafts/reviews/05-flash.md' -g 'drafts/reviews/05-pro.md' -g 'scripts/prompts/review-checklist.md' -g 'resources/sources/05/**' | sort" in /home/diablo/book18
+ succeeded in 220ms:
+/home/diablo/book18
+AGENT.md
+CONTEXT.md
+chapters/05-product-passports.html
+checks/claims/05.tsv
+drafts/reviews/05-flash.md
+drafts/reviews/05-pro.md
+resources/sources/05/SOURCES.md
+scripts/prompts/review-checklist.md
+
+exec
+/bin/bash -lc "wc -l CONTEXT.md AGENT.md chapters/05-product-passports.html checks/claims/05.tsv drafts/reviews/05-flash.md drafts/reviews/05-pro.md resources/sources/05/SOURCES.md scripts/prompts/review-checklist.md && sed -n '1,240p' CONTEXT.md && sed -n '1,240p' AGENT.md && sed -n '1,260p' scripts/prompts/review-checklist.md" in /home/diablo/book18
+ succeeded in 226ms:
+  192 CONTEXT.md
+   70 AGENT.md
+  132 chapters/05-product-passports.html
+   18 checks/claims/05.tsv
+  126 drafts/reviews/05-flash.md
+   31 drafts/reviews/05-pro.md
+   47 resources/sources/05/SOURCES.md
+   23 scripts/prompts/review-checklist.md
+  639 total
+# Book 18 — CONTEXT
+
+**Working title: *The Second Engine*.** Seven evidence-led essays for an experienced
+software developer deciding whether one of seven modern technical opportunities can become
+a second, scalable business before 2030.
+
+This is an investment book, not a prediction that software employment will disappear. The
+reader has one good career, up to EUR 100,000 available, twelve to twenty-four months to
+learn, Dutch at A2 with a path to B1/B2, a base in Zaandam, and willingness to travel and do
+physical work. The question is which option earns the right to consume time and capital.
+
+Precedence: this file -> `AGENT.md` -> essay contracts (section 6) -> `TEMPLATE.md` -> prose.
+
+## 1. Thesis
+
+The mistake is to choose between "modern but still software" and "AI-resistant but an old
+Dutch trade." A better second engine sits at an interface: a new EU obligation or industrial
+technology, a buyer with an expensive consequence, and a delivery model that begins with
+expert service but can become recurring, teachable, and productised.
+
+The candidates are not recommendations. Each is a hypothesis subjected to the same
+sequence inherited from Book 4, *The Going Concern*:
+
+**demand -> payment -> economics -> operations -> resilience**
+
+An essay passes only if it can identify all five. A large market is not demand; a legal duty
+is not a budget; revenue is not owner income; automation is not scalability; and novelty is
+not protection from competition.
+
+## 2. Reader and fixed assumptions
+
+- About forty, ten-plus years in enterprise full-stack development.
+- Dutch passport; based in Zaandam; flexible across the Netherlands and Benelux.
+- Dutch A2, potentially B1/B2 in one to two years. The primary business must not require
+  the founder personally to win and execute Dutch-language local field work.
+- Up to EUR 100,000 investable, excluding ordinary living costs unless an essay says otherwise.
+- Target: at least EUR 100,000 annual owner income within a plausible three-to-five-year path.
+- Preference: a company that can outgrow founder-hours, not merely premium self-employment.
+
+## 3. Economic gate
+
+Every essay carries a bottom-up model. The default target is EUR 100,000 owner compensation
+before personal tax, after operating expenses, with enough retained cash that the company is
+not emptied to pay its owner. Figures must separate:
+
+- revenue;
+- pass-through hardware or subcontracting;
+- gross margin;
+- operating costs;
+- owner labour at replacement cost;
+- recurring revenue;
+- working capital and capital expenditure.
+
+Illustrative arithmetic is labelled as a required design or validation hurdle, never reported
+as a market fact. Market prices require sources or live buyer evidence.
+
+## 4. Scalability test
+
+"Later a platform" is not evidence. Each essay must say what concretely changes between the
+first and twentieth customer. Score the option against four tests:
+
+1. **Repeatable acquisition:** the twentieth buyer is reached through a channel that does not
+   depend solely on the founder's personal network.
+2. **Teachable delivery:** another trained person can perform a majority of delivery from a
+   written playbook.
+3. **Recurring value:** some work recurs because the customer's state changes, not because an
+   annual report was artificially invented.
+4. **Accumulating asset:** integrations, data history, installed equipment, certification,
+   workflow or distribution becomes more valuable with use.
+
+An expert practice is a legitimate outcome, but it must not be called a scalable company.
+
+## 5. Evidence and honesty rules
+
+- Current law, deadlines, standards and official programmes: primary sources first (EUR-Lex,
+  European Commission, Dutch government, regulators, standards bodies).
+- Demand: buyer behaviour, enforcement records, procurement, company filings, trade data or
+  attributable practitioner evidence. A regulation alone does not prove willingness to pay.
+- Competition: name existing vendors and the substitute, including internal implementation.
+- No total-addressable-market theatre. A percentage of a global market is not a sales plan.
+- No numbers from memory. Every external factual claim in HTML carries `<!-- CHECK: id -->`
+  and a row in `checks/claims/NN.tsv`.
+- Distinguish enacted law from proposals, deadlines from expected dates, and legal obligation
+  from practical enforcement.
+- Each essay must make the strongest case against itself. If the case cannot be answered,
+  the verdict is DO NOT ENTER or PARTNER/ACQUIRE, not optimism.
+- Sources used by the prose are indexed in `resources/sources/NN/SOURCES.md`, with URL,
+  publisher, date accessed, and the claim supported.
+
+## 6. Essay contracts
+
+### 1. Connected Product Compliance Operations
+
+Test a managed operation combining the Cyber Resilience Act and Data Act for European
+connected-machinery and industrial-product manufacturers, with a later evidence/workflow
+platform. The essay must define one initial customer segment, identify the exact recurring
+state changes, distinguish legal interpretation from technical implementation, and test
+whether a small manufacturer will buy an external operating function rather than a one-off
+consultant or generic GRC tool.
+
+### 2. White-label Product Security for Engineering Consultancies
+
+Test a B2B2B model in which CE advisers, embedded-development firms, OT-security companies or
+machine integrators keep the customer relationship and resell a specialist product-security
+back office. The essay must confront channel conflict, margin sharing, trust, professional
+liability, partner enablement, and the risk that the partner learns the work and removes the
+supplier.
+
+### 3. A Narrow Machine-vision Product for Food or Packaging
+
+Do not study "machine vision" in general. Select and justify a narrow recurring defect or
+inspection job in food/packaging for which successive installations could become materially
+similar. Include lighting, optics, mechanics, PLC/reject integration, validation, cleaning and
+food-environment constraints, false accepts/rejects, support, and how Dutch integrators become
+channels rather than competitors.
+
+### 4. White-label Industrial Asset Intelligence
+
+Test a condition-monitoring/data layer sold through existing maintenance companies. The local
+maintenance firm owns measurement routes, repairs and Dutch customer relationships; the new
+company provides ingestion, asset history, analysis workflow, reporting and specialist review.
+Confront incumbent platforms, data quality, diagnostic liability, who owns the customer and
+data, the need for labelled failures, and whether the software layer has enough value to retain
+margin.
+
+### 5. Digital Product Passport / Battery-passport Integration
+
+Choose a narrow initial supply chain, preferably one with a dated obligation, and test an
+integration/managed-data business rather than generic DPP consulting. Separate the Battery
+Regulation's live requirements from the broader ESPR rollout and standards still being made.
+Confront platform incumbents, interoperability, identifier/data-carrier requirements, supplier
+data collection, access control, data verification, and the danger of building before delegated
+acts and customer budgets settle.
+
+### 6. Grid-congestion Capacity Control for Business Parks
+
+Test a control-and-evidence layer for Dutch "energy hubs": groups of neighbouring businesses
+that share or cap grid capacity because the regional grid operator cannot offer a new or larger
+connection. The essay must establish from primary sources what contract forms the grid
+operators and the regulator actually offer today (non-firm, time-bound, group or capacity-
+limiting transport agreements) and their dates, and must not present a proposal as a live
+product. Name the buyer (a site whose investment is blocked, not a sustainability officer), the
+channel (installers and energy consultants who hold the Dutch-language relationship), the
+incumbents (Sympower, Withthegrid, Scholt Energy, Enervalis and the grid operators' own hub
+programmes), the liability when a control system fails and a contracted limit is breached, and
+whether the software layer keeps margin once the installer owns the hardware and the site.
+
+### 7. EUDI Wallet Acceptance for Regulated Onboarding
+
+Test a verifier-as-a-service plus relying-party registration operation for mid-size
+organisations that will be obliged, or commercially pushed, to accept European Digital Identity
+Wallet credentials. The essay must pin the obligations to Regulation (EU) 2024/1183 and its
+implementing acts: which relying parties are obliged, from when, and what the Dutch NL Wallet
+programme has actually shipped. Separate obligation from budget. Name the target buyer (housing
+corporations, pre-employment screeners, notaries, rental and sharing platforms; not banks or
+telecoms with identity teams), the incumbents (Signicat, Datakeeper, Yivi, Ver.iD, Sphereon),
+the risk that wallet timelines slip, and the risk that large verifiers bundle acceptance for
+free. This essay is the book's test of its own thesis: pure software at a dated interface.
+It must say plainly whether the interface makes it more than "still software".
+
+## 7. Common verdict
+
+Each essay ends with exactly one provisional verdict:
+
+- **TEST NOW** — evidence supports spending a bounded amount on paid discovery.
+- **TEST THROUGH A PARTNER** — plausible only with a named channel or domain partner.
+- **WATCH** — timing or standards are too unsettled for material investment.
+- **ACQUIRE, DO NOT BUILD** — the capability is attractive but greenfield entry is structurally weak.
+- **DO NOT ENTER** — no credible route under the reader's constraints.
+
+The verdict is provisional until customer payment exists.
+
+## 8. Book shape
+
+Seven essays, 2,400–3,600 words each. The landing page carries a comparison table and explains
+how to read the essays; it is not a sixth essay. The method page explains evidence, assumptions,
+and how Book 4's framework was adapted. Essay order follows the current shortlist, not a claimed
+final ranking.
+
+## 9. Decision record
+
+- 2026-09-01 — Book opened after the original local-services shortlist was rejected as too
+  dependent on Dutch language and entrenched small-business competition.
+- 2026-09-01 — Working title *The Second Engine*; five essays fixed by user request.
+- 2026-09-01 — Book 4's demand/payment/economics/operations/resilience spine adopted. A common
+  scalability test and explicit negative verdicts were added because these are option screens,
+  not operating chapters.
+- 2026-09-02 — Essays 6 (grid-congestion capacity control) and 7 (EUDI wallet acceptance)
+  added by user choice from four pitched candidates; PPWR packaging data and EUDR cocoa due
+  diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
+  a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
+  review lane (`scripts/review.sh`) is added and run on every essay before publication.
+# AGENT.md — instructions for Book 18 research and writing
+
+## Who is reading
+
+An experienced enterprise developer considering a serious second business. He can understand
+systems, integrations, unit economics and technical detail. He is not asking to be reassured.
+He wants to know which idea deserves two years and EUR 100,000, and which seductive idea should
+be killed before it consumes either.
+
+## Priority stack
+
+1. **Never false.** Current claims are sourced; proposals are not presented as law; arithmetic
+   hypotheses are not presented as observed prices.
+2. **Find the buyer and event.** Name the person or function who pays and what happens to make
+   this purchase outrank other work.
+3. **Make the money legible.** Revenue, gross margin, founder replacement cost, working capital
+   and owner income are separate.
+4. **Earn scalability.** State which work remains human, what can be delegated, and what asset
+   accumulates. Never use "platform" as a magic word.
+5. **Attack the idea.** Entrenched vendors, internal teams, consultancies, free tools, standards
+   uncertainty and partner capture belong in the main argument.
+6. **Leave a cheap next move.** The reader must be able to test the riskiest assumption without
+   resigning or buying the full equipment stack.
+
+## Research rules
+
+- Browse because laws, deadlines, standards, products and competitors are current.
+- Prefer primary sources for law and technical requirements.
+- For competitors, use their own product documentation and pricing where published; label
+  marketing claims as marketing claims.
+- Record every relied-on URL and its purpose in `resources/sources/NN/SOURCES.md`.
+- Write a claim ledger in `checks/claims/NN.tsv` before or alongside prose. Schema:
+  `id<TAB>claim<TAB>source_url<TAB>source_locator<TAB>status` where status is `verified`,
+  `inference`, or `open`. HTML may ship only with no `open` claims.
+- Use `<!-- CHECK: id -->` immediately after the factual sentence or paragraph.
+- From essay 6 onward: save the passage that supports each `verified` row as a text excerpt in
+  `resources/sources/NN/excerpts/<slug>.txt` (URL, date fetched, then the verbatim passage),
+  and name that file in the `source_locator` column. A `verified` row without an excerpt is
+  not verified.
+- Do not download or reproduce copyrighted reports unless needed and permitted; links and
+  concise paraphrases are normally enough.
+
+## Voice
+
+Plain, adult, analytical. No startup cheerleading, future-of-X throat-clearing, fake scenes,
+or inflated market-size paragraphs. Explain technical mechanisms where they change the business
+case. The reader should feel that a skeptical operator and a skeptical investor wrote together.
+
+## Required challenge
+
+Each essay must contain at least one credible path by which capable execution still loses. This
+is Book 4's counter-case discipline adapted to an opportunity that may not yet have a historical
+post-mortem. It must not be a straw man such as "poor sales" or "bad execution."
+
+## Pre-ship test
+
+1. Can the reader name the buyer, purchase event and substitute?
+2. Is demand evidence distinct from regulation and market size?
+3. Does the economic model pay replacement-cost labour and still reach the owner target?
+4. Is the twentieth delivery visibly different from the first?
+5. Does the essay name why an incumbent, partner or customer might capture the margin?
+6. Is Dutch-language dependence stated for this exact channel?
+7. Is there a bounded 90-day experiment with a price, pass rule and kill rule?
+8. Are all external claims receipted and all arithmetic labelled?
+
+## Coordination
+
+Agents edit only their assigned essay HTML, claim TSV, source index and optional draft notes.
+The coordinating agent alone edits `CONTEXT.md`, `AGENT.md`, `TEMPLATE.md`, `README.md`,
+`index.html`, `about.html`, static assets and cross-essay comparisons.
+Review this essay against the book's own rules (CONTEXT.md sections 1–7, AGENT.md priority
+stack and pre-ship test). Rank findings by severity. For each: quote the passage, say what the
+cited source (excerpt file or URL) actually supports, and give a concrete fix.
+
+1. Never false: is any proposal presented as enacted law, expectation as deadline, or design
+   hurdle as market price? Check dates against the cited primary sources.
+2. Buyer and event: is the payer and the purchase event named and plausible, or is a
+   regulation standing in for demand?
+3. Economics: does the model pay replacement-cost labour, working capital and the owner
+   separately, and is the arithmetic internally consistent?
+4. Scalability: is the twentieth customer concretely different from the first, or is
+   "platform" doing the work?
+5. Incumbents and capture: are named competitors treated fairly from their own material, and is
+   the margin-capture risk by partner or customer confronted?
+6. Capable failure: is it a non-straw-man path, or "poor execution" in disguise?
+7. Dutch-language dependence stated for the exact channel; reader constraints (A2 Dutch,
+   EUR 100k, no founder field work in Dutch) respected.
+8. Receipts: every CHECK marker's row supports the sentence it follows; every verified row has
+   an excerpt that says what the claim says; inference rows are honest about what they infer.
+9. Verdict: is it the one the evidence earns, and is the kill assumption the right one?
+10. Readability: wall paragraphs, sentences over 40 words, jargon without mechanism.
+
+End with: verdict SHIP / REVISE / BLOCK, and the three fixes that matter most.
+
+exec
+/bin/bash -lc "sed -n '1,240p' chapters/05-product-passports.html && sed -n '1,220p' checks/claims/05.tsv && sed -n '1,220p' resources/sources/05/SOURCES.md && sed -n '1,240p' drafts/reviews/05-flash.md && sed -n '1,200p' drafts/reviews/05-pro.md" in /home/diablo/book18
+ succeeded in 253ms:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do Not Build Another Passport Platform — The Second Engine</title>
+<meta name="description" content="A test of a managed battery-passport data operation for second-life stationary industrial batteries above 2 kWh.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Essay 5 of 7 · Digital product passport / battery-passport integration</p>
+<h1>Do Not Build Another Passport Platform</h1>
+<p class="lede">On 18 February 2027, a second-life battery integrator placing a repurposed industrial battery over 2 kWh on the EU market does not merely inherit the donor battery's record. It takes responsibility for accurate passport information and must create a new passport linked to the original. <!-- CHECK: 05-second-life-transfer --> The opportunity is not a generic “DPP platform”: Siemens, Circularise, Minespider and Spherity are already there. It is the dirty operational layer between donor records, BMS tests, product data, access rules and one compliant publication route. That layer may earn recurring money—or disappear as soon as the platforms and source systems learn to speak.</p>
+
+<section class="proposition">
+<h2>The proposition</h2>
+<p>The first customer is a Benelux company that assembles stationary energy-storage systems from batteries previously used in vehicles or other applications and expects to place its finished industrial batteries on the EU market after 18 February 2027. It is not a cell manufacturer or a vehicle OEM. It buys or receives donor packs or modules, tests and grades them, changes their purpose or configuration, integrates a BMS and enclosure, and becomes the economic operator for the second-life battery.</p>
+<p>The buyer is its COO, head of compliance or product-data lead. The purchase event is a dated production batch that crosses the 2027 application date and cannot ship with a spreadsheet standing in for a battery passport. The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer. After launch, the service monitors missing, changed and expiring evidence and handles new units and lifecycle updates.</p>
+<p>The business does not host the only copy of the passport, issue product conformity, calculate or certify carbon footprints, verify responsible sourcing, provide battery-safety engineering, or pretend to be the customer's legal adviser. It does not invent a blockchain or proprietary identifier. A battery lawyer interprets scope; testing and conformity bodies assess what requires them; a DPP provider stores and serves the record. The company owns the connectors, validation rules, evidence workflow and operating playbook.</p>
+<p>The substitute is a compliance consultant plus spreadsheets and manual uploads, the customer's ERP/PLM team, or the integration/professional-services arm of the selected DPP platform. That last substitute is the serious one. The operation wins only where source data remain too fragmented and lifecycle changes too frequent for “configure once, issue passports” to be true.</p>
+</section>
+
+<section class="changed">
+<h2>What changed</h2>
+<p><strong>The dated battery obligation is enacted.</strong> Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents. Article 77(3) says the QR code links to a unique identifier assigned by the placing operator and requires both to comply with the ISO/IEC 15459 family listed there, or equivalent standards. <!-- CHECK: 05-qr-rule --></p>
+<p>The narrow second-life chain has an additional trigger. Article 77(7) transfers responsibility for passport accuracy, completeness and currency to the economic operator that places a reused, repurposed or remanufactured battery on the market or puts it into service. It requires a new passport linked to the original passport or passports. Article 13(9) also requires new labels or markings describing the status change. <!-- CHECK: 05-second-life-transfer --> This is why the opening is better than generic passport advice: the operator must join lineage from potentially several donor records to a changed physical product.</p>
+<p>Responsibility cannot be outsourced away. Article 77(4) permits written authorisation for another operator to act, but leaves the placing operator responsible for accurate, complete and current information. The same article requires open standards, an interoperable, machine-readable, structured and searchable format, transfer through an open network and no vendor lock-in. <!-- CHECK: 05-operator-responsibility --> Article 78 requires authentication, integrity, role-based access, continued availability after the responsible operator ceases activity, and forbids an authorised processor from reusing passport data beyond the service unless specifically agreed. <!-- CHECK: 05-art78-controls --> The contract must therefore distinguish doing the work from owning the legal answer.</p>
+<p>The source-data job started before the passport date. Since 18 August 2024, stationary battery energy-storage systems, LMT batteries and EV batteries must hold current state-of-health and expected-lifetime parameters in the BMS. Purchasers and authorised third parties receive read-only access for purposes including valuation and repurposing, subject to manufacturer intellectual-property rights. <!-- CHECK: 05-bms-access --> That is a legal access path, not proof that old donor packs expose clean APIs or that the parameters are comparable. A paid diagnostic must test actual extraction.</p>
+<p>Some common architecture is now real. The Commission's DPP Registry went live on 20 July 2026 and provides a testing environment. The registry stores identifiers, registration data and high-level metadata rather than the full passport; product data remain with the economic operator or its service provider in a decentralised architecture. <!-- CHECK: 05-registry-live --> The Commission's August 2026 battery guidance assembles 71 data points and marks their applicability by battery category, while warning that the guidance creates no new legal requirements and is not an authoritative interpretation. <!-- CHECK: 05-71-points --></p>
+<p><strong>Important pieces are still unsettled on 1 September 2026.</strong> The Commission's published implementation timeline schedules the battery access-rights implementing act for Q4 2026, the remaining two DPP standards for September 2026, and delegated requirements for DPP service providers in 2027. <!-- CHECK: 05-pending-rules --> Build schemas and adapters now; do not freeze a proprietary access model or promise final conformance before those acts arrive.</p>
+<p><strong>Do not merge this with the broader ESPR story.</strong> Regulation (EU) 2024/1781 is a framework under which product-specific delegated acts define passport requirements, and the Commission says economic operators receive at least an 18-month transition after an ESPR delegated act. <!-- CHECK: 05-espr-framework --> Its working plan prioritises groups such as textiles, furniture, tyres, mattresses, iron and steel, and aluminium. <!-- CHECK: 05-espr-priorities --> Those priorities and indicative adoption dates are not present-day passport obligations for every item in those sectors. Batteries have their own enacted regulation and date. Selling “ESPR compliance for all products in 2027” would be false.</p>
+<p>Battery due diligence is separate again. Regulation (EU) 2025/1561 moved the Article 48 due-diligence start to 18 August 2027. Chapter VII also excludes operators below its €40 million turnover threshold (unless their consolidated group exceeds it) and excludes batteries already marketed before reuse/repurposing from that chapter's scope. <!-- CHECK: 05-due-diligence-separate --> Those rules do not move the passport date. This offer tracks a due-diligence document only when it is a required passport input; it does not sell the passport as a complete due-diligence programme.</p>
+<p>Law creates the deadline, not the budget. The live registry, 71-point guidance and second-life responsibility show a real implementation job. They do not show that a small integrator will pay an external operator rather than its existing quality engineer or platform vendor. That remains the paid-test question.</p>
+</section>
+
+<section class="sale">
+<h2>The first sale</h2>
+<p>Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture. Screen out firms whose 2027 products are below 2 kWh, remain prototypes, or are placed by an OEM that retains all passport responsibility.</p>
+<p>The founder should approach through one named category of domain partner: a battery conformity/safety consultancy that will sign its own interpretation, not a generic sustainability agency. Add one passport-platform solutions partner so the diagnostic tests a real publication route. The introduction asks for a specific production event: “Which finished battery will you place on the market after 18 February, who is the economic operator, and can you trace ten planned units back to donor passports, tests and BMS records?” A company without a dated batch is a research interview, not a prospect.</p>
+<p>The first offer is a six-week <strong>€12,000 passport-readiness sprint</strong>, a proposed test price. It covers one finished product family and up to ten test units. Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote. It excludes legal opinions beyond the scoped memo, conformity assessment and new source-data creation. Fifty per cent is paid before work.</p>
+<p>The COO or compliance lead signs. Operations, engineering, quality and IT each name one owner. The customer contracts directly with the passport host, so licence cost and continuity rights remain visible and there is no hidden reseller lock-in. English should work for cross-border suppliers and technical teams, but local production records, regulator contact and shop-floor evidence may be Dutch or German. At A2 Dutch the founder must budget professional translation and let the qualified local partner lead regulatory conversations.</p>
+<p>The required production price is €30,000 for integration/onboarding, then €3,500 per month for managed evidence and change operations plus €12 per newly issued or materially updated passport event. These are hurdles, not market facts. The platform licence, identifier issuance, lab work and legal opinions are billed directly to the customer. If a ten-unit sprint cannot justify that next-stage order, do not assume thousands of future passports will.</p>
+</section>
+
+<section class="economics">
+<h2>Does the money work?</h2>
+<p>A high-value stationary system may contain fewer passported units than a vehicle programme. Per-passport fees cannot carry this company. The retainer pays for the changing state: supplier evidence arrives, tests are rerun, a donor lineage is corrected, roles change, a unit is updated, a standard or data rule changes, or an authority asks for proof. The event fee disciplines volume; the operating retainer funds readiness.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Model</th><th>Revenue</th><th>Direct cost / gross margin</th><th>Operating result</th></tr></thead>
+<tbody>
+<tr><td><strong>Year 1:</strong> three readiness sprints; two onboardings; two managed customers live for an average six months; 200 issue/update events.</td><td>Sprints €36k; onboarding €60k; retainers €42k; events €2.4k. <strong>Total €140.4k.</strong></td><td>Battery-law and data-QA subcontractors €15k; test cloud/tooling €5k. <strong>Gross margin €120.4k (86%).</strong></td><td>Founder labour at €75k replacement cost plus €45k security, insurance, travel, translation and sales leaves approximately <strong>break-even</strong>. No owner distribution.</td></tr>
+<tr><td><strong>Mature test:</strong> twelve managed customers; four new onboardings; 4,000 issue/update events.</td><td>Retainers €504k; onboarding €120k; events €48k. <strong>Total €672k.</strong></td><td>Specialist data QA €60k; cloud/test systems €24k. <strong>Gross margin €588k (88%).</strong></td><td>Two integration engineers €160k; compliance-operations lead €70k; founder replacement salary €100k; legal, security, insurance, translation, travel and sales €75k. <strong>€183k remains</strong> before corporation tax and financing.</td></tr>
+</tbody></table></div>
+<p>The model clears the owner-income target and retains cash only because customers pay a substantial retainer and platform licences stay out of revenue. If the managed work settles into one annual CSV upload, the retainer will be competed away. At €12 per event alone, 4,000 events produce €48,000: less than one engineer. Conversely, if every passport needs two hours of manual source chasing, 4,000 events consume roughly four full-time working years before review and support. The acceptable process must make the typical event mostly automatic and reserve human time for exceptions.</p>
+<p>Working capital deserves restraint. Bill sprints 50% upfront, onboarding 40/40/20 against evidence-map, test and production milestones, and retainers quarterly in advance. Keep provider licences on the customer's contract and do not finance laboratory work. The first 90 days need at most €25,000; a production company should preserve roughly €90,000 for six months of a small team's payroll and specialist commitments. That is almost the reader's full capital allowance, which is another reason not to build hosting infrastructure before payment.</p>
+<p>Track economics by data object, not by customer logo: automated versus manual fields, evidence rejection rate, minutes per passport event, supplier follow-up days, schema-change rework, and exceptions requiring counsel. A customer with five product variants and one disciplined ERP may be cheaper than a one-product customer with ten donor sources. Price the data topology found in the sprint, not nominal passport count.</p>
+</section>
+
+<section class="scale">
+<h2>From service to company</h2>
+<p><strong>Customer one</strong> is an evidence archaeology project. The founder and battery adviser decide whether the finished item is in scope, trace ten units to donor sources, discover which BMS parameters can actually be read, reconcile serial numbers and document every unresolved interpretation. Test payloads go to the Commission's registry environment and one selected provider. Every manual choice becomes a versioned rule with its source and approver.</p>
+<p><strong>Customer five</strong> should use a canonical internal schema with source provenance, evidence status, role/access class and effective date on each field. Connectors pull from two or three common ERP/PLM formats, a test bench export and a BMS gateway. Provider adapters translate that record into Siemens, Circularise, Spherity, Minespider or another selected endpoint without making one of them the internal truth. A trained integration engineer runs onboarding; the compliance partner reviews only scope and exceptions.</p>
+<p><strong>Customer twenty</strong> is a managed exception operation. Supplier reminders, validation, lineage checks, identifier registration, change approval and publication are automated. Humans resolve missing donor links, conflicting measurements, status changes and questions whose legal treatment has moved. The recurring value comes from real state changes, not an invented annual report. Acquisition repeats through battery compliance firms, test laboratories, recycling networks and DPP implementation partners, with one rule: no partner may both own the customer and silently substitute the company at renewal.</p>
+<p>The accumulating asset is a regression-tested mapping library: legal data point to canonical field to source evidence to provider payload; fixtures for registry/provider conformance; supplier evidence templates; provenance and access-control patterns; and measured failure modes from real onboarding. It is not a database of customer battery secrets. Contracts should leave raw and transformed customer data with the customer, guarantee full export, restrict cross-customer reuse, and permit reuse only of generic mappings, code, empty templates and de-identified operational metrics.</p>
+<p>Verification must be explicit. The system can validate presence, type, range, signature, lineage and approval. It cannot prove that a supplier's composition declaration is true or that a laboratory test was competent. Each field records source, issuer, date, transformation and approval; derived values preserve their inputs and algorithm version. Public, authority-only and legitimate-interest views are generated from one controlled record, not copied into three spreadsheets. Where access rules remain pending, the implementation uses a reversible policy table and a test credential—not a hard-coded interpretation.</p>
+</section>
+
+<section class="competition">
+<h2>The incumbent gets a turn</h2>
+<p>There is no platform gap. Siemens offers a Battery Passport REST API with user and passport management, including create, update and retrieve operations. <!-- CHECK: 05-siemens-api --> Circularise markets model- and individual-battery data, QR access and permissions in one platform. <!-- CHECK: 05-circularise --> Minespider markets EU battery-passport tooling and an open API. <!-- CHECK: 05-minespider --> Spherity markets templates, APIs, secure access and a fully white-label-ready product. <!-- CHECK: 05-spherity-product --> Their claims of compliance are vendor claims; only the responsible economic operator carries the legal duty. But their existence means a new generic passport host starts behind on product, standards work, security evidence and integrations.</p>
+<p>Spherity explicitly invites consultancies and integrators to resell or white-label its software. <!-- CHECK: 05-spherity-channel --> That is both route and threat. Use such a platform to reach production quickly, but keep the customer contract, canonical export and provider-neutral test suite. Siemens can bundle its passport into an industrial digital stack; Circularise and Minespider can add onboarding services; an ERP vendor can generate the payload at source. The proposed company keeps margin only if it repeatedly solves evidence and change operations those products cannot economically standardise.</p>
+<p>Interoperability is not a slogan here. The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one. Yet formal interoperability can commoditise the connector. The more successful the standards become, the less anyone should pay merely to translate JSON. Margin must migrate toward data provenance, supplier follow-up, exception handling and accountable operations.</p>
+</section>
+
+<div class="counter">
+<h2>The capable failure</h2>
+<p>The company chooses the right niche, partners with a competent battery lawyer, ships ten valid test passports, builds clean connectors and wins six second-life integrators. Then the standards and access act settle well. Donor OEMs expose reliable passport links; test-equipment vendors export the canonical fields; the leading DPP providers add second-life templates, lineage and registry submission; customers' ERP integrators map the remaining data during ordinary implementation.</p>
+<p>The founders have done nothing wrong. Their interoperability work helped make the problem routine. But each customer places relatively few high-value stationary systems, lifecycle updates are rare, and the supposedly recurring evidence queue shrinks after onboarding. Procurement compares a €42,000 annual managed retainer with a platform module and twenty days of internal quality-engineer time. The platform vendor absorbs the connector into its licence; the battery adviser keeps the occasional interpretation. This company is squeezed out of the middle by the standardisation it correctly anticipated. It can survive as project integration, but not reach the recurring mature-year model.</p>
+</div>
+
+<section class="monday">
+<h2>The first ninety days</h2>
+<ol>
+<li><strong>Days 1–12:</strong> retain an EU battery-regulation lawyer or conformity specialist for a capped €4,000 memo on the selected second-life scenario: product category, placing operator, Article 77/78 duties, Article 45 boundary and open implementation questions. Do not generalise it to all batteries.</li>
+<li><strong>Days 1–25:</strong> interview ten in-scope prospect types. Require a dated 2027 production family, estimated unit count, donor-source map, current system of record and named budget owner. Record whether the buyer already has a DPP platform or ERP programme.</li>
+<li><strong>Days 15–35:</strong> select one existing DPP provider and one fallback after testing export, API access, lineage, role controls, registry workflow, price transparency and exit. Use the Commission registry testing environment; do not build a production host.</li>
+<li><strong>Days 25–55:</strong> build a canonical evidence record and ten synthetic or customer-authorised test passports. Exercise one original-to-new lineage, one BMS/test import, public/restricted views and a full export. Mark pending legal rules in configuration.</li>
+<li><strong>Days 35–75:</strong> offer at least five €12,000 readiness sprints, 50% upfront, with the production prices stated before sale. A free workshop does not count.</li>
+<li><strong>Days 60–90:</strong> deliver one paid sprint and ask for the €30,000 onboarding plus €3,500 monthly managed-data order. Cap all pre-evidence cash at <strong>€25,000</strong>, including legal advice, provider sandbox, security review, travel and translation.</li>
+</ol>
+<p><strong>Pass:</strong> one in-scope operator pays for the sprint, supplies authorised donor/BMS/test evidence, completes ten linked test records and signs a production order or dated conditional order at the stated price level. The evidence map must show at least one recurring change process beyond initial issuance. <strong>Kill:</strong> counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer. A standards delay is a reason to keep mappings reversible, not to invent a different obligation.</p>
+</section>
+
+<div class="verdict-box">
+<h2>Verdict</h2>
+<p class="verdict">TEST THROUGH A PARTNER</p>
+<p>The date and second-life responsibility justify a paid test now, but only beside a battery-regulation specialist and on top of an existing DPP provider. The single assumption that would most change the verdict is that small second-life operators experience enough continuing evidence and lifecycle work to pay roughly €42,000 a year after initial integration. If the readiness sprint finds a one-time mapping followed by rare updates, this is consultancy, not a scalable second engine.</p>
+</div>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/">consolidated Regulation (EU) 2023/1542</a>, especially Articles 13, 14, 45, 47–48 and 77–78.</li>
+<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en">Batteries and the Digital Product Passport</a> and <a href="https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en">2026 battery-passport guidance announcement</a>.</li>
+<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en">The DPP Registry</a> and <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en">DPP implementation timeline</a>.</li>
+<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj">Regulation (EU) 2024/1781 (ESPR)</a>; European Commission, <a href="https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en">ESPR and Energy Labelling Working Plan 2025–2030</a>.</li>
+<li>Siemens, <a href="https://developer.siemens.com/battery-passport/overview.html">Battery Passport API</a>; Circularise, <a href="https://www.circularise.com/battery-passport">Battery Passport</a>.</li>
+<li>Minespider, <a href="https://www.minespider.com/">Digital and battery passports</a>; Spherity, <a href="https://www.spherity.com/digital-product-passport">VERA Digital Product Passport</a>.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav" aria-label="Essay navigation">
+  <a href="04-asset-intelligence.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+</body>
+</html>
+id	claim	source_url	source_locator	status
+05-art77-scope	From 18 February 2027 each LMT battery, EV battery and industrial battery above 2 kWh placed on the market or put into service requires a battery passport with model and individual-battery data.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(1)-(2), lines 2846-2868	verified
+05-qr-rule	From 18 February 2027 covered batteries require a QR code leading to the passport; marking must be visible, legible and indelible on the battery or, where appropriate, packaging/documents. The QR links to a placing-operator-assigned unique identifier and both must comply with the listed ISO/IEC 15459 family or equivalent.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(6)-(7) and 77(3), lines 979-996 and 2881-2885	verified
+05-second-life-transfer	For reused, repurposed or remanufactured batteries, passport responsibility transfers to the new placing operator and a new passport must link to the original passport(s); new status markings are also required.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(9) and 77(7), lines 1001-1002 and 2897-2899	verified
+05-operator-responsibility	The placing operator remains responsible for accurate, complete and current passport data even when another operator is authorised, and passport information must use open, interoperable, machine-readable formats without vendor lock-in.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(4)-(5), lines 2887-2895	verified
+05-art78-controls	Article 78 requires role-based access, continued availability, authentication, integrity, security/privacy and restricted processor reuse.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 78(a)-(h), lines 2928-2959	verified
+05-bms-access	Since 18 August 2024 stationary BESS, LMT and EV batteries must contain current health/lifetime parameters in the BMS, with read-only purchaser/authorised-party access for specified purposes including valuation and repurposing.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 14(1)-(2), lines 1009-1026	verified
+05-registry-live	The EU DPP Registry went live on 20 July 2026 with a testing environment; it stores identifiers/metadata while full passport data remain decentralised with the operator or provider.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en	The DPP Registry, lines 38-68	verified
+05-71-points	The Commission's August 2026 battery guidance organises 71 data points by category and expressly says the guidance is non-authoritative and creates no new requirements.	https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en	Guidance announcement, lines 38-57	verified
+05-pending-rules	On 1 September 2026 the Commission timeline scheduled two remaining DPP standards for September 2026, battery access-rights rules for Q4 2026 and service-provider delegated requirements for 2027.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	DPP timeline, lines 99-148	verified
+05-espr-framework	ESPR uses product-specific delegated acts for concrete DPP requirements; the Commission says operators receive at least an 18-month transition after such an act.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	Legal basis and timeline note, lines 47-64 and 99-103	verified
+05-espr-priorities	The Commission's 2025-2030 working plan prioritises steel, aluminium, textiles/apparel, furniture, tyres and mattresses among other measures/products.	https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en	Working plan summary, lines 33-48	verified
+05-due-diligence-separate	Battery due diligence begins 18 August 2027 after the 2025 amendment; Chapter VII has a EUR 40m turnover threshold and excludes previously marketed batteries later reused/repurposed/remanufactured.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 47-48, lines 1716-1738	verified
+05-siemens-api	Siemens offers a Battery Passport REST API with user and passport create/read/update/delete operations.	https://developer.siemens.com/battery-passport/overview.html	Overview, API functionalities	verified
+05-circularise	Circularise markets model- and individual-battery data, QR access and user permissions in one battery-passport platform.	https://www.circularise.com/battery-passport	Battery Passport product overview	verified
+05-minespider	Minespider markets EU battery-passport tooling and an open API.	https://www.minespider.com/	Digital Battery Passports and platform overview	verified
+05-spherity-product	Spherity markets DPP templates, APIs, access control and a white-label-ready product.	https://www.spherity.com/digital-product-passport	VERA product and FAQ	verified
+05-spherity-channel	Spherity invites partners to resell/white-label its DPP solution.	https://www.spherity.com/digital-product-passport	Become a Partner and white-label FAQ	verified
+# Essay 5 — source index
+
+Accessed 2026-09-01. Law and implementation status use EU primary sources. Vendor pages establish competitive product surface only; vendor “compliance” claims are not treated as legal conclusions.
+
+1. **EUR-Lex, consolidated Regulation (EU) 2023/1542 concerning batteries and waste batteries, current consolidated text dated 31 July 2025.**
+   URL: https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/
+   Supports: passport scope/date and individual data; QR and marking; BMS health-data access; second-life status and responsibility; open/interoperable format; technical/access controls; due-diligence date, threshold and second-life exclusion (`05-art77-scope`, `05-qr-rule`, `05-second-life-transfer`, `05-operator-responsibility`, `05-art78-controls`, `05-bms-access`, `05-due-diligence-separate`). The consolidated text incorporates Regulation (EU) 2025/1561's due-diligence delay.
+
+2. **European Commission, “Batteries” — Digital Product Passport.**
+   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en
+   Supports: Commission implementation summary, affected operator framing, decentralised design and 18 February 2027 date. Used as implementation context; the Regulation is the legal source.
+
+3. **European Commission, “Guidance to support preparations for the Digital Batteries Passport,” 21 August 2026.**
+   URL: https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en
+   Supports: current 71-data-point guidance and its explicit non-authoritative status (`05-71-points`).
+
+4. **European Commission, “The DPP Registry.”**
+   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en
+   Supports: live registry and testing environment, registry contents, enforcement role and decentralised storage (`05-registry-live`).
+
+5. **European Commission, “Digital Product Passport.”**
+   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en
+   Supports: framework/delegated-act distinction, minimum transition statement, and implementation status on standards, battery access rights and service-provider rules as of the access date (`05-pending-rules`, `05-espr-framework`).
+
+6. **European Commission, “Plan to boost circular and efficient products on the European market,” 11 July 2025.**
+   URL: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en
+   Supports: ESPR 2025–2030 priority product groups (`05-espr-priorities`).
+
+7. **Siemens, “Battery Passport API,” developer documentation.**
+   URL: https://developer.siemens.com/battery-passport/overview.html
+   Supports: REST API and user/passport management operations (`05-siemens-api`).
+
+8. **Circularise, “Battery Passport.”**
+   URL: https://www.circularise.com/battery-passport
+   Supports: marketed model/individual battery data, QR access and permission functionality (`05-circularise`).
+
+9. **Minespider, product platform.**
+   URL: https://www.minespider.com/
+   Supports: marketed digital battery-passport tooling and open API (`05-minespider`).
+
+10. **Spherity, “Digital Product Passport Solution / VERA.”**
+    URL: https://www.spherity.com/digital-product-passport
+    Supports: marketed templates, APIs, access control, partner route and white-label offer (`05-spherity-product`, `05-spherity-channel`).
+
+## Evidence boundary
+
+No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The €12,000 sprint, €30,000 onboarding, €3,500 monthly retainer and conversion assumptions are explicit required-price tests. The Commission's stated future implementation timetable is not treated as an enacted deadline where the referenced act had not yet been adopted on 2026-09-01.
+# Editorial & Technical Review: Essay 05 (*Digital Product Passport / Battery-Passport Integration*)
+
+**File Reviewed:** [`chapters/05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html)  
+**Claim Ledger:** [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv)  
+**Source Index:** [`resources/sources/05/SOURCES.md`](file:///home/diablo/book18/resources/sources/05/SOURCES.md)  
+**Rules & Reference:** [`CONTEXT.md`](file:///home/diablo/book18/CONTEXT.md) (Sections 1–7), [`AGENT.md`](file:///home/diablo/book18/AGENT.md) (Priority Stack & Pre-Ship Test)
+
+---
+
+## Executive Summary & Systematic 10-Point Rule Audit
+
+| # | Rule / Dimension | Status | Audit Summary |
+| :-: | :--- | :---: | :--- |
+| **1** | **Never false** | **PASS** | Distinguishes enacted law (Regulation (EU) 2023/1542 Art. 77/13 application on 18 Feb 2027; Art. 14 BMS access on 18 Aug 2024; Reg. (EU) 2025/1561 due-diligence postponement to 18 Aug 2027) from pending implementing acts (access rights Q4 2026, standards Sept 2026, service-provider rules 2027) and framework acts (ESPR Reg. (EU) 2024/1781 18-month transition). Test prices (€12k sprint, €30k onboarding, €3.5k/mo retainer, €12 event) are explicitly labelled as required design hurdles, never reported as market facts. |
+| **2** | **Buyer and event** | **PASS** | Named buyer: COO, head of compliance, or product-data lead at a Benelux second-life/repurposed stationary BESS assembler. Purchase event: a dated production batch crossing 18 February 2027 requiring a compliant passport handoff to place on the EU market. Explicitly notes that regulation creates the deadline, not the budget. |
+| **3** | **Economics** | **PASS** | Bottom-up model cleanly separates revenue, direct subcontractor QA/legal costs, gross margin, operating expenses, founder replacement salary (€75k Y1 / €100k mature), overheads (€45k Y1 / €75k mature), working capital (€25k 90-day cash cap; €90k mature operating reserve), and retained profit. Arithmetic is consistent: Year 1 generates €140.4k revenue (86% GM) at break-even; Mature model generates €672k revenue (88% GM), €405k OpEx, and €183k pre-tax retained earnings after paying full replacement wages. Platform licences are kept off company revenue. |
+| **4** | **Scalability** | **PASS** | Concretely differentiates Customer 1 (bespoke evidence archaeology, manual rule-making, BMS extraction tests), Customer 5 (canonical internal schema, ERP/BMS connectors, provider adapters, engineer-led onboarding), and Customer 20 (automated validation/reminders, managed exception queue, channel-led acquisition). Rejects building a generic DPP hosting platform; defines the accumulating asset as a regression-tested mapping library and conformance fixtures. |
+| **5** | **Incumbents & capture** | **PASS** | Incumbent DPP providers (Siemens, Circularise, Minespider, Spherity) are evaluated accurately from their developer docs and product pages. Partner margin-capture (Spherity white-labelling) and ERP disintermediation are confronted directly. Channel rule is stated: no partner may own the customer and silently substitute the company at renewal. |
+| **6** | **Capable failure** | **PASS** | Non-straw-man failure mode: the company executes well and builds clean connectors, but industry standards settle cleanly, donor OEMs and test benches expose standardised APIs, and DPP providers release second-life templates. Stationary storage volumes prove too low to generate recurring evidence changes, causing procurement to replace the €42k/yr retainer with an in-house quality engineer. |
+| **7** | **Language & constraints** | **PASS** | Reader constraints respected (A2 Dutch, €100k capital, no founder Dutch field work). English is used for cross-border technical integrations; professional translation and a Dutch-speaking battery compliance partner lead local regulatory and shop-floor interactions. Capital exposure is strictly bounded (€25k 90-day cap; €90k mature reserve within €100k limit). |
+| **8** | **Receipts** | **FAIL** | Line 84 stacks two `CHECK` markers back-to-back (`05-operator-responsibility` and `05-registry-live`) at the end of a compound sentence instead of placing each marker immediately after its respective clause. In addition, supporting verbatim text excerpts under `resources/sources/05/excerpts/` are currently missing for verified claim rows. |
+| **9** | **Verdict** | **PASS** | Correctly assigns `TEST THROUGH A PARTNER`. The kill assumption is precise: small second-life operators experience insufficient continuing state change after initial onboarding to support a €42k annual operating retainer. |
+| **10** | **Readability** | **FAIL** | Contains 5 sentences exceeding the 40-word readability limit (lines 30, 37, 50, 52, 103), along with one dense 132-word paragraph (line 37). |
+
+---
+
+## Detailed Findings Ranked by Severity
+
+### Finding 1 (Severity: High) — Stacked & Misplaced `CHECK` Markers (Rule 8)
+
+* **Passage ([`chapters/05-product-passports.html:L84`](file:///home/diablo/book18/chapters/05-product-passports.html#L84)):**
+  > `"The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one."`
+
+* **What the cited sources actually support:**
+  * `05-operator-responsibility` cites Regulation (EU) 2023/1542, Article 77(4)–(5), which establishes the requirement for open, interoperable formats without vendor lock-in. It supports only the first clause.
+  * `05-registry-live` cites the European Commission DPP Registry documentation, which explains that the registry stores identifiers and metadata while product data remain decentralised. It supports only the second clause.
+  * Stacking `<!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live -->` together at the end of the sentence detaches the first marker from its supporting clause.
+
+* **Concrete Fix:**
+  Separate the markers to immediately follow their respective clauses:
+  ```html
+  <p>The Regulation itself requires open, transferable data without vendor lock-in, <!-- CHECK: 05-operator-responsibility --> and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one.</p>
+  ```
+
+---
+
+### Finding 2 (Severity: Medium) — Missing Verbatim Text Excerpt Files (Rule 8 / Book 17/18 Standard)
+
+* **Passage / Location:** [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) and missing directory `resources/sources/05/excerpts/`.
+
+* **What the cited sources actually support:**
+  * Under the book's receipt discipline, every `verified` row must point to a saved verbatim excerpt file under `resources/sources/NN/excerpts/<slug>.txt` recording the URL, access date, and exact cited passage.
+  * All 17 rows in [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) are marked `verified`, but the `source_locator` column currently uses descriptive line references (e.g., `Article 77(1)-(2), lines 2846-2868`, `The DPP Registry, lines 38-68`, `Overview, API functionalities`).
+
+* **Concrete Fix:**
+  1. Create directory `resources/sources/05/excerpts/`.
+  2. Save verbatim text excerpt files for each verified claim (e.g., `05-art77-scope.txt`, `05-qr-rule.txt`, `05-second-life-transfer.txt`, `05-bms-access.txt`, `05-registry-live.txt`, `05-71-points.txt`, `05-siemens-api.txt`, `05-spherity-channel.txt`, etc.).
+  3. Update [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) so that each `source_locator` references its corresponding excerpt `.txt` filename.
+
+---
+
+### Finding 3 (Severity: Medium) — Sentences Exceeding the 40-Word Limit (Rule 10)
+
+Five sentences in [`chapters/05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html) exceed the 40-word readability ceiling:
+
+#### 3A. Line 30 (55 words)
+* **Quote:**
+  > `"The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer."`
+* **Concrete Fix:** Split into two concise sentences:
+  > `"The deliverable is a managed data operation. It determines applicable passport fields with qualified counsel, maps each field to a source and responsible person, ingests donor passport references and test/BMS data, preserves provenance, generates QR/identifier handoffs, submits registration metadata, and publishes through a chosen passport provider."`
+
+#### 3B. Line 37 (45 words)
+* **Quote:**
+  > `"Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents."`
+* **Concrete Fix:** Split into two distinct sentences:
+  > `"Article 13 separately requires a QR code from the same date that leads to the passport. The marking must be visible, legible and indelible on the battery or, where not possible or warranted, on packaging and accompanying documents."`
+
+#### 3C. Line 50 (55 words)
+* **Quote:**
+  > `"Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture."`
+* **Concrete Fix:** Split into an introduction and concise prospect categories:
+  > `"Build the first list from ten explicit prospect types. Target EV-pack integrators, bus-battery repurposers, forklift-battery remanufacturers, storage upgraders, containerised BESS assemblers, marine auxiliary integrators, telecom backup rebuilders, industrial UPS remanufacturers, second-life recyclers, and post-remanufacture battery leasing operators."`
+
+#### 3D. Line 52 (46 words)
+* **Quote:**
+  > `"Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote."`
+* **Concrete Fix:** Split into two sentences across sprint deliverables:
+  > `"Deliverables include a counsel-reviewed applicability memo, a field-by-field evidence matrix, lineage mapping to original identifiers, and extraction of one authorised BMS/test dataset. The sprint also delivers provisional access design, ten test-environment payloads, a provider comparison, and a fixed production quote."`
+
+#### 3E. Line 103 (43 words)
+* **Quote:**
+  > `"Kill: counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer."`
+* **Concrete Fix:** Split into two sentences:
+  > `"Kill: counsel finds the product outside the obligation, or five scoped offers yield zero paid sprints. Kill also if donor passport/BMS data cannot be obtained under workable rights, or if onboarding customers identify insufficient recurring change to justify the retainer."`
+
+---
+
+### Finding 4 (Severity: Low) — Dense 132-Word Paragraph (Rule 10)
+
+* **Passage ([`chapters/05-product-passports.html:L37`](file:///home/diablo/book18/chapters/05-product-passports.html#L37)):**
+  > `"The dated battery obligation is enacted. Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents. Article 77(3) says the QR code links to a unique identifier assigned by the placing operator and requires both to comply with the ISO/IEC 15459 family listed there, or equivalent standards. <!-- CHECK: 05-qr-rule -->"`
+
+* **Issue:**
+  At 132 words, this paragraph packs statutory scope, individual battery record requirements, physical QR marking standards, identifier assignment, and ISO/IEC 15459 references into a single block.
+
+* **Concrete Fix:**
+  Applying the sentence split in Finding 3B and streamlining the prose will resolve the density:
+  ```html
+  <p><strong>The dated battery obligation is enacted.</strong> Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date that leads to the passport. The marking must be visible, legible and indelible on the battery or accompanying documents. Article 77(3) requires the QR code to link to a unique identifier complying with the listed ISO/IEC 15459 family or equivalent open standards. <!-- CHECK: 05-qr-rule --></p>
+  ```
+
+---
+
+## Final Review Verdict
+
+### **Verdict: `REVISE`**
+
+The chapter is analytically rigorous, legally accurate, economically coherent, and completely honest about why an entrant data operation risks being squeezed out by industry standardisation. It passes all core strategic, economic, and regulatory tests, but requires mechanical edits to unstack claim markers, refactor long sentences, and store verbatim source excerpts.
+
+---
+
+## The Three Fixes That Matter Most
+
+1. **Unstack CHECK Markers in Line 84 (Finding 1):** Separate `<!-- CHECK: 05-operator-responsibility -->` and `<!-- CHECK: 05-registry-live -->` so each marker immediately follows the exact clause it substantiates.
+2. **Refactor Five 40+ Word Sentences and Dense Paragraph 37 (Findings 3 & 4):** Split the dense semicolon lists in lines 30, 37, 50, 52, and 103 to bring all sentences below the 40-word ceiling and improve structural readability.
+3. **Generate Verbatim Excerpt Files (Finding 2):** Create `resources/sources/05/excerpts/` with the exact source passages for all 17 verified ledger rows and update the `source_locator` column in [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv).
+Here is the review of Essay 5 against the book's rules. The essay is highly analytical, its economics are sound and internally consistent, and the capable failure is a sharp, non-straw-man scenario (being squeezed out of the middle by the standardisation it helps implement). It correctly treats dates and guidance as distinct from enacted laws.
+
+The findings below are primarily stylistic (readability) and technical (receipts workflow).
+
+### 1. High Severity: Readability (Sentences over 40 words)
+**Rule:** 10. Readability (wall paragraphs, sentences over 40 words, jargon without mechanism).
+**Passages:** 
+1. *"The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer."* (54 words)
+2. *"Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture."* (55 words)
+3. *"Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote."* (46 words)
+4. *"Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents."* (45 words)
+5. *"Kill: counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer."* (43 words)
+
+**What the cited source actually supports:** The factual claims within these sentences are fully supported by the cited EU regulations and logical product scoping, but their grammatical structure violates the book's strict 40-word limit. 
+**Concrete fix:** Break the long, semicolon-separated lists (passages 1, 2, 3, and 5) into bulleted lists to improve scanning and readability. For the Article 13 sentence (passage 4), split it into two: *"...from the same date. For those covered categories..."*
+
+### 2. Medium Severity: Receipts (Missing Excerpt Files)
+**Rule:** 8. Receipts (every verified row has an excerpt that says what the claim says).
+**Passage:** The entire `checks/claims/05.tsv` file relies on URLs, and there are no `.txt` excerpts provided for this essay. The directory `resources/sources/05/excerpts/` does not exist.
+**What the cited source actually supports:** The live URLs provided in the TSV and `SOURCES.md` (e.g., EUR-Lex, Commission registry pages) accurately support the dates and claims made in the text. However, the exact excerpts have not been isolated and saved. *(Note: `AGENT.md` specifically states "From essay 6 onward: save the passage...", which explains why the author omitted them here. However, this violates the explicit text of the review rule 8 requested for this pass).*
+**Concrete fix:** Either apply the excerpt requirement retroactively by creating a `resources/sources/05/excerpts/` directory and saving the `.txt` blocks there, or explicitly waive Rule 8's excerpt clause for Essays 1-5.
+
+***
+
+### Verdict
+**REVISE**
+
+**The three fixes that matter most:**
+1. Reformat the 54-word "deliverable" sentence into a bulleted list of operational tasks.
+2. Reformat the 55-word "first list" sentence into a bulleted list of prospect types.
+3. Split or bullet the remaining three 40+ word sentences (the "outputs" list, the Article 13 sentence, and the "Kill" condition) to adhere to the strict readability limits.
+
+codex
+The reviewers largely converge on mechanical concerns, but one of their central “receipts” objections may be applying an essay-6 rule retroactively. I’m now checking every cited clause, the marker placement, and whether their claimed 40-word “limit” actually exists in the checklist.
+exec
+/bin/bash -lc "nl -ba chapters/05-product-passports.html | sed -n '1,180p'; nl -ba checks/claims/05.tsv; nl -ba resources/sources/05/SOURCES.md; nl -ba drafts/reviews/05-flash.md | sed -n '1,180p'; nl -ba drafts/reviews/05-pro.md | sed -n '1,120p'" in /home/diablo/book18
+ succeeded in 229ms:
+     1	<!DOCTYPE html>
+     2	<html lang="en">
+     3	<head>
+     4	<meta charset="utf-8">
+     5	<meta name="viewport" content="width=device-width, initial-scale=1">
+     6	<title>Do Not Build Another Passport Platform — The Second Engine</title>
+     7	<meta name="description" content="A test of a managed battery-passport data operation for second-life stationary industrial batteries above 2 kWh.">
+     8	<link rel="stylesheet" href="../static/style.css">
+     9	<script src="../static/theme.js"></script>
+    10	</head>
+    11	<body>
+    12	<header class="site-header">
+    13	  <div class="wrap">
+    14	    <a class="brand" href="../index.html">The Second <span>Engine</span></a>
+    15	    <nav class="site-nav">
+    16	      <a href="../index.html">Contents</a>
+    17	      <a href="../about.html">Method</a>
+    18	      <button class="theme-toggle" type="button">☾ Dark</button>
+    19	    </nav>
+    20	  </div>
+    21	</header>
+    22	<main class="wrap">
+    23	<p class="kicker">Essay 5 of 7 · Digital product passport / battery-passport integration</p>
+    24	<h1>Do Not Build Another Passport Platform</h1>
+    25	<p class="lede">On 18 February 2027, a second-life battery integrator placing a repurposed industrial battery over 2 kWh on the EU market does not merely inherit the donor battery's record. It takes responsibility for accurate passport information and must create a new passport linked to the original. <!-- CHECK: 05-second-life-transfer --> The opportunity is not a generic “DPP platform”: Siemens, Circularise, Minespider and Spherity are already there. It is the dirty operational layer between donor records, BMS tests, product data, access rules and one compliant publication route. That layer may earn recurring money—or disappear as soon as the platforms and source systems learn to speak.</p>
+    26	
+    27	<section class="proposition">
+    28	<h2>The proposition</h2>
+    29	<p>The first customer is a Benelux company that assembles stationary energy-storage systems from batteries previously used in vehicles or other applications and expects to place its finished industrial batteries on the EU market after 18 February 2027. It is not a cell manufacturer or a vehicle OEM. It buys or receives donor packs or modules, tests and grades them, changes their purpose or configuration, integrates a BMS and enclosure, and becomes the economic operator for the second-life battery.</p>
+    30	<p>The buyer is its COO, head of compliance or product-data lead. The purchase event is a dated production batch that crosses the 2027 application date and cannot ship with a spreadsheet standing in for a battery passport. The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer. After launch, the service monitors missing, changed and expiring evidence and handles new units and lifecycle updates.</p>
+    31	<p>The business does not host the only copy of the passport, issue product conformity, calculate or certify carbon footprints, verify responsible sourcing, provide battery-safety engineering, or pretend to be the customer's legal adviser. It does not invent a blockchain or proprietary identifier. A battery lawyer interprets scope; testing and conformity bodies assess what requires them; a DPP provider stores and serves the record. The company owns the connectors, validation rules, evidence workflow and operating playbook.</p>
+    32	<p>The substitute is a compliance consultant plus spreadsheets and manual uploads, the customer's ERP/PLM team, or the integration/professional-services arm of the selected DPP platform. That last substitute is the serious one. The operation wins only where source data remain too fragmented and lifecycle changes too frequent for “configure once, issue passports” to be true.</p>
+    33	</section>
+    34	
+    35	<section class="changed">
+    36	<h2>What changed</h2>
+    37	<p><strong>The dated battery obligation is enacted.</strong> Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents. Article 77(3) says the QR code links to a unique identifier assigned by the placing operator and requires both to comply with the ISO/IEC 15459 family listed there, or equivalent standards. <!-- CHECK: 05-qr-rule --></p>
+    38	<p>The narrow second-life chain has an additional trigger. Article 77(7) transfers responsibility for passport accuracy, completeness and currency to the economic operator that places a reused, repurposed or remanufactured battery on the market or puts it into service. It requires a new passport linked to the original passport or passports. Article 13(9) also requires new labels or markings describing the status change. <!-- CHECK: 05-second-life-transfer --> This is why the opening is better than generic passport advice: the operator must join lineage from potentially several donor records to a changed physical product.</p>
+    39	<p>Responsibility cannot be outsourced away. Article 77(4) permits written authorisation for another operator to act, but leaves the placing operator responsible for accurate, complete and current information. The same article requires open standards, an interoperable, machine-readable, structured and searchable format, transfer through an open network and no vendor lock-in. <!-- CHECK: 05-operator-responsibility --> Article 78 requires authentication, integrity, role-based access, continued availability after the responsible operator ceases activity, and forbids an authorised processor from reusing passport data beyond the service unless specifically agreed. <!-- CHECK: 05-art78-controls --> The contract must therefore distinguish doing the work from owning the legal answer.</p>
+    40	<p>The source-data job started before the passport date. Since 18 August 2024, stationary battery energy-storage systems, LMT batteries and EV batteries must hold current state-of-health and expected-lifetime parameters in the BMS. Purchasers and authorised third parties receive read-only access for purposes including valuation and repurposing, subject to manufacturer intellectual-property rights. <!-- CHECK: 05-bms-access --> That is a legal access path, not proof that old donor packs expose clean APIs or that the parameters are comparable. A paid diagnostic must test actual extraction.</p>
+    41	<p>Some common architecture is now real. The Commission's DPP Registry went live on 20 July 2026 and provides a testing environment. The registry stores identifiers, registration data and high-level metadata rather than the full passport; product data remain with the economic operator or its service provider in a decentralised architecture. <!-- CHECK: 05-registry-live --> The Commission's August 2026 battery guidance assembles 71 data points and marks their applicability by battery category, while warning that the guidance creates no new legal requirements and is not an authoritative interpretation. <!-- CHECK: 05-71-points --></p>
+    42	<p><strong>Important pieces are still unsettled on 1 September 2026.</strong> The Commission's published implementation timeline schedules the battery access-rights implementing act for Q4 2026, the remaining two DPP standards for September 2026, and delegated requirements for DPP service providers in 2027. <!-- CHECK: 05-pending-rules --> Build schemas and adapters now; do not freeze a proprietary access model or promise final conformance before those acts arrive.</p>
+    43	<p><strong>Do not merge this with the broader ESPR story.</strong> Regulation (EU) 2024/1781 is a framework under which product-specific delegated acts define passport requirements, and the Commission says economic operators receive at least an 18-month transition after an ESPR delegated act. <!-- CHECK: 05-espr-framework --> Its working plan prioritises groups such as textiles, furniture, tyres, mattresses, iron and steel, and aluminium. <!-- CHECK: 05-espr-priorities --> Those priorities and indicative adoption dates are not present-day passport obligations for every item in those sectors. Batteries have their own enacted regulation and date. Selling “ESPR compliance for all products in 2027” would be false.</p>
+    44	<p>Battery due diligence is separate again. Regulation (EU) 2025/1561 moved the Article 48 due-diligence start to 18 August 2027. Chapter VII also excludes operators below its €40 million turnover threshold (unless their consolidated group exceeds it) and excludes batteries already marketed before reuse/repurposing from that chapter's scope. <!-- CHECK: 05-due-diligence-separate --> Those rules do not move the passport date. This offer tracks a due-diligence document only when it is a required passport input; it does not sell the passport as a complete due-diligence programme.</p>
+    45	<p>Law creates the deadline, not the budget. The live registry, 71-point guidance and second-life responsibility show a real implementation job. They do not show that a small integrator will pay an external operator rather than its existing quality engineer or platform vendor. That remains the paid-test question.</p>
+    46	</section>
+    47	
+    48	<section class="sale">
+    49	<h2>The first sale</h2>
+    50	<p>Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture. Screen out firms whose 2027 products are below 2 kWh, remain prototypes, or are placed by an OEM that retains all passport responsibility.</p>
+    51	<p>The founder should approach through one named category of domain partner: a battery conformity/safety consultancy that will sign its own interpretation, not a generic sustainability agency. Add one passport-platform solutions partner so the diagnostic tests a real publication route. The introduction asks for a specific production event: “Which finished battery will you place on the market after 18 February, who is the economic operator, and can you trace ten planned units back to donor passports, tests and BMS records?” A company without a dated batch is a research interview, not a prospect.</p>
+    52	<p>The first offer is a six-week <strong>€12,000 passport-readiness sprint</strong>, a proposed test price. It covers one finished product family and up to ten test units. Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote. It excludes legal opinions beyond the scoped memo, conformity assessment and new source-data creation. Fifty per cent is paid before work.</p>
+    53	<p>The COO or compliance lead signs. Operations, engineering, quality and IT each name one owner. The customer contracts directly with the passport host, so licence cost and continuity rights remain visible and there is no hidden reseller lock-in. English should work for cross-border suppliers and technical teams, but local production records, regulator contact and shop-floor evidence may be Dutch or German. At A2 Dutch the founder must budget professional translation and let the qualified local partner lead regulatory conversations.</p>
+    54	<p>The required production price is €30,000 for integration/onboarding, then €3,500 per month for managed evidence and change operations plus €12 per newly issued or materially updated passport event. These are hurdles, not market facts. The platform licence, identifier issuance, lab work and legal opinions are billed directly to the customer. If a ten-unit sprint cannot justify that next-stage order, do not assume thousands of future passports will.</p>
+    55	</section>
+    56	
+    57	<section class="economics">
+    58	<h2>Does the money work?</h2>
+    59	<p>A high-value stationary system may contain fewer passported units than a vehicle programme. Per-passport fees cannot carry this company. The retainer pays for the changing state: supplier evidence arrives, tests are rerun, a donor lineage is corrected, roles change, a unit is updated, a standard or data rule changes, or an authority asks for proof. The event fee disciplines volume; the operating retainer funds readiness.</p>
+    60	<div class="table-wrap"><table>
+    61	<thead><tr><th>Model</th><th>Revenue</th><th>Direct cost / gross margin</th><th>Operating result</th></tr></thead>
+    62	<tbody>
+    63	<tr><td><strong>Year 1:</strong> three readiness sprints; two onboardings; two managed customers live for an average six months; 200 issue/update events.</td><td>Sprints €36k; onboarding €60k; retainers €42k; events €2.4k. <strong>Total €140.4k.</strong></td><td>Battery-law and data-QA subcontractors €15k; test cloud/tooling €5k. <strong>Gross margin €120.4k (86%).</strong></td><td>Founder labour at €75k replacement cost plus €45k security, insurance, travel, translation and sales leaves approximately <strong>break-even</strong>. No owner distribution.</td></tr>
+    64	<tr><td><strong>Mature test:</strong> twelve managed customers; four new onboardings; 4,000 issue/update events.</td><td>Retainers €504k; onboarding €120k; events €48k. <strong>Total €672k.</strong></td><td>Specialist data QA €60k; cloud/test systems €24k. <strong>Gross margin €588k (88%).</strong></td><td>Two integration engineers €160k; compliance-operations lead €70k; founder replacement salary €100k; legal, security, insurance, translation, travel and sales €75k. <strong>€183k remains</strong> before corporation tax and financing.</td></tr>
+    65	</tbody></table></div>
+    66	<p>The model clears the owner-income target and retains cash only because customers pay a substantial retainer and platform licences stay out of revenue. If the managed work settles into one annual CSV upload, the retainer will be competed away. At €12 per event alone, 4,000 events produce €48,000: less than one engineer. Conversely, if every passport needs two hours of manual source chasing, 4,000 events consume roughly four full-time working years before review and support. The acceptable process must make the typical event mostly automatic and reserve human time for exceptions.</p>
+    67	<p>Working capital deserves restraint. Bill sprints 50% upfront, onboarding 40/40/20 against evidence-map, test and production milestones, and retainers quarterly in advance. Keep provider licences on the customer's contract and do not finance laboratory work. The first 90 days need at most €25,000; a production company should preserve roughly €90,000 for six months of a small team's payroll and specialist commitments. That is almost the reader's full capital allowance, which is another reason not to build hosting infrastructure before payment.</p>
+    68	<p>Track economics by data object, not by customer logo: automated versus manual fields, evidence rejection rate, minutes per passport event, supplier follow-up days, schema-change rework, and exceptions requiring counsel. A customer with five product variants and one disciplined ERP may be cheaper than a one-product customer with ten donor sources. Price the data topology found in the sprint, not nominal passport count.</p>
+    69	</section>
+    70	
+    71	<section class="scale">
+    72	<h2>From service to company</h2>
+    73	<p><strong>Customer one</strong> is an evidence archaeology project. The founder and battery adviser decide whether the finished item is in scope, trace ten units to donor sources, discover which BMS parameters can actually be read, reconcile serial numbers and document every unresolved interpretation. Test payloads go to the Commission's registry environment and one selected provider. Every manual choice becomes a versioned rule with its source and approver.</p>
+    74	<p><strong>Customer five</strong> should use a canonical internal schema with source provenance, evidence status, role/access class and effective date on each field. Connectors pull from two or three common ERP/PLM formats, a test bench export and a BMS gateway. Provider adapters translate that record into Siemens, Circularise, Spherity, Minespider or another selected endpoint without making one of them the internal truth. A trained integration engineer runs onboarding; the compliance partner reviews only scope and exceptions.</p>
+    75	<p><strong>Customer twenty</strong> is a managed exception operation. Supplier reminders, validation, lineage checks, identifier registration, change approval and publication are automated. Humans resolve missing donor links, conflicting measurements, status changes and questions whose legal treatment has moved. The recurring value comes from real state changes, not an invented annual report. Acquisition repeats through battery compliance firms, test laboratories, recycling networks and DPP implementation partners, with one rule: no partner may both own the customer and silently substitute the company at renewal.</p>
+    76	<p>The accumulating asset is a regression-tested mapping library: legal data point to canonical field to source evidence to provider payload; fixtures for registry/provider conformance; supplier evidence templates; provenance and access-control patterns; and measured failure modes from real onboarding. It is not a database of customer battery secrets. Contracts should leave raw and transformed customer data with the customer, guarantee full export, restrict cross-customer reuse, and permit reuse only of generic mappings, code, empty templates and de-identified operational metrics.</p>
+    77	<p>Verification must be explicit. The system can validate presence, type, range, signature, lineage and approval. It cannot prove that a supplier's composition declaration is true or that a laboratory test was competent. Each field records source, issuer, date, transformation and approval; derived values preserve their inputs and algorithm version. Public, authority-only and legitimate-interest views are generated from one controlled record, not copied into three spreadsheets. Where access rules remain pending, the implementation uses a reversible policy table and a test credential—not a hard-coded interpretation.</p>
+    78	</section>
+    79	
+    80	<section class="competition">
+    81	<h2>The incumbent gets a turn</h2>
+    82	<p>There is no platform gap. Siemens offers a Battery Passport REST API with user and passport management, including create, update and retrieve operations. <!-- CHECK: 05-siemens-api --> Circularise markets model- and individual-battery data, QR access and permissions in one platform. <!-- CHECK: 05-circularise --> Minespider markets EU battery-passport tooling and an open API. <!-- CHECK: 05-minespider --> Spherity markets templates, APIs, secure access and a fully white-label-ready product. <!-- CHECK: 05-spherity-product --> Their claims of compliance are vendor claims; only the responsible economic operator carries the legal duty. But their existence means a new generic passport host starts behind on product, standards work, security evidence and integrations.</p>
+    83	<p>Spherity explicitly invites consultancies and integrators to resell or white-label its software. <!-- CHECK: 05-spherity-channel --> That is both route and threat. Use such a platform to reach production quickly, but keep the customer contract, canonical export and provider-neutral test suite. Siemens can bundle its passport into an industrial digital stack; Circularise and Minespider can add onboarding services; an ERP vendor can generate the payload at source. The proposed company keeps margin only if it repeatedly solves evidence and change operations those products cannot economically standardise.</p>
+    84	<p>Interoperability is not a slogan here. The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one. Yet formal interoperability can commoditise the connector. The more successful the standards become, the less anyone should pay merely to translate JSON. Margin must migrate toward data provenance, supplier follow-up, exception handling and accountable operations.</p>
+    85	</section>
+    86	
+    87	<div class="counter">
+    88	<h2>The capable failure</h2>
+    89	<p>The company chooses the right niche, partners with a competent battery lawyer, ships ten valid test passports, builds clean connectors and wins six second-life integrators. Then the standards and access act settle well. Donor OEMs expose reliable passport links; test-equipment vendors export the canonical fields; the leading DPP providers add second-life templates, lineage and registry submission; customers' ERP integrators map the remaining data during ordinary implementation.</p>
+    90	<p>The founders have done nothing wrong. Their interoperability work helped make the problem routine. But each customer places relatively few high-value stationary systems, lifecycle updates are rare, and the supposedly recurring evidence queue shrinks after onboarding. Procurement compares a €42,000 annual managed retainer with a platform module and twenty days of internal quality-engineer time. The platform vendor absorbs the connector into its licence; the battery adviser keeps the occasional interpretation. This company is squeezed out of the middle by the standardisation it correctly anticipated. It can survive as project integration, but not reach the recurring mature-year model.</p>
+    91	</div>
+    92	
+    93	<section class="monday">
+    94	<h2>The first ninety days</h2>
+    95	<ol>
+    96	<li><strong>Days 1–12:</strong> retain an EU battery-regulation lawyer or conformity specialist for a capped €4,000 memo on the selected second-life scenario: product category, placing operator, Article 77/78 duties, Article 45 boundary and open implementation questions. Do not generalise it to all batteries.</li>
+    97	<li><strong>Days 1–25:</strong> interview ten in-scope prospect types. Require a dated 2027 production family, estimated unit count, donor-source map, current system of record and named budget owner. Record whether the buyer already has a DPP platform or ERP programme.</li>
+    98	<li><strong>Days 15–35:</strong> select one existing DPP provider and one fallback after testing export, API access, lineage, role controls, registry workflow, price transparency and exit. Use the Commission registry testing environment; do not build a production host.</li>
+    99	<li><strong>Days 25–55:</strong> build a canonical evidence record and ten synthetic or customer-authorised test passports. Exercise one original-to-new lineage, one BMS/test import, public/restricted views and a full export. Mark pending legal rules in configuration.</li>
+   100	<li><strong>Days 35–75:</strong> offer at least five €12,000 readiness sprints, 50% upfront, with the production prices stated before sale. A free workshop does not count.</li>
+   101	<li><strong>Days 60–90:</strong> deliver one paid sprint and ask for the €30,000 onboarding plus €3,500 monthly managed-data order. Cap all pre-evidence cash at <strong>€25,000</strong>, including legal advice, provider sandbox, security review, travel and translation.</li>
+   102	</ol>
+   103	<p><strong>Pass:</strong> one in-scope operator pays for the sprint, supplies authorised donor/BMS/test evidence, completes ten linked test records and signs a production order or dated conditional order at the stated price level. The evidence map must show at least one recurring change process beyond initial issuance. <strong>Kill:</strong> counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer. A standards delay is a reason to keep mappings reversible, not to invent a different obligation.</p>
+   104	</section>
+   105	
+   106	<div class="verdict-box">
+   107	<h2>Verdict</h2>
+   108	<p class="verdict">TEST THROUGH A PARTNER</p>
+   109	<p>The date and second-life responsibility justify a paid test now, but only beside a battery-regulation specialist and on top of an existing DPP provider. The single assumption that would most change the verdict is that small second-life operators experience enough continuing evidence and lifecycle work to pay roughly €42,000 a year after initial integration. If the readiness sprint finds a one-time mapping followed by rare updates, this is consultancy, not a scalable second engine.</p>
+   110	</div>
+   111	
+   112	<div class="reading">
+   113	<h2>Reading</h2>
+   114	<ul>
+   115	<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/">consolidated Regulation (EU) 2023/1542</a>, especially Articles 13, 14, 45, 47–48 and 77–78.</li>
+   116	<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en">Batteries and the Digital Product Passport</a> and <a href="https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en">2026 battery-passport guidance announcement</a>.</li>
+   117	<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en">The DPP Registry</a> and <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en">DPP implementation timeline</a>.</li>
+   118	<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj">Regulation (EU) 2024/1781 (ESPR)</a>; European Commission, <a href="https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en">ESPR and Energy Labelling Working Plan 2025–2030</a>.</li>
+   119	<li>Siemens, <a href="https://developer.siemens.com/battery-passport/overview.html">Battery Passport API</a>; Circularise, <a href="https://www.circularise.com/battery-passport">Battery Passport</a>.</li>
+   120	<li>Minespider, <a href="https://www.minespider.com/">Digital and battery passports</a>; Spherity, <a href="https://www.spherity.com/digital-product-passport">VERA Digital Product Passport</a>.</li>
+   121	</ul>
+   122	</div>
+   123	
+   124	<nav class="chapter-nav" aria-label="Essay navigation">
+   125	  <a href="04-asset-intelligence.html">← Previous</a>
+   126	  <a href="../index.html">Contents</a>
+   127	  <span></span>
+   128	</nav>
+   129	</main>
+   130	<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+   131	</body>
+   132	</html>
+     1	id	claim	source_url	source_locator	status
+     2	05-art77-scope	From 18 February 2027 each LMT battery, EV battery and industrial battery above 2 kWh placed on the market or put into service requires a battery passport with model and individual-battery data.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(1)-(2), lines 2846-2868	verified
+     3	05-qr-rule	From 18 February 2027 covered batteries require a QR code leading to the passport; marking must be visible, legible and indelible on the battery or, where appropriate, packaging/documents. The QR links to a placing-operator-assigned unique identifier and both must comply with the listed ISO/IEC 15459 family or equivalent.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(6)-(7) and 77(3), lines 979-996 and 2881-2885	verified
+     4	05-second-life-transfer	For reused, repurposed or remanufactured batteries, passport responsibility transfers to the new placing operator and a new passport must link to the original passport(s); new status markings are also required.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(9) and 77(7), lines 1001-1002 and 2897-2899	verified
+     5	05-operator-responsibility	The placing operator remains responsible for accurate, complete and current passport data even when another operator is authorised, and passport information must use open, interoperable, machine-readable formats without vendor lock-in.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(4)-(5), lines 2887-2895	verified
+     6	05-art78-controls	Article 78 requires role-based access, continued availability, authentication, integrity, security/privacy and restricted processor reuse.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 78(a)-(h), lines 2928-2959	verified
+     7	05-bms-access	Since 18 August 2024 stationary BESS, LMT and EV batteries must contain current health/lifetime parameters in the BMS, with read-only purchaser/authorised-party access for specified purposes including valuation and repurposing.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 14(1)-(2), lines 1009-1026	verified
+     8	05-registry-live	The EU DPP Registry went live on 20 July 2026 with a testing environment; it stores identifiers/metadata while full passport data remain decentralised with the operator or provider.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en	The DPP Registry, lines 38-68	verified
+     9	05-71-points	The Commission's August 2026 battery guidance organises 71 data points by category and expressly says the guidance is non-authoritative and creates no new requirements.	https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en	Guidance announcement, lines 38-57	verified
+    10	05-pending-rules	On 1 September 2026 the Commission timeline scheduled two remaining DPP standards for September 2026, battery access-rights rules for Q4 2026 and service-provider delegated requirements for 2027.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	DPP timeline, lines 99-148	verified
+    11	05-espr-framework	ESPR uses product-specific delegated acts for concrete DPP requirements; the Commission says operators receive at least an 18-month transition after such an act.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	Legal basis and timeline note, lines 47-64 and 99-103	verified
+    12	05-espr-priorities	The Commission's 2025-2030 working plan prioritises steel, aluminium, textiles/apparel, furniture, tyres and mattresses among other measures/products.	https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en	Working plan summary, lines 33-48	verified
+    13	05-due-diligence-separate	Battery due diligence begins 18 August 2027 after the 2025 amendment; Chapter VII has a EUR 40m turnover threshold and excludes previously marketed batteries later reused/repurposed/remanufactured.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 47-48, lines 1716-1738	verified
+    14	05-siemens-api	Siemens offers a Battery Passport REST API with user and passport create/read/update/delete operations.	https://developer.siemens.com/battery-passport/overview.html	Overview, API functionalities	verified
+    15	05-circularise	Circularise markets model- and individual-battery data, QR access and user permissions in one battery-passport platform.	https://www.circularise.com/battery-passport	Battery Passport product overview	verified
+    16	05-minespider	Minespider markets EU battery-passport tooling and an open API.	https://www.minespider.com/	Digital Battery Passports and platform overview	verified
+    17	05-spherity-product	Spherity markets DPP templates, APIs, access control and a white-label-ready product.	https://www.spherity.com/digital-product-passport	VERA product and FAQ	verified
+    18	05-spherity-channel	Spherity invites partners to resell/white-label its DPP solution.	https://www.spherity.com/digital-product-passport	Become a Partner and white-label FAQ	verified
+     1	# Essay 5 — source index
+     2	
+     3	Accessed 2026-09-01. Law and implementation status use EU primary sources. Vendor pages establish competitive product surface only; vendor “compliance” claims are not treated as legal conclusions.
+     4	
+     5	1. **EUR-Lex, consolidated Regulation (EU) 2023/1542 concerning batteries and waste batteries, current consolidated text dated 31 July 2025.**
+     6	   URL: https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/
+     7	   Supports: passport scope/date and individual data; QR and marking; BMS health-data access; second-life status and responsibility; open/interoperable format; technical/access controls; due-diligence date, threshold and second-life exclusion (`05-art77-scope`, `05-qr-rule`, `05-second-life-transfer`, `05-operator-responsibility`, `05-art78-controls`, `05-bms-access`, `05-due-diligence-separate`). The consolidated text incorporates Regulation (EU) 2025/1561's due-diligence delay.
+     8	
+     9	2. **European Commission, “Batteries” — Digital Product Passport.**
+    10	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en
+    11	   Supports: Commission implementation summary, affected operator framing, decentralised design and 18 February 2027 date. Used as implementation context; the Regulation is the legal source.
+    12	
+    13	3. **European Commission, “Guidance to support preparations for the Digital Batteries Passport,” 21 August 2026.**
+    14	   URL: https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en
+    15	   Supports: current 71-data-point guidance and its explicit non-authoritative status (`05-71-points`).
+    16	
+    17	4. **European Commission, “The DPP Registry.”**
+    18	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en
+    19	   Supports: live registry and testing environment, registry contents, enforcement role and decentralised storage (`05-registry-live`).
+    20	
+    21	5. **European Commission, “Digital Product Passport.”**
+    22	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en
+    23	   Supports: framework/delegated-act distinction, minimum transition statement, and implementation status on standards, battery access rights and service-provider rules as of the access date (`05-pending-rules`, `05-espr-framework`).
+    24	
+    25	6. **European Commission, “Plan to boost circular and efficient products on the European market,” 11 July 2025.**
+    26	   URL: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en
+    27	   Supports: ESPR 2025–2030 priority product groups (`05-espr-priorities`).
+    28	
+    29	7. **Siemens, “Battery Passport API,” developer documentation.**
+    30	   URL: https://developer.siemens.com/battery-passport/overview.html
+    31	   Supports: REST API and user/passport management operations (`05-siemens-api`).
+    32	
+    33	8. **Circularise, “Battery Passport.”**
+    34	   URL: https://www.circularise.com/battery-passport
+    35	   Supports: marketed model/individual battery data, QR access and permission functionality (`05-circularise`).
+    36	
+    37	9. **Minespider, product platform.**
+    38	   URL: https://www.minespider.com/
+    39	   Supports: marketed digital battery-passport tooling and open API (`05-minespider`).
+    40	
+    41	10. **Spherity, “Digital Product Passport Solution / VERA.”**
+    42	    URL: https://www.spherity.com/digital-product-passport
+    43	    Supports: marketed templates, APIs, access control, partner route and white-label offer (`05-spherity-product`, `05-spherity-channel`).
+    44	
+    45	## Evidence boundary
+    46	
+    47	No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The €12,000 sprint, €30,000 onboarding, €3,500 monthly retainer and conversion assumptions are explicit required-price tests. The Commission's stated future implementation timetable is not treated as an enacted deadline where the referenced act had not yet been adopted on 2026-09-01.
+     1	# Editorial & Technical Review: Essay 05 (*Digital Product Passport / Battery-Passport Integration*)
+     2	
+     3	**File Reviewed:** [`chapters/05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html)  
+     4	**Claim Ledger:** [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv)  
+     5	**Source Index:** [`resources/sources/05/SOURCES.md`](file:///home/diablo/book18/resources/sources/05/SOURCES.md)  
+     6	**Rules & Reference:** [`CONTEXT.md`](file:///home/diablo/book18/CONTEXT.md) (Sections 1–7), [`AGENT.md`](file:///home/diablo/book18/AGENT.md) (Priority Stack & Pre-Ship Test)
+     7	
+     8	---
+     9	
+    10	## Executive Summary & Systematic 10-Point Rule Audit
+    11	
+    12	| # | Rule / Dimension | Status | Audit Summary |
+    13	| :-: | :--- | :---: | :--- |
+    14	| **1** | **Never false** | **PASS** | Distinguishes enacted law (Regulation (EU) 2023/1542 Art. 77/13 application on 18 Feb 2027; Art. 14 BMS access on 18 Aug 2024; Reg. (EU) 2025/1561 due-diligence postponement to 18 Aug 2027) from pending implementing acts (access rights Q4 2026, standards Sept 2026, service-provider rules 2027) and framework acts (ESPR Reg. (EU) 2024/1781 18-month transition). Test prices (€12k sprint, €30k onboarding, €3.5k/mo retainer, €12 event) are explicitly labelled as required design hurdles, never reported as market facts. |
+    15	| **2** | **Buyer and event** | **PASS** | Named buyer: COO, head of compliance, or product-data lead at a Benelux second-life/repurposed stationary BESS assembler. Purchase event: a dated production batch crossing 18 February 2027 requiring a compliant passport handoff to place on the EU market. Explicitly notes that regulation creates the deadline, not the budget. |
+    16	| **3** | **Economics** | **PASS** | Bottom-up model cleanly separates revenue, direct subcontractor QA/legal costs, gross margin, operating expenses, founder replacement salary (€75k Y1 / €100k mature), overheads (€45k Y1 / €75k mature), working capital (€25k 90-day cash cap; €90k mature operating reserve), and retained profit. Arithmetic is consistent: Year 1 generates €140.4k revenue (86% GM) at break-even; Mature model generates €672k revenue (88% GM), €405k OpEx, and €183k pre-tax retained earnings after paying full replacement wages. Platform licences are kept off company revenue. |
+    17	| **4** | **Scalability** | **PASS** | Concretely differentiates Customer 1 (bespoke evidence archaeology, manual rule-making, BMS extraction tests), Customer 5 (canonical internal schema, ERP/BMS connectors, provider adapters, engineer-led onboarding), and Customer 20 (automated validation/reminders, managed exception queue, channel-led acquisition). Rejects building a generic DPP hosting platform; defines the accumulating asset as a regression-tested mapping library and conformance fixtures. |
+    18	| **5** | **Incumbents & capture** | **PASS** | Incumbent DPP providers (Siemens, Circularise, Minespider, Spherity) are evaluated accurately from their developer docs and product pages. Partner margin-capture (Spherity white-labelling) and ERP disintermediation are confronted directly. Channel rule is stated: no partner may own the customer and silently substitute the company at renewal. |
+    19	| **6** | **Capable failure** | **PASS** | Non-straw-man failure mode: the company executes well and builds clean connectors, but industry standards settle cleanly, donor OEMs and test benches expose standardised APIs, and DPP providers release second-life templates. Stationary storage volumes prove too low to generate recurring evidence changes, causing procurement to replace the €42k/yr retainer with an in-house quality engineer. |
+    20	| **7** | **Language & constraints** | **PASS** | Reader constraints respected (A2 Dutch, €100k capital, no founder Dutch field work). English is used for cross-border technical integrations; professional translation and a Dutch-speaking battery compliance partner lead local regulatory and shop-floor interactions. Capital exposure is strictly bounded (€25k 90-day cap; €90k mature reserve within €100k limit). |
+    21	| **8** | **Receipts** | **FAIL** | Line 84 stacks two `CHECK` markers back-to-back (`05-operator-responsibility` and `05-registry-live`) at the end of a compound sentence instead of placing each marker immediately after its respective clause. In addition, supporting verbatim text excerpts under `resources/sources/05/excerpts/` are currently missing for verified claim rows. |
+    22	| **9** | **Verdict** | **PASS** | Correctly assigns `TEST THROUGH A PARTNER`. The kill assumption is precise: small second-life operators experience insufficient continuing state change after initial onboarding to support a €42k annual operating retainer. |
+    23	| **10** | **Readability** | **FAIL** | Contains 5 sentences exceeding the 40-word readability limit (lines 30, 37, 50, 52, 103), along with one dense 132-word paragraph (line 37). |
+    24	
+    25	---
+    26	
+    27	## Detailed Findings Ranked by Severity
+    28	
+    29	### Finding 1 (Severity: High) — Stacked & Misplaced `CHECK` Markers (Rule 8)
+    30	
+    31	* **Passage ([`chapters/05-product-passports.html:L84`](file:///home/diablo/book18/chapters/05-product-passports.html#L84)):**
+    32	  > `"The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one."`
+    33	
+    34	* **What the cited sources actually support:**
+    35	  * `05-operator-responsibility` cites Regulation (EU) 2023/1542, Article 77(4)–(5), which establishes the requirement for open, interoperable formats without vendor lock-in. It supports only the first clause.
+    36	  * `05-registry-live` cites the European Commission DPP Registry documentation, which explains that the registry stores identifiers and metadata while product data remain decentralised. It supports only the second clause.
+    37	  * Stacking `<!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live -->` together at the end of the sentence detaches the first marker from its supporting clause.
+    38	
+    39	* **Concrete Fix:**
+    40	  Separate the markers to immediately follow their respective clauses:
+    41	  ```html
+    42	  <p>The Regulation itself requires open, transferable data without vendor lock-in, <!-- CHECK: 05-operator-responsibility --> and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one.</p>
+    43	  ```
+    44	
+    45	---
+    46	
+    47	### Finding 2 (Severity: Medium) — Missing Verbatim Text Excerpt Files (Rule 8 / Book 17/18 Standard)
+    48	
+    49	* **Passage / Location:** [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) and missing directory `resources/sources/05/excerpts/`.
+    50	
+    51	* **What the cited sources actually support:**
+    52	  * Under the book's receipt discipline, every `verified` row must point to a saved verbatim excerpt file under `resources/sources/NN/excerpts/<slug>.txt` recording the URL, access date, and exact cited passage.
+    53	  * All 17 rows in [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) are marked `verified`, but the `source_locator` column currently uses descriptive line references (e.g., `Article 77(1)-(2), lines 2846-2868`, `The DPP Registry, lines 38-68`, `Overview, API functionalities`).
+    54	
+    55	* **Concrete Fix:**
+    56	  1. Create directory `resources/sources/05/excerpts/`.
+    57	  2. Save verbatim text excerpt files for each verified claim (e.g., `05-art77-scope.txt`, `05-qr-rule.txt`, `05-second-life-transfer.txt`, `05-bms-access.txt`, `05-registry-live.txt`, `05-71-points.txt`, `05-siemens-api.txt`, `05-spherity-channel.txt`, etc.).
+    58	  3. Update [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv) so that each `source_locator` references its corresponding excerpt `.txt` filename.
+    59	
+    60	---
+    61	
+    62	### Finding 3 (Severity: Medium) — Sentences Exceeding the 40-Word Limit (Rule 10)
+    63	
+    64	Five sentences in [`chapters/05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html) exceed the 40-word readability ceiling:
+    65	
+    66	#### 3A. Line 30 (55 words)
+    67	* **Quote:**
+    68	  > `"The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer."`
+    69	* **Concrete Fix:** Split into two concise sentences:
+    70	  > `"The deliverable is a managed data operation. It determines applicable passport fields with qualified counsel, maps each field to a source and responsible person, ingests donor passport references and test/BMS data, preserves provenance, generates QR/identifier handoffs, submits registration metadata, and publishes through a chosen passport provider."`
+    71	
+    72	#### 3B. Line 37 (45 words)
+    73	* **Quote:**
+    74	  > `"Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents."`
+    75	* **Concrete Fix:** Split into two distinct sentences:
+    76	  > `"Article 13 separately requires a QR code from the same date that leads to the passport. The marking must be visible, legible and indelible on the battery or, where not possible or warranted, on packaging and accompanying documents."`
+    77	
+    78	#### 3C. Line 50 (55 words)
+    79	* **Quote:**
+    80	  > `"Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture."`
+    81	* **Concrete Fix:** Split into an introduction and concise prospect categories:
+    82	  > `"Build the first list from ten explicit prospect types. Target EV-pack integrators, bus-battery repurposers, forklift-battery remanufacturers, storage upgraders, containerised BESS assemblers, marine auxiliary integrators, telecom backup rebuilders, industrial UPS remanufacturers, second-life recyclers, and post-remanufacture battery leasing operators."`
+    83	
+    84	#### 3D. Line 52 (46 words)
+    85	* **Quote:**
+    86	  > `"Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote."`
+    87	* **Concrete Fix:** Split into two sentences across sprint deliverables:
+    88	  > `"Deliverables include a counsel-reviewed applicability memo, a field-by-field evidence matrix, lineage mapping to original identifiers, and extraction of one authorised BMS/test dataset. The sprint also delivers provisional access design, ten test-environment payloads, a provider comparison, and a fixed production quote."`
+    89	
+    90	#### 3E. Line 103 (43 words)
+    91	* **Quote:**
+    92	  > `"Kill: counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer."`
+    93	* **Concrete Fix:** Split into two sentences:
+    94	  > `"Kill: counsel finds the product outside the obligation, or five scoped offers yield zero paid sprints. Kill also if donor passport/BMS data cannot be obtained under workable rights, or if onboarding customers identify insufficient recurring change to justify the retainer."`
+    95	
+    96	---
+    97	
+    98	### Finding 4 (Severity: Low) — Dense 132-Word Paragraph (Rule 10)
+    99	
+   100	* **Passage ([`chapters/05-product-passports.html:L37`](file:///home/diablo/book18/chapters/05-product-passports.html#L37)):**
+   101	  > `"The dated battery obligation is enacted. Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents. Article 77(3) says the QR code links to a unique identifier assigned by the placing operator and requires both to comply with the ISO/IEC 15459 family listed there, or equivalent standards. <!-- CHECK: 05-qr-rule -->"`
+   102	
+   103	* **Issue:**
+   104	  At 132 words, this paragraph packs statutory scope, individual battery record requirements, physical QR marking standards, identifier assignment, and ISO/IEC 15459 references into a single block.
+   105	
+   106	* **Concrete Fix:**
+   107	  Applying the sentence split in Finding 3B and streamlining the prose will resolve the density:
+   108	  ```html
+   109	  <p><strong>The dated battery obligation is enacted.</strong> Article 77 of Regulation (EU) 2023/1542 says that from 18 February 2027 each light-means-of-transport battery, each industrial battery above 2 kWh and each electric-vehicle battery placed on the market or put into service must have an electronic battery passport. It includes model information and information specific to the individual battery. <!-- CHECK: 05-art77-scope --> Article 13 separately requires a QR code from the same date that leads to the passport. The marking must be visible, legible and indelible on the battery or accompanying documents. Article 77(3) requires the QR code to link to a unique identifier complying with the listed ISO/IEC 15459 family or equivalent open standards. <!-- CHECK: 05-qr-rule --></p>
+   110	  ```
+   111	
+   112	---
+   113	
+   114	## Final Review Verdict
+   115	
+   116	### **Verdict: `REVISE`**
+   117	
+   118	The chapter is analytically rigorous, legally accurate, economically coherent, and completely honest about why an entrant data operation risks being squeezed out by industry standardisation. It passes all core strategic, economic, and regulatory tests, but requires mechanical edits to unstack claim markers, refactor long sentences, and store verbatim source excerpts.
+   119	
+   120	---
+   121	
+   122	## The Three Fixes That Matter Most
+   123	
+   124	1. **Unstack CHECK Markers in Line 84 (Finding 1):** Separate `<!-- CHECK: 05-operator-responsibility -->` and `<!-- CHECK: 05-registry-live -->` so each marker immediately follows the exact clause it substantiates.
+   125	2. **Refactor Five 40+ Word Sentences and Dense Paragraph 37 (Findings 3 & 4):** Split the dense semicolon lists in lines 30, 37, 50, 52, and 103 to bring all sentences below the 40-word ceiling and improve structural readability.
+   126	3. **Generate Verbatim Excerpt Files (Finding 2):** Create `resources/sources/05/excerpts/` with the exact source passages for all 17 verified ledger rows and update the `source_locator` column in [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv).
+     1	Here is the review of Essay 5 against the book's rules. The essay is highly analytical, its economics are sound and internally consistent, and the capable failure is a sharp, non-straw-man scenario (being squeezed out of the middle by the standardisation it helps implement). It correctly treats dates and guidance as distinct from enacted laws.
+     2	
+     3	The findings below are primarily stylistic (readability) and technical (receipts workflow).
+     4	
+     5	### 1. High Severity: Readability (Sentences over 40 words)
+     6	**Rule:** 10. Readability (wall paragraphs, sentences over 40 words, jargon without mechanism).
+     7	**Passages:** 
+     8	1. *"The deliverable is a managed data operation: determine the applicable passport fields with qualified counsel; map each field to a source and responsible person; ingest donor passport references, bill-of-material and test/BMS data; preserve provenance and approvals; generate the QR/identifier handoff; submit required registration metadata; and publish through an existing passport provider chosen with the customer."* (54 words)
+     9	2. *"Build the first list from ten explicit prospect types: an EV-pack second-life integrator; bus-battery repurposer; forklift-battery remanufacturer; home-to-commercial storage upgrader; containerised BESS assembler using recovered modules; marine auxiliary-storage integrator; telecom backup-power remanufacturer; industrial UPS battery rebuilder; recycler launching a graded second-life product; and a battery leasing operator that becomes the placing economic operator after remanufacture."* (55 words)
+    10	3. *"Outputs are a counsel-reviewed applicability memo; a field-by-field responsibility and evidence matrix; lineage mapping to original passport identifiers; extraction of one authorised BMS/test dataset; role/access design marked “provisional” where the implementing act is pending; ten test-environment passport payloads; a provider comparison; and a fixed production quote."* (46 words)
+    11	4. *"Article 13 separately requires a QR code from the same date; for those covered categories it leads to the passport, and the marking must be visible, legible and indelible on the battery or, where that is not possible or warranted, on packaging and accompanying documents."* (45 words)
+    12	5. *"Kill: counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer."* (43 words)
+    13	
+    14	**What the cited source actually supports:** The factual claims within these sentences are fully supported by the cited EU regulations and logical product scoping, but their grammatical structure violates the book's strict 40-word limit. 
+    15	**Concrete fix:** Break the long, semicolon-separated lists (passages 1, 2, 3, and 5) into bulleted lists to improve scanning and readability. For the Article 13 sentence (passage 4), split it into two: *"...from the same date. For those covered categories..."*
+    16	
+    17	### 2. Medium Severity: Receipts (Missing Excerpt Files)
+    18	**Rule:** 8. Receipts (every verified row has an excerpt that says what the claim says).
+    19	**Passage:** The entire `checks/claims/05.tsv` file relies on URLs, and there are no `.txt` excerpts provided for this essay. The directory `resources/sources/05/excerpts/` does not exist.
+    20	**What the cited source actually supports:** The live URLs provided in the TSV and `SOURCES.md` (e.g., EUR-Lex, Commission registry pages) accurately support the dates and claims made in the text. However, the exact excerpts have not been isolated and saved. *(Note: `AGENT.md` specifically states "From essay 6 onward: save the passage...", which explains why the author omitted them here. However, this violates the explicit text of the review rule 8 requested for this pass).*
+    21	**Concrete fix:** Either apply the excerpt requirement retroactively by creating a `resources/sources/05/excerpts/` directory and saving the `.txt` blocks there, or explicitly waive Rule 8's excerpt clause for Essays 1-5.
+    22	
+    23	***
+    24	
+    25	### Verdict
+    26	**REVISE**
+    27	
+    28	**The three fixes that matter most:**
+    29	1. Reformat the 54-word "deliverable" sentence into a bulleted list of operational tasks.
+    30	2. Reformat the 55-word "first list" sentence into a bulleted list of prospect types.
+    31	3. Split or bullet the remaining three 40+ word sentences (the "outputs" list, the Article 13 sentence, and the "Kill" condition) to adhere to the strict readability limits.
+
+exec
+/bin/bash -lc "nl -ba chapters/05-product-passports.html | sed -n '78,150p'; nl -ba checks/claims/05.tsv; nl -ba resources/sources/05/SOURCES.md" in /home/diablo/book18
+ succeeded in 240ms:
+    78	</section>
+    79	
+    80	<section class="competition">
+    81	<h2>The incumbent gets a turn</h2>
+    82	<p>There is no platform gap. Siemens offers a Battery Passport REST API with user and passport management, including create, update and retrieve operations. <!-- CHECK: 05-siemens-api --> Circularise markets model- and individual-battery data, QR access and permissions in one platform. <!-- CHECK: 05-circularise --> Minespider markets EU battery-passport tooling and an open API. <!-- CHECK: 05-minespider --> Spherity markets templates, APIs, secure access and a fully white-label-ready product. <!-- CHECK: 05-spherity-product --> Their claims of compliance are vendor claims; only the responsible economic operator carries the legal duty. But their existence means a new generic passport host starts behind on product, standards work, security evidence and integrations.</p>
+    83	<p>Spherity explicitly invites consultancies and integrators to resell or white-label its software. <!-- CHECK: 05-spherity-channel --> That is both route and threat. Use such a platform to reach production quickly, but keep the customer contract, canonical export and provider-neutral test suite. Siemens can bundle its passport into an industrial digital stack; Circularise and Minespider can add onboarding services; an ERP vendor can generate the payload at source. The proposed company keeps margin only if it repeatedly solves evidence and change operations those products cannot economically standardise.</p>
+    84	<p>Interoperability is not a slogan here. The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one. Yet formal interoperability can commoditise the connector. The more successful the standards become, the less anyone should pay merely to translate JSON. Margin must migrate toward data provenance, supplier follow-up, exception handling and accountable operations.</p>
+    85	</section>
+    86	
+    87	<div class="counter">
+    88	<h2>The capable failure</h2>
+    89	<p>The company chooses the right niche, partners with a competent battery lawyer, ships ten valid test passports, builds clean connectors and wins six second-life integrators. Then the standards and access act settle well. Donor OEMs expose reliable passport links; test-equipment vendors export the canonical fields; the leading DPP providers add second-life templates, lineage and registry submission; customers' ERP integrators map the remaining data during ordinary implementation.</p>
+    90	<p>The founders have done nothing wrong. Their interoperability work helped make the problem routine. But each customer places relatively few high-value stationary systems, lifecycle updates are rare, and the supposedly recurring evidence queue shrinks after onboarding. Procurement compares a €42,000 annual managed retainer with a platform module and twenty days of internal quality-engineer time. The platform vendor absorbs the connector into its licence; the battery adviser keeps the occasional interpretation. This company is squeezed out of the middle by the standardisation it correctly anticipated. It can survive as project integration, but not reach the recurring mature-year model.</p>
+    91	</div>
+    92	
+    93	<section class="monday">
+    94	<h2>The first ninety days</h2>
+    95	<ol>
+    96	<li><strong>Days 1–12:</strong> retain an EU battery-regulation lawyer or conformity specialist for a capped €4,000 memo on the selected second-life scenario: product category, placing operator, Article 77/78 duties, Article 45 boundary and open implementation questions. Do not generalise it to all batteries.</li>
+    97	<li><strong>Days 1–25:</strong> interview ten in-scope prospect types. Require a dated 2027 production family, estimated unit count, donor-source map, current system of record and named budget owner. Record whether the buyer already has a DPP platform or ERP programme.</li>
+    98	<li><strong>Days 15–35:</strong> select one existing DPP provider and one fallback after testing export, API access, lineage, role controls, registry workflow, price transparency and exit. Use the Commission registry testing environment; do not build a production host.</li>
+    99	<li><strong>Days 25–55:</strong> build a canonical evidence record and ten synthetic or customer-authorised test passports. Exercise one original-to-new lineage, one BMS/test import, public/restricted views and a full export. Mark pending legal rules in configuration.</li>
+   100	<li><strong>Days 35–75:</strong> offer at least five €12,000 readiness sprints, 50% upfront, with the production prices stated before sale. A free workshop does not count.</li>
+   101	<li><strong>Days 60–90:</strong> deliver one paid sprint and ask for the €30,000 onboarding plus €3,500 monthly managed-data order. Cap all pre-evidence cash at <strong>€25,000</strong>, including legal advice, provider sandbox, security review, travel and translation.</li>
+   102	</ol>
+   103	<p><strong>Pass:</strong> one in-scope operator pays for the sprint, supplies authorised donor/BMS/test evidence, completes ten linked test records and signs a production order or dated conditional order at the stated price level. The evidence map must show at least one recurring change process beyond initial issuance. <strong>Kill:</strong> counsel finds the selected 2027 product outside the obligation; no paid sprint after five scoped offers; original passport/BMS data cannot be obtained under workable rights; or customers will buy onboarding but none can identify enough recurring state change to support the retainer. A standards delay is a reason to keep mappings reversible, not to invent a different obligation.</p>
+   104	</section>
+   105	
+   106	<div class="verdict-box">
+   107	<h2>Verdict</h2>
+   108	<p class="verdict">TEST THROUGH A PARTNER</p>
+   109	<p>The date and second-life responsibility justify a paid test now, but only beside a battery-regulation specialist and on top of an existing DPP provider. The single assumption that would most change the verdict is that small second-life operators experience enough continuing evidence and lifecycle work to pay roughly €42,000 a year after initial integration. If the readiness sprint finds a one-time mapping followed by rare updates, this is consultancy, not a scalable second engine.</p>
+   110	</div>
+   111	
+   112	<div class="reading">
+   113	<h2>Reading</h2>
+   114	<ul>
+   115	<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/">consolidated Regulation (EU) 2023/1542</a>, especially Articles 13, 14, 45, 47–48 and 77–78.</li>
+   116	<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en">Batteries and the Digital Product Passport</a> and <a href="https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en">2026 battery-passport guidance announcement</a>.</li>
+   117	<li>European Commission, <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en">The DPP Registry</a> and <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en">DPP implementation timeline</a>.</li>
+   118	<li>EUR-Lex, <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj">Regulation (EU) 2024/1781 (ESPR)</a>; European Commission, <a href="https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en">ESPR and Energy Labelling Working Plan 2025–2030</a>.</li>
+   119	<li>Siemens, <a href="https://developer.siemens.com/battery-passport/overview.html">Battery Passport API</a>; Circularise, <a href="https://www.circularise.com/battery-passport">Battery Passport</a>.</li>
+   120	<li>Minespider, <a href="https://www.minespider.com/">Digital and battery passports</a>; Spherity, <a href="https://www.spherity.com/digital-product-passport">VERA Digital Product Passport</a>.</li>
+   121	</ul>
+   122	</div>
+   123	
+   124	<nav class="chapter-nav" aria-label="Essay navigation">
+   125	  <a href="04-asset-intelligence.html">← Previous</a>
+   126	  <a href="../index.html">Contents</a>
+   127	  <span></span>
+   128	</nav>
+   129	</main>
+   130	<footer class="site-footer"><div class="wrap"><p>Five candidates. One second engine. Evidence before commitment.</p></div></footer>
+   131	</body>
+   132	</html>
+     1	id	claim	source_url	source_locator	status
+     2	05-art77-scope	From 18 February 2027 each LMT battery, EV battery and industrial battery above 2 kWh placed on the market or put into service requires a battery passport with model and individual-battery data.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(1)-(2), lines 2846-2868	verified
+     3	05-qr-rule	From 18 February 2027 covered batteries require a QR code leading to the passport; marking must be visible, legible and indelible on the battery or, where appropriate, packaging/documents. The QR links to a placing-operator-assigned unique identifier and both must comply with the listed ISO/IEC 15459 family or equivalent.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(6)-(7) and 77(3), lines 979-996 and 2881-2885	verified
+     4	05-second-life-transfer	For reused, repurposed or remanufactured batteries, passport responsibility transfers to the new placing operator and a new passport must link to the original passport(s); new status markings are also required.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 13(9) and 77(7), lines 1001-1002 and 2897-2899	verified
+     5	05-operator-responsibility	The placing operator remains responsible for accurate, complete and current passport data even when another operator is authorised, and passport information must use open, interoperable, machine-readable formats without vendor lock-in.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 77(4)-(5), lines 2887-2895	verified
+     6	05-art78-controls	Article 78 requires role-based access, continued availability, authentication, integrity, security/privacy and restricted processor reuse.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 78(a)-(h), lines 2928-2959	verified
+     7	05-bms-access	Since 18 August 2024 stationary BESS, LMT and EV batteries must contain current health/lifetime parameters in the BMS, with read-only purchaser/authorised-party access for specified purposes including valuation and repurposing.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Article 14(1)-(2), lines 1009-1026	verified
+     8	05-registry-live	The EU DPP Registry went live on 20 July 2026 with a testing environment; it stores identifiers/metadata while full passport data remain decentralised with the operator or provider.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en	The DPP Registry, lines 38-68	verified
+     9	05-71-points	The Commission's August 2026 battery guidance organises 71 data points by category and expressly says the guidance is non-authoritative and creates no new requirements.	https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en	Guidance announcement, lines 38-57	verified
+    10	05-pending-rules	On 1 September 2026 the Commission timeline scheduled two remaining DPP standards for September 2026, battery access-rights rules for Q4 2026 and service-provider delegated requirements for 2027.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	DPP timeline, lines 99-148	verified
+    11	05-espr-framework	ESPR uses product-specific delegated acts for concrete DPP requirements; the Commission says operators receive at least an 18-month transition after such an act.	https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en	Legal basis and timeline note, lines 47-64 and 99-103	verified
+    12	05-espr-priorities	The Commission's 2025-2030 working plan prioritises steel, aluminium, textiles/apparel, furniture, tyres and mattresses among other measures/products.	https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en	Working plan summary, lines 33-48	verified
+    13	05-due-diligence-separate	Battery due diligence begins 18 August 2027 after the 2025 amendment; Chapter VII has a EUR 40m turnover threshold and excludes previously marketed batteries later reused/repurposed/remanufactured.	https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/	Articles 47-48, lines 1716-1738	verified
+    14	05-siemens-api	Siemens offers a Battery Passport REST API with user and passport create/read/update/delete operations.	https://developer.siemens.com/battery-passport/overview.html	Overview, API functionalities	verified
+    15	05-circularise	Circularise markets model- and individual-battery data, QR access and user permissions in one battery-passport platform.	https://www.circularise.com/battery-passport	Battery Passport product overview	verified
+    16	05-minespider	Minespider markets EU battery-passport tooling and an open API.	https://www.minespider.com/	Digital Battery Passports and platform overview	verified
+    17	05-spherity-product	Spherity markets DPP templates, APIs, access control and a white-label-ready product.	https://www.spherity.com/digital-product-passport	VERA product and FAQ	verified
+    18	05-spherity-channel	Spherity invites partners to resell/white-label its DPP solution.	https://www.spherity.com/digital-product-passport	Become a Partner and white-label FAQ	verified
+     1	# Essay 5 — source index
+     2	
+     3	Accessed 2026-09-01. Law and implementation status use EU primary sources. Vendor pages establish competitive product surface only; vendor “compliance” claims are not treated as legal conclusions.
+     4	
+     5	1. **EUR-Lex, consolidated Regulation (EU) 2023/1542 concerning batteries and waste batteries, current consolidated text dated 31 July 2025.**
+     6	   URL: https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/
+     7	   Supports: passport scope/date and individual data; QR and marking; BMS health-data access; second-life status and responsibility; open/interoperable format; technical/access controls; due-diligence date, threshold and second-life exclusion (`05-art77-scope`, `05-qr-rule`, `05-second-life-transfer`, `05-operator-responsibility`, `05-art78-controls`, `05-bms-access`, `05-due-diligence-separate`). The consolidated text incorporates Regulation (EU) 2025/1561's due-diligence delay.
+     8	
+     9	2. **European Commission, “Batteries” — Digital Product Passport.**
+    10	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en
+    11	   Supports: Commission implementation summary, affected operator framing, decentralised design and 18 February 2027 date. Used as implementation context; the Regulation is the legal source.
+    12	
+    13	3. **European Commission, “Guidance to support preparations for the Digital Batteries Passport,” 21 August 2026.**
+    14	   URL: https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en
+    15	   Supports: current 71-data-point guidance and its explicit non-authoritative status (`05-71-points`).
+    16	
+    17	4. **European Commission, “The DPP Registry.”**
+    18	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en
+    19	   Supports: live registry and testing environment, registry contents, enforcement role and decentralised storage (`05-registry-live`).
+    20	
+    21	5. **European Commission, “Digital Product Passport.”**
+    22	   URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en
+    23	   Supports: framework/delegated-act distinction, minimum transition statement, and implementation status on standards, battery access rights and service-provider rules as of the access date (`05-pending-rules`, `05-espr-framework`).
+    24	
+    25	6. **European Commission, “Plan to boost circular and efficient products on the European market,” 11 July 2025.**
+    26	   URL: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en
+    27	   Supports: ESPR 2025–2030 priority product groups (`05-espr-priorities`).
+    28	
+    29	7. **Siemens, “Battery Passport API,” developer documentation.**
+    30	   URL: https://developer.siemens.com/battery-passport/overview.html
+    31	   Supports: REST API and user/passport management operations (`05-siemens-api`).
+    32	
+    33	8. **Circularise, “Battery Passport.”**
+    34	   URL: https://www.circularise.com/battery-passport
+    35	   Supports: marketed model/individual battery data, QR access and permission functionality (`05-circularise`).
+    36	
+    37	9. **Minespider, product platform.**
+    38	   URL: https://www.minespider.com/
+    39	   Supports: marketed digital battery-passport tooling and open API (`05-minespider`).
+    40	
+    41	10. **Spherity, “Digital Product Passport Solution / VERA.”**
+    42	    URL: https://www.spherity.com/digital-product-passport
+    43	    Supports: marketed templates, APIs, access control, partner route and white-label offer (`05-spherity-product`, `05-spherity-channel`).
+    44	
+    45	## Evidence boundary
+    46	
+    47	No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The €12,000 sprint, €30,000 onboarding, €3,500 monthly retainer and conversion assumptions are explicit required-price tests. The Commission's stated future implementation timetable is not treated as an enacted deadline where the referenced act had not yet been adopted on 2026-09-01.
+
+web search: 
+web search: https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/
+web search: 
+web search: https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/
+web search: 
+web search: site:eur-lex.europa.eu 2023/1542 Article 77 battery passport "18 February 2027" ...
+web search: 
+web search: 'responsible for ensuring that the information included in the battery passport is accurate'
+web search: 
+web search: 
+web search: 
+web search: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en
+web search: 
+web search: 'Open API'
+web search: 
+web search: 
+exec
+/bin/bash -lc "perl -0777 -pe 's/<script\\b["'^>]*>.*?<'"\\/script>//gs; s/<style\\b["'^>]*>.*?<'"\\/style>//gs; s/<["'^>]+>/ /g; s/&[''^;]+;/ /g'"' chapters/05-product-passports.html | wc -w; rg -o 'CHECK: ["'^ ]+'"' chapters/05-product-passports.html | sort | uniq -c; cut -f1 checks/claims/05.tsv | tail -n +2 | sort; rg -n '<"'!-- CHECK:'"' chapters/05-product-passports.html | wc -l" in /home/diablo/book18
+ succeeded in 232ms:
+3332
+      1 CHECK: 05-71-points
+      1 CHECK: 05-art77-scope
+      1 CHECK: 05-art78-controls
+      1 CHECK: 05-bms-access
+      1 CHECK: 05-circularise
+      1 CHECK: 05-due-diligence-separate
+      1 CHECK: 05-espr-framework
+      1 CHECK: 05-espr-priorities
+      1 CHECK: 05-minespider
+      2 CHECK: 05-operator-responsibility
+      1 CHECK: 05-pending-rules
+      1 CHECK: 05-qr-rule
+      2 CHECK: 05-registry-live
+      2 CHECK: 05-second-life-transfer
+      1 CHECK: 05-siemens-api
+      1 CHECK: 05-spherity-channel
+      1 CHECK: 05-spherity-product
+05-71-points
+05-art77-scope
+05-art78-controls
+05-bms-access
+05-circularise
+05-due-diligence-separate
+05-espr-framework
+05-espr-priorities
+05-minespider
+05-operator-responsibility
+05-pending-rules
+05-qr-rule
+05-registry-live
+05-second-life-transfer
+05-siemens-api
+05-spherity-channel
+05-spherity-product
+12
+
+exec
+/bin/bash -lc "nl -ba drafts/reviews/05-flash.md | sed -n '1,45p'" in /home/diablo/book18
+ succeeded in 226ms:
+     1	# Editorial & Technical Review: Essay 05 (*Digital Product Passport / Battery-Passport Integration*)
+     2	
+     3	**File Reviewed:** [`chapters/05-product-passports.html`](file:///home/diablo/book18/chapters/05-product-passports.html)  
+     4	**Claim Ledger:** [`checks/claims/05.tsv`](file:///home/diablo/book18/checks/claims/05.tsv)  
+     5	**Source Index:** [`resources/sources/05/SOURCES.md`](file:///home/diablo/book18/resources/sources/05/SOURCES.md)  
+     6	**Rules & Reference:** [`CONTEXT.md`](file:///home/diablo/book18/CONTEXT.md) (Sections 1–7), [`AGENT.md`](file:///home/diablo/book18/AGENT.md) (Priority Stack & Pre-Ship Test)
+     7	
+     8	---
+     9	
+    10	## Executive Summary & Systematic 10-Point Rule Audit
+    11	
+    12	| # | Rule / Dimension | Status | Audit Summary |
+    13	| :-: | :--- | :---: | :--- |
+    14	| **1** | **Never false** | **PASS** | Distinguishes enacted law (Regulation (EU) 2023/1542 Art. 77/13 application on 18 Feb 2027; Art. 14 BMS access on 18 Aug 2024; Reg. (EU) 2025/1561 due-diligence postponement to 18 Aug 2027) from pending implementing acts (access rights Q4 2026, standards Sept 2026, service-provider rules 2027) and framework acts (ESPR Reg. (EU) 2024/1781 18-month transition). Test prices (€12k sprint, €30k onboarding, €3.5k/mo retainer, €12 event) are explicitly labelled as required design hurdles, never reported as market facts. |
+    15	| **2** | **Buyer and event** | **PASS** | Named buyer: COO, head of compliance, or product-data lead at a Benelux second-life/repurposed stationary BESS assembler. Purchase event: a dated production batch crossing 18 February 2027 requiring a compliant passport handoff to place on the EU market. Explicitly notes that regulation creates the deadline, not the budget. |
+    16	| **3** | **Economics** | **PASS** | Bottom-up model cleanly separates revenue, direct subcontractor QA/legal costs, gross margin, operating expenses, founder replacement salary (€75k Y1 / €100k mature), overheads (€45k Y1 / €75k mature), working capital (€25k 90-day cash cap; €90k mature operating reserve), and retained profit. Arithmetic is consistent: Year 1 generates €140.4k revenue (86% GM) at break-even; Mature model generates €672k revenue (88% GM), €405k OpEx, and €183k pre-tax retained earnings after paying full replacement wages. Platform licences are kept off company revenue. |
+    17	| **4** | **Scalability** | **PASS** | Concretely differentiates Customer 1 (bespoke evidence archaeology, manual rule-making, BMS extraction tests), Customer 5 (canonical internal schema, ERP/BMS connectors, provider adapters, engineer-led onboarding), and Customer 20 (automated validation/reminders, managed exception queue, channel-led acquisition). Rejects building a generic DPP hosting platform; defines the accumulating asset as a regression-tested mapping library and conformance fixtures. |
+    18	| **5** | **Incumbents & capture** | **PASS** | Incumbent DPP providers (Siemens, Circularise, Minespider, Spherity) are evaluated accurately from their developer docs and product pages. Partner margin-capture (Spherity white-labelling) and ERP disintermediation are confronted directly. Channel rule is stated: no partner may own the customer and silently substitute the company at renewal. |
+    19	| **6** | **Capable failure** | **PASS** | Non-straw-man failure mode: the company executes well and builds clean connectors, but industry standards settle cleanly, donor OEMs and test benches expose standardised APIs, and DPP providers release second-life templates. Stationary storage volumes prove too low to generate recurring evidence changes, causing procurement to replace the €42k/yr retainer with an in-house quality engineer. |
+    20	| **7** | **Language & constraints** | **PASS** | Reader constraints respected (A2 Dutch, €100k capital, no founder Dutch field work). English is used for cross-border technical integrations; professional translation and a Dutch-speaking battery compliance partner lead local regulatory and shop-floor interactions. Capital exposure is strictly bounded (€25k 90-day cap; €90k mature reserve within €100k limit). |
+    21	| **8** | **Receipts** | **FAIL** | Line 84 stacks two `CHECK` markers back-to-back (`05-operator-responsibility` and `05-registry-live`) at the end of a compound sentence instead of placing each marker immediately after its respective clause. In addition, supporting verbatim text excerpts under `resources/sources/05/excerpts/` are currently missing for verified claim rows. |
+    22	| **9** | **Verdict** | **PASS** | Correctly assigns `TEST THROUGH A PARTNER`. The kill assumption is precise: small second-life operators experience insufficient continuing state change after initial onboarding to support a €42k annual operating retainer. |
+    23	| **10** | **Readability** | **FAIL** | Contains 5 sentences exceeding the 40-word readability limit (lines 30, 37, 50, 52, 103), along with one dense 132-word paragraph (line 37). |
+    24	
+    25	---
+    26	
+    27	## Detailed Findings Ranked by Severity
+    28	
+    29	### Finding 1 (Severity: High) — Stacked & Misplaced `CHECK` Markers (Rule 8)
+    30	
+    31	* **Passage ([`chapters/05-product-passports.html:L84`](file:///home/diablo/book18/chapters/05-product-passports.html#L84)):**
+    32	  > `"The Regulation itself requires open, transferable data without vendor lock-in, and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one."`
+    33	
+    34	* **What the cited sources actually support:**
+    35	  * `05-operator-responsibility` cites Regulation (EU) 2023/1542, Article 77(4)–(5), which establishes the requirement for open, interoperable formats without vendor lock-in. It supports only the first clause.
+    36	  * `05-registry-live` cites the European Commission DPP Registry documentation, which explains that the registry stores identifiers and metadata while product data remain decentralised. It supports only the second clause.
+    37	  * Stacking `<!-- CHECK: 05-operator-responsibility --><!-- CHECK: 05-registry-live -->` together at the end of the sentence detaches the first marker from its supporting clause.
+    38	
+    39	* **Concrete Fix:**
+    40	  Separate the markers to immediately follow their respective clauses:
+    41	  ```html
+    42	  <p>The Regulation itself requires open, transferable data without vendor lock-in, <!-- CHECK: 05-operator-responsibility --> and the EU registry indexes rather than stores the full record. <!-- CHECK: 05-registry-live --> A provider that blocks export is a compliance risk as well as a commercial one.</p>
+    43	  ```
+    44	
+    45	---
+
+codex
+The statutory core checks out: passport scope/date, second-life transfer, QR/identifier rules, BMS access, due-diligence separation, registry status, and the “indicative” implementation timeline all match the cited primary sources. The substantive defects are elsewhere: the cash reserve arithmetic, an overstated competitor API claim, and a competitor whose current offering overlaps the proposed differentiation much more than either reviewer reported.
+codex
+**Verdict: REVISE — the legal core is sound, but the mature cash model is internally false and the competitive case understates direct overlap with Circularise.**
+
+# Consolidated adversarial review
+
+The statutory claims were checked against the consolidated Batteries Regulation and current Commission material. The 18 February 2027 passport/QR date, second-life responsibility transfer, BMS-access provisions, Article 78 controls, due-diligence separation, registry status, 71-point guidance and indicative implementation schedule are supported by the cited primary sources: [Batteries Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731), [DPP Registry](https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en), [battery guidance](https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en), and [DPP timeline](https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en).
+
+## Ranked findings
+
+### 1. High — The “six months” cash reserve is arithmetically impossible
+
+> “A production company should preserve roughly €90,000 for six months of a small team's payroll and specialist commitments.”
+
+The mature model at [line 64](/home/diablo/book18/chapters/05-product-passports.html:64) budgets €330,000 annually for founder and employee labour plus €60,000 for specialist QA. Six months is therefore €195,000 before the €75,000 overhead allocation—or €232,500 including it. Even excluding the founder, six months of employees and specialists is €145,000.
+
+Thus €90,000 covers approximately 2.8 months of labour and specialists, not six. This directly contradicts the reviewer’s claim that working capital is “strictly bounded” within the reader’s €100,000.
+
+Fix: replace the reserve with the correctly calculated amount, then show how advance billing, retained profits, receivables and any credit facility bridge the gap without requiring the reader to inject more than €100,000.
+
+### 2. High — The differentiation under-describes a competitor already selling the proposed “dirty operational layer”
+
+The chapter reduces Circularise to:
+
+> “model- and individual-battery data, QR access and permissions in one platform.”
+
+Circularise currently markets supplier-evidence collection, field-to-owner mapping, automated evidence requests, chain-of-custody records, access governance, lifecycle maintenance, and ERP/PLM integration—the chapter’s proposed differentiation almost feature for feature. See [Circularise’s product description](https://www.circularise.com/battery-passport).
+
+Saying Circularise “can add onboarding services” understates the present overlap. The business must beat an incumbent already describing the passport as an ongoing evidence workflow, not merely a host that might later move upstream.
+
+Fix: compare the offer against Circularise field by field. Explain why provider neutrality, second-life lineage, or accountable managed exceptions remain defensible—and add a kill rule if buyers accept Circularise’s native workflow instead.
+
+### 3. High — Delivery capacity is not actually modelled
+
+The mature case assumes twelve managed customers, four onboardings and 4,000 annual events with two engineers and one operations lead. The chapter shows that two hours per event would consume roughly four working years, but never states the assumed automation rate, exception rate, minutes per ordinary event, onboarding hours or customer-support load.
+
+Consequently, the €183,000 result is correct bookkeeping applied to an unproven labour-capacity assumption.
+
+Fix: add a workload bridge—for example, automated-event percentage, exception minutes, onboarding hours and annual compliance-review hours—and demonstrate that the stated team can deliver it with contingency.
+
+### 4. Medium — One verified competitor claim is not supported, while other external claims lack immediate receipts
+
+The ledger says Minespider markets an “open API,” but its cited homepage currently says only “advanced API connectivity”; neither the homepage nor battery-passport page establishes that the API is open. The row at [05.tsv:16](/home/diablo/book18/checks/claims/05.tsv:16) should not remain `verified` as written. See [Minespider’s current product page](https://www.minespider.com/).
+
+Other factual repetitions also lack immediate markers:
+
+- The four-incumbent claim in the lede at [line 25](/home/diablo/book18/chapters/05-product-passports.html:25).
+- “Only the responsible economic operator carries the legal duty” at [line 82](/home/diablo/book18/chapters/05-product-passports.html:82).
+- The Siemens, Circularise, Minespider and ERP capability assertions at [line 83](/home/diablo/book18/chapters/05-product-passports.html:83).
+
+Fix: change “open API” to “API connectivity” unless documentation proves openness, and put CHECK markers immediately after every external factual occurrence.
+
+### 5. Medium — A partner-dependent verdict lacks a named domain partner
+
+The chapter names a category—“a battery conformity/safety consultancy”—and several software platforms, but no actual battery-regulation specialist, conformity body or laboratory through which the test will run. The 90-day plan likewise says to retain an unspecified lawyer or specialist.
+
+That weakens `TEST THROUGH A PARTNER`: the partner is structurally necessary for interpretation, local conversations, liability boundaries and acquisition, yet its availability and economics remain hypothetical.
+
+Fix: name at least one real candidate domain partner, record its commercial role and conflict risk, and require a partner-supported prospect introduction in the pass criteria.
+
+### 6. Medium — The footer contradicts the book and chapter
+
+The kicker correctly says “Essay 5 of 7,” while the footer says:
+
+> “Five candidates. One second engine.”
+
+See [line 130](/home/diablo/book18/chapters/05-product-passports.html:130). `CONTEXT.md` now defines seven essays.
+
+Fix: update the footer to seven candidates or use wording that does not encode the count.
+
+### 7. Low — The long sentences are real, but not a “strict 40-word-limit” violation
+
+The reviewers correctly found five sentences over 40 words and a dense 132-word paragraph. The checklist says to inspect sentences over 40 words; it does not establish a strict ceiling or make each one a shipping failure.
+
+The Article 13 sentence should be split. The operational lists at lines 30, 50, 52 and 103 can be divided into shorter prose without turning the essay into a field of bullet lists.
+
+## Reviewer finding dispositions
+
+### `05-flash.md`
+
+| Reviewer assertion | Disposition | Reason |
+|---|---|---|
+| 1. Never false — PASS | **REJECTED** | Legal dates are correct, but “open API,” the stale five-candidate footer and unreceipted factual repetitions prevent a clean pass. |
+| 2. Buyer and event — PASS | **CONFIRMED** | Buyer roles and the dated batch event are explicit; the chapter honestly labels willingness to pay as unproven. |
+| 3. Economics — PASS | **REJECTED** | Revenue and profit arithmetic works, but the €90,000/six-month reserve claim does not. Delivery capacity is also missing. |
+| 4. Scalability — PASS | **CONFIRMED** | Customers one, five and twenty, recurring state changes, delegation and the accumulating mapping asset are concretely described. |
+| 5. Incumbents and capture — PASS | **REJECTED** | Capture is discussed, but Circularise’s existing evidence-operation surface is materially understated. Minespider’s “open API” is unsupported. |
+| 6. Capable failure — PASS | **CONFIRMED** | Standardisation eliminating the profitable middle is credible and does not depend on poor execution. |
+| 7. Language and constraints — PASS | **REJECTED** | The Dutch-language mitigation is adequate, but the reviewer’s claim that capital is strictly bounded relies on the false €90,000 reserve calculation. |
+| 8. Receipts — FAIL for stacked markers and absent excerpts | **REJECTED** | Markers may follow a complete factual sentence; the two markers each support one clause. Excerpts are explicitly required only from essay 6 onward in `CONTEXT.md` and `AGENT.md`. Real receipt defects are listed above. |
+| 9. Verdict — PASS | **CONFIRMED** | A bounded partner-led test is defensible, although an actual domain partner still needs naming. |
+| 10. Readability — FAIL | **REJECTED as a rule failure** | The counts are correct, but 40 words is a review trigger, not a strict ceiling. |
+| Detailed F1: stacked markers | **REJECTED** | Both markers follow the sentence they support; moving one to mid-sentence is optional clarity, not compliance repair. |
+| Detailed F2: missing excerpts | **REJECTED** | The excerpt requirement begins with essay 6. |
+| Detailed F3: five long sentences | **CONFIRMED** | The sentences exist and merit editing; the stated “strict ceiling” does not. |
+| Detailed F4: dense paragraph | **CONFIRMED** | It combines several statutory mechanisms and would read better split. |
+| Overall `REVISE` | **CONFIRMED** | Correct outcome, but the material reasons are economics, competition and receipts—not missing excerpts or stacked markers. |
+
+### `05-pro.md`
+
+| Reviewer assertion | Disposition | Reason |
+|---|---|---|
+| Economics are sound and internally consistent | **REJECTED** | The working-capital claim is off by at least €55,000 and as much as €142,500. |
+| Capable failure is sharp and non-straw-man | **CONFIRMED** | It describes capable execution losing to successful standardisation. |
+| Law, guidance and pending rules are separated correctly | **CONFIRMED** | Primary sources support the chapter’s treatment of enacted duties versus indicative implementation dates. |
+| F1: five sentences violate a strict 40-word limit | **REJECTED as stated** | The sentence counts are useful editorial flags, but no strict limit exists. |
+| F2: missing excerpt files | **REJECTED** | Both precedence documents restrict that requirement to essays 6 onward. |
+| Overall `REVISE` | **CONFIRMED** | Correct verdict for different, more substantive reasons. |
+
+## Three fixes that matter most
+
+1. Correct and fully finance the mature working-capital model.
+2. Rebuild the competitive comparison around Circularise’s existing evidence-workflow capabilities.
+3. Repair the unsupported “open API” claim and add immediate receipts to all repeated external assertions.
+tokens used
+138,958
