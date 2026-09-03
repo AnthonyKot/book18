@@ -1,0 +1,18 @@
+URL: https://developer.siemens.com/senseye/workorders/structure.html
+Publisher: Siemens
+Fetch date: 2026-09-03
+Page/section: Structure; Timestamp; Failure Mode
+
+Work events within Senseye are composed of the following required attributes:
+
+- Timestamp: the date, time and time zone that the work took place
+- Message: A free text description of the work undertaken
+- Asset ID: Either the Senseye or External ID of the asset the work was performed on
+- Is Routine: Whether the event was routine or non-routine
+- Work Activity: The type of work undertaken
+
+In addition to these required attributes, the following optional attribute can be provided:
+
+- Failure Mode: Identifies the failure encountered on the asset
+
+The eventTime attribute should identify when the work was completed. This allows Senseye to learn how the failure evolved to the point of intervention and implies that any changes in data may be related to the recent work on the asset.

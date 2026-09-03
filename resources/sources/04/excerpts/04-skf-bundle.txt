@@ -1,0 +1,8 @@
+URL: https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf
+Publisher: SKF
+Fetch date: 2026-09-03
+Page/section: PDF page 4 (printed page 7), Assessing, managing and monitoring machine health — Software systems; Remote diagnostic services
+
+SKF condition monitoring tools are supported by SKF @ptitude Analyst software, which provides a seamless interface to computerized maintenance management systems, enterprise asset management systems and other plant-wide systems.
+
+With SKF Remote Diagnostic Services, machine condition data is collected, either with an on-line system or with hand-held devices by skilled personnel – your own, a service partner or by SKF. Certified SKF analysts interpret and report on the data from Remote Diagnostic Centres using the most advanced, cloud-based technology and proprietary SKF signal analysis techniques. These subscription-based services provide access to machine data – and to expert SKF diagnostics – from anywhere, any time.

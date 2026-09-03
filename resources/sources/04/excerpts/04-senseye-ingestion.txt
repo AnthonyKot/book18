@@ -1,0 +1,19 @@
+URL: https://developer.siemens.com/senseye/machine/index.html
+Publisher: Siemens
+Fetch date: 2026-09-03
+Page/section: Machine Data; Time Series Data; Vibration Data
+
+Machine data is a broad term that covers all data to be used for predictive maintenance purposes, whether a condition indicator or contextual data.
+
+Senseye includes a cloud data storage solution which can be integrated with via several methods:
+
+- API
+- MQTT
+- E-mail
+- S3 / Azure Blob Storage
+
+Alternatively, Senseye can connect to your historian to collect the data directly.
+
+Senseye supports the ingestion of time series data with a maximum frequency for a single time series (known as a measure) of 1Hz, which can be either a condition indicator or contextual data.
+
+Senseye supports the ingestion of velocity and acceleration waveforms, and can process these into frequency spectra. Alternatively, if the raw waveform is not available, we can ingest spectra directly.

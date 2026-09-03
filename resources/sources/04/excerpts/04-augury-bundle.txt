@@ -1,0 +1,17 @@
+URL: https://www.augury.com/machine-health/
+Archive URL: https://web.archive.org/web/20260614134258id_/https://www.augury.com/machine-health/
+Publisher: Augury
+Fetch date: 2026-09-03
+Page/section: The Augury Difference; Machine Health 360°; Critical; FAQ, integration with existing workflows
+
+With continuous coverage across 200+ asset types of all criticalities, your teams get the visibility, diagnostics, and expert support they need to catch failures early and act. And because Augury unifies asset health data, AI diagnostics, and expert services in a single platform, you get results from day one that scale across your entire operation.
+
+Industrial-grade IoT
+
+Included in every subscription
+
+Machine Health Critical combines the industry's most accurate AI with continuous sensing and expert validation to tell your team exactly what's failing, when to act, and what to do.
+
+Machine Health solutions do exactly that, using IoT sensors that capture vibration, temperature, and magnetic data to provide real-time visibility into the condition, performance, and reliability of your industrial equipment.
+
+The platform integrates with leading CMMS and EAM systems, including SAP PM, IBM Maximo, and Infor EAM, automatically triggering work orders complete with diagnostics and repair guidance so Machine Health insights flow directly into your existing maintenance workflows.

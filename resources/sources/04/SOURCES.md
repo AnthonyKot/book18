@@ -1,25 +1,30 @@
 # Essay 4 — source index
 
-Re-fetched 2026-09-02. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
+Fetched 2026-09-03. Vendor pages support only the described product or service surface; their outcome and performance language is not treated as independent evidence of buyer results.
 
 1. **Siemens, “Machine Data,” Senseye developer documentation.**
    URL: https://developer.siemens.com/senseye/machine/index.html
+   Publisher: Siemens. Fetch date: 2026-09-03. Excerpt: `excerpts/04-senseye-ingestion.txt`.
    Supports: predictive-maintenance use, ingestion routes, supported time-series and vibration inputs, and the 1 Hz ordinary time-series limit (`04-senseye-ingestion`).
 
 2. **Siemens, “Structure,” Senseye work-order developer documentation.**
    URL: https://developer.siemens.com/senseye/workorders/structure.html
+   Publisher: Siemens. Fetch date: 2026-09-03. Excerpt: `excerpts/04-senseye-work-events.txt`.
    Supports: required work-event fields, optional failure mode, and the role of work timing in learning from interventions (`04-senseye-work-events`).
 
 3. **Augury, “AI for Predictive Maintenance Solutions / Machine Health.”**
    URL: https://www.augury.com/machine-health/
+   Publisher: Augury. Fetch date: 2026-09-03. Excerpt: `excerpts/04-augury-bundle.txt`. The live URL returned a Cloudflare block; excerpt fetched from https://web.archive.org/web/20260614134258id_/https://www.augury.com/machine-health/.
    Supports: Augury's marketed bundle of sensors, AI diagnostics, expert validation, workflows and stated asset-type coverage (`04-augury-bundle`).
 
 4. **SKF, “Assessing, managing and monitoring machine health.”**
    URL: https://cdn.skfmediahub.skf.com/api/public/0901d1968043cda1/pdf_preview_medium/0901d1968043cda1_pdf_preview_medium.pdf
+   Publisher: SKF. Fetch date: 2026-09-03. Excerpt: `excerpts/04-skf-bundle.txt`.
    Supports: SKF software interfaces, collection routes, remote diagnostic analysts and subscription service (`04-skf-bundle`).
 
 5. **IBM, “Asset Performance Management Software — Maximo Application Suite.”**
    URL: https://www.ibm.com/products/maximo/asset-performance-management
+   Publisher: IBM. Fetch date: 2026-09-03. Excerpt: `excerpts/04-maximo-bundle.txt`.
    Supports: Maximo's current combination of condition monitoring, reliability, work history, failure modes and recommendations (`04-maximo-bundle`).
 
 6. **SPIE Nederland, “Maintenance Solutions.”**
