@@ -1,0 +1,10 @@
+URL: https://wp2026.cencenelec.eu/sectors-list/digital-society/
+Publisher: CEN and CENELEC
+Fetch date: 2026-09-03
+Page/section: “Cybersecurity and Data Protection”, CEN-CLC/JTC 13 and CLC/TC 65X
+
+CEN-CLC/JTC 13 develops standards for cybersecurity and data protection across the information society. In 2026, it will advance deliverables supporting the CRA, preparing the drafts for publication, including standards on cybersecurity principles for products with digital elements and vulnerability handling, supporting manufacturers of products with digital elements in their compliance with the CRA.
+
+In 2026, CLC/TC 65X will continue advancing its key deliverables under the Cyber Resilience Act Standardization Request M/606, focusing on cybersecurity requirements for industrial automation and control systems (IACS) and other connected industrial products. The technical committee’s work supports the development of vertical profiles that translate CRA horizontal standards into practical, sector-specific requirements for industrial applications.
+
+Both the horizontal CRA standards and the sectoral vertical profiles are scheduled to be finalized by the end of 2026, ensuring a coherent and comprehensive framework for CRA harmonized standards across the European industrial landscape.

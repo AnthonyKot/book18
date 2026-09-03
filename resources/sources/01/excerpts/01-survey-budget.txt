@@ -1,0 +1,6 @@
+URL: https://arxiv.org/html/2505.14325v2
+Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
+Fetch date: 2026-09-03
+Page/section: Section 5, “Cost Impact and Organizational Changes”
+
+Cost Impact and Organizational Changes When asked about the estimated cost impacts of CRA compliance, as shown in Figure 4, 50% of participants expect costs to remain under 20%, 25% anticipate costs to increase by 20–40%, and, surprisingly, 25% foresee no cost impact at all. The question asked participants to estimate how much additional cost CRA compliance would introduce relative to their current product development budgets, including expenses related to personnel, tooling, and process adjustments. Similarly, when participants were asked about potential changes in employee roles, also shown in figure 4, the majority (50%) expect roles to remain unchanged after the CRA comes into force, while 33.3% anticipate role changes, and 16.7% remain uncertain. These findings suggest that CRA may not significantly impact employee roles or organizational costs. This could indicate that manufacturers are either reasonably prepared or have resigned themselves to achieving compliance using their existing resources without expecting additional budget or support for structural changes.

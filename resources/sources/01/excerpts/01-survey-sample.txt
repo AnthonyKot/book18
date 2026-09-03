@@ -1,0 +1,14 @@
+URL: https://arxiv.org/html/2505.14325v2
+Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
+Fetch date: 2026-09-03
+Page/section: Section 4, “Study Design” and “Limitations”
+
+Between June and August 2024, we conducted a survey to gather insights into the compliance challenges faced by industrial equipment manufacturing companies.
+
+A total of 12 companies participated in the survey. This group included seven large companies (with over 500 employees) that manufacture industrial equipment such as cranes, elevators, and machinery for the shipping and mining industries. The remaining five companies were consultancies or partner organizations providing software and support services to the large industrial equipment manufacturers we surveyed.
+
+All of the industrial equipment manufacturing companies interviewed had already established an internal SDL compliant with IEC 62443-4-1, and a few of them had reached Maturity Level 3, meaning they were actively practicing the SDL.
+
+Limitations We recruited survey participants based on their involvement in a joint research project focused on automating compliance with the IEC 62443 series of standards. Additional participants were invited through recommendations from those already involved. All participating companies were predominantly based in Northern Europe, which may limit the generalizability of the findings to all industrial manufacturers subject to the CRA.
+
+Another limitation is the small sample size of 12 companies, which makes it inappropriate to draw statistically significant conclusions. This limitation highlights the qualitative nature of our study, which is primarily descriptive and exploratory rather than statistically validated.

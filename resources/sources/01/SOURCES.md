@@ -10,6 +10,14 @@ Hardening excerpts fetched 2026-09-03:
 - `excerpts/01-data-examples.txt` — European Commission, fetched 2026-09-03. URL: https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained. Claims: `01-data-examples`.
 - `excerpts/01-data-duty.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-duty`.
 - `excerpts/01-data-dates.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-dates`.
+- `excerpts/01-data-secrets.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-secrets`.
+- `excerpts/01-survey-sample.txt` — arXiv (Roosa Risto, Mohit Sethi and Mika Katara), fetched 2026-09-03. URL: https://arxiv.org/html/2505.14325v2. Claims: `01-survey-sample`.
+- `excerpts/01-survey-pain.txt` — arXiv (Roosa Risto, Mohit Sethi and Mika Katara), fetched 2026-09-03. URL: https://arxiv.org/html/2505.14325v2. Claims: `01-survey-pain`.
+- `excerpts/01-survey-budget.txt` — arXiv (Roosa Risto, Mohit Sethi and Mika Katara), fetched 2026-09-03. URL: https://arxiv.org/html/2505.14325v2. Claims: `01-survey-budget`.
+- `excerpts/01-onekey.txt` — ONEKEY, fetched 2026-09-03. URL: https://www.onekey.com/platform-overview. Claims: `01-onekey`.
+- `excerpts/01-cybellum.txt` — Cybellum, fetched 2026-09-03. URL: https://cybellum.com/platform/. Claims: `01-cybellum`.
+- `excerpts/01-cracowi.txt` — ONEKEY / CRACoWi, fetched 2026-09-03. URL: https://www.onekey.com/cracowi. Claims: `01-cracowi`.
+- `excerpts/01-standards.txt` — CEN and CENELEC, fetched 2026-09-03. URL: https://wp2026.cencenelec.eu/sectors-list/digital-society/. Claims: `01-standards`.
 
 Re-fetched 2026-09-02. Vendor pages describe their own products and projects; they are used only to establish that an offer or capability is marketed, not that it performs as claimed or that buyers pay the proposed prices.
 

@@ -1,0 +1,16 @@
+URL: https://www.onekey.com/platform-overview
+Publisher: ONEKEY
+Fetch date: 2026-09-03
+Page/section: Platform overview, “Expert Guidance” and feature descriptions
+
+Expert Guidance
+
+More than a tool: Tap into the knowledge of our world-leading pentesting experts who developed this technology. With our consulting services.
+
+Easily generate, import, and monitor SBOMs in seconds. Export them in standard formats such as CycloneDX and SPDX with just a few clicks. Get a comprehensive list of your components from binary images, imports from source code scanners or merge third-party information. You can also upload your SBOM without associated sources and binaries. The platform continuously monitors for new unknown or known vulnerabilities for you – automatically.
+
+Identifying and prioritizing product firmware is time-consuming. Let the ONEKEY platform run analyses on new threats for you. Across your whole portfolio, 24/7. 365 days a year. Streamline your remediation efforts by focusing on the relevant vulnerabilities indicated by the platform and reduce your response time. Proactively protect your assets from cyber threats and drive continuous improvement in your security practices with regular, automated assessments.
+
+Save time on triaging and process thousands of Common Vulnerability Exposures (CVEs) in minutes – with our automated impact assessment. Each CVE is analyzed in the context of your firmware to determine if the given vulnerability exists and affects your product, allowing your team to focus their efforts. The platform collects evidence and attaches it to existing or eliminated CVE matches – for your review or documentation. Enjoy full transparency with an easy-to-understand match score.
+
+Meet our patent-pending ONEKEY Compliance Wizard. This virtual assistant guides you through complex standards such as the EU Cyber Resilience Act, IEC 62443, ETSI 303 645 and more. Offering dialogue-led compliance analysis and documentation. Editable panels tailor the assessments to your needs and uploaded product data is extracted automatically. You can also monitor changes, override suggestions, and maintain audit trails for simple compliance management.
