@@ -20,6 +20,12 @@ Saved excerpts audited so far:
 | `excerpts/07-spec-update.txt` | https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation | European Commission | 2026-09-03 | `07-spec-update` |
 | `excerpts/07-job-use-case.txt` | https://github.com/MinBZK/nl-wallet | Ministry of the Interior and Kingdom Relations | 2026-09-03 | `07-job-use-case` |
 | `excerpts/07-demand-gap.txt` | https://github.com/MinBZK/nl-wallet | Ministry of the Interior and Kingdom Relations | 2026-09-03 | `07-demand-gap` |
+| `excerpts/07-signicat.txt` | https://www.signicat.com/eudi-wallet-integration-checklist | Signicat | 2026-09-03 | `07-signicat` |
+| `excerpts/07-datakeeper-market.txt` | https://www.datakeeper.nl/ | Datakeeper | 2026-09-03 | `07-datakeeper-market` |
+| `excerpts/07-datakeeper-api.txt` | https://docs.developer.rabobank.com/identity-risk/reference/datakeeper-documentation | Rabobank Developer Portal | 2026-09-03 | `07-datakeeper-api` |
+| `excerpts/07-yivi.txt` | https://docs.yivi.app/openid4vp-introduction/ | Yivi | 2026-09-03 | `07-yivi` |
+| `excerpts/07-verid.txt` | https://docs.ver.id/overview/apps/wallets/introduction | Ver.iD | 2026-09-03 | `07-verid` |
+| `excerpts/07-sphereon.txt` | https://sphereon.com/sphereon-vdx-verifiable-data-exchange/ | Sphereon | 2026-09-03 | `07-sphereon` |
 
 1. **European Union, “Regulation (EU) 2024/1183.”**
    URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng

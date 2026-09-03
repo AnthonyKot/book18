@@ -18,11 +18,20 @@ No sourced number has been corrected. The changes below narrow wording to the sa
 - `07-spec-update` — stamped. The Commission status list repeats the 2026/1731 amendment under all four named subject headings.
 - `07-job-use-case` — stamped. The repository README gives the digital-diploma/job-application example verbatim.
 - `07-demand-gap` — inference. The saved factual basis is only a repository example; prose and ledger were narrowed from an unreceiptable search-wide negative to the auditable statement that the example is not payment evidence.
+- `07-signicat` — stamped. The current checklist supports the coverage numbers and service phases; its own trust-service statement supports the narrowly attributed position in the prose.
+- `07-datakeeper-market` — stamped. The company homepage ties its wallet to identification and bank data and names real estate and social housing as sectors.
+- `07-datakeeper-api` — stamped. The current developer page documents sessions, QR codes, a webhook callback and delegated multi-tenant verification.
+- `07-yivi` — stamped. The documentation labels OpenID4VP disclosure operational, identifies SD-JWT VCs and gives the verifier flow.
+- `07-verid` — stamped. The page's dated vendor status tables support the production/testing labels exactly; prose continues to label them vendor claims.
+- `07-sphereon` — stamped. The product page supports verification, trust resolution, policy application, issuer-status validation against configured trust registries and auditable decisions. Prose and ledger were narrowed from generic “status checking.”
 
 ## Prose changes
 
 - Removed “certified” from the Article 5a availability sentence.
 - Recast the payment-evidence gap as a bounded inference from the repository example rather than an unsupported claim about everything searched.
+- Added existing vendor markers to the lede's named-company landscape sentence and the relying-party marker to the customer-twenty topology.
+- Narrowed Sphereon's “status checking” to the sourced issuer-status validation against configured trust registries.
+- Replaced the unmarked Signicat “trust-service position” shorthand with the company's attributed qualified-trust-service-provider statement and a marker.
 
 ## Rows added
 

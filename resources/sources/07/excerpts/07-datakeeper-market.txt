@@ -1,9 +1,10 @@
-https://www.datakeeper.nl/
-2026-09-02
+URL: https://www.datakeeper.nl/
+Publisher: Datakeeper
+Fetch date: 2026-09-03
+Page/section: Homepage wallet description and sector links
+
 Met de Datakeeper app delen jouw klanten snel, gemakkelijk en geheel veilig precies de persoonlijke gegevens die je van ze nodig hebt.
 
 Onze wallet biedt toegang tot de gegevens van o.a. UWV, Belastingdienst, bankgegevens, etc. en combineert verschillende stappen zoals identificatie en het ondertekenen van documenten.
-
-Bied je klanten een veilige manier om aan te tonen wie ze zijn en welke gegevens bij ze horen. Onze Datakeeper app kan worden geïntegreerd in je eigen platform, wel zo veilig en vertrouwd voor je klant.
 
 Autoverhuur › Vastgoed › Sociale Woningverhuur

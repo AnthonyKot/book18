@@ -1,0 +1,16 @@
+URL: https://docs.yivi.app/openid4vp-introduction/
+Publisher: Yivi
+Fetch date: 2026-09-03
+Page/section: “OpenID4VP Introduction”; “Operational”; “How it works at a glance”
+
+OpenID for Verifiable Presentations (OpenID4VP) is an open standard that allows a verifier (relying party) to request and receive verifiable credentials from a user's wallet.
+
+As part of Yivi's journey to become a crypto agile, EUDI-compliant wallet, the Yivi app supports OpenID4VP for disclosure of SD-JWT VCs alongside the existing IRMA protocol.
+
+OpenID4VP disclosure is available from Yivi app version 7.10.0 and irmago version 0.19 onwards.
+
+1. The verifier builds a DCQL query describing the credentials and claims it needs.
+2. The verifier asks its OpenID4VP server to create an authorization request. The server returns a request_uri that the Yivi app can fetch.
+3. The verifier renders a wallet link such as eudi-openid4vp://?client_id=...&request_uri=... as a QR code (or, on mobile, opens it directly).
+4. The Yivi app fetches the authorization request, verifies the verifier's X.509 certificate, asks the user to confirm, and posts a vp_token containing the requested SD-JWT VCs back to the verifier.
+5. The verifier polls its server for the result and parses the disclosed claims out of the SD-JWT VC.

@@ -1,0 +1,16 @@
+URL: https://docs.developer.rabobank.com/identity-risk/reference/datakeeper-documentation
+Publisher: Rabobank Developer Portal
+Fetch date: 2026-09-03
+Page/section: “Datakeeper API Verifier” overview; “Getting your delegated tenant ID”
+
+To request verified data from an end-user, you can create a session for them. A session is a temporary instance that holds the state of the verification process.
+
+A common flow will consist of the following steps:
+
+* First-time setup: use the /organizations/my endpoint to check your access to the tenant and retrieve the delegated tenant ID
+* Create a session starting with a POST request to /sessions
+* Get a QR-code to share with the end-user by sending a GET request to /sessions/{sessionId}/qr
+* The end-user scans the QR-code with their wallet app and completes the verification transaction, this triggers the webhook callback set on session creation
+* Get the results by sending a GET request to /verification-status/{transactionId}. Although using a webhook is recommended, it's also possible to poll this endpoint until the transaction is completed
+
+There is a multi-tenant architecture where multiple organizations can use the same Digital Identity Service Provider to do data verifications. Each tenant represents an organization, and you are required to specify on whose behalf you are requesting the data.

@@ -1,5 +1,8 @@
-https://docs.ver.id/overview/apps/wallets/introduction
-2026-09-02
+URL: https://docs.ver.id/overview/apps/wallets/introduction
+Publisher: Ver.iD
+Fetch date: 2026-09-03
+Page/section: “Production” and “Testing” tables; page review date
+
 Last reviewed: 20 August 2026.
 
 Production

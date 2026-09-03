@@ -1,0 +1,16 @@
+URL: https://sphereon.com/sphereon-vdx-verifiable-data-exchange/
+Publisher: Sphereon
+Fetch date: 2026-09-03
+Page/section: “Sphereon VDX: a verifiable data layer” and six-step product description
+
+Sphereon VDX is a verifiable data layer for policy-driven trust and audit-ready decisions. It is a deployable verifiable data exchange platform that verifies evidence, resolves trust, applies policy, and returns auditable decisions to your existing business systems.
+
+2. Verify. Checks cryptographic integrity and confirms the credential belongs to the person presenting it.
+
+3. Trust. Validates the issuer’s current status against your configured trust registries.
+
+4. Policy. Applies your custom business rules to determine whether the credential is acceptable.
+
+5. Return. Delivers a structured outcome back to your systems of record.
+
+6. Audit. Retains a tamper-evident record of every verification event.
