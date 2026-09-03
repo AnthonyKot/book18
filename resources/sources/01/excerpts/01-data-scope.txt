@@ -1,0 +1,6 @@
+URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng
+Publisher: European Union (EUR-Lex)
+Fetch date: 2026-09-03
+Page/section: Article 2(5)
+
+(5) ‘connected product’ means an item that obtains, generates or collects data concerning its use or environment and that is able to communicate product data via an electronic communications service, physical connection or on-device access, and whose primary function is not the storing, processing or transmission of data on behalf of any party other than the user;

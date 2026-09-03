@@ -1,0 +1,10 @@
+URL: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
+Publisher: European Union Agency for Cybersecurity (ENISA)
+Fetch date: 2026-09-03
+Page/section: “Single Reporting Platform (SRP)” overview
+
+The Single Reporting Platform (SRP) shall become a technical tool for the reporting of actively exploited vulnerabilities and incidents impacting products with digital elements in the EU Digital Single Market.
+
+Under the Cyber Resilience Act (CRA), manufacturers of products with digital elements are mandated to report actively exploited vulnerabilities and severe incidents having an impact on the security of the products.
+
+As of 11 September 2026 onwards, the SRP will be used by CSIRTs and manufacturers for mandatory reporting and could be used by any natural/legal persons for voluntary reporting.

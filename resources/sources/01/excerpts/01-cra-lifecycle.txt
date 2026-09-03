@@ -1,0 +1,38 @@
+URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+Publisher: European Union (EUR-Lex)
+Fetch date: 2026-09-03
+Page/section: Recital 60; Article 13(3), (8); Article 31(2); Annex I Part II(1), (5); Annex VII(2)
+
+(60) The support period for which the manufacturer ensures the effective handling of vulnerabilities should be no less than five years, unless the lifetime of the product with digital elements is less than five years, in which case the manufacturer should ensure the vulnerability handling for that lifetime.
+
+In particular, products with digital elements intended for use in industrial settings, such as industrial control systems, are often in use for significantly longer periods of time.
+
+Article 13
+
+3. The cybersecurity risk assessment shall be documented and updated as appropriate during a support period to be determined in accordance with paragraph 8 of this Article.
+
+8. Manufacturers shall ensure, when placing a product with digital elements on the market, and for the support period, that vulnerabilities of that product, including its components, are handled effectively and in accordance with the essential cybersecurity requirements set out in Part II of Annex I.
+
+Without prejudice to the second subparagraph, the support period shall be at least five years. Where the product with digital elements is expected to be in use for less than five years, the support period shall correspond to the expected use time.
+
+Article 31
+
+2. The technical documentation shall be drawn up before the product with digital elements is placed on the market and shall be continuously updated, where appropriate, at least during the support period.
+
+ANNEX I
+
+Part II Vulnerability handling requirements
+
+Manufacturers of products with digital elements shall:
+
+(1) identify and document vulnerabilities and components contained in products with digital elements, including by drawing up a software bill of materials in a commonly used and machine-readable format covering at the very least the top-level dependencies of the products;
+
+(5) put in place and enforce a policy on coordinated vulnerability disclosure;
+
+ANNEX VII
+
+CONTENTS OF THE TECHNICAL DOCUMENTATION
+
+2. a description of the design, development and production of the product with digital elements and vulnerability handling processes, including:
+
+(b) necessary information and specifications of the vulnerability handling processes put in place by the manufacturer, including the software bill of materials, the coordinated vulnerability disclosure policy, evidence of the provision of a contact address for the reporting of the vulnerabilities and a description of the technical solutions chosen for the secure distribution of updates;

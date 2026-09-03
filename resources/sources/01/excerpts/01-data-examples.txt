@@ -1,0 +1,6 @@
+URL: https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained
+Publisher: European Commission
+Fetch date: 2026-09-03
+Page/section: Chapter II, “Examples of connected products”
+
+Examples of connected products: consumer products (e.g. connected cars, health monitoring devices, smart-home devices), other products (e.g. planes, robots, industrial machines).

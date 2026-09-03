@@ -1,5 +1,16 @@
 # Essay 01 — sources
 
+Hardening excerpts fetched 2026-09-03:
+
+- `excerpts/01-cra-scope.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng. Claims: `01-cra-scope`.
+- `excerpts/01-cra-dates.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng. Claims: `01-cra-dates`.
+- `excerpts/01-srp.txt` — European Union Agency for Cybersecurity (ENISA), fetched 2026-09-03. URL: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp. Claims: `01-srp`.
+- `excerpts/01-cra-lifecycle.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng. Claims: `01-cra-lifecycle`.
+- `excerpts/01-data-scope.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-scope`.
+- `excerpts/01-data-examples.txt` — European Commission, fetched 2026-09-03. URL: https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained. Claims: `01-data-examples`.
+- `excerpts/01-data-duty.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-duty`.
+- `excerpts/01-data-dates.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-dates`.
+
 Re-fetched 2026-09-02. Vendor pages describe their own products and projects; they are used only to establish that an offer or capability is marketed, not that it performs as claimed or that buyers pay the proposed prices.
 
 1. **European Union — Regulation (EU) 2024/2847 (Cyber Resilience Act).** 23 October 2024.
