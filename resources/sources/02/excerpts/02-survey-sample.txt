@@ -1,0 +1,12 @@
+URL: https://arxiv.org/html/2505.14325v2
+Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
+Fetch date: 2026-09-03
+Page/section: Sections 3-4, “CRA and IEC 62443” and “Study Design”
+
+The IEC 62443 series of standards provides a comprehensive framework for securing industrial automation and control systems (IACS) against cybersecurity threats.
+
+Among these, the parts relevant for CRA requirements include IEC 62443-4-1, which outlines secure product development lifecycle (SDL) requirements for vendors; IEC 62443-4-2, which specifies technical security requirements for IACS components, such as controllers and software applications; and IEC 62443-3-2, which focuses on security risk assessment and system design.
+
+A total of 12 companies participated in the survey. This group included seven large companies (with over 500 employees) that manufacture industrial equipment such as cranes, elevators, and machinery for the shipping and mining industries. The remaining five companies were consultancies or partner organizations providing software and support services to the large industrial equipment manufacturers we surveyed.
+
+All of the industrial equipment manufacturing companies interviewed had already established an internal SDL compliant with IEC 62443-4-1, and a few of them had reached Maturity Level 3, meaning they were actively practicing the SDL.

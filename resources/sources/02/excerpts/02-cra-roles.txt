@@ -1,0 +1,18 @@
+URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+Publisher: European Union (EUR-Lex)
+Fetch date: 2026-09-03
+Page/section: Articles 21-22
+
+Article 21
+
+Cases in which obligations of manufacturers apply to importers and distributors
+
+An importer or distributor shall be considered to be a manufacturer for the purposes of this Regulation and shall be subject to Articles 13 and 14, where that importer or distributor places a product with digital elements on the market under its name or trademark or carries out a substantial modification of a product with digital elements already placed on the market.
+
+Article 22
+
+Other cases in which obligations of manufacturers apply
+
+1. A natural or legal person, other than the manufacturer, the importer or the distributor, that carries out a substantial modification of a product with digital elements and makes that product available on the market, shall be considered to be a manufacturer for the purposes of this Regulation.
+
+2. The person referred to in paragraph 1 of this Article shall be subject to the obligations set out in Articles 13 and 14 for the part of the product with digital elements that is affected by the substantial modification or, if the substantial modification has an impact on the cybersecurity of the product with digital elements as a whole, for the entire product.

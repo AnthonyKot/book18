@@ -1,0 +1,20 @@
+URL: https://arxiv.org/abs/2505.14325 and https://arxiv.org/html/2505.14325v2
+Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
+Fetch date: 2026-09-03
+Page/section: Submission history; Section 4, “Study Design”; Section 5, “Challenges”
+
+[Submitted on 20 May 2025 (v1), last revised 11 Oct 2025 (this version, v2)]
+
+Between June and August 2024, we conducted a survey to gather insights into the compliance challenges faced by industrial equipment manufacturing companies.
+
+As shown in figure 3, survey participants identified security management, secure by design, and security update management practices as the most challenging.
+
+Another significant issue was identifying and allocating responsibilities, as organizational structures often do not align with the process structures outlined in the standard.
+
+Additionally, the practice mandates ensuring adequate security expertise and it was seen as a challenge, with participants citing a perceived shortage of qualified cybersecurity professionals.
+
+Interestingly, participants did not report difficulties with the more technical controls within the security management practice 1, such as SM-6 (file integrity) or SM-8 (controls for private keys), suggesting that technical controls are generally perceived as less challenging compared to organizational and procedural aspects.
+
+Participants were also uncertain whether their vulnerability management processes and tools were sufficiently mature to meet CRA expectations.
+
+Similarly, vulnerability notification requirements were also highlighted as a significant challenge, as many participants had little prior experience with such practices. The CRA deadline of notifying within 24 hours of an actively exploited vulnerability was perceived as stringent. Some participants even expressed doubts about their ability to detect actively exploited vulnerabilities promptly.

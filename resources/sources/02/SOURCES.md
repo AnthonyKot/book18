@@ -1,10 +1,10 @@
 # Essay 02 — sources
 
-Accessed and re-fetched 2026-09-02. Partner and vendor pages are first-party descriptions. They establish that structures and capabilities are offered; they do not establish independent outcomes, margins, retention or the proposed model prices.
+Accessed and re-fetched 2026-09-03. Partner and vendor pages are first-party descriptions. They establish that structures and capabilities are offered; they do not establish independent outcomes, margins, retention or the proposed model prices. Each claim below names its saved excerpt.
 
 1. **European Union — Regulation (EU) 2024/2847 (Cyber Resilience Act).** 23 October 2024.
    https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
-   Supports: reporting and main application dates; vulnerability, risk and documentation workload; circumstances in which other economic operators take manufacturer obligations. Claims `02-cra-dates`, `02-cra-work`, `02-cra-roles`.
+   Fetch date: 2026-09-03. Supports: reporting and main application dates; vulnerability, risk and documentation workload; circumstances in which other economic operators take manufacturer obligations; the subcontract-role inference. Claims `02-cra-dates` (`excerpts/02-cra-dates.txt`), `02-cra-work` (`excerpts/02-cra-work.txt`), `02-cra-roles` (`excerpts/02-cra-roles.txt`), `02-subcontract-role` (`excerpts/02-subcontract-role.txt`).
 
 2. **European Commission — Cyber Resilience Act: reporting obligations.** Current implementation summary.
    https://digital-strategy.ec.europa.eu/en/policies/cra-reporting
@@ -16,7 +16,7 @@ Accessed and re-fetched 2026-09-02. Partner and vendor pages are first-party des
 
 4. **Roosa Risto, Mohit Sethi and Mika Katara — “Effects of the Cyber Resilience Act (CRA) on Industrial Equipment Manufacturing Companies.”** 20 May 2025.
    https://arxiv.org/html/2505.14325v2
-   Supports: the 2024 survey period, 2025 first publication, sample limitations, IEC 62443-4-1 alignment and reported implementation pain. Claims `02-survey-pain`, `02-survey-sample`.
+   Fetch date: 2026-09-03. Supports: the 2024 survey period, 2025 first arXiv posting, sample composition, IEC 62443-4-1 alignment and reported implementation pain. Claims `02-survey-pain` (`excerpts/02-survey-pain.txt`), `02-survey-sample` (`excerpts/02-survey-sample.txt`).
 
 5. **Hard2bit — Cybersecurity partner programme.** Current vendor page.
    https://hard2bit.com/en/partners/
