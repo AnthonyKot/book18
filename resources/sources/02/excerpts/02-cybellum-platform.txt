@@ -1,0 +1,26 @@
+URL: https://cybellum.com/platform/
+Publisher: Cybellum
+Fetch date: 2026-09-03
+Page/section: “The Product Security Platform” and lifecycle feature descriptions
+
+Create, merge and validate complete SBOMs & assets, detect and triage risks & vulnerabilities, integrate with threat models and security tests, and automate evidence creation for regulatory submissions. All from one AI-driven product security platform.
+
+Product Risk Management
+
+Surface the most critical issues and make more informed decisions with a centralized dashboard purpose-built for product security managers
+
+Product Cyber Compliance
+
+Automate and manage evidence creation for cybersecurity regulatory submissions
+
+Product Assurance & Vulnerability Management
+
+Manage and triage risks & vulnerabilities in the context of your devices
+
+Product Incident Response
+
+Get contextual alerts and facilitate thorough investigations in post production
+
+Product Asset & SBOM Management
+
+Create and manage reliable, complete assets & SBOMs from multiple sources, merge, auto-fix and validate SBOMs, and track the process across BUs

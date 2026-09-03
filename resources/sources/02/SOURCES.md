@@ -20,23 +20,23 @@ Accessed and re-fetched 2026-09-03. Partner and vendor pages are first-party des
 
 5. **Hard2bit — Cybersecurity partner programme.** Current vendor page.
    https://hard2bit.com/en/partners/
-   Supports: offered white-label/co-branded/referral structure, partner control, unpublished negotiated margins, credential ownership and direct-contracting boundary. Claims `02-hard2bit-model`, `02-hard2bit-credentials`.
+   Fetch date: 2026-09-03. Supports: offered white-label/co-branded/referral structure, partner control, unpublished negotiated margins, credential ownership and direct-contracting boundary. Claims `02-hard2bit-model` (`excerpts/02-hard2bit-model.txt`), `02-hard2bit-credentials`.
 
 6. **Cybellum — Partner programme.** Current vendor page.
    https://cybellum.com/partners/
-   Supports: a marketed solution-provider programme combining partner services with Cybellum's platform. Claim `02-cybellum-partners`; used in Reading.
+   Fetch date: 2026-09-03. Supports: a marketed solution-provider programme combining partner services with Cybellum's platform. Claim `02-cybellum-partners` (`excerpts/02-cybellum-partners.txt`); used in Reading.
 
 7. **Cybellum and Hitachi Solutions — “Hitachi & Cybellum Provide PLM Security Solutions in Japan.”** 8 November 2023.
    https://cybellum.com/blog/hitachi-solutions-and-cybellum-to-provide-plm-security-solutions-in-japan/
-   Supports: a first-party announcement of a planned service combining consultancy and PSIRT capability with product-security technology. It does not establish adoption or economics. Claim `02-cybellum-channel`.
+   Fetch date: 2026-09-03. Supports: a first-party announcement of a planned service combining consultancy and PSIRT capability with product-security technology. It does not establish adoption or economics. Claim `02-cybellum-channel` (`excerpts/02-cybellum-channel.txt`).
 
 8. **Cybellum — Product Security Platform.** Current vendor page.
    https://cybellum.com/platform/
-   Supports: marketed SBOM, risk, vulnerability, incident-response and evidence capabilities. Claim `02-cybellum-platform`.
+   Fetch date: 2026-09-03. Supports: marketed SBOM, risk, vulnerability, incident-response and evidence capabilities. Claim `02-cybellum-platform` (`excerpts/02-cybellum-platform.txt`).
 
 9. **ONEKEY — Platform overview.** Current vendor page.
    https://www.onekey.com/platform-overview
-   Supports: marketed product analysis, vulnerability monitoring, compliance workflow and consulting. Claim `02-onekey`.
+   Fetch date: 2026-09-03. Supports: marketed product analysis, vulnerability monitoring, compliance workflow and consulting. Claim `02-onekey` (`excerpts/02-onekey.txt`).
 
 10. **CEN and CENELEC — 2026 Work Programme, Digital Society.** 2026.
     https://wp2026.cencenelec.eu/sectors-list/digital-society/

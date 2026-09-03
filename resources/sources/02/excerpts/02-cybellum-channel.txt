@@ -1,0 +1,14 @@
+URL: https://cybellum.com/blog/hitachi-solutions-and-cybellum-to-provide-plm-security-solutions-in-japan/
+Publisher: Cybellum and Hitachi Solutions
+Fetch date: 2026-09-03
+Page/section: Announcement dated 8 November 2023; “Features of PLM security solution”
+
+Cybellum, creators of the award-winning Product Security Platform, and Hitachi Solutions, a leading Japanese IT distributor that provides a full range of IT security products and services to midsize and enterprise-level customers, announced today its partnership to provide PLM security solutions in Japan.
+
+Hitachi Solutions has been offering Product Incident Response Team (PSIRT) implementation for organizational setup and process development, consulting services for security measure integration into product design, and security libraries for implementation of security functionalities.
+
+Working with Cybellum, Hitachi Solutions will now add highly accurate vulnerability management capabilities and expand their consulting services to encompass compliance support for the Cyber Resilience Act and product lifecycle support with their PLM security solution.
+
+PSIRT Construction Consulting– This partnership will provide guidance on establishing the incident response process and security assurance procedures required for a PSIRT.
+
+Real-time Vulnerability Monitoring– Continuously monitor software vulnerabilities against the latest vulnerability databases, promptly alerting teams of potential security threats.
