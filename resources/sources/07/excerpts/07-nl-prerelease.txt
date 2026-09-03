@@ -1,5 +1,8 @@
-https://github.com/MinBZK/nl-wallet/releases
-2026-09-02
+URL: https://github.com/MinBZK/nl-wallet/releases
+Publisher: Ministry of the Interior and Kingdom Relations (GitHub repository)
+Fetch date: 2026-09-03
+Page/section: “Wallet 0.5.0” release
+
 Wallet 0.5.0
 
 Pre-release

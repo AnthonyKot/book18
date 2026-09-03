@@ -1,16 +1,27 @@
-https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0848
-2026-09-02
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0848
+Publisher: Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Articles 3–8 and 11
+
 Article 3
+
+National registers
 
 1. Member States shall establish and maintain at least one national register of wallet-relying parties with information regarding registered wallet-relying parties established in that Member State.
 
 4. Member States shall make the information set out in Annex I on registered wallet-relying parties publicly available online, both in human-readable form and in a form suitable for automated processing.
 
+5. The information referred to in paragraph 2 shall be available through a single common application programming interface (‘API’) and through a national website. It shall be electronically signed or sealed by or on behalf of the registrar, in accordance with the common requirements for a single API set out in Section 1 of Annex II.
+
 Article 4
+
+Registration policies
 
 1. Member States shall lay down and publish one or more national registration policies applicable to the national registers established in their territory.
 
 Article 5
+
+Information to be provided to the national registers
 
 2. Wallet-relying parties shall ensure that the information provided is accurate at the time of registration.
 
@@ -18,24 +29,38 @@ Article 5
 
 Article 6
 
+Registration processes
+
 1. Registrars shall establish easy to use electronic, and where possible, automated registration processes for wallet-relying parties.
 
-3. Where possible, registrars shall verify in an automated manner: (a) the accuracy, validity, authenticity and integrity of the information required under Article 5; (b) where applicable, the power of attorney of representatives of the wallet-relying parties; (c) the type of entitlement or entitlements of the wallet-relying parties; (d) the absence of an existing registration in another national register.
+3. Where possible, registrars shall verify in an automated manner:
+
+(a) the accuracy, validity, authenticity and integrity of the information required under Article 5;
+
+(b) where applicable, the power of attorney of representatives of the wallet-relying parties drawn up and submitted in accordance with the laws and procedures of the Member State where the national register is established;
+
+(c) the type of entitlement or entitlements of the wallet-relying parties as set out in Annex I;
+
+(d) the absence of an existing registration in another national register.
 
 4. Registrars shall verify the information set out in paragraph 3 against the supporting documentation provided by the wallet-relying parties or against appropriate authentic sources or other official electronic records in the Member State where the national register is established and to which the registrars have access in accordance with the applicable national laws and procedures.
 
 5. The verification of entitlements of wallet-relying parties referred to in paragraph 3, point (c) shall be carried out in accordance with Annex III.
 
-6. Where the registrar cannot verify the information in accordance with paragraphs 3 to 5, the registrar shall reject the registration.
-
 Article 7
+
+Wallet-relying party access certificates
 
 1. Member States shall authorise at least one certificate authority to issue wallet-relying party access certificates.
 
 Article 8
 
+Wallet-relying party registration certificates
+
 1. Member States may authorise at least one certificate authority to issue wallet-relying party registration certificates.
 
-Article 10
+Article 11
+
+Entry into force
 
 It shall apply from the 24 December 2026.

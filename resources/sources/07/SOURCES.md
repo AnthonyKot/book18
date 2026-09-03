@@ -13,6 +13,13 @@ Saved excerpts audited so far:
 | `excerpts/07-acceptance-scope.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-acceptance-scope` |
 | `excerpts/07-private-list.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-private-list` |
 | `excerpts/07-target-not-automatic.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-target-not-automatic` |
+| `excerpts/07-rp-duties.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-rp-duties` |
+| `excerpts/07-registration-act.txt` | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0848 | Official Journal of the European Union | 2026-09-03 | `07-registration-act` |
+| `excerpts/07-nl-status.txt` | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/id-wallet/ | Digitale Overheid (Dutch Digital Government) | 2026-09-03 | `07-nl-status` |
+| `excerpts/07-nl-prerelease.txt` | https://github.com/MinBZK/nl-wallet/releases | Ministry of the Interior and Kingdom Relations | 2026-09-03 | `07-nl-prerelease` |
+| `excerpts/07-spec-update.txt` | https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation | European Commission | 2026-09-03 | `07-spec-update` |
+| `excerpts/07-job-use-case.txt` | https://github.com/MinBZK/nl-wallet | Ministry of the Interior and Kingdom Relations | 2026-09-03 | `07-job-use-case` |
+| `excerpts/07-demand-gap.txt` | https://github.com/MinBZK/nl-wallet | Ministry of the Interior and Kingdom Relations | 2026-09-03 | `07-demand-gap` |
 
 1. **European Union, “Regulation (EU) 2024/1183.”**
    URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng

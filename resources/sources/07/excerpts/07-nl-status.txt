@@ -1,5 +1,9 @@
-https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/id-wallet/
-2026-09-02
+URL: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/id-wallet/
+Resolved URL: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/edi-wallet/
+Publisher: Digitale Overheid (Dutch Digital Government)
+Fetch date: 2026-09-03
+Page/section: “Publieke NL-wallet”
+
 De Nederlandse overheid ontwikkelt een nationale versie: de publieke NL-wallet. Deze is nog in ontwikkeling en komt later beschikbaar, omdat de benodigde nationale wetgeving (de uitvoeringswet) nog wordt voorbereid.
 
 Nationale wetgeving (de uitvoeringswet) is in voorbereiding om het EDI-stelsel, inclusief de publieke NL-wallet, in Nederland te laten werken. Naar verwachting wordt deze eind 2026 ter openbare consultatie aangeboden en daarna volgt het verdere wetgevingstraject.

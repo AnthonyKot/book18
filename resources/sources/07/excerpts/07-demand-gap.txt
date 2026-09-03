@@ -1,5 +1,8 @@
-https://github.com/MinBZK/nl-wallet
-2026-09-02
+URL: https://github.com/MinBZK/nl-wallet
+Publisher: Ministry of the Interior and Kingdom Relations (GitHub repository)
+Fetch date: 2026-09-03
+Page/section: README, “For example”
+
 For example:
 
 * Showing you are over 18 without sharing your full date of birth.

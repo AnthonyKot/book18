@@ -1,5 +1,8 @@
-https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation
-2026-09-02
+URL: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation
+Publisher: European Commission
+Fetch date: 2026-09-03
+Page/section: Implementing Acts status list — “Protocols and interfaces to be supported”; “Trust framework”; “Personal identification data and electronic attestations of attributes”; “Integrity and core functionalities”
+
 Protocols and interfaces to be supported
 
 Adopted
