@@ -1,0 +1,18 @@
+URL: https://www.domino-printing.com/en-us/products/r-series
+Publisher: Domino Printing Sciences; PackCheck; Vision Partners
+Fetch date: 2026-09-03
+Page/section: Product-capability sentences underlying the lede inference. Additional URLs: https://packcheck.nl/vitrack-platform/ ; https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/
+
+Domino:
+
+Domino offers an extensive range of pre-configured cameras and lighting, with brackets to remove complexity, which can be easily integrated with Domino printers.
+
+PackCheck:
+
+Directe afkeur: Stuurt uitwerpsystemen (rejectors) feilloos aan bij elk gedetecteerd defect.
+
+Het Dashboard verbindt alle inspectiepunten in je fabriek. Geen losse systemen meer, maar één web-based omgeving waar je volledige controle hebt over je kwaliteit en data.
+
+Vision Partners:
+
+Integration with production line PLC possible

@@ -27,6 +27,12 @@ No source contradiction requiring a numeric correction has been found.
 - `03-machinery-date` — stamped; official correction 10 changes Article 54’s application date to 20 January 2027.
 - `03-substantial-mod` — stamped; Article 18 imposes manufacturer and conformity-assessment obligations on the person making a substantial modification.
 - `03-prices` — inference; a saved essay-model excerpt records the explicit hurdle labels and the model figures.
+- `03-stat-test` — inference; the excerpt records the independent-holdout design, counts, confidence reporting, thresholds and correlation caveat as author-designed protocol.
+- `03-liability-boundary` — inference; the excerpt records the proposed allocations, indemnities, caps and insurance requirement as unobserved design terms.
+- `03-liability-stress` — inference; the excerpt records the model basis and both arithmetic stress cases as non-forecast design tests.
+- `03-prospect-list` — inference; the excerpt records the ten names and the express disclaimer of line fit or intent.
+- `03-lede-competition` — inference (row added); saved Domino, PackCheck and Vision Partners capability sentences support the narrowed lede’s substitute claim.
+- `03-adjacent-substitutes` — inference (row added); saved PackCheck and EVIS menus support referring broader packaging-inspection scope.
 
-Prose changes: none in this batch.
-Rows added: none in this batch.
+Prose changes: narrowed the lede from unnamed plural vendor categories to three evidenced vendors; replaced the unsupported “all five inspections” referral with the vendors’ published broader menus; reframed assumed substitutes as hypotheses for the diagnostic; removed the unauditable claim that no comparable public Dutch price was found; moved model and liability markers beside the governed numbers and terms.
+Rows added: `03-lede-competition`, `03-adjacent-substitutes`.

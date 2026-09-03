@@ -52,6 +52,12 @@ Accessed 2026-09-03. Vendor statements below document current product positionin
 - `excerpts/03-machinery-date.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1230R%2801%29); serves `03-machinery-date`.
 - `excerpts/03-substantial-mod.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1230); serves `03-substantial-mod`.
 - `excerpts/03-prices.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-prices`.
+- `excerpts/03-stat-test.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-stat-test`.
+- `excerpts/03-liability-boundary.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-liability-boundary`.
+- `excerpts/03-liability-stress.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-liability-stress`.
+- `excerpts/03-prospect-list.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-prospect-list`.
+- `excerpts/03-lede-competition.txt` — Domino Printing Sciences, PackCheck and Vision Partners; fetched 2026-09-03; primary [URL](https://www.domino-printing.com/en-us/products/r-series) with additional URLs in the excerpt; serves `03-lede-competition`.
+- `excerpts/03-adjacent-substitutes.txt` — PackCheck and Vision Partners; fetched 2026-09-03; primary [URL](https://packcheck.nl/vitrack-platform/) with the additional URL in the excerpt; serves `03-adjacent-substitutes`.
 
 ## Deliberately not used as market facts
 

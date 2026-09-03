@@ -1,0 +1,10 @@
+URL: author-model
+Publisher: The Second Engine, essay 03
+Fetch date: 2026-09-03
+Page/section: “How the cell works—and how it is accepted” (author-designed validation protocol underlying inference)
+
+Quality and the partner hold an untouched image set after recipe and threshold freeze. Its packs come from production runs separate from tuning data. Conditions cover every approved film and code format at nominal and maximum speed.
+
+Factory acceptance requires 250 holdout images for every defect-class and declared-condition combination, plus 1,500 good images per condition. Site acceptance runs 100 independently prepared challenge packs for every combination through trigger, tracking and confirmed reject. A 10,000-good-pack run spans all conditions without bypass. The report gives counts, denominators and exact one-sided 95% upper bounds separately for false accepts and false rejects, by class and condition.
+
+The gates are zero false accepts and a false-reject upper bound no higher than 0.2%. These samples are design hurdles, not proof of zero field risk. Images from one production run are correlated and not counted as independent trials.

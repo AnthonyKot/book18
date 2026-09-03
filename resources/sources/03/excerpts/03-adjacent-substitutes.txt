@@ -1,0 +1,24 @@
+URL: https://packcheck.nl/vitrack-platform/
+Publisher: PackCheck; Vision Partners
+Fetch date: 2026-09-03
+Page/section: Published inspection menus underlying the referral inference. Additional URL: https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/
+
+PackCheck:
+
+Foutloze inspectie: Directe controle op THT-data (OCR), barcodes, allergenen en etiketten.
+
+Aanwezigheidscontrole: Controleert of doppen, zegels en actielabels correct zijn aangebracht.
+
+Sealcontrole: Detecteert productresten in de sealrand om lekkages en bederf te voorkomen.
+
+Vision Partners:
+
+Possible applications label control with EVIS
+
+Label
+
+(Bar) code
+
+Text
+
+Seal
