@@ -1,6 +1,6 @@
 # Essay 3 — source index
 
-Accessed 2026-09-02. Vendor statements below document current product positioning and capabilities; they are not treated as independent proof of performance or customer savings.
+Accessed 2026-09-03. Vendor statements below document current product positioning and capabilities; they are not treated as independent proof of performance or customer savings. Each claim below has a verbatim saved excerpt in `excerpts/`.
 
 ## Law and official guidance
 
@@ -24,6 +24,15 @@ Accessed 2026-09-02. Vendor statements below document current product positionin
 12. **Videojet-Laetus, inline vision systems.** [Product page and specifications](https://www.videojet.com/us/homepage/products/vision-systems.html). Supports claims about OCR/OCV, best-before and lot inspection, printer synchronisation, SKU control, lighting options and IP67 camera specification.
 13. **PackCheck, Vi-Track Platform.** [Product page](https://packcheck.nl/vitrack-platform/) and [company/customer page](https://packcheck.nl/). Supports the current Dutch competitive product description and PackCheck’s published Vezet customer account.
 14. **Vision Partners, EVIS Label Packaging Inspection System.** [Product page](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/). Supports the current Dutch competitive product description: date/barcode/text/seal inspection and MES/PLC/label-software integration.
+
+## Saved excerpt register
+
+- `excerpts/03-date-duty.txt` — NVWA; fetched 2026-09-03; [URL](https://www.nvwa.nl/onderwerpen/voedselveiligheid/etikettering-van-levensmiddelen/houdbaarheidsdatum-levensmiddelen); serves `03-date-duty`.
+- `excerpts/03-lot-duty.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/eli/dir/2011/91/oj/eng); serves `03-lot-duty`.
+- `excerpts/03-trace-withdraw.txt` — Official Journal of the European Communities / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32002R0178); serves `03-trace-withdraw`.
+- `excerpts/03-real-warning.txt` — NVWA; fetched 2026-09-03; [URL](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps); serves `03-real-warning`.
+- `excerpts/03-no-budget-proof.txt` — NVWA; fetched 2026-09-03; [URL](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps); serves `03-no-budget-proof`.
+- `excerpts/03-hygiene-law.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng); serves `03-hygiene-law`.
 
 ## Deliberately not used as market facts
 
