@@ -35,17 +35,17 @@ Fetched 2026-09-03. Vendor pages support only the described product or service s
 7. **ERIKS, “Total Cost of Ownership.”**
    URL: https://eriks.com/be/nl/oplossingen/engineering-maatwerkoplossingen/tco-total-cost-of-ownership
    Publisher: ERIKS. Fetch date: 2026-09-03. Excerpt: `excerpts/04-eriks-offer.txt`.
-   Supports: ERIKS's description of sensor- and data-analysis-based Smart Asset Management providing real-time machine-fleet insight (`04-eriks-offer`). This current official page replaces the former redirecting receipt; the team-composition wording was removed.
+   Supports: ERIKS's description of sensor- and data-analysis-based Smart Asset Management providing real-time machine-fleet insight (`04-eriks-offer`).
 
 8. **VIBRO, company and services page.**
    URL: https://vibro.nl/en/
    Publisher: VIBRO. Fetch date: 2026-09-03. Excerpt: `excerpts/04-vibro-offer.txt`.
-   Supports: Dutch specialist services in condition monitoring, telemonitoring, vibration analysis, advice and calibration (`04-vibro-offer`).
+   Supports: specialist services in condition monitoring, telemonitoring, vibration analysis, advice and calibration (`04-vibro-offer`).
 
 9. **Istec, company and services page.**
    URL: https://www.istec.com/
    Publisher: Istec. Fetch date: 2026-09-03. Excerpt: `excerpts/04-istec-offer.txt`.
-   Supports: Dutch vibration-monitoring hardware, certified expertise and analysis capability (`04-istec-offer`).
+   Supports: vibration-monitoring hardware, certified expertise and analysis capability (`04-istec-offer`).
 
 10. **Microsoft, “Save a workbook in another file format.”**
     URL: https://support.microsoft.com/en-us/office/save-a-workbook-in-another-file-format-6a16c862-4a36-48f9-a300-c2ca0065286e

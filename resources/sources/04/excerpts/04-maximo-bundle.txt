@@ -3,6 +3,8 @@ Publisher: IBM
 Fetch date: 2026-09-03
 Page/section: Built for modern maintenance operations — Condition-Based Maintenance, Predictive Maintenance, Reliability-Centered Maintenance and Prescriptive Asset Intelligence; AI agents — Condition Insight and Alert Insights
 
+IBM Maximo Asset Performance Management extends Maximo’s enterprise asset management capabilities with asset health monitoring, reliability engineering, predictive analytics, and AI-embedded decision support.
+
 Monitor asset health in real time using operational, IoT, inspection, maintenance, and quality data.
 
 By leveraging historical asset health data, operating conditions, failure patterns, and machine learning models, organizations can forecast emerging issues and estimate when assets will no longer perform optimally.
