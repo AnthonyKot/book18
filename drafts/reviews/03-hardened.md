@@ -8,6 +8,13 @@ No source contradiction requiring a numeric correction has been found.
 - `03-real-warning` — stamped; the 19 December 2025 NVWA warning gives the missing and incorrect dates and says the products were sold.
 - `03-no-budget-proof` — inference; the warning supports the escape/consequence fact but contains no purchasing evidence.
 - `03-hygiene-law` — stamped; Annex II Chapters I and V state the cited cleaning, disinfection and installation requirements.
+- `03-ehedg-principles` — stamped; the EHEDG session description expressly names all five principles (using “draining ability” for drainability).
+- `03-iso-hygiene` — stamped; ISO’s catalogue gives the published/current status, revision stage and machinery-hygiene scope.
+- `03-cognex-ocr` — stamped; page 6 gives the food-and-beverage lot/expiration-code example on uneven surfaces.
+- `03-cognex-spec` — stamped; Cognex’s image-sensor table lists monochrome models and global shutters.
+- `03-cognex-system` — stamped; the specification rows support the I/O, two-port networking and conditional IP67 wording.
+- `03-global-shutter` — stamped; Cognex describes sequential rolling-shutter exposure/distortion and all-at-once global exposure.
+- `03-exposure-motion` — stamped; Cognex links shorter exposure to stopping motion and documents an external-strobe mode.
 
 Prose changes: none in this batch.
 Rows added: none in this batch.

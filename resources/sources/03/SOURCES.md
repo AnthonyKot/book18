@@ -33,6 +33,13 @@ Accessed 2026-09-03. Vendor statements below document current product positionin
 - `excerpts/03-real-warning.txt` — NVWA; fetched 2026-09-03; [URL](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps); serves `03-real-warning`.
 - `excerpts/03-no-budget-proof.txt` — NVWA; fetched 2026-09-03; [URL](https://www.nvwa.nl/documenten/2025/12/19/veiligheidswaarschuwing-upfront-pitas-en-wraps); serves `03-no-budget-proof`.
 - `excerpts/03-hygiene-law.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng); serves `03-hygiene-law`.
+- `excerpts/03-ehedg-principles.txt` — EHEDG; fetched 2026-09-03; [URL](https://www.ehedg.org/congress-2026/programm-sessions/speakers/session/day1-main-stage-jurgen-hoffman); serves `03-ehedg-principles`.
+- `excerpts/03-iso-hygiene.txt` — ISO; fetched 2026-09-03; [URL](https://www.iso.org/standard/23748.html); serves `03-iso-hygiene`.
+- `excerpts/03-cognex-ocr.txt` — Cognex; fetched 2026-09-03; [URL](https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf); serves `03-cognex-ocr`.
+- `excerpts/03-cognex-spec.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2); serves `03-cognex-spec`.
+- `excerpts/03-cognex-system.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm); serves `03-cognex-system`.
+- `excerpts/03-global-shutter.txt` — Cognex; fetched 2026-09-03; [URL](https://www.cognex.com/en-nl/what-is/machine-vision/machine-vision-hardware-components); serves `03-global-shutter`.
+- `excerpts/03-exposure-motion.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/isvidi_150/web/EN/Help_ISViDi/Content/Topics/Spreadsheet/VisionTools/AcquireImage.htm); serves `03-exposure-motion`.
 
 ## Deliberately not used as market facts
 

@@ -1,0 +1,16 @@
+URL: https://docs.cognex.com/isvs_2530/web/EN/is3800-manual/Content/Topics/specifications/imager-3800.htm?TocPath=Specifications%7C_____2
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: “In-Sight 3800 Series Vision System Image Sensor”, image-sensor table
+
+Specification: IS3801M; IS3803M; IS3805M
+
+Bit Depth: 8-bit monochrome; 8-bit monochrome; 8-bit monochrome
+
+Sensor Type: 1/2.3" CMOS, global shutter; 1/1.8" CMOS, global shutter; 2/3" CMOS, global shutter
+
+Specification: IS3808M; IS3812M; IS3816M
+
+Bit Depth: 8-bit monochrome; 8-bit monochrome; 8-bit monochrome
+
+Sensor Type: 2/3" CMOS, global shutter; 1/1.1" CMOS, global shutter; 1.1" CMOS, global shutter

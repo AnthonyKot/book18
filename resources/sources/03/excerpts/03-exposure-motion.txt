@@ -1,0 +1,8 @@
+URL: https://docs.cognex.com/isvidi_150/web/EN/Help_ISViDi/Content/Topics/Spreadsheet/VisionTools/AcquireImage.htm
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: AcquireImage inputs, “Exposure (ms)” and “Illumination”
+
+Exposure (ms): Defines the exposure time. When the device receives an image acquisition trigger signal, light is integrated into the image sensor array for the specified duration. Shorter durations are better suited for stopping motion, but may require larger lens apertures or higher Gain settings to achieve sufficient image intensity.
+
+External Illumination: If an external light is connected to the vision system's LIGHT connector, select the External Illumination to specify the light settings for the external strobe or continuous lighting device.

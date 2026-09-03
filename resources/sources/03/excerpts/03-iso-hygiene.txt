@@ -1,0 +1,20 @@
+URL: https://www.iso.org/standard/23748.html
+Publisher: International Organization for Standardization (ISO)
+Fetch date: 2026-09-03
+Page/section: ISO 14159:2002, status, abstract and general information
+
+Published (Edition 1, 2002)
+
+This publication was last reviewed and confirmed in 2018. Therefore this version remains current.
+
+Expected to be replaced by ISO/DIS 14159 within the coming months.
+
+Abstract
+
+This International Standard specifies hygiene requirements of machines and provides information for the intended use to be provided by the manufacturer. It applies to all types of machines and associated equipment used in applications where hygiene risks to the consumer of the product can occur.
+
+General information
+
+Status: Published
+
+Stage: International Standard to be revised [90.92]

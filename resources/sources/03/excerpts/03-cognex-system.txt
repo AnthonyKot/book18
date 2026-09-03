@@ -1,0 +1,12 @@
+URL: https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: “In-Sight 3800 Series Vision System”, specifications table
+
+Discrete Inputs: 1 opto-isolated, acquisition trigger input. Up to 3 general-purpose inputs when connected to the Breakout cable.
+
+Discrete Outputs: Up to 4 high-speed outputs when connected to the Breakout cable.
+
+Network Communication: 2 Ethernet ports, 10/100/1000 BaseT with auto MDIX. IEEE 802.3 TCP/IP Protocol.
+
+Protection: IP67 with all cables properly attached (or the provided connector plug installed) and the IP67-rated cover or Multi Torch attachment properly installed.

@@ -1,0 +1,8 @@
+URL: https://www.cognex.com/en-nl/what-is/machine-vision/machine-vision-hardware-components
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: “Rolling vs. global shutters”
+
+A rolling shutter image sensor exposes lines of pixels sequentially. This kind of sensor is lower cost, but if the target being imaged is moving rapidly, the image can be distorted.
+
+A global shutter image sensor can expose all of its pixels at once.
