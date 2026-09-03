@@ -1,35 +1,39 @@
 # Essay 6 — source index
 
-Accessed 2026-09-02. Vendor pages support only their described marketing surface; they are not evidence of customer outcomes, prices or market share.
+Accessed 2026-09-03. Vendor pages support only their described marketing surface; they are not evidence of customer outcomes, prices or market share. Each entry names its saved excerpt.
 
 1. **Autoriteit Consument & Markt, “ACM: Energiehubs kunnen groepstransportovereenkomst aanvragen bij hun netbeheerder.”**
    URL: https://www.acm.nl/nl/publicaties/acm-energiehubs-kunnen-groepstransportovereenkomst-aanvragen-bij-hun-netbeheerder
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-gto-final.txt`.
    Supports: the 19 December 2025 decision, present application route, shared-capacity description and operator obligation from 1 January 2027 (`06-gto-final`).
 
 2. **Autoriteit Consument & Markt, “Codebesluit groepstransportovereenkomst,” Staatscourant 2025, 43262.**
    URL: https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
    Supports: consequences of repeated GTO breaches and ACM's explicit decision not to regulate the civil-liability allocation (`06-gto-sanctions`, `06-gto-liability`).
 
 3. **Liander, “Groepscontracten: zo werkt het.”**
    URL: https://www.liander.nl/grootzakelijk/energietransitie/samenwerken/transportovereenkomst-voor-groepen
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-liander-route.txt`.
    Supports: current Liander conditions, group process, GTV requirement and stated timing (`06-liander-route`).
 
 4. **Enexis Netbeheer, “Groepstransportovereenkomst (GTO).”**
    URL: https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpts: `excerpts/06-enexis-gto.txt`, `excerpts/06-enexis-rollout.txt`.
    Supports: GTO mechanics, EMS need, ten development sites and expected wider availability (`06-enexis-gto`, `06-enexis-rollout`).
 
 5. **Stedin, “Groepstransportovereenkomst: samen transportvermogen delen.”**
    URL: https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
    Supports: joint responsibility for the capacity limit, EMS need and Stedin's own Netburenscan (`06-stedin-hub`).
 
 6. **Autoriteit Consument & Markt, “ACM stelt maatregelen tegen netcongestie vast en publiceert uitgangspunten voor toekomstige tariefaanpassingen.”**
    URL: https://www.acm.nl/nl/publicaties/acm-stelt-maatregelen-tegen-netcongestie-vast-en-publiceert-uitgangspunten-voor-toekomstige-tariefaanpassingen
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-atr-date.txt`.
    Supports: the 19 July 2024 decision, 1 April 2025 time-block availability date and 85% duration-bound high-voltage form (`06-atr-date`).
 
 7. **Autoriteit Consument & Markt, “Voortgangsdashboard, bestuurlijke afspraken en verbeterplannen netbeheerders.”**

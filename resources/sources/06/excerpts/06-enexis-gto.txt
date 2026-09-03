@@ -1,0 +1,15 @@
+URL: https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
+Publisher: Enexis Netbeheer
+Fetch date: 2026-09-03
+Page/section: “Hoe werkt een groepstransportovereenkomst?”
+
+Hoe werkt een groepstransportovereenkomst?
+
+Als u met een groep bedrijven een GTO aangaat, behoudt u een eigen
+aansluiting op het elektriciteitsnet. De groep heeft gezamenlijk 1
+transportcontract met ons. Dit betekent dat u samen met de groep bepaalt
+hoe de beschikbare capaciteit verdeeld wordt. U maakt hier samen
+afspraken over en legt deze en andere afspraken vast in een onderlinge
+overeenkomst. Voor het verdelen van de capaciteit is een
+energiemanagementsysteem nodig om de gemaakte afspraken uit te kunnen
+voeren en binnen de groepscapaciteit te kunnen blijven.
