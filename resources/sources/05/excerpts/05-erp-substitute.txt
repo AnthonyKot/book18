@@ -1,0 +1,7 @@
+URL: https://www.circularise.com/battery-passport
+Publisher: Circularise
+Fetch date: 2026-09-03
+Page/section: “2027 readiness”, “Connect existing systems”
+
+Plan integrations with ERP, PLM, LCA, and compliance systems so the
+passport becomes a maintained record.

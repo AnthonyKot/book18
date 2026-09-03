@@ -51,6 +51,10 @@ Accessed and re-fetched 2026-09-03. Law and implementation status use EU primary
     URL: https://eur-lex.europa.eu/eli/reg/2024/1781/oj
     Supports: primary legal context for the ESPR framework cited in the reading list; the Commission DPP page supplies the concrete delegated-act and transition claim (`05-espr-framework`).
 
+13. **Circularise, “Battery Passport,” source-system integration statement.**
+    URL: https://www.circularise.com/battery-passport
+    Supports: the factual basis for the inference that a customer's source-system team could displace a separate integration layer (`05-erp-substitute`).
+
 ## Evidence boundary
 
 No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The prices, automation rate, labour minutes, workload capacity and financing bridge are explicit design hurdles. The Commission's future timetable is not treated as enacted where the referenced act had not been adopted on 2026-09-03. The ERP displacement row (`05-erp-substitute`) is an inference to test, not an externally verified product claim.
@@ -76,3 +80,8 @@ No source found establishes a market price or recurring external budget among sm
 - `excerpts/05-spherity-channel.txt` — Spherity; fetched 2026-09-03; URL: https://www.spherity.com/digital-product-passport; serves `05-spherity-channel`.
 - `excerpts/05-tuvsud-partner.txt` — TÜV SÜD; fetched 2026-09-03 from Arquivo.pt's 2025-12-24 capture; URL: https://arquivo.pt/wayback/20251224024609id_/https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation; serves `05-tuvsud-partner`.
 - `excerpts/05-tuvsud-channel-risk.txt` — TÜV SÜD; fetched 2026-09-03 from Arquivo.pt's 2025-12-24 capture; URL: https://arquivo.pt/wayback/20251224024609id_/https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation; serves inference `05-tuvsud-channel-risk`.
+- `excerpts/05-art45-second-life.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-art45-second-life`.
+- `excerpts/05-espr-not-obligations.txt` — European Commission, Green Forum; fetched 2026-09-03; URL: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en; serves inference `05-espr-not-obligations`.
+- `excerpts/05-passport-access-tiers.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-passport-access-tiers`.
+- `excerpts/05-erp-substitute.txt` — Circularise; fetched 2026-09-03; URL: https://www.circularise.com/battery-passport; serves inference `05-erp-substitute`.
+- `excerpts/05-interoperability-pressure.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves inference `05-interoperability-pressure`.

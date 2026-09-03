@@ -1,0 +1,32 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Article 77(2), PDF pages 82-83
+
+The information in the battery passport shall comprise:
+
+(a) information accessible to the general public in accordance with
+    point 1 of Annex XIII;
+
+(b) information accessible only to notified bodies, market surveillance
+    authorities and the Commission in accordance with points 2 and 3
+    of Annex XIII; and
+
+(c) information accessible only to any natural or legal person with a
+    legitimate interest in accessing and processing that information for
+    the purposes referred to in points (a) and (b) of the third subpara-
+    graph in accordance with points 2 and 4 of Annex XIII.
+
+The purposes for accessing and processing the information as referred
+to in point (c) of the second subparagraph, shall:
+
+(a) concern dismantling of the battery, including safety measures to be
+    taken during the dismantling, and the detailed composition of the
+    battery model and be essential to allow repairers, remanufacturers,
+    second-life operators and recyclers to conduct their respective
+    economic activities in accordance with this Regulation; or
+
+(b) in the case of individual batteries, be essential to the purchaser of
+    the battery or parties acting on the purchaser’s behalf, for the
+    purpose of making the individual battery available to independent
+    energy aggregators or energy market participants.

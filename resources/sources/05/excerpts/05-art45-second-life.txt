@@ -1,0 +1,26 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Article 45(1)-(2), PDF page 44
+
+Article 45
+Obligations of economic operators placing on the market or putting
+into service batteries that have been subject to preparation for re-
+use, preparation for repurposing, repurposing or remanufacturing
+
+1. Economic operators placing on the market or putting into service
+batteries that have been subject to preparation for re-use, preparation
+for repurposing, repurposing or remanufacturing shall ensure that the
+examination, performance testing, packing and shipment of those
+batteries, and of such batteries’ components subject to any of those
+operations, is carried out following adequate quality control and
+safety instructions.
+
+2. Economic operators placing on the market or putting into service
+batteries that have been subject to preparation for re-use, preparation
+for repurposing, repurposing or remanufacturing shall ensure that the
+battery complies with the requirements of this Regulation, any relevant
+product, environmental, human health protection and transport safety
+requirements in other Union law, taking into account the fact that, as
+a result of those operations, the battery might fall under a different
+battery category.

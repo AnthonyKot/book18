@@ -23,6 +23,11 @@ No source contradicted a numerical claim. Locator corrections and prose narrowin
 - `05-spherity-channel` — stamped; Spherity expressly frames white-labelling as suitable for consultancies.
 - `05-tuvsud-partner` — stamped from Arquivo.pt's 2025-12-24 capture because the live page returned a Cloudflare challenge; wording narrowed to the services and documentation the company actually markets.
 - `05-tuvsud-channel-risk` — inference added; TÜV SÜD's marketed multidisciplinary, end-to-end modular offer is the saved factual basis for channel-conflict risk.
+- `05-art45-second-life` — stamped and added; Article 45 supports the quality-control, safety and compliance duties for second-life placing operators.
+- `05-espr-not-obligations` — inference added; the Commission's “will consider” wording supports treating priorities as plans rather than present duties.
+- `05-passport-access-tiers` — stamped and added; Article 77 supports the three access audiences; prose narrowed “authority-only” to include notified bodies.
+- `05-erp-substitute` — inference; added a Circularise excerpt and source URL as the factual basis, and rewrote the prose to state the inference explicitly.
+- `05-interoperability-pressure` — inference added; Article 77(5)'s open/interoperable/no-lock-in rule supports the stated competition inference.
 
 ## Prose changes
 
@@ -32,7 +37,15 @@ No source contradicted a numerical claim. Locator corrections and prose narrowin
 - Narrowed the registry architecture sentence to the Commission page's explicit storage statement.
 - Updated the pending-rules audit date to 3 September 2026 and made the timeline's indicative status explicit.
 - Tightened the Circularise, Spherity and TÜV SÜD descriptions to the vendors' own wording, and separated TÜV SÜD channel risk into an inference row.
+- Added Article 45's second-life operating duties, narrowed the passport-access audience wording, and made the ESPR and interoperability conclusions explicit inferences.
+- Grounded the existing ERP-substitute inference in Circularise's marketed source-system integration.
+- Added markers to repeated dates, thresholds, registry/vendor references, access tiers and second-life duties throughout the proposition, sale, scale, test plan and verdict.
+- Recast the English-language expectation and stationary-versus-vehicle volume comparison as explicit operating/model assumptions. All offer prices, volumes, staffing, rates and financing figures remain explicitly labelled proposed tests or design hurdles, so none is presented as an external market fact.
 
 ## Rows added
 
 - `05-tuvsud-channel-risk` — added for the essay's inference that the broad candidate partner could absorb the work or customer relationship.
+- `05-art45-second-life` — added for the previously unmarked second-life operating duties.
+- `05-espr-not-obligations` — added for the distinction between working-plan priorities and live duties.
+- `05-passport-access-tiers` — added for the public/notified-body-authority/legitimate-interest views.
+- `05-interoperability-pressure` — added for the competition inference from open/no-lock-in rules.
