@@ -7,7 +7,7 @@ No source contradiction requiring a numeric correction has been found.
 - `03-trace-withdraw` — stamped; Regulation 178/2002 Articles 18–19 support traceability systems and withdrawal procedures.
 - `03-real-warning` — stamped; the 19 December 2025 NVWA warning gives the missing and incorrect dates and says the products were sold.
 - `03-no-budget-proof` — inference; the warning supports the escape/consequence fact but contains no purchasing evidence.
-- `03-hygiene-law` — stamped; Annex II Chapters I and V state the cited cleaning, disinfection and installation requirements.
+- `03-hygiene-law` — stamped; Annex II Chapters I and V state the cited premises and food-contact-equipment cleaning, disinfection and installation requirements; prose and row were narrowed to that scope.
 - `03-ehedg-principles` — stamped; the EHEDG session description expressly names all five principles (using “draining ability” for drainability).
 - `03-iso-hygiene` — stamped; ISO’s catalogue gives the published/current status, revision stage and machinery-hygiene scope.
 - `03-cognex-ocr` — stamped; page 6 gives the food-and-beverage lot/expiration-code example on uneven surfaces.
@@ -39,5 +39,5 @@ No source contradiction requiring a numeric correction has been found.
 - `03-broad-competition` — inference (row added); vendor menus support “broader” after the unsupported “Dutch, local” description was removed.
 - `03-ocr-availability` — inference (row added); Cognex’s marketed OCR example supports availability, while commodity status remains an inference.
 
-Prose changes: narrowed the lede from unnamed plural vendor categories to three evidenced vendors; replaced the unsupported “all five inspections” referral with the vendors’ published broader menus; reframed assumed substitutes and buyer roles as hypotheses; removed the unauditable claim that no comparable public Dutch price was found; moved model, statistical and liability markers beside every governed number and term; weakened the lighting, IP67, incumbent-response, recurrence and OCR-commodity language to the saved evidence; removed the unsupported “Dutch, local” competitor description; trimmed audit-added wording to retain the essay’s contracted word range.
+Prose changes: narrowed the lede from unnamed plural vendor categories to three evidenced vendors; replaced the unsupported “all five inspections” referral with the vendors’ published broader menus; reframed assumed substitutes and buyer roles as hypotheses; removed the unauditable claim that no comparable public Dutch price was found; moved model, statistical and liability markers beside every governed number and term; narrowed the hygiene-law sentence to food-contact equipment; weakened the lighting, IP67, incumbent-response, recurrence and OCR-commodity language to the saved evidence; removed the unsupported “Dutch, local” competitor description; trimmed audit-added wording to retain the essay’s contracted word range.
 Rows added: `03-lede-competition`, `03-adjacent-substitutes`, `03-optics-light`, `03-optics-geometry`, `03-component-rating`, `03-broad-competition`, `03-ocr-availability`.
