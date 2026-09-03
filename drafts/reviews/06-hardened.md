@@ -20,11 +20,17 @@ No source contradiction or corrected number found so far.
 - `06-sympower` — stamped; the company page makes the connection, aggregation, optimisation, trading, interface and customer-segment claims.
 - `06-withthegrid` — stamped; the company whitepaper contents list Dutch local control, static and dynamic limitations, grid-operator endpoints and peak shaving.
 - `06-peak-shaving` — stamped; the product documentation describes battery response to consumption-limit and feed-in-limit violations. The ledger's unsupported “absorbing” mechanism was narrowed to the source's “peak-shaving” wording; essay prose already said only “counter.”
+- `06-scholt` — stamped; Scholt's company page names renewable generation, battery storage, flexible industrial consumption and VPP connection to relevant energy markets.
+- `06-enervalis` — stamped; the JavaScript-rendered portal heading contains the quoted marketing line.
+- `06-enervalis-boundary` — inference retained; the saved heading is the fact underlying the deliberately narrow evidence-boundary inference.
 
 ## Prose changes
 
-- None in rows `06-gto-final` through `06-peak-shaving`; the saved passages support both ledger and essay wording.
+- Recast the channel's switchgear, meter, permit and operating-limit work as a required partner role rather than an unsupported statement about present practice.
+- Replaced the named WhatsApp substitute with the generic “group chat.”
+- Recast raw-data ownership as a contract requirement rather than an unsupported statement of current ownership.
+- Changed “already purchasable together” to “marketed together,” matching the vendor evidence.
 
 ## Rows added
 
-- None so far; unmarked-fact audit continues.
+- None. The full audit found that external dates, public amounts, contract terms, company claims and product claims were already marked; remaining numbers and prices are explicitly labelled design or validation hurdles.

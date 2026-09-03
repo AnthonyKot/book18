@@ -76,12 +76,14 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 
 13. **Scholt Energy, “Flex Services for Energy Assets.”**
     URL: https://scholt.com/flex-services-for-energy-assets-scholt-energy
-    Accessed: 2026-09-02.
+    Accessed: 2026-09-03.
+    Excerpt: `excerpts/06-scholt.txt`.
     Supports: Scholt's marketed VPP and flexibility-service surface (`06-scholt`).
 
 14. **Enervalis, customer portal.**
    URL: https://portal.enervalis.com/
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-enervalis.txt`.
    Supports: the portal's own marketing line only (`06-enervalis`); the absence of a public product specification is treated as an inference boundary, not proof that no product exists (`06-enervalis-boundary`).
 
 15. **Withthegrid, “Control strategies.”**

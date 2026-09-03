@@ -1,0 +1,11 @@
+URL: https://scholt.com/flex-services-for-energy-assets-scholt-energy
+Publisher: Scholt Energy
+Fetch date: 2026-09-03
+Page/section: “Why work with Scholt Energy?”; “Virtual Power Plant”
+
+Scholt works with renewable generation, battery storage and flexible
+industrial consumption, allowing flexibility to be assessed in its wider
+energy context.
+
+Scholt Energy connects these assets to the relevant energy markets
+through its Virtual Power Plant (VPP).
