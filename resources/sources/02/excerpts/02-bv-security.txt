@@ -1,0 +1,20 @@
+URL: https://cybersecurity.bureauveritas.com/services/iot/industrial
+Publisher: Bureau Veritas Cybersecurity
+Fetch date: 2026-09-03
+Page/section: “Industrial Products”; “IEC 62443 assessments and certification”; enquiry form
+
+Industrial Products | Testing and Certification
+
+Have your industrial products tested and certified against international standards like IEC 62443, IECEE and Common Criteria with Bureau Veritas Cybersecurity's IoT cybersecurity services. Contact us today.
+
+Testing, Compliance and Certification of Industrial Control Systems (ICS)
+
+Bureau Veritas Cybersecurity can provide testing and certification services in line with the relevant standards and regulations addressing the domain of ICS SCADA.
+
+IEC 62443 assessments and certification
+
+IEC 62443-4-2 and IEC 62443-3-3 can be used to validate the security of ICS products or integrated systems. IEC 62443-4-1 can be used to validate the security of the development processes.
+
+We can offer you support in complying with the standard, as well as formal audits and certification based on IEC 62443.
+
+Are you interested in our Testing and Certification Services for Industrial Products? Please fill out the form below, and we will contact you within one business day.

@@ -13,7 +13,13 @@ No source contradiction or corrected number found.
 - `02-cybellum-channel` — stamped; the dated first-party announcement supports the described Hitachi/Cybellum service components, without proving adoption or economics.
 - `02-cybellum-platform` — stamped; the vendor page markets each named platform capability.
 - `02-onekey` — stamped; the vendor page markets the named analysis, SBOM, monitoring, compliance and consulting capabilities.
+- `02-dekra` — stamped; the vendor page supports the testing, certification, named sectors and direct-contact route after the sector wording was narrowed.
+- `02-bv-security` — stamped; the vendor page supports industrial-product testing, IEC 62443 product/process assessment, formal audits, certification and direct enquiry.
+- `02-tuv` — stamped; the vendor page supports consumer and industrial product testing, direct request and the expressly non-certification assurance statement.
+- `02-standards` — stamped; the standards-body programme says horizontal CRA deliverables and industrial vertical profiles will advance during 2026.
+- `02-hard2bit-credentials` — stamped; the vendor page says its credentials are not inherited and directs credential-dependent engagements to direct contracting.
+- `02-vat-rate` — stamped; the Netherlands Tax Administration identifies 21% as the high or general VAT rate, subject to stated exceptions.
 
-Prose changes made: replaced “first published in 2025” with the narrower “first posted to arXiv in 2025.”
+Prose changes made: replaced “first published in 2025” with the narrower “first posted to arXiv in 2025”; narrowed DEKRA's sectors to the page's named list and removed “independent”; replaced the Bureau Veritas credential characterisation with the page's offered formal audits and certification; identified 21% VAT as the general Dutch rate and added its marker; recast the unsupported “free or inexpensive” tool-price claim as an explicit competitive assumption; added repeated vendor markers in the failure scenario.
 
-Rows added: none in this checkpoint.
+Rows added: one (`02-vat-rate`) for the previously unmarked 21% VAT statement.

@@ -20,7 +20,7 @@ Accessed and re-fetched 2026-09-03. Partner and vendor pages are first-party des
 
 5. **Hard2bit — Cybersecurity partner programme.** Current vendor page.
    https://hard2bit.com/en/partners/
-   Fetch date: 2026-09-03. Supports: offered white-label/co-branded/referral structure, partner control, unpublished negotiated margins, credential ownership and direct-contracting boundary. Claims `02-hard2bit-model` (`excerpts/02-hard2bit-model.txt`), `02-hard2bit-credentials`.
+   Fetch date: 2026-09-03. Supports: offered white-label/co-branded/referral structure, partner control, unpublished negotiated margins, credential ownership and direct-contracting boundary. Claims `02-hard2bit-model` (`excerpts/02-hard2bit-model.txt`), `02-hard2bit-credentials` (`excerpts/02-hard2bit-credentials.txt`).
 
 6. **Cybellum — Partner programme.** Current vendor page.
    https://cybellum.com/partners/
@@ -40,16 +40,20 @@ Accessed and re-fetched 2026-09-03. Partner and vendor pages are first-party des
 
 10. **CEN and CENELEC — 2026 Work Programme, Digital Society.** 2026.
     https://wp2026.cencenelec.eu/sectors-list/digital-society/
-    Supports: ongoing CRA horizontal and industrial-profile standardisation. Claim `02-standards`.
+    Fetch date: 2026-09-03. Supports: ongoing CRA horizontal and industrial-profile standardisation. Claim `02-standards` (`excerpts/02-standards.txt`).
 
 11. **DEKRA — Cybersecurity services.** Current service page.
     https://www.dekra.com/en/cybersecurity-services/
-    Supports: marketed testing and certification across industrial, ICT and connected-product sectors through direct contact. Claim `02-dekra`.
+    Fetch date: 2026-09-03. Supports: marketed testing and certification across automotive, consumer, ICT, industrial, medical and system-on-chip sectors through direct contact. Claim `02-dekra` (`excerpts/02-dekra.txt`).
 
 12. **Bureau Veritas Cybersecurity — Industrial products: testing and certification.** Current service page; former Secura URL redirects here.
     https://cybersecurity.bureauveritas.com/services/iot/industrial
-    Supports: marketed industrial-product testing and IEC 62443 product, process and certification work through direct enquiry. Claim `02-bv-security`.
+    Fetch date: 2026-09-03. Supports: marketed industrial-product testing and IEC 62443 product, process and certification work through direct enquiry. Claim `02-bv-security` (`excerpts/02-bv-security.txt`).
 
 13. **TÜV Rheinland — Cybersecurity Assurance.** Current service page.
     https://go.tuv.com/cybersecurity-assurance-from-tuv-rheinland?cpid=US21_I07_CYBER_WS_03
-    Supports: consumer and industrial product testing, a named assurance statement that is explicitly not certification, and direct manufacturer request. Claim `02-tuv`.
+    Fetch date: 2026-09-03. Supports: consumer and industrial product testing, a named assurance statement that is explicitly not certification, and direct manufacturer request. Claim `02-tuv` (`excerpts/02-tuv.txt`).
+
+14. **Netherlands Tax Administration (Belastingdienst) — VAT tariffs.** Current tax guidance.
+    https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/belastingdienst/business/vat/vat_in_the_netherlands/calculating_vat/vat_tariffs
+    Fetch date: 2026-09-03. Supports: 21% as the Dutch high or general VAT rate and the stated qualifications. Claim `02-vat-rate` (`excerpts/02-vat-rate.txt`).

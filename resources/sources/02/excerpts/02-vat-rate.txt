@@ -1,0 +1,14 @@
+URL: https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/belastingdienst/business/vat/vat_in_the_netherlands/calculating_vat/vat_tariffs
+Publisher: Netherlands Tax Administration (Belastingdienst)
+Fetch date: 2026-09-03
+Page/section: “VAT tariffs”; “21% tariff”
+
+There are 3 VAT tariffs in the Netherlands:
+
+* 0% tariff
+* 9% tariff
+* 21% tariff
+
+21% tariff
+
+The 21% tariff is also called the high or general tariff. Is there no reason for an exemption, the reverse-charge mechanism, the 0% tariff or the 9% tariff? Then you must charge 21% VAT.
