@@ -197,3 +197,6 @@ final ranking.
   no number changed except locators; prose narrowed in every essay (logs `drafts/reviews/NN-hardened.md`).
   Same night: whole-book read-through by the coordinating session (titles to sentence case, kickers,
   GTO expanded, one typo). Verdicts unchanged.
+- 2026-09-03 (night) — Reading order decoupled from numbering: index and prev/next follow the
+  launch order in `drafts/reviews/virality-order.md` (1, 5, 6, 4, 7, 2, 3); `scripts/nav.py` carries
+  the ORDER list. Essay numbers unchanged.
