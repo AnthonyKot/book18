@@ -15,6 +15,13 @@ No source contradiction requiring a numeric correction has been found.
 - `03-cognex-system` — stamped; the specification rows support the I/O, two-port networking and conditional IP67 wording.
 - `03-global-shutter` — stamped; Cognex describes sequential rolling-shutter exposure/distortion and all-at-once global exposure.
 - `03-exposure-motion` — stamped; Cognex links shorter exposure to stopping motion and documents an external-strobe mode.
+- `03-domino-range` — stamped; Domino’s product page supports validation, camera/lighting integration and pre-commitment sample testing.
+- `03-domino-range-competition` — stamped; the repeated competition claim uses its own saved excerpt from the same page.
+- `03-videojet-system` — stamped; the product page supports the code fields, OCR/OCV, SKU/printer integration, lighting and qualified IP67 claims.
+- `03-videojet-system-competition` — stamped; the repeated competition claim uses its own saved excerpt from the same page.
+- `03-packcheck-product` — stamped; current Vi-Track copy supports recipe/API control, THT OCR, reject control and a web dashboard.
+- `03-packcheck-case` — stamped; PackCheck’s Vezet account says it was selected for film/code/label checks and exposes results in a live web dashboard.
+- `03-evis-product` — stamped; EVIS copy supports date/barcode/text/seal checks and all three integrations.
 
 Prose changes: none in this batch.
 Rows added: none in this batch.

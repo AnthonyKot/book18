@@ -1,0 +1,12 @@
+URL: https://packcheck.nl/vitrack-platform/
+Publisher: PackCheck
+Fetch date: 2026-09-03
+Page/section: “Vi-Track Intelligence”; “Vi-Track Automation”; “Vi-Track Dashboard”; “Volledig modulair recept beheer”
+
+Foutloze inspectie: Directe controle op THT-data (OCR), barcodes, allergenen en etiketten.
+
+Directe afkeur: Stuurt uitwerpsystemen (rejectors) feilloos aan bij elk gedetecteerd defect.
+
+Het Dashboard verbindt alle inspectiepunten in je fabriek. Geen losse systemen meer, maar één web-based omgeving waar je volledige controle hebt over je kwaliteit en data.
+
+Elk inspectiepunt kent een eigen recept wat op afstand via onze standaard API aangestuurd kan worden. Recepten toevoegen, verwijderen, actief maken, in bypass zetten of recept waardes (als een THT) aanpassen is standaard mogelijk.

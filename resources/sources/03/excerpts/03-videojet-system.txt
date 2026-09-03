@@ -1,0 +1,20 @@
+URL: https://www.videojet.com/us/homepage/products/vision-systems.html
+Publisher: Videojet Technologies / Laetus
+Fetch date: 2026-09-03
+Page/section: “Consumer Confidence”; “Setup made easy”; Videojet 5250 specification table
+
+Increase accuracy of variable data (e.g. Expiry Date or Best Before), helping to ensure that the information provided to the consumer matches the product life and is fully readable.
+
+Increase the quality of the product by assuring that the needed information is fully printed (Best Before Date, LOT, etc).
+
+Setup time is minimized by integral SKU/article management.
+
+Variable data input is simplified, ensuring the operator needs to input the data only once for printer and camera.
+
+OCV/OCR application: Font-based OCR reader, multiple AOI, auto character and row segmentation, max. 64 characters and 5 lines / AOI.
+
+Lens and lighting options: PRL white polarized LED ring module; DIL white diffuse LED module.
+
+Environmental protection: Inspection camera IP67 (with lens protection tube), overall protection depends on selected lighting.
+
+Package options: PRINTER wt, interface software to printing system for synchronized format loading, single data entry for printer and camera.

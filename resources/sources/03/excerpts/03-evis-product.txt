@@ -1,0 +1,22 @@
+URL: https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/
+Publisher: Vision Partners
+Fetch date: 2026-09-03
+Page/section: “Integration labeling software”; “Possible applications label control with EVIS”; “Integration with third-party systems”
+
+EVIS enables rapid introduction of inspection of new labels through integration with industry-standard labeling software such as Bartender, Nicelabel and more.
+
+Possible applications label control with EVIS
+
+Label
+
+(Bar) code
+
+Text
+
+Seal
+
+Read and validate lot code and date code
+
+Integration with production control computer (MES) possible
+
+Integration with production line PLC possible

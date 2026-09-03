@@ -40,6 +40,13 @@ Accessed 2026-09-03. Vendor statements below document current product positionin
 - `excerpts/03-cognex-system.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm); serves `03-cognex-system`.
 - `excerpts/03-global-shutter.txt` — Cognex; fetched 2026-09-03; [URL](https://www.cognex.com/en-nl/what-is/machine-vision/machine-vision-hardware-components); serves `03-global-shutter`.
 - `excerpts/03-exposure-motion.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/isvidi_150/web/EN/Help_ISViDi/Content/Topics/Spreadsheet/VisionTools/AcquireImage.htm); serves `03-exposure-motion`.
+- `excerpts/03-domino-range.txt` — Domino Printing Sciences; fetched 2026-09-03; [URL](https://www.domino-printing.com/en-us/products/r-series); serves `03-domino-range`.
+- `excerpts/03-domino-range-competition.txt` — Domino Printing Sciences; fetched 2026-09-03; [URL](https://www.domino-printing.com/en-us/products/r-series); serves `03-domino-range-competition`.
+- `excerpts/03-videojet-system.txt` — Videojet Technologies / Laetus; fetched 2026-09-03; [URL](https://www.videojet.com/us/homepage/products/vision-systems.html); serves `03-videojet-system`.
+- `excerpts/03-videojet-system-competition.txt` — Videojet Technologies / Laetus; fetched 2026-09-03; [URL](https://www.videojet.com/us/homepage/products/vision-systems.html); serves `03-videojet-system-competition`.
+- `excerpts/03-packcheck-product.txt` — PackCheck; fetched 2026-09-03; [URL](https://packcheck.nl/vitrack-platform/); serves `03-packcheck-product`.
+- `excerpts/03-packcheck-case.txt` — PackCheck; fetched 2026-09-03; [URL](https://packcheck.nl/); serves `03-packcheck-case`.
+- `excerpts/03-evis-product.txt` — Vision Partners; fetched 2026-09-03; [URL](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/); serves `03-evis-product`.
 
 ## Deliberately not used as market facts
 
