@@ -1,5 +1,0 @@
-https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng
-2026-09-02
-Article 5f(2)
-
-Where private relying parties that provide services, with the exception of microenterprises and small enterprises as defined in Article 2 of the Annex to Commission Recommendation 2003/361/EC, are required by Union or national law to use strong user authentication for online identification or where strong user authentication for online identification is required by contractual obligation, including in the areas of transport, energy, banking, financial services, social security, health, drinking water, postal services, digital infrastructure, education or telecommunications, those private relying parties shall [...] also accept European Digital Identity Wallets that are provided in accordance with this Regulation.

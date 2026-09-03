@@ -1,0 +1,6 @@
+URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng
+Publisher: Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Article 5f(2), “Cross-border reliance on European Digital Identity Wallets”
+
+2. Where private relying parties that provide services, with the exception of microenterprises and small enterprises as defined in Article 2 of the Annex to Commission Recommendation 2003/361/EC, are required by Union or national law to use strong user authentication for online identification or where strong user authentication for online identification is required by contractual obligation, including in the areas of transport, energy, banking, financial services, social security, health, drinking water, postal services, digital infrastructure, education or telecommunications, those private relying parties shall, no later than 36 months from the date of entry into force of the implementing acts referred to in Article 5a(23) and Article 5c(6) and only upon the voluntary request of the user, also accept European Digital Identity Wallets that are provided in accordance with this Regulation.

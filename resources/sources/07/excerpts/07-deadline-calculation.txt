@@ -1,0 +1,18 @@
+URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2982
+Publisher: Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Regulation (EU) 2024/1183 Articles 5a(1), 5f(2); Implementing Regulation (EU) 2024/2981 Official Journal header and Article 22; Implementing Regulation (EU) 2024/2982 Official Journal header and Article 8
+
+1. For the purpose of ensuring that all natural and legal persons in the Union have secure, trusted and seamless cross-border access to public and private services, while having full control over their data, each Member State shall provide at least one European Digital Identity Wallet within 24 months of the date of entry into force of the implementing acts referred to in paragraph 23 of this Article and in Article 5c(6).
+
+2. Where private relying parties that provide services, with the exception of microenterprises and small enterprises as defined in Article 2 of the Annex to Commission Recommendation 2003/361/EC, are required by Union or national law to use strong user authentication for online identification or where strong user authentication for online identification is required by contractual obligation, including in the areas of transport, energy, banking, financial services, social security, health, drinking water, postal services, digital infrastructure, education or telecommunications, those private relying parties shall, no later than 36 months from the date of entry into force of the implementing acts referred to in Article 5a(23) and Article 5c(6) and only upon the voluntary request of the user, also accept European Digital Identity Wallets that are provided in accordance with this Regulation.
+
+2024/2981 — 4.12.2024
+
+This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
+
+2024/2982 — 4.12.2024
+
+This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.

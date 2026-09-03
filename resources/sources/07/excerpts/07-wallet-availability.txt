@@ -1,0 +1,8 @@
+URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng
+Publisher: Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Article 5a(1), (15), “European Digital Identity Wallets”
+
+1. For the purpose of ensuring that all natural and legal persons in the Union have secure, trusted and seamless cross-border access to public and private services, while having full control over their data, each Member State shall provide at least one European Digital Identity Wallet within 24 months of the date of entry into force of the implementing acts referred to in paragraph 23 of this Article and in Article 5c(6).
+
+15. The use of European Digital Identity Wallets shall be voluntary. Access to public and private services, access to the labour market and freedom to conduct business shall not in any way be restricted or made disadvantageous to natural or legal persons that do not use European Digital Identity Wallets. It shall remain possible to access public and private services by other existing identification and authentication means.

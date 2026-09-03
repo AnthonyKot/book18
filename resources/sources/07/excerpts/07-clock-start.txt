@@ -1,13 +1,18 @@
-https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981
-2026-09-02
-Official Journal of the European Union
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981
+Publisher: Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Official Journal header; Article 22, “Entry into force”
+
 2024/2981 — 4.12.2024
 
 COMMISSION IMPLEMENTING REGULATION (EU) 2024/2981
+
 of 28 November 2024
+
 laying down rules for the application of Regulation (EU) No 910/2014 of the European Parliament and the Council as regards the certification of European Digital Identity Wallets
 
 Article 22
+
 Entry into force
 
 This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.

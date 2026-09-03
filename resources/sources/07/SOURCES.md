@@ -1,6 +1,18 @@
 # Essay 7 — source index
 
-Accessed 2026-09-02. Vendor pages support only the product surfaces and status labels they describe. They are not treated as independent proof of outcomes, compliance or buyer payment.
+Accessed 2026-09-03. Vendor pages support only the product surfaces and status labels they describe. They are not treated as independent proof of outcomes, compliance or buyer payment.
+
+Saved excerpts audited so far:
+
+| Excerpt | URL | Publisher | Fetch date | Claims served |
+|---|---|---|---|---|
+| `excerpts/07-wallet-availability.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-wallet-availability` |
+| `excerpts/07-clock-start.txt` | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981 | Official Journal of the European Union | 2026-09-03 | `07-clock-start` |
+| `excerpts/07-protocol-clock.txt` | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2982 | Official Journal of the European Union | 2026-09-03 | `07-protocol-clock` |
+| `excerpts/07-deadline-calculation.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2981; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2982 | Official Journal of the European Union | 2026-09-03 | `07-deadline-calculation` |
+| `excerpts/07-acceptance-scope.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-acceptance-scope` |
+| `excerpts/07-private-list.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-private-list` |
+| `excerpts/07-target-not-automatic.txt` | https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng | Official Journal of the European Union | 2026-09-03 | `07-target-not-automatic` |
 
 1. **European Union, “Regulation (EU) 2024/1183.”**
    URL: https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng
