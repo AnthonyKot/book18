@@ -1,2 +1,4 @@
 checks/__pycache__/
 *.pyc
+drafts/*.log
+drafts/reviews/*.err
