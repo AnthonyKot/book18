@@ -1,7 +1,0 @@
-https://scholt.com/flex-services-for-energy-assets-scholt-energy
-Fetched 2026-09-02
-Scholt works with renewable generation, battery storage and flexible industrial consumption, allowing flexibility to be assessed in its wider energy context.
-
-Scholt combines asset information, agreed operating limits, market access and optimisation to determine when flexibility should be available or activated.
-
-Scholt Energy connects these assets to the relevant energy markets through its Virtual Power Plant (VPP).

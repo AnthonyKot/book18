@@ -1,3 +1,0 @@
-https://teleport.withthegrid.com/control-strategies/
-Fetched 2026-09-02
-Additionally, if local load violates the grid consumption limit, the batteries can be configured to supply peak shaving power to correct this violation. Similarly, if power generation causes a violation of the grid feed-in limit, the batteries can be configured to peak shave this additional power.

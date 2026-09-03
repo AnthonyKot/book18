@@ -1,6 +1,6 @@
 # Essay 06 hardening log
 
-No source contradiction or corrected number found so far.
+No source contradiction or corrected number was found.
 
 ## Row results
 
@@ -22,7 +22,7 @@ No source contradiction or corrected number found so far.
 - `06-peak-shaving` — stamped; the product documentation describes battery response to consumption-limit and feed-in-limit violations. The ledger's unsupported “absorbing” mechanism was narrowed to the source's “peak-shaving” wording; essay prose already said only “counter.”
 - `06-scholt` — stamped; Scholt's company page names renewable generation, battery storage, flexible industrial consumption and VPP connection to relevant energy markets.
 - `06-enervalis` — stamped; the JavaScript-rendered portal heading contains the quoted marketing line.
-- `06-enervalis-boundary` — inference retained; the saved heading is the fact underlying the deliberately narrow evidence-boundary inference.
+- `06-enervalis-boundary` — inference retained; its own saved heading is the fact underlying the deliberately narrow evidence-boundary inference.
 
 ## Prose changes
 
@@ -34,3 +34,7 @@ No source contradiction or corrected number found so far.
 ## Rows added
 
 - None. The full audit found that external dates, public amounts, contract terms, company claims and product claims were already marked; remaining numbers and prices are explicitly labelled design or validation hurdles.
+
+## Source-file cleanup
+
+- Removed the superseded 2026-09-02 excerpt copies whose filenames omitted the claim prefix. Their 2026-09-03 claim-ID replacements have complete URL, publisher, fetch-date and locator headers and are recoverable alongside the old versions in Git history.

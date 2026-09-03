@@ -1,9 +1,0 @@
-https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst
-Fetched 2026-09-02
-De groep heeft samen één contract voor transportvermogen.
-De bedrijven spreken af hoe ze de capaciteit verdelen. De groep is ook samen verantwoordelijk voor het niet overschrijden van de capaciteit.
-Deze afspraken worden vastgelegd in een onderlinge overeenkomst.
-Voor de verdeling is een energiemanagementsysteem nodig. Dit gebruikt slimme software die op basis van realtime data en aansturing de opwek, opslag en verbruik op elkaar afstemt binnen de beschikbare capaciteit.
-
-Netburenscan: met welke bedrijven kunt u samen in een GTO
-Deze scan geeft inzicht in de bedrijven die op hetzelfde deel van het elektriciteitsnet zijn aangesloten. U kunt mogelijk met deze bedrijven samenwerken in een GTO.

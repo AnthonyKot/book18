@@ -83,7 +83,7 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 14. **Enervalis, customer portal.**
    URL: https://portal.enervalis.com/
    Accessed: 2026-09-03.
-   Excerpt: `excerpts/06-enervalis.txt`.
+   Excerpts: `excerpts/06-enervalis.txt`, `excerpts/06-enervalis-boundary.txt`.
    Supports: the portal's own marketing line only (`06-enervalis`); the absence of a public product specification is treated as an inference boundary, not proof that no product exists (`06-enervalis-boundary`).
 
 15. **Withthegrid, “Control strategies.”**

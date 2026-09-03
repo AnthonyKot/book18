@@ -1,7 +1,0 @@
-https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
-Fetched 2026-09-02
-Artikel 7.1h van de Netcode regelt dat het transportrecht van de groep eerst kan worden opgeschort en in het uiterste geval kan komen te vervallen indien de groep de voorwaarden van een groepstransportovereenkomst heeft geschonden. Deze mogelijke sancties moeten de groep ervan weerhouden om de aan haar beschikbaar gestelde capaciteit te overschrijden.
-
-Artikel 7.1h, eerste lid, van de Netcode schrijft voor dat de netbeheerder de gemachtigde informeert bij elke schending van de voorwaarden van artikel 7.1e of artikel 7.1f van de Netcode door de groep. Als een groep twee keer of vaker de voorwaarden van de groepstransportovereenkomst heeft geschonden, kan de netbeheerder het recht op transport volgens artikel 7.1h, tweede lid, van de Netcode opschorten. Bij de beslissing om het transportrecht op te schorten houdt de netbeheerder rekening met de mate en frequentie van de schending van de voorwaarden.
-
-Als de groep na het opheffen van de opschorting, ondanks de getroffen maatregelen, opnieuw de voorwaarden schendt, kan de conclusie worden getrokken dat de groep niet aan de voorwaarden van een groepstransportovereenkomst voldoet. Naar het oordeel van de ACM kan het in het uiterste geval dan redelijk zijn dat de netbeheerder de uiteindelijke mogelijkheid heeft om het betreffende recht op transport van de groep te laten vervallen.

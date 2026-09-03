@@ -1,5 +1,0 @@
-https://www.enexis.nl/zakelijk/netcapaciteit/flexibiliteitsoplossingen/groepstransportovereenkomst
-Fetched 2026-09-02
-Als u met een groep bedrijven een GTO aangaat, behoudt u een eigen aansluiting op het elektriciteitsnet. De groep heeft gezamenlijk 1 transportcontract met ons. Dit betekent dat u samen met de groep bepaalt hoe de beschikbare capaciteit verdeeld wordt.
-
-Voor het verdelen van de capaciteit is een energiemanagementsysteem nodig om de gemaakte afspraken uit te kunnen voeren en binnen de groepscapaciteit te kunnen blijven.
