@@ -28,6 +28,7 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 5. **Stedin, “Groepstransportovereenkomst: samen transportvermogen delen.”**
    URL: https://www.stedin.net/zakelijk/energietransitie/beschikbare-netcapaciteit/flexoplossingen/energiehub/groepstransportovereenkomst
    Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-stedin-hub.txt`.
    Supports: joint responsibility for the capacity limit, EMS need and Stedin's own Netburenscan (`06-stedin-hub`).
 
 6. **Autoriteit Consument & Markt, “ACM stelt maatregelen tegen netcongestie vast en publiceert uitgangspunten voor toekomstige tariefaanpassingen.”**
@@ -38,17 +39,20 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 
 7. **Autoriteit Consument & Markt, “Voortgangsdashboard, bestuurlijke afspraken en verbeterplannen netbeheerders.”**
    URL: https://www.acm.nl/nl/publicaties/voortgangsdashboard-bestuurlijke-afspraken-en-verbeterplannen-netbeheerders
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpts: `excerpts/06-contract-taxonomy.txt`, `excerpts/06-cbc-compensation.txt`.
    Supports: the 2 June 2026 taxonomy of CBC, CSC, group forms, TBTR, TDTR and VVTR, plus the CBC-specific temporary adjustment duty and compensation (`06-contract-taxonomy`, `06-cbc-compensation`).
 
 8. **Enexis Netbeheer, “Alternatieve transportrechten.”**
    URL: https://www.enexis.nl/zakelijk/netcapaciteit/transportcapaciteit/alternatieve-transportrechten
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-enexis-atr-status.txt`.
    Supports: the live Blokstroom application route from 1 April 2025 and the not-yet-live status of fully variable Reststroom (`06-enexis-atr-status`).
 
 9. **Liander, “Keuzehulp deelname congestiemanagement.”**
    URL: https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement
-   Accessed: 2026-09-02.
+   Accessed: 2026-09-03.
+   Excerpt: `excerpts/06-liander-cbc.txt`.
    Supports: CBC forms, redispatch, GOPACS as a flexibility-trading platform and the CSP as the party bidding there for the customer (`06-liander-cbc`).
 
 10. **Rijksoverheid, “Maatregelen tegen vol elektriciteitsnet (netcongestie).”**

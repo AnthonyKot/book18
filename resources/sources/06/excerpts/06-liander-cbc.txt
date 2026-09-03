@@ -1,0 +1,32 @@
+URL: https://www.liander.nl/grootzakelijk/energietransitie/alles-over-netcongestie/keuzehulp-deelnemen-congestiemanagement
+Publisher: Liander
+Fetch date: 2026-09-03
+Page/section: “Wat zijn de mogelijkheden?”; “Biedplicht via GOPACS”
+
+U kunt met ons een capaciteitsbeperkingscontract afsluiten, met of
+zonder afroep.
+
+Bij het contract met afroep heeft u de plicht om op ons verzoek het
+benodigde vermogen aan te passen. U bepaalt zelf wat u aan flexibel
+vermogen kunt aanbieden. Wij roepen nooit meer af dan met u
+overeengekomen. Bij dit contract mag u zich laten vertegenwoordigen door
+een Congestie Service Provider (CSP), maar het hoeft niet.
+
+Bij het contract zonder afroep spreken we rechtstreeks met u af dat u
+het vermogen aanpast op de afgesproken vaste momenten.
+
+Biedplicht via GOPACS
+
+U wilt handelen met dagbiedingen via het congestiemanagementplatform
+GOPACS. Dan is het biedplichtcontract voor redispatch de beste optie
+voor u. Dit verloopt altijd via een CSP. U kunt zelf een CSP kiezen die
+namens u het biedplichtcontract met ons afsluit en biedingen op GOPACS
+voor u regelt. Kijk op TenneT voor alle erkende CSP’s.
+
+* GOPACS is een platform waar flexibel vermogen wordt verhandeld.
+Netbeheerders geven hun capaciteitsvraag aan en deelnemers kunnen hierop
+bieden.
+
+** CSP staat voor Congestie Service Provider. Dit is een partij die
+namens de klant handelt op het GOPACS-platform om flexibel vermogen aan
+te bieden en congestie op het elektriciteitsnet te verminderen.

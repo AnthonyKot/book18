@@ -9,10 +9,15 @@ No source contradiction or corrected number found so far.
 - `06-enexis-gto` — stamped; Enexis page states individual connections remain, the group has one contract, and an EMS is needed for allocation and the group limit.
 - `06-enexis-rollout` — stamped; Enexis page states ten development parks and expected broader availability from 2027.
 - `06-atr-date` — stamped; ACM page states the publication date, 1 April 2025 start, and at-least-85% duration-bound access.
+- `06-contract-taxonomy` — stamped; ACM's dated dashboard defines CBC, CSC, group CBC/CSC, TBTR, TDTR and VVTR.
+- `06-cbc-compensation` — stamped; ACM defines the voluntary, temporary reduction or export limitation and compensation.
+- `06-enexis-atr-status` — stamped; Enexis gives the Blokstroom application date and says Reststroom lacks sufficient capacity visibility and remains under study.
+- `06-liander-cbc` — stamped; Liander describes CBC variants, redispatch, the CSP role and GOPACS.
+- `06-stedin-hub` — stamped; Stedin states joint responsibility, the EMS need and the Netburenscan function.
 
 ## Prose changes
 
-- None in rows `06-gto-final` through `06-atr-date`; the saved passages support both ledger and essay wording.
+- None in rows `06-gto-final` through `06-stedin-hub`; the saved passages support both ledger and essay wording.
 
 ## Rows added
 
