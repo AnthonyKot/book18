@@ -131,7 +131,7 @@ def main() -> int:
             if claim_id not in rows:
                 failures.append(f"{number}: CHECK {claim_id} missing from ledger")
         for claim_id, status in rows.items():
-            if status not in {"verified", "inference", "open"}:
+            if status not in {"verified", "inference", "open"} and not re.fullmatch(r"checked-by:[^:]+:\d{4}-\d{2}-\d{2}", status):
                 failures.append(f"{number}: {claim_id} has invalid status {status!r}")
             if status == "open":
                 failures.append(f"{number}: {claim_id} remains open")
