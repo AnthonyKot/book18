@@ -1,0 +1,24 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Articles 13(9) and 77(7), PDF pages 24 and 84
+
+Article 13
+Labelling and marking of batteries
+
+9. Batteries that have been subject to preparation for re-use, prep-
+aration for repurposing, repurposing or remanufacturing shall bear new
+labels or shall be marked with markings in accordance with this Article,
+and containing information on their change of status in accordance with
+point 4 of Annex XIII, which shall be accessible through the QR code.
+
+Article 77
+Battery passport
+
+7. For a battery that has been subject to preparation for re-use,
+preparation for repurposing, repurposing or remanufacturing, the
+responsibility for the fulfilment of the obligations under paragraph 4
+of this Article shall be transferred to the economic operator that has
+placed that battery on the market or has put it into service. Such battery
+shall have a new battery passport linked to the battery passport or
+passports of the original battery or batteries.

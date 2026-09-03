@@ -1,0 +1,32 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Articles 13(6)-(7) and 77(3), PDF pages 24 and 83
+
+Article 13
+Labelling and marking of batteries
+
+6. From 18 February 2027, all batteries shall be marked with a QR
+code as described in Part C of Annex VI. The QR code shall provide
+access to the following:
+
+(a) for LMT batteries, industrial batteries with a capacity greater than
+    2kWh and electric vehicles batteries, the battery passport in
+    accordance with Article 77;
+
+7. The labels and the QR code referred to in paragraphs 1 to 6 shall
+be printed or engraved visibly, legibly and indelibly on the battery.
+Where this is not possible or not warranted on account of the nature
+and size of the battery, the labels and the QR code shall be affixed to
+the packaging and to the documents accompanying the battery.
+
+Article 77
+Battery passport
+
+3. The battery passport shall be accessible through the QR code
+referred to in Article 13(6) which links to a unique identifier that the
+economic operator placing the battery on the market shall attribute to it.
+
+The QR code and the unique identifier shall comply with the ISO/IEC
+standards 15459-1:2014, 15459-2:2015, 15459-3:2014, 15459-4:2014,
+15459-5:2014 and 15459-6:2014 or their equivalent.

@@ -1,0 +1,18 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Article 77(4)-(5), PDF page 84
+
+Article 77
+Battery passport
+
+4. The economic operator placing the battery on the market shall
+ensure that the information in the battery passport is accurate, complete
+and up to date. It may give written authorisation to any other operator
+to act on its behalf.
+
+5. All information included in the battery passport shall be based on
+open standards and be in an interoperable format, transferable through
+an open interoperable data exchange network without vendor lock-in,
+machine-readable, structured and searchable, in accordance with the
+essential requirements laid down in Article 78.

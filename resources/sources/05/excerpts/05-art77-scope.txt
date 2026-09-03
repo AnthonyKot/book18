@@ -1,0 +1,21 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Article 77(1)-(2), PDF pages 82-83
+
+Article 77
+Battery passport
+
+1. From 18 February 2027 each LMT battery, each industrial battery
+with a capacity greater than 2 kWh and each electric vehicle battery
+placed on the market or put into service shall have an electronic record
+(‘battery passport’).
+
+2. The battery passport shall contain information relating to the
+battery model and information specific to the individual battery,
+including resulting from the use of that battery, as set out in Annex
+XIII.
+
+The information referred to in the second subparagraph shall be
+included in the battery passport to the extent applicable to the
+category or sub-category of battery concerned.

@@ -1,0 +1,31 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
+Publisher: EUR-Lex / Official Journal of the European Union
+Fetch date: 2026-09-03
+Page/section: Consolidated Regulation (EU) 2023/1542, Article 14(1)-(2), PDF page 25
+
+Article 14
+Information on the state of health and expected lifetime of batteries
+
+1. From 18 August 2024, up-to-date data for the parameters for
+determining the state of health and expected lifetime of batteries as
+set out in Annex VII shall be contained in the battery management
+system of stationary battery energy storage systems, LMT batteries
+and electric vehicle batteries.
+
+2. Read-only access to the data for the parameters set out in Annex
+VII through the battery management system referred to in paragraph 1
+shall be provided, respecting the intellectual property rights of the
+battery manufacturer, on a non-discriminatory basis to the natural or
+legal person who has legally purchased the battery, including inde-
+pendent operators or waste management operators, or any third party
+acting on their behalf at any time, for the purpose of:
+
+(a) making the battery available to independent aggregators or market
+    participants through energy storage;
+
+(b) evaluating the residual value or remaining lifetime of the battery
+    and capability for further use, based on the estimation of the state
+    of health of the battery;
+
+(c) facilitating the preparation for re-use, preparation for repurposing,
+    repurposing or remanufacturing of the battery.

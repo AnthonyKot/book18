@@ -1,6 +1,6 @@
 # Essay 5 — source index
 
-Accessed and re-fetched 2026-09-02. Law and implementation status use EU primary sources. Vendor pages establish competitive product surface only; vendor “compliance” claims are not treated as legal conclusions.
+Accessed and re-fetched 2026-09-03. Law and implementation status use EU primary sources. Vendor pages establish competitive product surface only; vendor “compliance” claims are not treated as legal conclusions.
 
 1. **EUR-Lex, consolidated Regulation (EU) 2023/1542 concerning batteries and waste batteries, current consolidated text dated 31 July 2025.**
    URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731
@@ -52,4 +52,14 @@ Accessed and re-fetched 2026-09-02. Law and implementation status use EU primary
 
 ## Evidence boundary
 
-No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The prices, automation rate, labour minutes, workload capacity and financing bridge are explicit design hurdles. The Commission's future timetable is not treated as enacted where the referenced act had not been adopted on 2026-09-02. The ERP displacement row (`05-erp-substitute`) is an inference to test, not an externally verified product claim.
+No source found establishes a market price or recurring external budget among small Benelux second-life battery operators. The prices, automation rate, labour minutes, workload capacity and financing bridge are explicit design hurdles. The Commission's future timetable is not treated as enacted where the referenced act had not been adopted on 2026-09-03. The ERP displacement row (`05-erp-substitute`) is an inference to test, not an externally verified product claim.
+
+## Saved excerpt inventory
+
+- `excerpts/05-art77-scope.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-art77-scope`.
+- `excerpts/05-qr-rule.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-qr-rule`.
+- `excerpts/05-second-life-transfer.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-second-life-transfer`.
+- `excerpts/05-operator-responsibility.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-operator-responsibility`.
+- `excerpts/05-art78-controls.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-art78-controls`.
+- `excerpts/05-bms-access.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-bms-access`.
+- `excerpts/05-due-diligence-separate.txt` — EUR-Lex / Official Journal of the European Union; fetched 2026-09-03; URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731; serves `05-due-diligence-separate`.
