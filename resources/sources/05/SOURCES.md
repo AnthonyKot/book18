@@ -43,8 +43,9 @@ Accessed and re-fetched 2026-09-03. Law and implementation status use EU primary
     Supports: marketed templates, APIs, access control and a white-label offer explicitly framed for consultancies and their clients (`05-spherity-product`, `05-spherity-channel`).
 
 11. **TÜV SÜD, “EU Battery Regulation 2023/1542.”**
-    URL: https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation
-    Supports: candidate domain partner's marketed product-specific interpretation, battery testing and documented technical-verification services (`05-tuvsud-partner`). No partnership, availability or prospect introduction has yet been secured.
+    URL: https://arquivo.pt/wayback/20251224024609id_/https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation
+    Original URL: https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation (Cloudflare challenge on 2026-09-03; using Arquivo.pt's 2025-12-24 capture).
+    Supports: candidate domain partner's marketed product-specific interpretation, accredited battery testing, technical-verification services and documented test results (`05-tuvsud-partner`); its broad offer is the factual basis for the channel-risk inference (`05-tuvsud-channel-risk`). No partnership, availability or prospect introduction has yet been secured.
 
 12. **EUR-Lex, Regulation (EU) 2024/1781 establishing the ESPR framework.**
     URL: https://eur-lex.europa.eu/eli/reg/2024/1781/oj
@@ -68,3 +69,10 @@ No source found establishes a market price or recurring external budget among sm
 - `excerpts/05-pending-rules.txt` — European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs; fetched 2026-09-03; URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en; serves `05-pending-rules`.
 - `excerpts/05-espr-framework.txt` — European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs; fetched 2026-09-03; URL: https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en; serves `05-espr-framework`.
 - `excerpts/05-espr-priorities.txt` — European Commission, Green Forum; fetched 2026-09-03; URL: https://green-forum.ec.europa.eu/news/2025-2030-working-plan-2025-07-11_en; serves `05-espr-priorities`.
+- `excerpts/05-siemens-api.txt` — Siemens; fetched 2026-09-03; URL: https://developer.siemens.com/battery-passport/overview.html; serves `05-siemens-api`.
+- `excerpts/05-circularise.txt` — Circularise; fetched 2026-09-03; URL: https://www.circularise.com/battery-passport; serves `05-circularise`.
+- `excerpts/05-minespider.txt` — Minespider; fetched 2026-09-03; URL: https://www.minespider.com/; serves `05-minespider`.
+- `excerpts/05-spherity-product.txt` — Spherity; fetched 2026-09-03; URL: https://www.spherity.com/digital-product-passport; serves `05-spherity-product`.
+- `excerpts/05-spherity-channel.txt` — Spherity; fetched 2026-09-03; URL: https://www.spherity.com/digital-product-passport; serves `05-spherity-channel`.
+- `excerpts/05-tuvsud-partner.txt` — TÜV SÜD; fetched 2026-09-03 from Arquivo.pt's 2025-12-24 capture; URL: https://arquivo.pt/wayback/20251224024609id_/https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation; serves `05-tuvsud-partner`.
+- `excerpts/05-tuvsud-channel-risk.txt` — TÜV SÜD; fetched 2026-09-03 from Arquivo.pt's 2025-12-24 capture; URL: https://arquivo.pt/wayback/20251224024609id_/https://www.tuvsud.com/en-gb/services/product-certification/ce-marking/eu-battery-regulation; serves inference `05-tuvsud-channel-risk`.

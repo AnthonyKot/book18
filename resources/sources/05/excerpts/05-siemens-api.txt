@@ -1,0 +1,38 @@
+URL: https://developer.siemens.com/battery-passport/overview.html
+Publisher: Siemens
+Fetch date: 2026-09-03
+Page/section: “Battery Passport API” and “Battery Passport API functionalities”
+
+The Battery Passport platform offers a rest API in order to provide data
+exchange in a standardized and self-described way. It is essential to
+provide a machine to machine interface in order to seamlessly integrate
+any automated process.
+
+The Battery Passport platform provides operations for two different
+subsystems:
+
+- User management
+- Passport management
+
+The main functionalities for a user are:
+
+- Get user information (from the logged user)
+- Update user information (in case the logged user has the proper
+  permissions or rights)
+- Create user (in case the logged user has the proper permissions or
+  rights)
+
+The main functionalities to manage passports are:
+
+- Get public passport information (for any logged or not logged user
+  requiring the information)
+- Get owned passports (for any logged user with the proper permissions
+  or rights)
+- Get owned passport information (for any logged user with the proper
+  permissions or rights)
+- Create passport (for any logged user with the proper permissions or
+  rights)
+- Update owned passport (for any logged user with the proper permissions
+  or rights)
+- Delete owned passport (for any logged user with the proper permissions
+  or rights)

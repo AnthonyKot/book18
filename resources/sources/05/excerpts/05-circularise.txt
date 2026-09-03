@@ -1,0 +1,35 @@
+URL: https://www.circularise.com/battery-passport
+Publisher: Circularise
+Fetch date: 2026-09-03
+Page/section: “What Circularise covers”, “Implementation workflow”, “Battery passport data model” and “2027 readiness”
+
+Circularise helps teams collect supplier evidence, trace battery data,
+and publish governed QR-code disclosures without exposing sensitive
+supply chain information.
+
+Circularise brings those layers together across supplier data
+collection, chain-of-custody traceability, and governed disclosure for
+product passports.
+
+Request, normalize, and review the declarations, certificates, and
+field-level evidence needed for passport data.
+
+Map battery passport fields to owners, suppliers, and systems, then
+automate the evidence requests that usually slow teams down.
+
+Link battery identifiers, batch history, supplier evidence, and
+sustainability claims into an auditable data trail.
+
+Expose the right passport data through QR codes, APIs, and partner
+access while retaining control over sensitive fields.
+
+Create a durable product record that can be linked to a physical battery
+and updated through its lifecycle.
+
+Keep the passport useful after sale with governed access to performance,
+safety, and end-of-life information.
+
+- Repair, reuse, and state-of-health updates
+
+Plan integrations with ERP, PLM, LCA, and compliance systems so the
+passport becomes a maintained record.

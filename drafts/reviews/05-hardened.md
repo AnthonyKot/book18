@@ -16,6 +16,13 @@ No source contradicted a numerical claim. Locator corrections and prose narrowin
 - `05-pending-rules` — stamped; the Commission's expressly indicative timeline supports the scheduled items; updated the audit date to 3 September and added “indicative” to prose and ledger.
 - `05-espr-framework` — stamped; the Commission page supports product-specific delegated acts and the minimum 18-month transition statement.
 - `05-espr-priorities` — stamped; the Commission working-plan announcement lists all named product groups.
+- `05-siemens-api` — stamped; Siemens' documentation supports the REST API and listed user/passport operations.
+- `05-circularise` — stamped; Circularise's page supports each marketed workflow element; replaced “chain-of-custody records” with the page's “chain-of-custody traceability” and auditable-trail wording.
+- `05-minespider` — stamped; the company page says its traceability offer has advanced API connectivity.
+- `05-spherity-product` — stamped; the company FAQ supports templates, API access, configurable access and white-label readiness; narrowed “APIs” to “API access”.
+- `05-spherity-channel` — stamped; Spherity expressly frames white-labelling as suitable for consultancies.
+- `05-tuvsud-partner` — stamped from Arquivo.pt's 2025-12-24 capture because the live page returned a Cloudflare challenge; wording narrowed to the services and documentation the company actually markets.
+- `05-tuvsud-channel-risk` — inference added; TÜV SÜD's marketed multidisciplinary, end-to-end modular offer is the saved factual basis for channel-conflict risk.
 
 ## Prose changes
 
@@ -24,7 +31,8 @@ No source contradicted a numerical claim. Locator corrections and prose narrowin
 - Recast the due-diligence date as a claim about the consolidated Regulation rather than attributing the change to an amendment not identified in the saved passage.
 - Narrowed the registry architecture sentence to the Commission page's explicit storage statement.
 - Updated the pending-rules audit date to 3 September 2026 and made the timeline's indicative status explicit.
+- Tightened the Circularise, Spherity and TÜV SÜD descriptions to the vendors' own wording, and separated TÜV SÜD channel risk into an inference row.
 
 ## Rows added
 
-- Pending completion of the unmarked-fact audit.
+- `05-tuvsud-channel-risk` — added for the essay's inference that the broad candidate partner could absorb the work or customer relationship.

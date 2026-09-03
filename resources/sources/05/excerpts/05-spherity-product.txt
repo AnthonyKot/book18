@@ -1,0 +1,18 @@
+URL: https://www.spherity.com/digital-product-passport
+Publisher: Spherity
+Fetch date: 2026-09-03
+Page/section: “Digital Product Passport: Frequently Asked Questions”
+
+VERA simplifies compliance through pre-configured templates, QR code
+generation, dynamic data updates, and full lifecycle management.
+
+The real value lies in the structured, trustworthy data stored behind
+it—accessible via web or API, and authenticated to ensure it reflects
+the true lifecycle and sustainability of the product.
+
+Yes, VERA is fully white-label ready, allowing you to offer Digital
+Product Passports under your own brand.
+
+Access is fully configurable. You control which data is public,
+restricted, or shared selectively via permissions or verifiable
+credentials.
