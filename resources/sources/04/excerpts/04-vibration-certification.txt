@@ -1,0 +1,22 @@
+URL: https://www.mobiusinstitute.com/certification/certification-requirements/
+Publisher: Mobius Institute Board of Certification
+Fetch date: 2026-09-03
+Page/section: Condition Monitoring Certifications — Vibration Analysis CAT-III; Vibration Analysis CAT-IV
+
+Vibration Analysis CAT-III
+
+In order to be certified you must:
+
+- Complete a MIBoC approved training course (click here for a list of approved courses).
+- Achieve 70% or higher on the certification exam (100 multiple choice questions, duration 4 hours).
+- Have thirty-six (36) months of practical vibration analysis work experience, verified by an independent person.
+- Have previously been certified to VCAT-II by a MIBoC approved certification body.
+
+Vibration Analysis CAT-IV
+
+In order to be certified you must:
+
+- Complete a MIBoC approved training course (click here for a list of approved courses).
+- Achieve 70% or higher on the certification exam (60 multiple choice questions, duration 5 hours).
+- Have sixty (60) months of practical vibration analysis work experience, verified by an independent person.
+- Have previously been VCAT-III certified by a MIBoC approved certification body.

@@ -1,0 +1,14 @@
+URL: https://grafana.com/docs/grafana/latest/datasources/influxdb/
+Publisher: Grafana Labs
+Fetch date: 2026-09-03
+Page/section: InfluxDB data source — introduction; Additional features
+
+Grafana ships with the InfluxDB data source out of the box. The data source is preinstalled in both Grafana OSS and Grafana Enterprise, so there’s nothing for you to install.
+
+After configuring the data source, you can:
+
+- Use Explore to query data without building a dashboard.
+- Add transformations to manipulate query results.
+- Configure template variables for dynamic dashboards.
+- Build dashboards to visualize your InfluxDB data.
+- Set up alerting rules based on your InfluxDB query results.

@@ -29,19 +29,38 @@ Fetched 2026-09-03. Vendor pages support only the described product or service s
 
 6. **SPIE Nederland, “Maintenance Solutions.”**
    URL: https://www.spie-nl.com/oplossing/maintenance-solutions
+   Publisher: SPIE Nederland. Fetch date: 2026-09-03. Excerpt: `excerpts/04-spie-offer.txt`.
    Supports: SPIE's machine-maintenance and asset-management scope and linked IFS Ultimo partnership (`04-spie-offer`).
 
 7. **ERIKS, “Total Cost of Ownership.”**
    URL: https://eriks.com/be/nl/oplossingen/engineering-maatwerkoplossingen/tco-total-cost-of-ownership
+   Publisher: ERIKS. Fetch date: 2026-09-03. Excerpt: `excerpts/04-eriks-offer.txt`.
    Supports: ERIKS's description of sensor- and data-analysis-based Smart Asset Management providing real-time machine-fleet insight (`04-eriks-offer`). This current official page replaces the former redirecting receipt; the team-composition wording was removed.
 
 8. **VIBRO, company and services page.**
    URL: https://vibro.nl/en/
+   Publisher: VIBRO. Fetch date: 2026-09-03. Excerpt: `excerpts/04-vibro-offer.txt`.
    Supports: Dutch specialist services in condition monitoring, telemonitoring, vibration analysis, advice and calibration (`04-vibro-offer`).
 
 9. **Istec, company and services page.**
    URL: https://www.istec.com/
+   Publisher: Istec. Fetch date: 2026-09-03. Excerpt: `excerpts/04-istec-offer.txt`.
    Supports: Dutch vibration-monitoring hardware, certified expertise and analysis capability (`04-istec-offer`).
+
+10. **Microsoft, “Save a workbook in another file format.”**
+    URL: https://support.microsoft.com/en-us/office/save-a-workbook-in-another-file-format-6a16c862-4a36-48f9-a300-c2ca0065286e
+    Publisher: Microsoft. Fetch date: 2026-09-03. Excerpt: `excerpts/04-excel-pdf-substitute.txt`.
+    Supports: Excel workbook and PDF export as an existing reporting substitute (`04-excel-pdf-substitute`).
+
+11. **Grafana Labs, “InfluxDB data source.”**
+    URL: https://grafana.com/docs/grafana/latest/datasources/influxdb/
+    Publisher: Grafana Labs. Fetch date: 2026-09-03. Excerpt: `excerpts/04-influx-grafana-substitute.txt`.
+    Supports: the built-in InfluxDB data source and dashboard capability underlying the essay's low-end-substitute inference (`04-influx-grafana-substitute`).
+
+12. **Mobius Institute Board of Certification, “Certification Requirements.”**
+    URL: https://www.mobiusinstitute.com/certification/certification-requirements/
+    Publisher: Mobius Institute Board of Certification. Fetch date: 2026-09-03. Excerpt: `excerpts/04-vibration-certification.txt`.
+    Supports: existence and requirements of Vibration Analysis Category III and IV certification (`04-vibration-certification`).
 
 ## Evidence boundary
 
