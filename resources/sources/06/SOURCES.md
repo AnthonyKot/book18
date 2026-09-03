@@ -11,6 +11,7 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 2. **Autoriteit Consument & Markt, “Codebesluit groepstransportovereenkomst,” Staatscourant 2025, 43262.**
    URL: https://www.officielebekendmakingen.nl/stcrt-2025-43262.pdf
    Accessed: 2026-09-03.
+   Excerpts: `excerpts/06-gto-sanctions.txt`, `excerpts/06-gto-liability.txt`.
    Supports: consequences of repeated GTO breaches and ACM's explicit decision not to regulate the civil-liability allocation (`06-gto-sanctions`, `06-gto-liability`).
 
 3. **Liander, “Groepscontracten: zo werkt het.”**
@@ -57,17 +58,20 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 
 10. **Rijksoverheid, “Maatregelen tegen vol elektriciteitsnet (netcongestie).”**
     URL: https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/duurzame-energie/kabinet-neemt-maatregelen-tegen-vol-elektriciteitsnet-netcongestie
-    Accessed: 2026-09-02.
+    Accessed: 2026-09-03.
+    Excerpt: `excerpts/06-public-support.txt`.
     Supports: public funding for blocked organisations and energy hubs, distinguished here from customer budget (`06-public-support`).
 
 11. **Sympower, “Turn your energy into profit.”**
     URL: https://sympower.net/
-    Accessed: 2026-09-02.
+    Accessed: 2026-09-03.
+    Excerpt: `excerpts/06-sympower.txt`.
     Supports: Sympower's marketed integration, aggregation, optimisation and trading surface (`06-sympower`).
 
 12. **Withthegrid, “Managing grid congestion in the Netherlands with local control strategies.”**
     URL: https://withthegrid.com/teleport/whitepaper/
-    Accessed: 2026-09-02.
+    Accessed: 2026-09-03.
+    Excerpt: `excerpts/06-withthegrid.txt`.
     Supports: Withthegrid's marketed local-control surface (`06-withthegrid`).
 
 13. **Scholt Energy, “Flex Services for Energy Assets.”**
@@ -82,7 +86,8 @@ Accessed 2026-09-03. Vendor pages support only their described marketing surface
 
 15. **Withthegrid, “Control strategies.”**
     URL: https://teleport.withthegrid.com/control-strategies/
-    Accessed: 2026-09-02.
+    Accessed: 2026-09-03.
+    Excerpt: `excerpts/06-peak-shaving.txt`.
     Supports: the mechanism of battery peak shaving against consumption and feed-in limits (`06-peak-shaving`).
 
 ## Evidence boundary

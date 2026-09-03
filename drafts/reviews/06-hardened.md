@@ -14,10 +14,16 @@ No source contradiction or corrected number found so far.
 - `06-enexis-atr-status` — stamped; Enexis gives the Blokstroom application date and says Reststroom lacks sufficient capacity visibility and remains under study.
 - `06-liander-cbc` — stamped; Liander describes CBC variants, redispatch, the CSP role and GOPACS.
 - `06-stedin-hub` — stamped; Stedin states joint responsibility, the EMS need and the Netburenscan function.
+- `06-gto-sanctions` — stamped; Article 7.1h supports notice for each breach, possible suspension after at least two, remedies, and possible lapse after another breach.
+- `06-gto-liability` — stamped; ACM says it lacks authority over the stated civil agreements and therefore sets no liability requirements.
+- `06-public-support` — stamped; Rijksoverheid states €62 million for blocked organisations' advice or investment and €166 million to stimulate energy hubs.
+- `06-sympower` — stamped; the company page makes the connection, aggregation, optimisation, trading, interface and customer-segment claims.
+- `06-withthegrid` — stamped; the company whitepaper contents list Dutch local control, static and dynamic limitations, grid-operator endpoints and peak shaving.
+- `06-peak-shaving` — stamped; the product documentation describes battery response to consumption-limit and feed-in-limit violations. The ledger's unsupported “absorbing” mechanism was narrowed to the source's “peak-shaving” wording; essay prose already said only “counter.”
 
 ## Prose changes
 
-- None in rows `06-gto-final` through `06-stedin-hub`; the saved passages support both ledger and essay wording.
+- None in rows `06-gto-final` through `06-peak-shaving`; the saved passages support both ledger and essay wording.
 
 ## Rows added
 

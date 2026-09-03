@@ -1,0 +1,18 @@
+URL: https://sympower.net/
+Publisher: Sympower
+Fetch date: 2026-09-03
+Page/section: Homepage, “Full capability stack to monetise flexibility”
+
+Sympower connects, aggregates, optimises and trades energy assets
+across markets for BESS owners and developers, commercial and industrial
+companies, BRPs and DSOs
+
+We connect resources and manage hardware or API interfaces for market
+access.
+
+We optimise and dispatch each asset on market and network signals.
+
+We group resources to meet market capacity and ramping requirements.
+
+We trade the aggregated flexibility 24/7 across products and value
+stacks.

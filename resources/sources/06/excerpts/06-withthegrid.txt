@@ -1,0 +1,18 @@
+URL: https://withthegrid.com/teleport/whitepaper/
+Publisher: Withthegrid
+Fetch date: 2026-09-03
+Page/section: “Managing grid congestion in the Netherlands with local control strategies”, contents
+
+Managing grid congestion in the Netherlands with local control strategies:
+
+- Regulatory compliance: Realtime Interface in the Netherlands
+  - The grid operator endpoint
+  - The customer endpoint
+
+- Local control strategies for congestion management
+  - Static and dynamic limitations
+
+- Detailed control loops and applications
+  - Grid guard
+  - Peak shaving
+  - Hybrid control
