@@ -190,3 +190,10 @@ final ranking.
   diligence banked in `drafts/pitches-2026-09-02.md`. From essay 6 onward, claims must save
   a supporting excerpt under `resources/sources/NN/excerpts/` (Book 17 standard); a panel
   review lane (`scripts/review.sh`) is added and run on every essay before publication.
+- 2026-09-03 (night) — Hardening to book17's standard: `checks/claims.py` (dated verifier stamps,
+  `inference`, `open`; bare `verified` fails `--strict`), one codex job per essay from
+  `scripts/prompts/harden-brief.md` (fetch every source, save `resources/sources/NN/excerpts/<id>.txt`,
+  stamp, weaken prose to the excerpt, audit unreceipted facts). Rows 128 → 149; essay 4 from 9 to 12;
+  no number changed except locators; prose narrowed in every essay (logs `drafts/reviews/NN-hardened.md`).
+  Same night: whole-book read-through by the coordinating session (titles to sentence case, kickers,
+  GTO expanded, one typo). Verdicts unchanged.
