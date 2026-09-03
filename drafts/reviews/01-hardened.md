@@ -24,6 +24,6 @@ No source contradiction or corrected number found.
 - `01-data-recurring` — inference; recurring state is inferred from the saved data-description, access, request, and control duties.
 - `01-industrial-update-constraints` — inference; the generic-workflow conclusion rests on the survey's complete-image, connectivity, and availability observations.
 
-Prose changes made: replaced the unsupported list of firmware extraction, field variants, supplier images, and safe update windows with the survey-supported complete-image, connectivity, and availability constraints; added markers at repeated dates, legal thresholds, and vendor mentions.
+Prose changes made: narrowed the CRA recurring-state list to changes grounded in the regulation; replaced the unsupported list of firmware extraction, field variants, supplier images, and safe update windows with the survey-supported complete-image, connectivity, and availability constraints; added markers at repeated dates, legal thresholds, and vendor mentions.
 
 Rows added: five (`01-jira`, `01-sharepoint`, `01-cra-recurring`, `01-data-recurring`, `01-industrial-update-constraints`).
