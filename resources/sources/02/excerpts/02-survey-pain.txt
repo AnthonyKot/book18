@@ -1,4 +1,5 @@
-URL: https://arxiv.org/abs/2505.14325 and https://arxiv.org/html/2505.14325v2
+URL: https://arxiv.org/abs/2505.14325
+Full-text URL: https://arxiv.org/html/2505.14325v2
 Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
 Fetch date: 2026-09-03
 Page/section: Submission history; Section 4, “Study Design”; Section 5, “Challenges”

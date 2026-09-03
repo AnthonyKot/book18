@@ -8,14 +8,14 @@ Accessed and re-fetched 2026-09-03. Partner and vendor pages are first-party des
 
 2. **European Commission — Cyber Resilience Act: reporting obligations.** Current implementation summary.
    https://digital-strategy.ec.europa.eu/en/policies/cra-reporting
-   Corroborates the reporting sequence and date used in `02-cra-dates`; used in Reading.
+   Fetch date: 2026-09-03. Corroborates the reporting sequence and date used in `02-cra-dates`; used in Reading.
 
 3. **ENISA — Single Reporting Platform (SRP).** Current implementation page.
    https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
-   Corroborates the live operational context for CRA reporting; used in Reading.
+   Fetch date: 2026-09-03. Corroborates the live operational context for CRA reporting; used in Reading.
 
 4. **Roosa Risto, Mohit Sethi and Mika Katara — “Effects of the Cyber Resilience Act (CRA) on Industrial Equipment Manufacturing Companies.”** 20 May 2025.
-   https://arxiv.org/html/2505.14325v2
+   https://arxiv.org/abs/2505.14325 (submission history); https://arxiv.org/html/2505.14325v2 (full text)
    Fetch date: 2026-09-03. Supports: the 2024 survey period, 2025 first arXiv posting, sample composition, IEC 62443-4-1 alignment and reported implementation pain. Claims `02-survey-pain` (`excerpts/02-survey-pain.txt`), `02-survey-sample` (`excerpts/02-survey-sample.txt`).
 
 5. **Hard2bit — Cybersecurity partner programme.** Current vendor page.
