@@ -18,6 +18,11 @@ Hardening excerpts fetched 2026-09-03:
 - `excerpts/01-cybellum.txt` — Cybellum, fetched 2026-09-03. URL: https://cybellum.com/platform/. Claims: `01-cybellum`.
 - `excerpts/01-cracowi.txt` — ONEKEY / CRACoWi, fetched 2026-09-03. URL: https://www.onekey.com/cracowi. Claims: `01-cracowi`.
 - `excerpts/01-standards.txt` — CEN and CENELEC, fetched 2026-09-03. URL: https://wp2026.cencenelec.eu/sectors-list/digital-society/. Claims: `01-standards`.
+- `excerpts/01-jira.txt` — Atlassian, fetched 2026-09-03. URL: https://www.atlassian.com/software/jira. Claims: `01-jira`.
+- `excerpts/01-sharepoint.txt` — Microsoft Support, fetched 2026-09-03. URL: https://support.microsoft.com/en-us/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site. Claims: `01-sharepoint`.
+- `excerpts/01-cra-recurring.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng. Claims: `01-cra-recurring`.
+- `excerpts/01-data-recurring.txt` — European Union (EUR-Lex), fetched 2026-09-03. URL: https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng. Claims: `01-data-recurring`.
+- `excerpts/01-industrial-update-constraints.txt` — arXiv (Roosa Risto, Mohit Sethi and Mika Katara), fetched 2026-09-03. URL: https://arxiv.org/html/2505.14325v2. Claims: `01-industrial-update-constraints`.
 
 Re-fetched 2026-09-02. Vendor pages describe their own products and projects; they are used only to establish that an offer or capability is marketed, not that it performs as claimed or that buyers pay the proposed prices.
 

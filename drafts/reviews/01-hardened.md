@@ -18,7 +18,12 @@ No source contradiction or corrected number found.
 - `01-cybellum` — stamped; the company page markets each named platform capability.
 - `01-cracowi` — stamped; the project page states EU funding, exact value, dates, intended users, assessments, and documentation.
 - `01-standards` — stamped; the standards-body programme describes continuing draft/profile work and end-2026 finalisation.
+- `01-jira` — stamped; Atlassian's page describes Jira planning and tracking projects.
+- `01-sharepoint` — stamped; Microsoft Support describes SharePoint file collaboration, lists, and project-status tracking.
+- `01-cra-recurring` — inference; recurring state is inferred from the saved lifecycle, vulnerability, reporting, and support-period duties.
+- `01-data-recurring` — inference; recurring state is inferred from the saved data-description, access, request, and control duties.
+- `01-industrial-update-constraints` — inference; the generic-workflow conclusion rests on the survey's complete-image, connectivity, and availability observations.
 
-Prose changes made: none for the original 16 rows.
+Prose changes made: replaced the unsupported list of firmware extraction, field variants, supplier images, and safe update windows with the survey-supported complete-image, connectivity, and availability constraints; added markers at repeated dates, legal thresholds, and vendor mentions.
 
-Rows added: none while processing the original ledger; the unmarked-fact audit follows.
+Rows added: five (`01-jira`, `01-sharepoint`, `01-cra-recurring`, `01-data-recurring`, `01-industrial-update-constraints`).

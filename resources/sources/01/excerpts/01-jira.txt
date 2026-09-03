@@ -1,0 +1,6 @@
+URL: https://www.atlassian.com/software/jira
+Publisher: Atlassian
+Fetch date: 2026-09-03
+Page/section: Page metadata, description
+
+Jira brings teams together to reach the next level of productivity with AI agents that orchestrate, plan, and track projects at scale.

@@ -1,0 +1,10 @@
+URL: https://support.microsoft.com/en-us/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site
+Publisher: Microsoft Support
+Fetch date: 2026-09-03
+Page/section: “What is a SharePoint team site?”
+
+A SharePoint team site connects you and your team to shared content and resources. Use team sites to store and collaborate on files or to create and manage lists of information as well as:
+
+- Track and stay updated on project status
+- Organize and co-author shared content
+- Connect to a Microsoft 365 group to access team resources

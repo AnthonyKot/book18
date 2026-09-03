@@ -1,0 +1,12 @@
+URL: https://arxiv.org/html/2505.14325v2
+Publisher: arXiv (Roosa Risto, Mohit Sethi and Mika Katara)
+Fetch date: 2026-09-03
+Page/section: Section 5, “Challenges” — security update management
+
+This is understandable, as many industrial equipment manufacturers rely on embedded software packages that are delivered as complete images, unlike desktop software libraries where individual patches can be built, delivered, and applied to address specific vulnerabilities.
+
+Furthermore, industrial equipment often has intermittent or no connectivity, making it difficult to meet timely update requirements.
+
+Even when vulnerabilities are identified, issuing timely patches can be difficult in practice, particularly in industrial settings where the update cycles are inherently slower due to end-user demands for high availability and minimal downtime.
+
+While the standard acknowledges that the availability and safety properties of industrial equipment take precedence over addressing theoretical vulnerabilities, participants still found compliance with the update management practice challenging.
