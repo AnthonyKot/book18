@@ -1,0 +1,31 @@
+URL: author-model
+Publisher: The Second Engine, essay 03
+Fetch date: 2026-09-03
+Page/section: “The first sale”; “Does the money work?”; “The first ninety days” (author-designed model underlying inference)
+
+The first offer is CodeProof, a fixed €3,500 feasibility and loss diagnostic. This is a required test price, not an observed market price.
+
+No comparable Dutch turnkey price was found in public documentation, so every number below is a hurdle.
+
+Offer | End-customer price hurdle | Company revenue | Direct cost at replacement rates | Contribution
+CodeProof diagnostic | €3,500 | €2,800 after 20% partner share | €1,200 labour/travel | €1,600
+Inspection cell | €52,000 | €35,000 wholesale | €18,000 hardware/assembly; €6,000 delivery labour; €1,500 warranty reserve | €9,500
+Evidence service | €6,000/year | €4,500 after partner share | €1,700 support labour, cloud and spares | €2,800
+
+Company model | Year 1: learn | Mature year: prove scale
+Volume | 6 diagnostics; 3 cells; 3 service contracts | 12 diagnostics; 12 cells; 36 service contracts
+Revenue | €135,300 | €615,600
+Pass-through hardware, assembly and warranty | €58,500 | €234,000
+Delivery/support labour at replacement cost | €30,300 | €147,600
+Gross contribution | €46,500 | €234,000
+Founder role at replacement cost | €65,000 | €100,000
+Other operating cost | €47,000 | €60,000
+Retained result before company tax | −€65,500 | €74,000
+
+All volumes, prices and costs are designed arithmetic, not market facts.
+
+Factory acceptance requires 250 holdout images for every defect-class and declared-condition combination, plus 1,500 good images per condition. Site acceptance runs 100 independently prepared challenge packs for every combination through trigger, tracking and confirmed reject. A 10,000-good-pack run spans all conditions without bypass.
+
+The gates are zero false accepts and a false-reject upper bound no higher than 0.2%. These samples are design hurdles, not proof of zero field risk.
+
+Spend at most €8,000 before evidence.

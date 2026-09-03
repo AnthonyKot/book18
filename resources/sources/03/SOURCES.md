@@ -47,6 +47,11 @@ Accessed 2026-09-03. Vendor statements below document current product positionin
 - `excerpts/03-packcheck-product.txt` — PackCheck; fetched 2026-09-03; [URL](https://packcheck.nl/vitrack-platform/); serves `03-packcheck-product`.
 - `excerpts/03-packcheck-case.txt` — PackCheck; fetched 2026-09-03; [URL](https://packcheck.nl/); serves `03-packcheck-case`.
 - `excerpts/03-evis-product.txt` — Vision Partners; fetched 2026-09-03; [URL](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/); serves `03-evis-product`.
+- `excerpts/03-evis-channel.txt` — Vision Partners; fetched 2026-09-03; [URL](https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/); serves `03-evis-channel`.
+- `excerpts/03-incumbent-inference.txt` — PackCheck, Domino, Videojet-Laetus and Vision Partners; fetched 2026-09-03; primary [URL](https://packcheck.nl/vitrack-platform/) with the additional URLs recorded in the excerpt; serves `03-incumbent-inference`.
+- `excerpts/03-machinery-date.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1230R%2801%29); serves `03-machinery-date`.
+- `excerpts/03-substantial-mod.txt` — Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; [URL](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1230); serves `03-substantial-mod`.
+- `excerpts/03-prices.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-prices`.
 
 ## Deliberately not used as market facts
 

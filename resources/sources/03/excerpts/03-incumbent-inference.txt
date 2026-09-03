@@ -1,0 +1,32 @@
+URL: https://packcheck.nl/vitrack-platform/
+Publisher: PackCheck; Domino Printing Sciences; Videojet Technologies / Laetus; Vision Partners
+Fetch date: 2026-09-03
+Page/section: Product-capability sentences underlying the cross-vendor author inference. Additional URLs: https://www.domino-printing.com/en-us/products/r-series ; https://www.videojet.com/us/homepage/products/vision-systems.html ; https://visionpartners.nl/en/products/evis-label-packaging-inspection-system/
+
+PackCheck:
+
+Foutloze inspectie: Directe controle op THT-data (OCR), barcodes, allergenen en etiketten.
+
+Directe afkeur: Stuurt uitwerpsystemen (rejectors) feilloos aan bij elk gedetecteerd defect.
+
+Domino:
+
+The R-Series can grow with your needs – adding capabilities is a simple software update: from basic checking of code presence and position to machine readable code (MRC) validating and optical character verification (OCV).
+
+Domino offers an extensive range of pre-configured cameras and lighting, with brackets to remove complexity, which can be easily integrated with Domino printers.
+
+Videojet-Laetus:
+
+Setup time is minimized by integral SKU/article management.
+
+Variable data input is simplified, ensuring the operator needs to input the data only once for printer and camera.
+
+OCV/OCR application: Font-based OCR reader, multiple AOI, auto character and row segmentation, max. 64 characters and 5 lines / AOI.
+
+Vision Partners:
+
+Read and validate lot code and date code
+
+Integration with production control computer (MES) possible
+
+Integration with production line PLC possible

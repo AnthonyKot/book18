@@ -1,0 +1,10 @@
+URL: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1230R%2801%29
+Publisher: Official Journal of the European Union / EUR-Lex
+Fetch date: 2026-09-03
+Page/section: Corrigendum to Regulation (EU) 2023/1230, page 2, correction 10
+
+10. On page 39, Article 54, second paragraph:
+
+for: ‘14 January 2027’,
+
+read: ‘20 January 2027’.

@@ -22,6 +22,11 @@ No source contradiction requiring a numeric correction has been found.
 - `03-packcheck-product` — stamped; current Vi-Track copy supports recipe/API control, THT OCR, reject control and a web dashboard.
 - `03-packcheck-case` — stamped; PackCheck’s Vezet account says it was selected for film/code/label checks and exposes results in a live web dashboard.
 - `03-evis-product` — stamped; EVIS copy supports date/barcode/text/seal checks and all three integrations.
+- `03-evis-channel` — inference; the saved EVIS integration facts support the overlap from which channel conflict is inferred.
+- `03-incumbent-inference` — inference; the saved cross-vendor capability passages support the functional-overlap premise, while the lack of wedge remains the author’s conclusion.
+- `03-machinery-date` — stamped; official correction 10 changes Article 54’s application date to 20 January 2027.
+- `03-substantial-mod` — stamped; Article 18 imposes manufacturer and conformity-assessment obligations on the person making a substantial modification.
+- `03-prices` — inference; a saved essay-model excerpt records the explicit hurdle labels and the model figures.
 
 Prose changes: none in this batch.
 Rows added: none in this batch.
