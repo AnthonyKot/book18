@@ -1,0 +1,8 @@
+URL: https://docs.cognex.com/dmst_2610/web/EN/HH_WebUI/Content/HH/Topics/External_Help/adjust-image.htm?TocPath=Code+Setup%7CAdjust+Image%7C_____0
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: “Adjust Image”, lighting types
+
+Polarized lighting can help to minimize surface irregularities and reduce ambient light interference. It works best on direct part marking (DPM) codes with different surface finishes.
+
+Diffuse lighting provides even illumination, which results in no glare. It is great for curved, shiny surfaces.

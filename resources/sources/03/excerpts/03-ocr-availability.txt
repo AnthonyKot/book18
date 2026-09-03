@@ -1,0 +1,6 @@
+URL: https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: In-Sight 3800 Vision System datasheet, page 6, “OCR examples” (fact underlying inference)
+
+Food & beverage: Read lot codes and expiration dates on uneven surfaces

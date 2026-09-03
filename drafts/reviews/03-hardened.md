@@ -33,6 +33,11 @@ No source contradiction requiring a numeric correction has been found.
 - `03-prospect-list` — inference; the excerpt records the ten names and the express disclaimer of line fit or intent.
 - `03-lede-competition` — inference (row added); saved Domino, PackCheck and Vision Partners capability sentences support the narrowed lede’s substitute claim.
 - `03-adjacent-substitutes` — inference (row added); saved PackCheck and EVIS menus support referring broader packaging-inspection scope.
+- `03-optics-light` — stamped (row added); Cognex supports the narrowed statements about diffuse glare control and polarization as a test variable.
+- `03-optics-geometry` — stamped (row added); Cognex ties focal length, focus and aperture to field of view and reading distance.
+- `03-component-rating` — inference (row added); the conditional component rating and separate legal cleanability duties support the whole-cell caveat.
+- `03-broad-competition` — inference (row added); vendor menus support “broader” after the unsupported “Dutch, local” description was removed.
+- `03-ocr-availability` — inference (row added); Cognex’s marketed OCR example supports availability, while commodity status remains an inference.
 
-Prose changes: narrowed the lede from unnamed plural vendor categories to three evidenced vendors; replaced the unsupported “all five inspections” referral with the vendors’ published broader menus; reframed assumed substitutes as hypotheses for the diagnostic; removed the unauditable claim that no comparable public Dutch price was found; moved model and liability markers beside the governed numbers and terms.
-Rows added: `03-lede-competition`, `03-adjacent-substitutes`.
+Prose changes: narrowed the lede from unnamed plural vendor categories to three evidenced vendors; replaced the unsupported “all five inspections” referral with the vendors’ published broader menus; reframed assumed substitutes and buyer roles as hypotheses; removed the unauditable claim that no comparable public Dutch price was found; moved model, statistical and liability markers beside the governed numbers and terms; weakened the lighting, IP67, incumbent-response and OCR-commodity language to the saved evidence; removed the unsupported “Dutch, local” competitor description.
+Rows added: `03-lede-competition`, `03-adjacent-substitutes`, `03-optics-light`, `03-optics-geometry`, `03-component-rating`, `03-broad-competition`, `03-ocr-availability`.

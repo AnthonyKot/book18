@@ -1,0 +1,8 @@
+URL: https://docs.cognex.com/dmst_617/web/EN/DM360_Manual/Content/Topics/DM300_360_470_Manual/FOV.htm
+Publisher: Cognex Corporation
+Fetch date: 2026-09-03
+Page/section: “Field of View and Reading Distances”
+
+The following maps show the field of view of the DataMan 360 series readers. Reading distance values are also provided for 1-D and 2-D example code distances.
+
+For the C-mount (or other non-Cognex) and S-Mount lenses, the focal length of the lens, focus setting, and aperture setting determine the field of view and reading distance.

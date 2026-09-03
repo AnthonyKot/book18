@@ -58,6 +58,11 @@ Accessed 2026-09-03. Vendor statements below document current product positionin
 - `excerpts/03-prospect-list.txt` — The Second Engine, essay 03 author model; fetched 2026-09-03; URL `author-model`; serves `03-prospect-list`.
 - `excerpts/03-lede-competition.txt` — Domino Printing Sciences, PackCheck and Vision Partners; fetched 2026-09-03; primary [URL](https://www.domino-printing.com/en-us/products/r-series) with additional URLs in the excerpt; serves `03-lede-competition`.
 - `excerpts/03-adjacent-substitutes.txt` — PackCheck and Vision Partners; fetched 2026-09-03; primary [URL](https://packcheck.nl/vitrack-platform/) with the additional URL in the excerpt; serves `03-adjacent-substitutes`.
+- `excerpts/03-optics-light.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/dmst_2610/web/EN/HH_WebUI/Content/HH/Topics/External_Help/adjust-image.htm?TocPath=Code+Setup%7CAdjust+Image%7C_____0); serves `03-optics-light`.
+- `excerpts/03-optics-geometry.txt` — Cognex; fetched 2026-09-03; [URL](https://docs.cognex.com/dmst_617/web/EN/DM360_Manual/Content/Topics/DM300_360_470_Manual/FOV.htm); serves `03-optics-geometry`.
+- `excerpts/03-component-rating.txt` — Cognex and Official Journal of the European Union / EUR-Lex; fetched 2026-09-03; primary [URL](https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm) with the regulation URL in the excerpt; serves `03-component-rating`.
+- `excerpts/03-broad-competition.txt` — PackCheck and Vision Partners; fetched 2026-09-03; primary [URL](https://packcheck.nl/vitrack-platform/) with the additional URL in the excerpt; serves `03-broad-competition`.
+- `excerpts/03-ocr-availability.txt` — Cognex; fetched 2026-09-03; [URL](https://www.cognex.com/support/downloads/ns/1/11/35/In-Sight%203800%20Datasheet.pdf); serves `03-ocr-availability`.
 
 ## Deliberately not used as market facts
 

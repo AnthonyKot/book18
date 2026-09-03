@@ -1,0 +1,16 @@
+URL: https://docs.cognex.com/isvs_2620/web/EN/is3800-manual/Content/Topics/specifications/specifications-3800.htm
+Publisher: Cognex Corporation; Official Journal of the European Union / EUR-Lex
+Fetch date: 2026-09-03
+Page/section: Cognex “Protection” specification and Regulation (EC) No 852/2004 Annex II Chapter V (facts underlying inference). Additional URL: https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng
+
+Cognex:
+
+Protection: IP67 with all cables properly attached (or the provided connector plug installed) and the IP67-rated cover or Multi Torch attachment properly installed.
+
+Regulation (EC) No 852/2004:
+
+All articles, fittings and equipment with which food comes into contact are to:
+
+(c) with the exception of non-returnable containers and packaging, be so constructed, be of such materials and be kept in such good order, repair and condition as to enable them to be kept clean and, where necessary, to be disinfected; and
+
+(d) be installed in such a manner as to allow adequate cleaning of the equipment and the surrounding area.
